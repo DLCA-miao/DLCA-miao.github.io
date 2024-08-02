@@ -129,7 +129,7 @@ jQuery( document ).ready(function( $ ) {
 </script>
 
 <div class="container" style="box-shadow: 0 0 2px;">
-<p id="clickMessageContainer" style="display: block;">Please click</p>
+<p id="clickMessageContainer" style="display: block;">Please click on the <b>Markers</b> button above.</p>
 </div>
 
 
