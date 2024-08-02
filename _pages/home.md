@@ -9,7 +9,7 @@ permalink: /
 <br>
 <br>
 <p class="text-center" style="color:#587B39; font-size:40px;">Developmental Lung Cell Atlas</p>
-<p class="text-center" style="font-size:20px;">The database offer a comprehensive lung development atlas that covers all stages from embryonic development to adulthood. The database hope this atlas will contribute to advancements and breakthroughs in the field of lung development research.</p>
+<p class="text-center" style="font-size:20px;">The website offer a comprehensive lung development atlas that covers all stages from embryonic development to adulthood. The website hope this atlas will contribute to advancements and breakthroughs in the field of lung development research.</p>
 <div class="wrapper box_style">
 <div class="well" style="border: 0px solid #C9C9C9; background-color: #fff;">
 <section class="sectiontitle"> 
