@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brain Cell Atlas - RegionDEG</title>
+  <meta name="description" content="Brain Cell Atlas -- RegionDEG">
+  <!-- <link rel="stylesheet" href="http://localhost:4000/css/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/regiondeg/">
+<link rel="shortcut icon" type ="image/x-icon" href="http://localhost:4000/images/favicon.ico">
+
+
+
+</head>
+
+
+  <body>
+
+    <div class="navbar-expand-lg navbar-dark" style='background-color: #333333; border-radius: 0; margin-bottom: 0; border: 0; height: 30px;' role="navigation">
+  <div class="container-fluid" style='height: 30px; max-width: 1000px;'>
+	  <ul class="nav navbar-nav navbar-right" style='height: 30px;'>
+		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="http://www.gznl.org/">
+			<img src="http://localhost:4000/images/header/home.svg" style='height: 20px; width: auto; margin: 0;'>
+			Home</a></li>
+		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/database/">
+			<img src="http://localhost:4000/images/header/database.svg" style='height: 20px; width: auto; margin: 0;'>
+			Database</a></li>
+		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/research/">
+			<img src="http://localhost:4000/images/header/research.svg" style='height: 20px; width: auto; margin: 0;'>
+			Research</a></li>
+		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/aboutus/">
+			<img src="http://localhost:4000/images/header/aboutus.svg" style='height: 20px; width: auto; margin: 0;'>
+			About us</a></li>
+		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://gzlab.ac.cn/">
+			GZNL-RDC
+			<img src="http://localhost:4000/images/header/gznl2.svg" style='height: 20px; width: auto; margin: 0;'>
+			</a></li>
+	  </ul>
+  </div>
+</div>
+
+<!--
+  <div class="search-container">
+    <p class="search-text">Search for something:</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+    </div>
+    <p class="additional-text">Additional text here...</p>
+  </div>
+
+  <div class="background-image">
+    <img src="http://localhost:4000/images/Picture-1.jpg" style='width: 100%; border-radius: 0; margin-top: 0; margin-bottom: 0;'>
+  </div>
+-->
+
+<!-- <div class="full-width-image">
+  <img src="http://localhost:4000/images/homePage/lung_dev_background.png" class="img-fluid" alt="Responsive image">
+</div>
+
+<style>
+	.full-width-image {
+	  background-color: #8E1B11; /* 设置背景颜色为黄色 */
+	  display: flex;
+	  justify-content: flex-end; /* 图片右对齐 */
+	}
+	
+	.full-width-image img {
+	  height: 300px;
+	  border-radius: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	}
+</style> -->
+
+<!-- aoying -->
+<div class="full-width-image">
+	<div class="search-box">
+	  <div class="search">
+		<h2>GZNL's Respiratory Data Centre, GZNL-RDC</h2>
+		<div class="i"><img src="http://localhost:4000/images/header/HDLCA-logo-green-large.svg">
+		  <h1>Developmental lung data</h1>
+		</div>
+		<p>Developmental Lung Cell Atlas</p>
+		<script async src="https://cse.google.com/cse.js?cx=560632b54571a4f6c"></script>
+		  <div class="gcse-search"></div>
+  
+		<!--p class="tip">Example searches: Lung, Nose, Airway</p-->
+		<p style="color:red; font-size:20px;">The search function is under construction</p>
+		<!-- <p>Example: 
+		  <a class="tip" href="https://aptamer.ribocentre.org/Ribocentre-aptamer/">Limbic system</a>&nbsp;&nbsp;
+		  <a class="tip" href="https://aptamer.ribocentre.org/SELEX/">Cerebellum</a>&nbsp;&nbsp;
+		  <a class="tip" href="https://aptamer.ribocentre.org/docs/ATP-aptamer/" target="_blank">Cerebral cortex</a>&nbsp;&nbsp; -->
+		  <!-- <a class="tip" href="https://aptamer.ribocentre.org/structures/">Structure</a>&nbsp;&nbsp; -->
+	  <!-- </p> -->
+	  </div>
+	</div>
+  </div>
+  
+  
+  
+  
+  
+  <style>
+ .full-width-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    background: url(http://localhost:4000/images/homePage/lung_dev_background2.jpeg) no-repeat;
+
+    background-size: cover; /* 使用 cover 让背景图片填充整个容器 */
+    background-position: center; /* 让背景图片在容器中水平和垂直居中 */
+}
+
+.full-width-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center
+}
+  /* .full-width-image {
+	  width: 100%;
+	  height: 350px;
+	  overflow: hidden;
+	  border-radius: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  position: relative;
+	  background: url(http://localhost:4000/images/homePage/background3.png) no-repeat;
+	  background-size: 100% 100%
+  }
+  
+  .full-width-image img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  object-position: center
+  } */
+  
+  .search-box {
+	  height: 100%;
+	  width: 1300px;
+	  margin: 0 auto;
+	  display: flex;
+	  align-items: center;
+  }
+  
+  .search {
+	  padding-top: 0px;
+	  padding-bottom: 0px; 
+	  padding-left: 20px; 
+	  padding-right: 20px;
+	  background: #fff;
+	  position: absolute;
+  }
+  
+  .search h2 {
+	  font-size: 20px
+  }
+  
+  .search .i {
+	  display: flex;
+	  align-items: center
+  }
+  
+  .search .i img {
+	  width: 70px;
+	  height: 50px;
+	  object-fit: contain
+  }
+  
+  .search .i h1 {
+	  font-size: 28px;
+	  font-weight: 700;
+	  margin-left: 10px
+  }
+  
+  .search .tip {
+	  font-size: 14px;
+	  margin-top: 10px
+  }
+  
+  .searchInput {
+	  margin-top: 10px;
+	  width: 450px;
+	  height: 32px;
+	  display: flex
+  }
+  
+  .searchInput input {
+	  flex: 1;
+	  height: 100%;
+	  line-height: 32px;
+	  border: 1px solid #868686;
+	  outline: 0;
+	  border-radius: 7px;
+	  padding: 0 10px
+  }
+  
+  .gsc-control {
+	width: 300px;
+  }
+  
+  .gsc-control div {
+	position: static;
+  }
+  
+  /* Slight reset to make the preview have ample padding. */
+  .gsc-control-cse {
+	padding: 1em;
+  }
+  
+  .gsc-control-cse,
+  .gsc-control-cse .gsc-table-result {
+	width: auto;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+  }
+  
+  .gsc-control-wrapper-cse {
+	width: 600px;
+  }
+  .gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+	  border-color: #587B39;
+	  background-color: #587B39;
+	  background-image: none;
+	  filter: none;
+	  height: 38px
+  }
+  
+  .gsc-control-cse, .gsc-control-cse .gsc-table-result {
+	  width: auto;
+	  font-family: Arial, sans-serif;
+	  font-size: 1px;
+  }
+  .gsc-input {
+	  font-size: 16px;
+	  color: #000000;
+  }
+  </style>
+
+
+
+
+
+
+<div class="navbar navbar-expand-lg navbar-dark bg-primary" style='border-radius: 0; border: 0;' role="navigation">
+
+  <div class="container-fluid" style='width: 1400px; font-size: 20px;'>
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	
+    <a class="navbar-brand" href="http://localhost:4000/">
+		
+		<img class="navbar-brand" src="http://localhost:4000/images/header/HDLCA-logo-white-large.svg" style='height:50px;margin-top:-14px;margin-bottom:0;padding:2px 2px;border-radius: 0;' alt="logo">
+		<!--b style='font-size: 32px; color: #eeeeee;'>RespiratoryCellAtlas</b-->
+	</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a class="nav-link-1" href="http://localhost:4000/">Home</a></li>
+		<!-- <li><a class="nav-link-1" href="http://localhost:4000/dataviewer">Data Viewer</a></li> -->
+		<!-- <li class="dropdown">
+			<a href="#" class="dropdown-toggle nav-link-1" data-toggle="dropdown">
+				Data Viewer <span class="caret"></span>
+			</a> -->
+			<!-- <ul class="dropdown-menu">
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_adult">Adult brain</a></li> -->
+				<!-- <li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_fetal">Fetal brain</a></li>
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_tumour">Tumour</a></li>
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_organoid">Organoid</a></li>
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_mouse">Mouse brain</a></li> -->
+			<!-- </ul> -->
+		<li><a class="nav-link-1" href="http://localhost:4000/dataviewer_hdlc">Data Viewer</a></li>
+		<li><a class="nav-link-1" href="http://localhost:4000/portrait">Portrait</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle nav-link-1" data-toggle="dropdown">
+				Gene <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/markers">Markers</a></li>
+				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/deg">DEG</a></li>
+				<!-- <li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/celltypedeg">CellType DEG</a></li> -->
+			</ul>
+		<!-- <li><a class="nav-link-1" href="http://localhost:4000/exploration"><b>Exploration</b></a></li> -->
+		<li><a class="nav-link-1" href="http://localhost:4000/database">Dataset</a></li>
+		<li><a class="nav-link-1" href="http://localhost:4000/Helps">Help</a></li>
+		<li><a class="nav-link-1" href="http://localhost:4000/contact">Contact</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+          <div id="homeid" class="col-sm-12">
+	<p class="text-center" style="color:#587B39; font-size:20px; ">The page shows the differentially expressed genes (DEGs) of cell types in a region.</p>
+<!-- <div class="container"> -->
+<!--b style="font-size: 24px; color: #BF5701">
+ATLAS
+</b-->
+<!--div class="shadow p-3 mb-5 bg-white rounded row"-->
+<!-- <p><b>Step1</b> Click below to select a target dataset for analysis.</p>
+<div class="row" style="display: flex; justify-content: space-between;"> 
+<div class="col-lg-3 text-center custom-column">
+<div class="img-circle card photo-card card-clickable" onclick="handleClick('Adult',this)">
+<img src="http://localhost:4000/images/homePage/adult-brain.png" class="rounded-circle" />
+</div> -->
+<!-- <div>
+<p class="text-center" style="margin-top: 16px;">
+<b style="font-size: 24px; color: #587B39">
+ADULT BRAIN
+</b>
+</p>
+</div>
+</div> -->
+
+<!-- <div class="col-lg-3 text-center custom-column">
+<div class="img-circle card photo-card card-clickable" onclick="handleClick('Fetal',this)">
+<img src="http://localhost:4000/images/homePage/fetal-brain.png" class="rounded-circle" />
+</div>
+<div>
+<p class="text-center" style="margin-top: 16px;">
+<b style="font-size: 24px; color: #587B39">
+FETAL BRAIN
+</b>
+</p>
+</div>
+</div>
+<div class="col-lg-3 text-center custom-column">
+<div class="img-circle card photo-card card-clickable" onclick="handleClick('Tumour',this)">
+<img src="http://localhost:4000/images/homePage/tumour-brain.png" class="rounded-circle" />
+</div>
+<div>
+<p class="text-center" style="margin-top: 16px;">
+<b style="font-size: 24px; color: #587B39">
+TUMOR
+</b>
+</p>
+</div>
+</div>
+<div class="col-lg-3 text-center custom-column">
+<div class="img-circle card photo-card card-clickable" onclick="handleClick('Organoid',this)">
+<img src="http://localhost:4000/images/homePage/drganoid-brain.png" class="rounded-circle" />
+</div>
+<div>
+<p class="text-center" style="margin-top: 16px;">
+<b style="font-size: 24px; color: #587B39">
+ORGANOID
+</b>
+</p>
+</div>
+</div> -->
+
+<!--div class="col-lg-3 text-center">
+<div class="img-circle card photo-card card-clickable" onclick="handleClick('Tumour',this)">
+<img src="http://localhost:4000/images/homePage/airway.png" class="rounded-circle" />
+</div>
+<div>
+<p class="text-center" style="margin-top: 16px;">
+<b style="font-size: 24px; color: #BF5701">
+ORGANOID
+</b>
+</p>
+</div>
+</div-->
+
+<!-- </div>
+</div> -->
+
+<style>
+    .custom-column {
+        margin: 0 50px; /* 设置列之间的间距 */
+    }
+</style>
+
+<script>
+  function showImage0(photoName) {
+    var photoElement = document.getElementById('photo');
+    photoElement.src = photoName;
+    photoElement.alt = photoName;
+  }
+</script>
+
+<style>
+  .image-container {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+    .photo-card {
+        border: 10px solid #ccc; 
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        background-size: cover;
+    }
+    .photo-card:hover img {
+        transform: scale(1.1);
+    }
+    .photo-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+    .photo-card.clicked {
+        border-color: #587B39;
+    }
+</style>
+
+<div class="container" style="width: 800px">
+  <p><b>Step1</b> Select the target Region.</p>
+  <p><b style="font-size: 24px; color: #587B39">Expression</b></p>
+  <div id="imageIdContainer"></div>
+  <p><br />
+  <b style="font-size: 24px; color: #587B39">Region</b>
+  <br />
+  <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedindex="0"></select>
+  <br /></p>
+  <div id="imageContainer"></div>
+  <p><!-- 新增的div用于展示图片 --></p>
+</div>
+<p><br /></p>
+
+<!-- <div id="imageIdContainer"></div> -->
+<style>
+  /* 设置固定宽度 */
+  #selectBox1 {
+    width: 400px; /* 这里可以根据需要调整宽度 */
+    height: 38px
+  }
+  .image-container {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .container {
+  /* background-color: #f0f0f0; */ /* 设置背景颜色为您想要的颜色值 */
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px; /* 设置边框圆角的半径，可以根据需要进行调整 */
+  padding: 10px; /* 可选：添加内边距以增加内容与边框之间的间距 */
+}
+  .imageIdContainer{
+    box-shadow: 0 0 15px grey;
+    border-radius: 10px; 
+    padding: 10px; 
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var selectBox1 = document.getElementById('selectBox1');
+    var imageContainer = document.getElementById('imageContainer');
+    var imageElement = document.createElement('img');
+    imageContainer.appendChild(imageElement);  // 将图片元素添加到指定的div
+
+    // 确保选择框变化时触发 handleSelectChange 函数
+    selectBox1.addEventListener('change', function() {
+      handleSelectChange();
+      displaySelectedImage(selectBox1.value);
+    });
+
+    loadInitialData();
+
+    function loadInitialData() {
+      fetch('http://localhost:4000/js/genepage/RegionDEG.json')
+        .then(response => response.json())
+        .then(data => {
+          // 获取数据中的第一个键
+          var firstKey = Object.keys(data)[0];
+          var options = data[firstKey] || []; // 使用空数组如果 data[firstKey] 未定义
+
+          // 更新 selectBox1 的选项
+          updateSelectBoxOptions(selectBox1, options);
+
+          if (options.length > 0) {
+            selectBox1.selectedIndex = 0;
+            document.getElementById('imageIdContainer').textContent = 'Atlas: ' + firstKey;
+            handleSelectChange(); // 默认选中第一个选项并显示图片
+            displaySelectedImage(selectBox1.options[0].value); // 默认选中第一个选项并显示图片
+          }
+        })
+        .catch(error => {
+          console.error('Error loading RegionDEG.json:', error);
+        });
+    }
+
+    function handleSelectChange() {
+      var option1 = selectBox1.options[selectBox1.selectedIndex].value;
+      displaySelectedImage(option1);
+    }
+
+    function displaySelectedImage(optionValue) {
+      if (optionValue) {
+        var encodedOption = encodeURIComponent(optionValue);
+        var imageName = 'Atlas'+'_'+encodedOption + '.png'; // 假设图片名仅由选项值组成
+        var imagePath = 'http://localhost:4000/images/markerPage/volcano/figures/stacked_violin_/ByRegion/' + imageName;
+        
+        if (imageElement) {
+          imageElement.src = imagePath;
+          console.log('Selected Image:', imagePath);
+          // 设置图片路径和样式
+          imageElement.src = imagePath;
+          imageElement.style.width = '100%'; // 设置宽度
+          imageElement.style.height = '100%'; // 高度自动调整
+          imageElement.style.display = 'block'; // 设置图片为块级元素
+          imageElement.style.margin = '0 auto'; // 图片居中
+          console.log('Selected Image:', imagePath);
+        }
+      } else {
+        console.log('Please select an image option.');
+      }
+    }
+
+    function updateSelectBoxOptions(selectBox, options) {
+      if (selectBox) {
+        selectBox.innerHTML = generateOptionsHtml(options);
+      }
+    }
+
+    function generateOptionsHtml(options) {
+      var optionsHtml = '';
+      for (var i = 0; i < options.length; i++) {
+        optionsHtml += '<option value="' + options[i] + '">' + options[i] + '</option>';
+      }
+      return optionsHtml;
+    }
+  });
+</script>
+
+
+  </div>
+
+      </div>
+    </div>
+
+    <br/>
+<div id="footer" class="panel">
+  <div class="panel-footer" style='background-color: #333333; color: #eeeeee;'>
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-sm-4">
+			
+		  <p>&copy 2024 GZNL-RDC. </p>
+		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#587B39">Guangzhou Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#587B39">RNAcentre</a>.</p>
+		  <p>Site made with <a href="https://jekyllrb.com" style="color:#587B39">Jekyll</a>;  <a href="http://localhost:4000/aboutwebsite.html" style="color:#587B39">copy and  modify it for your own research group.</a></p>
+		  <p>  </p>
+		  <p>  </p>
+		</div>
+		
+		<div class="col-sm-4">
+		  Funding:<br />
+          - <a href="https://gzlab.ac.cn" style="color:#587B39">R&D Programs of Guangzhou Laboratory</a><br />
+          - <a href="http://www.most.gov.cn/" style="color:#587B39">MOST IT+BT projects</a> <br />
+          - <a href="https://www.nsfc.gov.cn/" style="color:#587B39">NSFC</a> <br />	 
+		  <br>
+		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" style="color:#587B39"></script>
+		  <!--<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_uv"><strong>: <a href=""><span id="busuanzi_value_site_uv"></span></strong></a> </span> &nbsp;&nbsp;
+		  !--><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_pv">: <a href="" style="color:#587B39"><span id="busuanzi_value_site_pv"></span></a> </span> 
+		</div>
+		
+		<div class="col-sm-4">
+		  Contact:<br />
+		  Building B2, Guangzhou National Laboratory<br />
+		  96 Xingdao South Road, Guangzhou International Bio Island, <br />
+		  Haizhu District, Guangzhou, Guangdong, China.<br />
+          (<a href="https://goo.gl/maps/hDLr6siEAS2Eaypt8" style="color:#587B39">Maps</a>)
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>
