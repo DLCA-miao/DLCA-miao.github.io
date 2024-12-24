@@ -75,10 +75,6 @@ border-width: 0;
 </div>
 </div>
 
-<!-- <h3>Cite us </h3>
-<p>Chen, X., Huang, Y., Huang, L. et al. (2024). A brain cell atlas integrating single-cell transcriptomes across human brain regions. 10.1038/s41591-024-03150-z</p>
-<br/> -->
-
 <h3 style="color:#587B39">Cite us </h3>
 <div class="left-aligned" style="width: 100%;">
 Chen, X., Huang, Y., Huang, L. et al. <br>
