@@ -78,9 +78,7 @@ border-width: 0;
 <h3 style="color:#587B39">Cite us </h3>
 <div class="left-aligned" style="width: 100%;">
 Chen, X., Huang, Y., Huang, L. et al. <br>
-<strong style="color:#587B39;font-weight: bold">A brain cell atlas integrating single-cell transcriptomes across human brain regions. 10.1038/s41591-024-03150-z
-        
-        .strong><br>
+<strong style="color:#587B39;font-weight: bold">A brain cell atlas integrating single-cell transcriptomes across human brain regions. 10.1038/s41591-024-03150-z.</strong><br>
 <!-- <a> Unpublished</a> -->
 </div>
 
