@@ -4,7 +4,7 @@ layout: homelay
 excerpt: "Brain Cell Atlas -- RegionDEG"
 permalink: /regiondeg/
 ---
-<p class="text-center" style="color:#587B39; font-size:20px; ">The page shows the differentially expressed genes (DEGs) of cell types in a region.</p>
+<p class="text-center" style="color:#00528e; font-size:20px; ">The page shows the differentially expressed genes (DEGs) of cell types in a region.</p>
 <!-- <div class="container"> -->
 <!--b style="font-size: 24px; color: #BF5701">
 ATLAS
@@ -18,7 +18,7 @@ ATLAS
 </div> -->
 <!-- <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 ADULT BRAIN
 </b>
 </p>
@@ -31,7 +31,7 @@ ADULT BRAIN
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 FETAL BRAIN
 </b>
 </p>
@@ -43,7 +43,7 @@ FETAL BRAIN
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 TUMOR
 </b>
 </p>
@@ -55,7 +55,7 @@ TUMOR
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 ORGANOID
 </b>
 </p>
@@ -127,17 +127,17 @@ ORGANOID
         transition: transform 0.3s;
     }
     .photo-card.clicked {
-        border-color: #587B39;
+        border-color: #00528e;
     }
 </style>
 
 
 <div class="container" style="width: 800px">
 <p><b>Step1</b> Select the target Region.</p>
-  <b style="font-size: 24px; color: #587B39">Expression</b>
+  <b style="font-size: 24px; color: #00528e">Expression</b>
   <div id="imageIdContainer"></div>
   <br/>
-  <b style="font-size: 24px; color: #587B39">Region</b>
+  <b style="font-size: 24px; color: #00528e">Region</b>
   <br>
   <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>

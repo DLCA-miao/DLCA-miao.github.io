@@ -1,16 +1,18 @@
 {
   "Atlas": [
-"Whole lung",         
-"Right lobes",        
-"Periphery",         
-"Parenchyma",         
-"Distal lung",        
-"Trachea",           
-"Bronchi",              
-"Distal airway",         
-"Right middle lobe",     
-"Proximal airway",     
-"Proximal lung",       
-"Middle airway"
+"Trachea",         
+"Bronchi",           
+"Proximal airway",  
+"Proximal lung",  
+"Middle airway",  
+"Right middle lobe",
+"Right lobes", 
+"Bronchiole", 
+"Parenchyma",      
+"Distal airway",  
+"Periphery",        
+"Distal lung",      
+"Whole lung",       
+"Lung"
   ]
 }

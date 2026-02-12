@@ -1,0 +1,8843 @@
+---
+title: "Ribocentre-aptamer - Structures"
+layout: riboswitch
+excerpt: "Ribocentre-aptamer: A aptamer database"
+sitemap: True
+permalink: /structures/
+---
+<h1 class="post-title" itemprop="name headline">Sequences</h1>
+Shows the sequence of Riboswitch (Rfam ID for fasta file download). We keep the U in the partial sequence because it is consistent with the sequence information in the fasta file. ( We provide the script could change T into U on the page). <a href="https://www.ribocentre.org/downloads/sequence-T2U.ipynb" target="_blank" download="sequence-T2U.ipynb"><button class="btn btn-secondary"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;&nbsp;Download Script</button></a><br><br>
+<html>
+<head>
+<style>
+     .header_box {
+    border: none;
+    background: #efefef;
+    font-size:24px
+  }
+  h2{
+    font-size:20px
+  }
+    /* tabel style */
+    table {
+        border: 2px solid #f8f8ff;
+        border: 2px solid #767676;
+                    border: 2px solid #767676;
+                    border-radius: 5px;
+                    background-color: #fff;
+        }
+                  th {
+        background-color: #719B71;
+        background-color: #719B71;
+        background-color: #005826;
+        color: rgba(255,255,255,0.9);
+                    cursor: pointer;
+        }
+                  td {
+                    background-color: #ffffff;
+                    background-color: #f9f9f9;
+                    background-color: #f9f9f9;
+                    }                
+                  th, td {
+                  min-width: 90px;
+                  padding: 10px 10px;
+                }
+    /* 隐藏所有 sheet */
+    .sheet {
+      display: none;
+    }
+    /*一闪一闪*/
+    .updating-text {
+      animation: updateText 2s infinite;
+      font-weight:bold;
+      color:#005826
+    }
+    @keyframes updateText {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+    /*一闪一闪*/
+</style>
+</head>
+
+<div class="sectiontitle" style="border: 1px solid #C9C9C9; background-color: #fff;">
+<p class="header_box" >About sequence in Riboswitch database</p>
+The table below presents the complete collection of currently available sequences from RNAcentre. Click 'download' to obtain the desired target sequence.<br><br>
+
+        
+ <div style="display: flex;overflow:auto">
+ 
+    <table style="flex: 1;">
+      <tr>
+        <th onclick="sortTable(0)">DOI</th>
+        <th onclick="sortTable(1)">Author</th>
+        <th onclick="sortTable(2)">Year</th>
+        <th onclick="sortTable(3)">Title</th>
+        <th onclick="sortTable(4)">Download link/th>
+        <th onclick="sortTable(5)">Accession code</th>
+        <th onclick="sortTable(6)">Seq method</th>
+        <th onclick="sortTable(7)">Species</th>
+        <th onclick="sortTable(8)">Donor status</th>
+        <th onclick="sortTable(9)">Organ</th>
+        <th onclick="sortTable(10)">Region</th>
+        <th onclick="sortTable(11)">Developmental stage</th>
+      </tr>
+        
+
+     <tr>
+      <td name="td0">10.1038/s41422-023-00802-6</td>
+      <td name="td1">Cao et al Cell Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell RNA sequencing reveals the developmental program underlying proximal-distal patterning of the human lung at the embryonic stage</td>
+      <td name="td6"><a href="https://ngdc.cncb.ac.cn/omix" target="_blank" style="color:#020e65"><b>OMIX003147</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2022.05.010</td>
+      <td name="td1">Hein et al Dev Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">SPONDIN2+ mesenchymal cells form the bud tip progenitor niche during human lung development</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-10662" target="_blank" style="color:#020e65"><b>E-MTAB-10662</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-022-01064-x</td>
+      <td name="td1">Sountoulidis et al Nat Cell Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">A topographic atlas defines developmental origins of cell heterogeneity in the human embryonic lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215895" target="_blank" style="color:#020e65"><b>GSE215895</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">right lobes</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41588-022-01243-4</td>
+      <td name="td1">Madissoon et al Nature genetic</td>
+      <td name="td2">2022</td>
+      <td name="td3">A spatially resolved atlas of the human lung characterizes a gland-associated immune niche</td>
+      <td name="td6"><a href="https://5locationslung.cellgeni.sanger.ac.uk/" target="_blank" style="color:#020e65"><b>S-SUBS17</b></a></td>
+      <td name="td4">scRNA-seq, snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway, Lung</td>
+      <td name="td11">Parenchyma, Bronchi, Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.62522</td>
+      <td name="td1">Wang et al Elife</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell multiomic profiling of human lungs reveals cell-type-specific and age-dynamic control of SARS-CoV2 host genes</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161381" target="_blank" style="color:#020e65"><b>GSE161382</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children, Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2022.11.005</td>
+      <td name="td1">He et al Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">A human fetal lung cell atlas uncovers proximal-distal gradients of differentiation and key regulators of epithelial fates</td>
+      <td name="td6"><a href="https://fetal-lung.cellgeni.sanger.ac.uk/scRNA.html" target="_blank" style="color:#020e65"><b>E-MTAB-11278</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2922-4</td>
+      <td name="td1">Kyle et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">A molecular cell atlas of the human lung from single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.synapse.org/#!Synapse:syn21041850/files/" target="_blank" style="color:#020e65"><b>syn21041850</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2922-4</td>
+      <td name="td1">Kyle et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">A molecular cell atlas of the human lung from single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.synapse.org/#!Synapse:syn21041850/files/" target="_blank" style="color:#020e65"><b>syn21041850</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2020.01.033</td>
+      <td name="td1">Miller et al Developmental Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">In Vitro and In Vivo Development of the Human Airway at Single-Cell Resolution</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-8221" target="_blank" style="color:#020e65"><b>E-MTAB-8221</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea, Airway, Lung</td>
+      <td name="td11">Scraped tracheal epithelial,  small airways,  distal lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-022-04541-3</td>
+      <td name="td1">Murthy et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human distal lung maps and lineage hierarchies reveal a bipotent progenitor</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178360" target="_blank" style="color:#020e65"><b>GSE178360</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-022-04552-0</td>
+      <td name="td1">Basil et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human distal airways contain a multipotent secretory cell that can regenerate alveoli</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130076" target="_blank" style="color:#020e65"><b>GSE130076</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Distal lung epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-021-00809-4</td>
+      <td name="td1">Kathiriya et al Nature Cell Biology</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human alveolar Type 2 epithelium transdifferentiates into metaplastic KRT5+ basal cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150247" target="_blank" style="color:#020e65"><b>GSE150247</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/science.abc3172</td>
+      <td name="td1">Zepp et al Science</td>
+      <td name="td2">2021</td>
+      <td name="td3">Genomic,  epigenomic,  and biophysical cues controlling the emergence of the lung alveolus</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149563" target="_blank" style="color:#020e65"><b>GSE149563</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.00474-2022</td>
+      <td name="td1">Valenzi et al Eur Respir J</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-nucleus chromatin accessibility identifies a critical role for TWIST1 in idiopathic pulmonary fibrosis myofibroblast activity.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214085" target="_blank" style="color:#020e65"><b>GSE214085</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2021.01.053</td>
+      <td name="td1">Ren et al Cell</td>
+      <td name="td2">2021</td>
+      <td name="td3">COVID-19 immune features revealed by a large-scale single-cell transcriptome atlas</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158055" target="_blank" style="color:#020e65"><b>GSE158055</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Trachea, Blood</td>
+      <td name="td11">Trachea, blood</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-48700-8</td>
+      <td name="td1">Zuani et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell and spatial transcriptomics analysis of non-small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-13526" target="_blank" style="color:#020e65"><b>E-MTAB-13526</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non-small cell lung cancer,  lung squamous cell carcinoma,  lung adenocarcinoma, healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41588-024-01702-0</td>
+      <td name="td1">Natri et al Nat Genet</td>
+      <td name="td2">2024</td>
+      <td name="td3">Cell-type-specific and disease-associated expression quantitative trait loci in the human lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE227136" target="_blank" style="color:#020e65"><b>GSE227136</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">IPF</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03752-4</td>
+      <td name="td1">Caushi et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Transcriptional programs of neoantigen-specific TIL in anti-PD-1-treated lung cancers.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176021" target="_blank" style="color:#020e65"><b>GSE176021</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.202401-0078OC</td>
+      <td name="td1">Zhao et al Am J Respir Crit Care Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-Cell Analysis Reveals Novel Immune Perturbations in Fibrotic Hypersensitivity Pneumonitis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271789" target="_blank" style="color:#020e65"><b>GSE271789</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">IPF,  Fibrotic HP</td>
+      <td name="td10">Bronchi, Blood</td>
+      <td name="td11">alveolar,  PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41587-022-01495-9</td>
+      <td name="td1">Ursu et al Nat Biotechnol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Author Correction: Massively parallel phenotyping of coding variants in cancer with Perturb-seq</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161824" target="_blank" style="color:#020e65"><b>GSE161824</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-024-02064-9</td>
+      <td name="td1">Coates et al Nat Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Temporal profiling of human lymphoid tissues reveals coordinated defense against viral challenge</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287808" target="_blank" style="color:#020e65"><b>GSE287808</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Nose, Blood</td>
+      <td name="td11">Nose,  PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/thorax-2022-219958</td>
+      <td name="td1">Stoleriu et al Thorax</td>
+      <td name="td2">2024</td>
+      <td name="td3">COPD basal cells are primed towards secretory to multiciliated cell imbalance driving increased resilience to environmental stressors.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE233145" target="_blank" style="color:#020e65"><b>GSE233145</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COPD</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi epithelium</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1242/dev.177428</td>
+      <td name="td1">García et al Development</td>
+      <td name="td2">2019</td>
+      <td name="td3">Novel dynamics of human mucociliary differentiation revealed by single-cell RNA sequencing of nasal epithelial cultures</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE121600&format=file" target="_blank" style="color:#020e65"><b>GSE121600</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI183978</td>
+      <td name="td1">Zhao et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">Activation of STAT3-mediated ciliated cell survival protects against severe infection by respiratory syncytial virus.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274466" target="_blank" style="color:#020e65"><b>GSE274466</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway</td>
+      <td name="td11">Adult, Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.aba1983</td>
+      <td name="td1">Adams et al Sci Adv</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell RNA-seq reveals ectopic and aberrant lung-resident cell populations in idiopathic pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136831" target="_blank" style="color:#020e65"><b>GSE136831</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF) , Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.xcrm.2024.101615</td>
+      <td name="td1">Zhang et al Cell Rep Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Neoadjuvant sintilimab plus chemotherapy in EGFR-mutant NSCLC: Phase 2 trial interim results (NEOTIDE/CTONG2104)</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241934" target="_blank" style="color:#020e65"><b>GSE241934</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-018-0394-6</td>
+      <td name="td1">Plasschaert et al Nature</td>
+      <td name="td2">2018</td>
+      <td name="td3">A single-cell atlas of the airway epithelium reveals the CFTR-rich pulmonary ionocyte</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE102580" target="_blank" style="color:#020e65"><b>GSE102580</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41587-021-01037-9</td>
+      <td name="td1">Loske et al Nature Biotechnology</td>
+      <td name="td2">2021</td>
+      <td name="td3">Pre-activated antiviral innate immunity in the upper airways controls early SARS-CoV-2 infection in children</td>
+      <td name="td6"><a href="https://doi.org/10.6084/m9.figshare.14938755" target="_blank" style="color:#020e65"><b>EGAS00001005461</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Airway</td>
+      <td name="td11">upper airway</td>
+      <td name="td11">Adult, Children, Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-04345-x</td>
+      <td name="td1">Yoshida et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Local and systemic responses to SARS-CoV-2 infection in children and adults</td>
+      <td name="td6"><a href="https://covid19.cog.sanger.ac.uk/submissions/release2/meyer_nikolic_covid_airway_raw.h5ad" target="_blank" style="color:#020e65"><b>GSE168215</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.15252/emmm.202012871</td>
+      <td name="td1">Mayr et al EMBO Mol Med</td>
+      <td name="td2">2021</td>
+      <td name="td3">Integrative analysis of cell state changes in lung fibrosis with peripheral protein biomarkers</td>
+      <td name="td6"><a href="https://drive.google.com/uc?export=download&id=13vf6Fcy6cCJUuGvbnj5sQDhayLRq7op1" target="_blank" style="color:#020e65"><b>2020_Mayr</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD),  lung squamous cell carcinoma(LUSC)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adg1487</td>
+      <td name="td1">Dykema et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Lung tumor-infiltrating Treg have divergent transcriptional profiles and function linked to checkpoint blockade response</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235500" target="_blank" style="color:#020e65"><b>GSE235500</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.aba1972</td>
+      <td name="td1">Habermann et al Science Advances</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell RNA sequencing reveals profibrotic roles of distinct epithelial and mesenchymal lineages in pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135893" target="_blank" style="color:#020e65"><b>GSE135893</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF) ,  chronic hypersensitivity pneumonitis ,  nonspecific interstitial pneumonia ,  sarcoidosis ,  unclassifiable ILD ,  nonfibrotic controls</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung epithelial ; Lung endothelial ; Lung mesenchymal ; Lung immune</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1541-7786.MCR-22-0881</td>
+      <td name="td1">Wollenzien et al Mol Cancer Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-Cell Evolutionary Analysis Reveals Drivers of Plasticity and Mediators of Chemoresistance in Small Cell Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216182" target="_blank" style="color:#020e65"><b>GSE216182</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Small Cell Lung Cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2023.03.009</td>
+      <td name="td1">Pai et al Cancer Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Lineage tracing reveals clonal progenitors and long-term persistence of tumor-specific T cells during immune checkpoint blockade.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE185206" target="_blank" style="color:#020e65"><b>GSE185206</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adl4913</td>
+      <td name="td1">Hasegawa et al Sci Adv</td>
+      <td name="td2">2024</td>
+      <td name="td3">Pulmonary osteoclast-like cells in silica induced pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288887" target="_blank" style="color:#020e65"><b>GSE288887</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">coal-workers pneumoconiosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-16164-1</td>
+      <td name="td1">Kim et al Nature computation</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell RNA sequencing demonstrates the molecular and cellular reprogramming of metastatic lung adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131907" target="_blank" style="color:#020e65"><b>GSE131907</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/jmv.29889</td>
+      <td name="td1">Wang et al J Med Virol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Interferon-responsive neutrophils and macrophages extricate SARS-CoV-2 Omicron critical patients from the nasty fate of sepsis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263469" target="_blank" style="color:#020e65"><b>GSE263469</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3390/cells13231991</td>
+      <td name="td1">Kim et al Cells</td>
+      <td name="td2">2024</td>
+      <td name="td3">Transcriptomic Analysis of Air-Liquid Interface Culture in Human Lung Organoids Reveals Regulators of Epithelial Differentiation.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280502" target="_blank" style="color:#020e65"><b>GSE280502</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adf9988</td>
+      <td name="td1">Barnes et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Early human lung immune cell development and its role in epithelial cell fate.</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11528" target="_blank" style="color:#020e65"><b>E-MTAB-11528</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.176596</td>
+      <td name="td1">Mellors et al JCI insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">Shared roles of immune and stromal cells in the pathogenesis of human bronchiolitis obliterans syndrome.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290834" target="_blank" style="color:#020e65"><b>GSE290834</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">CLAD-BOS,  cGVHD-BOS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">distal lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-21043-4</td>
+      <td name="td1">Liu et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">Tumour heterogeneity and intercellular networks of nasopharyngeal carcinoma at single cell resolution</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE162025&format=file,  https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE162025&format=file&file=GSE162025%5Ffiltered%5Fcontig%5Fannotations%5FTCR%2Ecsv%2Egz" target="_blank" style="color:#020e65"><b>GSE162025</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">nasopharyngeal carcinom</td>
+      <td name="td10">Pharynx, Blood</td>
+      <td name="td11">Nasopharynx, PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2024.114076</td>
+      <td name="td1">Meganck et al Cell Rep</td>
+      <td name="td2">2024</td>
+      <td name="td3">SARS-CoV-2 variant of concern fitness and adaptation in primary human airway epithelia</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253698" target="_blank" style="color:#020e65"><b>GSE253698</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Airway</td>
+      <td name="td11">epithelium</td>
+      <td name="td11">Adult, Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1078-0432.CCR-24-2983</td>
+      <td name="td1">Rosner et al Clin Cancer Res</td>
+      <td name="td2">2025</td>
+      <td name="td3">Divergent Clinical and Immunologic Outcomes Based on STK11 Co-mutation Status in Resectable KRAS-Mutant Lung Cancers Following Neoadjuvant Immune Checkpoint Blockade</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280232" target="_blank" style="color:#020e65"><b>GSE280232</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-022-04552-0</td>
+      <td name="td1">Basil et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human distal airways contain a multipotent secretory cell that can regenerate alveoli</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168191" target="_blank" style="color:#020e65"><b>GSE168191</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Airway, Lung</td>
+      <td name="td11">peripheral lung tissue ,  Proximal airway epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.omtn.2021.06.010</td>
+      <td name="td1">Cooney et al Mol Ther Nucleic Acids</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lentiviral vectors transduce lung stem cells without disrupting plasticity.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159056" target="_blank" style="color:#020e65"><b>GSE159056</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Cystic fibrosis</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway Basal</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41419-023-05992-w</td>
+      <td name="td1">Wang et al Cell Death Dis</td>
+      <td name="td2">2023</td>
+      <td name="td3">Multidirectional characterization of cellular composition and spatial architecture in human multiple primary lung cancers</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200972" target="_blank" style="color:#020e65"><b>GSE200972</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Multiple primary lung cancers</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-21702-6</td>
+      <td name="td1">Bost et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">Deciphering the state of immune silence in fatal COVID-19 patients</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157344" target="_blank" style="color:#020e65"><b>GSE157344</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">BLAF,  Lung, PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2024.110009</td>
+      <td name="td1">Chang et al iScience</td>
+      <td name="td2">2024</td>
+      <td name="td3">Uncovering strain- and age-dependent innate immune responses to SARS-CoV-2 infection in air-liquid-interface cultured nasal epithelia</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241292" target="_blank" style="color:#020e65"><b>GSE241292</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Nose</td>
+      <td name="td11">epithelial</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.abe4282</td>
+      <td name="td1">Bharat et al Sci Transl Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Lung transplantation for patients with severe COVID-19.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158127" target="_blank" style="color:#020e65"><b>GSE158127</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Bronchi, Lung</td>
+      <td name="td11">Bronchi, Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.02725-2021</td>
+      <td name="td1">Hönzke et al Eur Respir J</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human lungs show limited permissiveness for SARS-CoV-2 due to scarce ACE2 levels but virus-induced expansion of inflammatory macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198864" target="_blank" style="color:#020e65"><b>GSE198864</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/spectrum.00776-23</td>
+      <td name="td1">Cohen et al Microbiol Spectr</td>
+      <td name="td2">2023</td>
+      <td name="td3">Unambiguous detection of SARS-CoV-2 subgenomic mRNAs with single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE189900" target="_blank" style="color:#020e65"><b>GSE189900</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoa</td>
+      <td name="td10">Airway</td>
+      <td name="td11">epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-50281-5</td>
+      <td name="td1">Quach et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Early human fetal lung atlas reveals the temporal dynamics of epithelial cell plasticity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264407" target="_blank" style="color:#020e65"><b>GSE264407</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-42327-x</td>
+      <td name="td1">Dolgalev et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Inflammation in the tumor-adjacent lung as a predictor of clinical outcome in lung adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229253" target="_blank" style="color:#020e65"><b>GSE229253</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.adn0136</td>
+      <td name="td1">Li et al Sci Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Comparative single-cell analysis reveals IFN-γ as a driver of respiratory sequelae after acute COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263817" target="_blank" style="color:#020e65"><b>GSE263817</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">R-PASC,  Non-R-PASC</td>
+      <td name="td10">Bronchi, Blood</td>
+      <td name="td11">alveolar,  PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ajt.2024.08.019</td>
+      <td name="td1">Wong et al Am J Transplant</td>
+      <td name="td2">2024</td>
+      <td name="td3">Ischemia-reperfusion responses in human lung transplants at the single-cell resolution</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220797" target="_blank" style="color:#020e65"><b>GSE220797</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Ischemia reperfusion</td>
+      <td name="td10">Lung</td>
+      <td name="td11">peripheral lung biopsy</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41388-021-02054-3</td>
+      <td name="td1">Bischoff et al Oncogene</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell RNA sequencing reveals distinct tumor microenvironmental patterns in lung adenocarcinoma</td>
+      <td name="td6"><a href="https://codeocean.com/capsule/8321305/tree/v1" target="_blank" style="color:#020e65"><b>https://codeocean.com/capsule/8321305/tree/v2</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI148517</td>
+      <td name="td1">Ahn et al Journal of Clinical Investigation</td>
+      <td name="td2">2021</td>
+      <td name="td3">Nasal ciliated cells are primary targets for SARS-CoV-2 replication in the early stage of COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164547" target="_blank" style="color:#020e65"><b>GSE164547</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1007/s13238-020-00752-4</td>
+      <td name="td1">He et al Protein Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell analysis reveals bronchoalveolar epithelial dysfunction in COVID-19 patients</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147143" target="_blank" style="color:#020e65"><b>GSE147143</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung: BALF</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03569-1</td>
+      <td name="td1">Melms et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">A molecular single-cell lung atlas of lethal COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171524" target="_blank" style="color:#020e65"><b>GSE171524</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.26508/lsa.202201458</td>
+      <td name="td1">Li et al Life Sci Alliance</td>
+      <td name="td2">2022</td>
+      <td name="td3">ScRNA-seq expression of <i>IFI27</i> and <i>APOC2</i> identifies four alveolar macrophage superclusters in healthy BALF.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193782" target="_blank" style="color:#020e65"><b>GSE193782</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Cystic Fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar（BALF）</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/2767-9764.CRC-23-0167</td>
+      <td name="td1">Yanagihara et al Cancer Res Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">A Th1-like CD4+ T-cell Cluster That Predicts Disease-free Survival in Early-stage Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215219" target="_blank" style="color:#020e65"><b>GSE215219</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/science.abl5197</td>
+      <td name="td1">Conde et al Science</td>
+      <td name="td2">2022</td>
+      <td name="td3">Cross-tissue immune cell analysis reveals tissue-specific features in humans</td>
+      <td name="td6"><a href="https://www.tissueimmunecellatlas.org/" target="_blank" style="color:#020e65"><b>E-MTAB-11536</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">Lung, PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abd5778</td>
+      <td name="td1">Gueguen et al Sci Immunol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Contribution of resident and circulating precursors to tumor-infiltrating CD8+ T cell populations in lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162498" target="_blank" style="color:#020e65"><b>GSE162498</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non–small cell lung cancer</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">Lung,  PBMC</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2056-8</td>
+      <td name="td1">Wu et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">Peripheral T cell expansion predicts tumour infiltration and clinical response</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139555" target="_blank" style="color:#020e65"><b>GSE139555</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoma; Lung squamous cell carcinoma,  nonkeratinizing; Lung squamous cell carcinoma,  keratinizing; Large cell neuroendocrine carcinoma</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-020-0901-9</td>
+      <td name="td1">Liao et al Nat Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell landscape of bronchoalveolar immune cells in patients with COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145926" target="_blank" style="color:#020e65"><b>GSE145926</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Lung: BALF</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ctm2.300</td>
+      <td name="td1">Tao et al Clin Transl Med</td>
+      <td name="td2">2021</td>
+      <td name="td3">Preliminary analyses of scRNA sequencing and immunohistochemistry of children's lung tissues indicate the expression of SARS-CoV-2 entry-related genes may not be the key reason for the milder syndromes of COVID-19 in children</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155900" target="_blank" style="color:#020e65"><b>GSE155900</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s13073-023-01164-9</td>
+      <td name="td1">Hu et al Genome Med</td>
+      <td name="td2">2023</td>
+      <td name="td3">Tumor microenvironment remodeling after neoadjuvant immunotherapy in non-small cell lung cancer revealed by single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207422" target="_blank" style="color:#020e65"><b>GSE207422</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2021.09.008</td>
+      <td name="td1">Chan et al Cancer Cell</td>
+      <td name="td2">2021</td>
+      <td name="td3">Signatures of plasticity,  metastasis,  and immunosuppression in an atlas of human small cell lung cancer</td>
+      <td name="td6"><a href="https://data.humantumoratlas.org/publications/msk_sclc_chan_2021?tab=scrna-seq" target="_blank" style="color:#020e65"><b>https://data.humantumoratlas.org/publications/msk_sclc_chan_2021?tab=scrna-seq</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">tumors,  regional lymph node metastases,  and distant metastases (liver,  adrenal gland,  axilla,  and pleural effusion)</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-22801-0</td>
+      <td name="td1">Wu et al Nat Communs</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell profiling of tumor heterogeneity and the microenvironment in advanced non-small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE148071&format=file" target="_blank" style="color:#020e65"><b>GSE148071</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1007/s00018-024-05322-z</td>
+      <td name="td1">Vu Manh et al Cell Mol Life Sci</td>
+      <td name="td2">2024</td>
+      <td name="td3">SARS-CoV2 infection in whole lung primarily targets macrophages that display subset-specific responses.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246128" target="_blank" style="color:#020e65"><b>GSE246128</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Alcoholism,  High blood pressure,  Alcoholism - Diabete</td>
+      <td name="td10">Lung</td>
+      <td name="td11">upper lobes</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jaci.2024.04.021</td>
+      <td name="td1">Ruysseveldt et al J Allergy Clin Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">The nasal basal cell population shifts toward a diseased phenotype with impaired barrier formation capacity in allergic rhinitis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261706" target="_blank" style="color:#020e65"><b>GSE261706</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Allergic rhinitis</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nasal Inferior Turbinate</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-15647-5</td>
+      <td name="td1">Tsukui et al Nat Communs</td>
+      <td name="td2">2020</td>
+      <td name="td3">Collagen-producing lung cell atlas identifies multiple subsets with distinct localization and relevance to fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132771" target="_blank" style="color:#020e65"><b>GSE132771</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF) ,  Scleroderma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.167082</td>
+      <td name="td1">Khatri et al JCI Insight</td>
+      <td name="td2">2023</td>
+      <td name="td3">JAK-STAT activation contributes to cytotoxic T cell-mediated basal cell death in human chronic lung allograft dysfunction.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224210" target="_blank" style="color:#020e65"><b>GSE224210</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic lung allograft dysfunction</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-49756-2</td>
+      <td name="td1">Neyton et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Distinct pulmonary and systemic effects of dexamethasone in severe COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236030" target="_blank" style="color:#020e65"><b>GSE236030</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Trachea, Blood</td>
+      <td name="td11">tracheal aspirate,  Blood</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.180198</td>
+      <td name="td1">Koenitzer et al JCI Insight</td>
+      <td name="td2">2024</td>
+      <td name="td3">Transcriptional analysis of primary ciliary dyskinesia airway cells reveals a dedicated cilia glutathione pathway.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE272189" target="_blank" style="color:#020e65"><b>GSE272189</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Primary ciliary dyskinesia</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway epithelial</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201911-2199OC</td>
+      <td name="td1">Deprez et al Am J Respir Crit Care Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">A Single-Cell Atlas of the Human Healthy Airways</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143868" target="_blank" style="color:#020e65"><b>GSE143868</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2024-0232LE</td>
+      <td name="td1">Blackburn et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2025</td>
+      <td name="td3">A Single-Cell RNA Sequencing Atlas of the Chronic Obstructive Pulmonary Disease Distal Lung to Predict Cell-Cell Communication.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269390" target="_blank" style="color:#020e65"><b>GSE269390</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">chronic obstructive pulmonary disease</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Distal lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.177729</td>
+      <td name="td1">Bai et al JCI Insight</td>
+      <td name="td2">2024</td>
+      <td name="td3">Increased autoreactivity and maturity of EBI2+ antibody-secreting cells from nasal polyps</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE270953" target="_blank" style="color:#020e65"><b>GSE270953</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic Rhinosinusitis with Nasal Polyps (CRSwNP)</td>
+      <td name="td10">Nose, Pharynx</td>
+      <td name="td11">Nasal Polyps; Tonsils</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-43223-0</td>
+      <td name="td1">Morrell et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">The transcriptional and phenotypic characteristics that define alveolar macrophage subsets in acute hypoxemic respiratory failure.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234918" target="_blank" style="color:#020e65"><b>GSE234918</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">ARDS,  AHRF</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.21203/rs.3.rs-2870695/v1</td>
+      <td name="td1">Choi et al Res Sq</td>
+      <td name="td2">2023</td>
+      <td name="td3">Organoid modeling of lung-resident immune responses to SARS-CoV-2 infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216049" target="_blank" style="color:#020e65"><b>GSE216049</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201712-2410OC</td>
+      <td name="td1">Reyfman et al American journal of respiratory and critical care medicine</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-Cell Transcriptomic Analysis of Human Lung Provides Insights into the Pathobiology of Pulmonary Fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122960" target="_blank" style="color:#020e65"><b>GSE122960</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Systemic sclerosis_associated ILD; IPF; Hypersensitivity pneumonitis; Myositis-associated ILD</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jinf.2023.09.004</td>
+      <td name="td1">Wang et al J Infect</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell RNA-sequencing reveals heterogeneity and intercellular crosstalk in human tuberculosis lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE192483" target="_blank" style="color:#020e65"><b>GSE192483</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">tuberculosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.139019</td>
+      <td name="td1">Sana Siddiqui et al JCI Insight</td>
+      <td name="td2">2021</td>
+      <td name="td3">Epithelial miR-141 regulates IL-13-induced airway mucus production</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164015" target="_blank" style="color:#020e65"><b>GSE164015</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Asthma</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1371/journal.pbio.3001143</td>
+      <td name="td1">Ravindra et al PLoS Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell longitudinal analysis of SARS-CoV-2 infection in human airway epithelium identifies target cells,  alterations in gene expression,  and cell state changes.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE166766" target="_blank" style="color:#020e65"><b>GSE166766</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2024.1372658</td>
+      <td name="td1">Mehta et al Front Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell analysis of bronchoalveolar cells in inflammatory and fibrotic post-COVID lung disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE228236" target="_blank" style="color:#020e65"><b>GSE228236</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">subacute inflammation,  pulmonary fibrosis</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-21795-z</td>
+      <td name="td1">Gong et al Nat Communs</td>
+      <td name="td2">2021</td>
+      <td name="td3">Comprehensive single-cell sequencing reveals the stromal dynamics and tumor-specific characteristics in the microenvironment of nasopharyngeal carcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE150825" target="_blank" style="color:#020e65"><b>GSE150825</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">nasopharyngeal carcinom</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1084/jem.20220126</td>
+      <td name="td1">Liu et al J Exp Med</td>
+      <td name="td2">2022</td>
+      <td name="td3">HER2 drives lung fibrosis by activating a metastatic cancer signature in invasive lung fibroblasts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137026" target="_blank" style="color:#020e65"><b>GSE137026</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">idiopathic pulmonary fibrosis,  Invasive lung fibroblasts,  Non-invasive lung fibroblasts</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.02441-2018</td>
+      <td name="td1">Morse et al Eur Respir J</td>
+      <td name="td2">2019</td>
+      <td name="td3">Proliferating SPP1/MERTK-expressing macrophages in idiopathic pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128033" target="_blank" style="color:#020e65"><b>GSE128033</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">IPF</td>
+      <td name="td10">Bronchi, Lung</td>
+      <td name="td11">upperlobe lung, lower lobe lung, mix of upper + lower lobe lung, Bronchi</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2023.01.032</td>
+      <td name="td1">Wang et al Immunity</td>
+      <td name="td2">2023</td>
+      <td name="td3">Dysregulated lung stroma drives emphysema exacerbation by potentiating resident lymphocytes to suppress an epithelial stem cell reservoir</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE196638" target="_blank" style="color:#020e65"><b>GSE196638</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung (distal)</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102151</td>
+      <td name="td1">Wyler et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Transcriptomic profiling of SARS-CoV-2 infected human cell lines identifies HSP90 as target for COVID-19 therapy.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148729" target="_blank" style="color:#020e65"><b>GSE148729</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung cell line</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-024-01885-y</td>
+      <td name="td1">Jaeger et al Nat Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Diversity of group 1 innate lymphoid cells in human tissues</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240441" target="_blank" style="color:#020e65"><b>GSE240441</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Pharynx, Lung, Blood</td>
+      <td name="td11">tonsil,  lung,  PBMC</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.xgen.2022.100229</td>
+      <td name="td1">Koh et al Cell Genom</td>
+      <td name="td2">2024</td>
+      <td name="td3">Genomic characterization and therapeutic utilization of IL-13-responsive sequences in asthma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE185199" target="_blank" style="color:#020e65"><b>GSE185199</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi epithelial</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1142228</td>
+      <td name="td1">Gouin et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cell type- and time-dependent biological responses in ex vivo perfused lung grafts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218788" target="_blank" style="color:#020e65"><b>GSE218788</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">High blood pressure</td>
+      <td name="td10">Lung</td>
+      <td name="td11">upper lobes</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-021-01897-6</td>
+      <td name="td1">Maroni et al Commun Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Identification of a targetable KRAS-mutant epithelial population in non-small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136246" target="_blank" style="color:#020e65"><b>GSE136246</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2020.10.030</td>
+      <td name="td1">Daniloski et al Cell</td>
+      <td name="td2">2021</td>
+      <td name="td3">Identification of Required Host Factors for SARS-CoV-2 Infection in Human Cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159519" target="_blank" style="color:#020e65"><b>GSE159519</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/annrheumdis-2018-214865</td>
+      <td name="td1">Valenzi et al Ann Rheum Dis</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell analysis reveals fibroblast heterogeneity and myofibroblasts in systemic sclerosis-associated interstitial lung disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128169" target="_blank" style="color:#020e65"><b>GSE128169</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">scleroderma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.113454</td>
+      <td name="td1">Li et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Abundant binary promoter switches in lineage-determining transcription factors indicate a digital component of cell fate determination</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242100" target="_blank" style="color:#020e65"><b>GSE242100</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Pharynx, Blood</td>
+      <td name="td11">Tonsil,  PBMC</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12931-022-02293-2</td>
+      <td name="td1">Huang et al Respir Res</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptomics highlights immunological dysregulations of monocytes in the pathobiology of COPD.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171541" target="_blank" style="color:#020e65"><b>GSE171541</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fonc.2023.1204726</td>
+      <td name="td1">Miller et al Front Oncol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Phase Ib trial of inhaled iloprost for the prevention of lung cancer with predictive and response biomarker assessment</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246441" target="_blank" style="color:#020e65"><b>GSE240001</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adr9995</td>
+      <td name="td1">Berdnikovs et al Sci Adv</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-cell profiling demonstrates the combined effect of wheeze phenotype and infant viral infection on airway epithelial development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE286262" target="_blank" style="color:#020e65"><b>GSE286262</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">wheeze,  RSV-infected</td>
+      <td name="td10">Nose</td>
+      <td name="td11">epithelial</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jaci.2021.11.017</td>
+      <td name="td1">Nakayama T et al Jaci</td>
+      <td name="td2">2021</td>
+      <td name="td3">Inflammatory molecular endotypes of nasal polyps derived from White and Japanese populations</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179269" target="_blank" style="color:#020e65"><b>GSE179269</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Nasal polyps</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.202302-0264LE</td>
+      <td name="td1">Yao et al Am J Respir Crit Care Med</td>
+      <td name="td2">2023</td>
+      <td name="td3">Maladaptive TGF-β Signals to the Alveolar Epithelium Drive Fibrosis after COVID-19 Infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224955" target="_blank" style="color:#020e65"><b>GSE224955</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">post-acute sequelae SARS-CoV-2 infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI155506</td>
+      <td name="td1">Oliva et al J Clin Invest</td>
+      <td name="td2">2022</td>
+      <td name="td3">Aging-related olfactory loss is associated with olfactory stem cell transcriptional alterations in humans.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184117" target="_blank" style="color:#020e65"><b>GSE184117</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Nose</td>
+      <td name="td11">olfactory epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2157-4</td>
+      <td name="td1">Han et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">Construction of a human cell landscape at single-cell level</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134355" target="_blank" style="color:#020e65"><b>GSE134355</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">right lobes</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1093/cei/uxae118</td>
+      <td name="td1">Osborn et al Clin Exp Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-cell analysis of lung epithelial cells reveals age and cell population-specific responses to SARS-CoV-2 infection in ciliated cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE254266" target="_blank" style="color:#020e65"><b>GSE254266</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7150/jca.103656</td>
+      <td name="td1">Zhang et al J Cancer</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-Cell Sequencing Reveals PD-L1-Mediated Immune Escape Signaling in Lung Adenocarcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267108" target="_blank" style="color:#020e65"><b>GSE267108</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoa</td>
+      <td name="td10">Lung</td>
+      <td name="td11">right upper lung,  right lower lung,  left upper lung,  left lower lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s13059-019-1906-x</td>
+      <td name="td1">Madissoon et al Genome Biology</td>
+      <td name="td2">2019</td>
+      <td name="td3">scRNA-seq assessment of the human lung,  spleen,  and esophagus tissue stability after cold preservation</td>
+      <td name="td6"><a href="https://data.humancellatlas.org/explore/projects?filter=%5B%7B%22facetName%22:%22publicationTitle%22, %22terms%22:%5B%22scRNA-seq%20assessment%20of%20the%20human%20lung, %20spleen, %20and%20esophagus%20tissue%20stability%20after%20cold%20preservation%22%5D%7D%5D" target="_blank" style="color:#020e65"><b>PRJEB31843</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung parenchyma (lower left lobe)</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/cac2.12449</td>
+      <td name="td1">Kwok et al Cancer Commun (Lond)</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell transcriptomic analysis uncovers intratumoral heterogeneity and drug-tolerant persister in ALK-rearranged lung adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223779" target="_blank" style="color:#020e65"><b>GSE223779</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-22-0112</td>
+      <td name="td1">Kagamu et al Cancer Res</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-Cell Analysis Reveals a CD4+ T-cell Cluster That Correlates with PD-1 Blockade Efficacy</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168844" target="_blank" style="color:#020e65"><b>GSE168844</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.add0484</td>
+      <td name="td1">Finlay et al Sci Transl Med</td>
+      <td name="td2">2022</td>
+      <td name="td3">Persistent post-COVID-19 smell loss is associated with immune cell infiltration and altered gene expression in olfactory epithelium</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE201620" target="_blank" style="color:#020e65"><b>GSE201620</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Nose</td>
+      <td name="td11">epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2021.03.005</td>
+      <td name="td1">Szabo et al Immunity</td>
+      <td name="td2">2021</td>
+      <td name="td3">Longitudinal profiling of respiratory and systemic immune responses reveals myeloid cell-driven lung inflammation in severe COVID-19</td>
+      <td name="td6"><a href="https://www.covid19cellatlas.org/index.patient.html" target="_blank" style="color:#020e65"><b>Farber group, https://www.covid19cellatlas.org/index.patient.html</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/JVI.01257-21</td>
+      <td name="td1">Nilsson-Payant et al J Virol</td>
+      <td name="td2">2021</td>
+      <td name="td3">The NF-&#x3ba;B Transcriptional Footprint Is Essential for SARS-CoV-2 Replication.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184536" target="_blank" style="color:#020e65"><b>GSE184536</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.medj.2023.09.003</td>
+      <td name="td1">Mata et al Med</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cytotoxic CD4+ tissue-resident memory T cells are associated with asthma severity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE181710" target="_blank" style="color:#020e65"><b>GSE181710</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">asthma</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.202005-1989OC</td>
+      <td name="td1">Mould et al Am J Respir Crit Care Med</td>
+      <td name="td2">2021</td>
+      <td name="td3">Airspace Macrophages and Monocytes Exist in Transcriptionally Distinct Subsets in Healthy Adults.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE151928" target="_blank" style="color:#020e65"><b>GSE151928</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-22-3140</td>
+      <td name="td1">Fan et al Cancer Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Elevated Mast Cell Abundance Is Associated with Enrichment of CCR2+ Cytotoxic T Cells and Favorable Prognosis in Lung Adenocarcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE127465" target="_blank" style="color:#020e65"><b>GSE127465</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">LA、SSC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ctm2.1366</td>
+      <td name="td1">Song et al Clin Transl Med</td>
+      <td name="td2">2023</td>
+      <td name="td3">Transcriptomic evidence of lung repair in paediatric ARDS survival</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223793" target="_blank" style="color:#020e65"><b>GSE223793</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">acute respiratory distress syndrome</td>
+      <td name="td10">Lung, Blood</td>
+      <td name="td11">Lung,  PBMC</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.165837</td>
+      <td name="td1">Angeles-Lopez et al JCI Insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">Regulation of lung progenitor plasticity and repair by fatty acid oxidation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283885" target="_blank" style="color:#020e65"><b>GSE283885</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abq6352</td>
+      <td name="td1">Jehan Alladina et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">A human model of asthma exacerbation reveals transcriptional programs and cell circuits specific to allergic asthma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193816" target="_blank" style="color:#020e65"><b>GSE193816</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Allergic asthmatics</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-021-00809-4</td>
+      <td name="td1">Kathiriya et al Nature Cell Biology</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human alveolar Type 2 epithelium transdifferentiates into metaplastic KRT5+ basal cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150068" target="_blank" style="color:#020e65"><b>GSE150068</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Organoid</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adf9988</td>
+      <td name="td1">Barnes et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Early human lung immune cell development and its role in epithelial cell fate.</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11528" target="_blank" style="color:#020e65"><b>E-MTAB-11528</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ctm2.224</td>
+      <td name="td1">Xu et al Clin Transl Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Persistent viral activity,  cytokine storm,  and lung fibrosis in a case of severe COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149878" target="_blank" style="color:#020e65"><b>GSE149878</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2025.03.14.643375</td>
+      <td name="td1">Rivera-Cardona et al bioRxiv</td>
+      <td name="td2">2025</td>
+      <td name="td3">Intrinsic OASL expression licenses interferon induction during influenza A virus infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287024" target="_blank" style="color:#020e65"><b>GSE287024</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">alveolar epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41422-020-0374-x</td>
+      <td name="td1">Chen et al Cell Research</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell transcriptomics reveals regulators underlying immune cell diversity and immune subtypes associated with prognosis in nasopharyngeal carcinom</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150430" target="_blank" style="color:#020e65"><b>GSE150430</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">nasopharyngeal carcinom</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2020.04.12.037580</td>
+      <td name="td1">Wang et al Elife</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single Nucleus Multiomic Profiling Reveals Age-Dynamic Regulation of Host Genes Associated with SARS-CoV-2 Infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161383" target="_blank" style="color:#020e65"><b>GSE161382</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children, Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/jitc-2021-003534</td>
+      <td name="td1">Yang et al J Immunother Cancer</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptome analysis revealed a suppressive tumor immune microenvironment in EGFR mutant lung adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171145" target="_blank" style="color:#020e65"><b>GSE171145</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1189520</td>
+      <td name="td1">Zhang et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Mast cell marker gene signature: prognosis and immunotherapy response prediction in lung adenocarcinoma through integrated scRNA-seq and bulk RNA-seq.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150938" target="_blank" style="color:#020e65"><b>GSE150938</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-16066-2</td>
+      <td name="td1">Cook DP et al Nat Commun</td>
+      <td name="td2">2020</td>
+      <td name="td3">Context specificity of the EMT transcriptional response</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147405" target="_blank" style="color:#020e65"><b>GSE147405</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2021-0555OC</td>
+      <td name="td1">Watanabe et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Anomalous Epithelial Variations and Ectopic Inflammatory Response in Chronic Obstructive Pulmonary Disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE173896" target="_blank" style="color:#020e65"><b>GSE173896</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ctm2.1786</td>
+      <td name="td1">Wang et al Clin Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell transcriptome analysis deciphers the CD74-mediated immune evasion and tumour growth in lung squamous cell carcinoma with chronic obstructive pulmonary disease.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194070" target="_blank" style="color:#020e65"><b>GSE194070</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Non-Small Cell Lung Cancer,  COPD</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-022-04541-3</td>
+      <td name="td1">Murthy et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human distal lung maps and lineage hierarchies reveal a bipotent progenitor</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178519" target="_blank" style="color:#020e65"><b>GSE178519</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Organoid</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12864-024-10321-2</td>
+      <td name="td1">Guan et al BMC Genomics</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell transcriptomic landscape and the microenvironment of normal adjacent tissues in hypopharyngeal carcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206038" target="_blank" style="color:#020e65"><b>GSE206038</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">hypopharyngeal carcinoma</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">hypopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201904-0792OC</td>
+      <td name="td1">Carraro et al American Journal of Respiratory and Critical Care Medicine</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-Cell Reconstruction of Human Basal Cell Diversity in Normal and Idiopathic Pulmonary Fibrosis Lungs</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143706" target="_blank" style="color:#020e65"><b>GSE143706</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF) ,  Scleroderma</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-021-01332-7</td>
+      <td name="td1">Carraro et al Nat Med</td>
+      <td name="td2">2021</td>
+      <td name="td3">Transcriptional analysis of cystic fibrosis airways at single-cell resolution reveals altered epithelial cell states and composition</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150674" target="_blank" style="color:#020e65"><b>GSE150674</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Cystic Fibrosis</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Airway Epithelium ,  Airway Submucosal Glands</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.15252/embj.20105114</td>
+      <td name="td1">Lukassen et al EMBO Journal</td>
+      <td name="td2">2020</td>
+      <td name="td3">SARS‐CoV‐2 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells</td>
+      <td name="td6"><a href="https://data.mendeley.com/datasets/7r2cwbw44m/1" target="_blank" style="color:#020e65"><b>7r2cwbw44m</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.ado4720</td>
+      <td name="td1">Mohammed et al Sci Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Distinct type I and II interferon responses direct cortical and medullary thymic epithelial cell development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212244" target="_blank" style="color:#020e65"><b>GSE212244</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi, Lung</td>
+      <td name="td11">Bronchi,  Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.112162</td>
+      <td name="td1">Mitsuhashi et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Identification of fibrocyte cluster in tumors reveals the role in antitumor immunity by PD-L1 blockade</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223923" target="_blank" style="color:#020e65"><b>GSE223923</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoa</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-51153-8</td>
+      <td name="td1">Olan et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">HMGA1 orchestrates chromatin compartmentalization and sequesters genes into 3D networks coordinating senescence heterogeneity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245807" target="_blank" style="color:#020e65"><b>GSE245807</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-16239-z</td>
+      <td name="td1">Goldfarbmuren et al Nat Communs</td>
+      <td name="td2">2020</td>
+      <td name="td3">Dissecting the cellular specificity of smoking effects and reconstructing lineages in the human airway epithelium</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134174" target="_blank" style="color:#020e65"><b>GSE134174</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Tracheal epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-18979-4</td>
+      <td name="td1">Obraztsova et al Nat Commun</td>
+      <td name="td2">2020</td>
+      <td name="td3">mTORC1 activation in lung mesenchyme drives sex- and age-dependent pulmonary structure and function decline.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139819" target="_blank" style="color:#020e65"><b>GSE139819</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">LAM</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.202008-3198OC</td>
+      <td name="td1">Okuda et al Am J Respir Crit Care Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Secretory Cells Dominate Airway CFTR Expression and Function in Human Airway Superficial Epithelia.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160673" target="_blank" style="color:#020e65"><b>GSE160673</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi,  Bronchiole</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201912-2445OC</td>
+      <td name="td1">Guo et al Am J Respir Crit Care Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-Cell Transcriptomic Analysis Identifies a Unique Pulmonary Lymphangioleiomyomatosis Cell</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135851" target="_blank" style="color:#020e65"><b>GSE135851</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lymphangioleiomyomatosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-60441-w</td>
+      <td name="td1">Shah et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single cell profiling of human airway identifies tuft-ionocyte progenitor cells displaying cytokine-dependent differentiation bias in vitro</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240168" target="_blank" style="color:#020e65"><b>GSE240168</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi, Airway</td>
+      <td name="td11">primary bronchus,  small airway</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1078-0432.CCR-24-0049</td>
+      <td name="td1">Reinecke et al Clinical Cancer Research</td>
+      <td name="td2">2024</td>
+      <td name="td3">Aberrant activation of wound healing programs within the metastatic niche facilitates lung colonization by osteosarcoma cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE270231" target="_blank" style="color:#020e65"><b>GSE270231</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Hilar lobe,  Lower lobe,  Right Hilar I lobe,  Right upper lobe,  lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-24730-4</td>
+      <td name="td1">Fischer et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell RNA sequencing reveals ex vivo signatures of SARS-CoV-2-reactive T cells through 'reverse phenotyping'</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171037" target="_blank" style="color:#020e65"><b>GSE171037</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2022.10.25.22281528</td>
+      <td name="td1">Ziegler et al medRxiv</td>
+      <td name="td2">2023</td>
+      <td name="td3">Severe COVID-19 is associated with fungal colonization of the nasopharynx and potent induction of IL-17 responses in the nasal epithelium.</td>
+      <td name="td6"><a href="https://singlecell.broadinstitute.org/single_cell/study/SCP1289" target="_blank" style="color:#020e65"><b>SCP1289</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2021.07.023</td>
+      <td name="td1">Ziegler et al Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Impaired local intrinsic immunity to SARS-CoV-2 infection in severe COVID-19.</td>
+      <td name="td6"><a href="https://singlecell.broadinstitute.org/single_cell/study/SCP1289/" target="_blank" style="color:#020e65"><b>SCP1289</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-019-0750-6</td>
+      <td name="td1">Laughney et al at Nat Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Regenerative lineages and immune-mediated pruning in lung cancer metastasis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123902" target="_blank" style="color:#020e65"><b>GSE123902</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2025.03.14.643375</td>
+      <td name="td1">Rivera-Cardona et al bioRxiv</td>
+      <td name="td2">2025</td>
+      <td name="td3">Intrinsic OASL expression licenses interferon induction during influenza A virus infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE247979" target="_blank" style="color:#020e65"><b>GSE247979</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Trachea, Bronchi</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2020.12.003</td>
+      <td name="td1">Evren et al Immunity</td>
+      <td name="td2">2021</td>
+      <td name="td3">Distinct developmental pathways from blood monocytes generate human lung macrophage diversity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217722" target="_blank" style="color:#020e65"><b>GSE217722</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41421-023-00598-0</td>
+      <td name="td1">Wang et al Cell Discov</td>
+      <td name="td2">2023</td>
+      <td name="td3">Aberrant differentiation of epithelial progenitors is accompanied by a hypoxic microenvironment in the paraquat-injured human lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE231647" target="_blank" style="color:#020e65"><b>GSE231647</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">paraquat-injured lung</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1371/journal.ppat.1009458</td>
+      <td name="td1">Hippee et al PLoS Pathog</td>
+      <td name="td2">2021</td>
+      <td name="td3">Measles virus exits human airway epithelia within dislodged metabolically active infectious centers</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168775" target="_blank" style="color:#020e65"><b>GSE168775</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway Epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2021-0563OC</td>
+      <td name="td1">Liégeois et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Airway Macrophages Encompass Transcriptionally and Functionally Distinct Subsets Altered by Smoking</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183974" target="_blank" style="color:#020e65"><b>GSE183974</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.152288</td>
+      <td name="td1">Gao et al JCI Insight</td>
+      <td name="td2">2021</td>
+      <td name="td3">Human nasal wash RNA-Seq reveals distinct cell-specific innate immune responses in influenza versus SARS-CoV-2.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176269" target="_blank" style="color:#020e65"><b>GSE176269</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19 and Flu</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12967-025-06485-4</td>
+      <td name="td1">Huang et al J Transl Med</td>
+      <td name="td2">2025</td>
+      <td name="td3">scRNA-seq reveals that VEGF signaling mediates the response to neoadjuvant anlotinib combined with PD-1 blockade therapy in non-small cell lung cancer.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE291670" target="_blank" style="color:#020e65"><b>GSE291670</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-58450-w</td>
+      <td name="td1">Kang et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Generation of induced alveolar assembloids with functional alveolar-like macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE231467" target="_blank" style="color:#020e65"><b>GSE231467</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1162087</td>
+      <td name="td1">Li et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Heme oxygenase-1 determines the cell fate of ferroptotic death of alveolar macrophages in COPD.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE227691" target="_blank" style="color:#020e65"><b>GSE227691</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-020-0844-1</td>
+      <td name="td1">Slyper et al Nat Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">A single-cell and single-nucleus RNA-Seq toolbox for fresh and frozen human tumors.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140819" target="_blank" style="color:#020e65"><b>GSE140819</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41698-023-00384-x</td>
+      <td name="td1">Hui et al NPJ Precis Oncol</td>
+      <td name="td2">2023</td>
+      <td name="td3">PD-1 blockade potentiates neoadjuvant chemotherapy in NSCLC via increasing CD127+ and KLRG1+ CD8 T cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229353" target="_blank" style="color:#020e65"><b>GSE229353</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41421-025-00777-1</td>
+      <td name="td1">Zhang et al Cell Discov</td>
+      <td name="td2">2025</td>
+      <td name="td3">A basigin antibody modulates MCTs to impact tumor metabolism and immunity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE268751" target="_blank" style="color:#020e65"><b>GSE268751</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non small cell lung cancer,  Squamous cell carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12931-023-02514-2</td>
+      <td name="td1">Prescott et al Respir Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">A comparative study of in vitro air-liquid interface culture models of the human airway epithelium evaluating cellular heterogeneity and gene expression at single cell resolution.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225765" target="_blank" style="color:#020e65"><b>GSE225765</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-21884-z</td>
+      <td name="td1">Aissa et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell transcriptional changes associated with drug tolerance and response to combination therapies in cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134836" target="_blank" style="color:#020e65"><b>GSE134836</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Non-small cell lung carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1182/bloodadvances.2022008834</td>
+      <td name="td1">Eddins et al Blood Adv</td>
+      <td name="td2">2023</td>
+      <td name="td3">Transcriptional reprogramming of infiltrating neutrophils drives lung pathology in severe COVID-19 despite low viral load</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186267" target="_blank" style="color:#020e65"><b>GSE186267</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Trachea, Blood</td>
+      <td name="td11">Tracheal Aspirate,  blood</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.03794-2020</td>
+      <td name="td1">Liao et al Eur Respir J</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell RNA sequencing identifies macrophage transcriptional heterogeneities in granulomatous diseases</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184735" target="_blank" style="color:#020e65"><b>GSE184735</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic Beryllium Disease,  Non-progressive Sarcoidosis,  Progressive Sarcoidosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">alveoli</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3390/cells11244013</td>
+      <td name="td1">Yang et al Cells</td>
+      <td name="td2">2022</td>
+      <td name="td3">Multiomics Analysis of a <i>DNAH5</i>-Mutated PCD Organoid Model Revealed the Key Role of the TGF-&#x3b2;/BMP and Notch Pathways in Epithelial Differentiation and the Immune Response in <i>DNAH5</i>-Mutated Patients.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217596" target="_blank" style="color:#020e65"><b>GSE217596</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Primary ciliary dyskinesia</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI148517</td>
+      <td name="td1">Ahn et al Journal of Clinical Investigation</td>
+      <td name="td2">2021</td>
+      <td name="td3">Nasal ciliated cells are primary targets for SARS-CoV-2 replication in the early stage of COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171488" target="_blank" style="color:#020e65"><b>GSE171488</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Nasopharynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-023-01095-y</td>
+      <td name="td1">Tang et al Nat Cell Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">A multi-organoid platform identifies CIART as a key factor for SARS-CoV-2 infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202964" target="_blank" style="color:#020e65"><b>GSE202964</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-36810-8</td>
+      <td name="td1">Uehara et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Insights into pulmonary phosphate homeostasis and osteoclastogenesis emerge from the study of pulmonary alveolar microlithiasis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199329" target="_blank" style="color:#020e65"><b>GSE199329</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Pulmonary alveolar microlithiasis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2018.03.067</td>
+      <td name="td1">Black et al Cell Rep</td>
+      <td name="td2">2018</td>
+      <td name="td3">FOXF1 Inhibits Pulmonary Fibrosis by Preventing CDH2-CDH11 Cadherin Switch in Myofibroblasts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213017" target="_blank" style="color:#020e65"><b>GSE213017</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult, Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.202004-0991OC</td>
+      <td name="td1">Schupp et al Am J Respir Crit Care Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-Cell Transcriptional Archetypes of Airway Inflammation in Cystic Fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145360" target="_blank" style="color:#020e65"><b>GSE145360</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Cystic Fibrosis (CF)</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Sputum</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.153471</td>
+      <td name="td1">Crnkovic et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptomics reveals skewed cellular communication and phenotypic shift in pulmonary artery remodeling</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE228643" target="_blank" style="color:#020e65"><b>GSE228643</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">pulmonary hypertension associated with pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Medium/small size pulmonary artery</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2022.11.013</td>
+      <td name="td1">Lim et al Cell Stem Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Organoid modeling of human fetal lung alveolar development reveals mechanisms of cell fate patterning and neonatal respiratory disease</td>
+      <td name="td6"><a href="https://fetal-lung-organoid.cellgeni.sanger.ac.uk" target="_blank" style="color:#020e65"><b>E-MTAB-11435</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI99435</td>
+      <td name="td1">Wang et al J Clin Invest</td>
+      <td name="td2">2018</td>
+      <td name="td3">Expansion of hedgehog disrupts mesenchymal identity and induces emphysema phenotype</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE102592" target="_blank" style="color:#020e65"><b>GSE102592</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI99435</td>
+      <td name="td1">Wang et al J Clin Invest</td>
+      <td name="td2">2018</td>
+      <td name="td3">Expansion of hedgehog disrupts mesenchymal identity and induces emphysema phenotype</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108288" target="_blank" style="color:#020e65"><b>GSE108288</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/mBio.02880-19</td>
+      <td name="td1">Wang et al mBio</td>
+      <td name="td2">2020</td>
+      <td name="td3">Cell-to-Cell Variation in Defective Virus Expression and Effects on Host Responses during Influenza Virus Infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118773" target="_blank" style="color:#020e65"><b>GSE118773</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Bronchi, Lung</td>
+      <td name="td11">Bronchi, Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2157-4</td>
+      <td name="td1">Han et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">Construction of a human cell landscape at single-cell level</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134355" target="_blank" style="color:#020e65"><b>GSE134355</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cels.2024.02.005</td>
+      <td name="td1">McCauley et al Cell Syst</td>
+      <td name="td2">2024</td>
+      <td name="td3">A map of signaling responses in the human airway epithelium</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246441" target="_blank" style="color:#020e65"><b>GSE246441</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">epithelium</td>
+      <td name="td11">Adult, Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.crmeth.2022.100314</td>
+      <td name="td1">Tamai et al Cell Rep Methods</td>
+      <td name="td2">2022</td>
+      <td name="td3">iPSC-derived mesenchymal cells that support alveolar organoid development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE188823" target="_blank" style="color:#020e65"><b>GSE188823</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2022.903513</td>
+      <td name="td1">He et al Front Immunol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-Cell RNA Sequencing Unravels Distinct Tumor Microenvironment of Different Components of Lung Adenocarcinoma Featured as Mixed Ground-Glass Opacity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203360" target="_blank" style="color:#020e65"><b>GSE203360</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">solid components and ground-glass like components</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2020.11.010</td>
+      <td name="td1">Purkayastha et al Cell Stem Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Direct Exposure to SARS-CoV-2 and Cigarette Smoke Increases Infection Severity and Alters the Stem Cell-Derived Airway Repair Response</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161089" target="_blank" style="color:#020e65"><b>GSE161089</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Airway</td>
+      <td name="td11">airway</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.aaw3851</td>
+      <td name="td1">Raredon et al Sci Adv</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-cell connectomic analysis of adult mammalian lungs</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133747" target="_blank" style="color:#020e65"><b>GSE133747</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.15252/embj.20105114</td>
+      <td name="td1">Lukassen et al EMBO Journal</td>
+      <td name="td2">2020</td>
+      <td name="td3">SARS‐CoV‐2 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells</td>
+      <td name="td6"><a href="https://data.mendeley.com/datasets/7r2cwbw44m/1" target="_blank" style="color:#020e65"><b>7r2cwbw44m</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-3014-1</td>
+      <td name="td1">Salahudeen et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">Progenitor identification and SARS-CoV-2 infection in human distal lung organoids</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106850" target="_blank" style="color:#020e65"><b>GSE106850</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abc6259</td>
+      <td name="td1">Hung et al Sci Immunol</td>
+      <td name="td2">2020</td>
+      <td name="td3">Cellular context of IL-33 expression dictates impact on anti-helminth immunity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156285" target="_blank" style="color:#020e65"><b>GSE156285</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">CRSwNP,  CRSwNP_AERD</td>
+      <td name="td10">Nose</td>
+      <td name="td11">inferior turbinate,  nasal polyps</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-33193-0</td>
+      <td name="td1">Jaeger et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">Airway basal cells show a dedifferentiated KRT17highPhenotype and promote fibrosis in idiopathic pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141939" target="_blank" style="color:#020e65"><b>GSE141939</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Bronchi</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adf9988</td>
+      <td name="td1">Barnes et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Early human lung immune cell development and its role in epithelial cell fate.</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11528" target="_blank" style="color:#020e65"><b>E-MTAB-11528</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.32303</td>
+      <td name="td1">Russell et al Elife</td>
+      <td name="td2">2019</td>
+      <td name="td3">Extreme heterogeneity of influenza virus infection in single cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108041" target="_blank" style="color:#020e65"><b>GSE108041</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1111/acel.13969</td>
+      <td name="td1">Jia et al Aging Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Transcriptional changes of the aging lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150148" target="_blank" style="color:#020e65"><b>GSE150148</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-019-12464-3</td>
+      <td name="td1">Szabo et al Nat Commun</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-cell transcriptomics of human T cells reveals tissue and activation signatures in health and disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126030" target="_blank" style="color:#020e65"><b>GSE126030</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.adk8623</td>
+      <td name="td1">McCall et al Sci Transl Med</td>
+      <td name="td2">2025</td>
+      <td name="td3">Hypoxia-inducible factor 2 regulates alveolar regeneration after repetitive injury in three-dimensional cellular and in vivo models</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243252" target="_blank" style="color:#020e65"><b>GSE243252</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-52689-5</td>
+      <td name="td1">Rha et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">SARS-CoV-2 spike-specific nasal-resident CD49a+CD8+ memory T cells exert immediate effector functions with enhanced IFN-γ production</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271754" target="_blank" style="color:#020e65"><b>GSE271754</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19 Breakthrough Infection</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2020.01.033</td>
+      <td name="td1">Miller et al Developmental Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">In Vitro and In Vivo Development of the Human Airway at Single-Cell Resolution</td>
+      <td name="td6"><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-8221" target="_blank" style="color:#020e65"><b>E-MTAB-8221</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway Organoid</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stemcr.2023.03.015</td>
+      <td name="td1">Rosado-Olivieri et al Stem Cell Reports</td>
+      <td name="td2">2023</td>
+      <td name="td3">Organotypic human lung bud microarrays identify BMP-dependent SARS-CoV-2 infection in lung cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE163698" target="_blank" style="color:#020e65"><b>GSE163698</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung bud</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/jitc-2024-009440</td>
+      <td name="td1">Paolini et al J Immunother Cancer</td>
+      <td name="td2">2024</td>
+      <td name="td3">Differential predictive value of resident memory CD8<sup>+</sup>T cell subpopulations in patients with non-small-cell lung cancer treated by immunotherapy.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280433" target="_blank" style="color:#020e65"><b>GSE280433</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2020.07.022</td>
+      <td name="td1">Dost et al Cell Stem Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Organoids Model Transcriptional Hallmarks of Oncogenic KRAS Activation in Lung Epithelial Progenitor Cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149655" target="_blank" style="color:#020e65"><b>GSE149655</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41596-023-00827-6</td>
+      <td name="td1">Leko et al Nat Protoc</td>
+      <td name="td2">2023</td>
+      <td name="td3">A distal lung organoid model to study interstitial lung disease,  viral infection and human lung development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215825" target="_blank" style="color:#020e65"><b>GSE215825</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ijc.33192</td>
+      <td name="td1">Song et al International Journal of Cancer</td>
+      <td name="td2">2020</td>
+      <td name="td3">Cellular heterogeneity landscape in laryngeal squamous cell carcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150321" target="_blank" style="color:#020e65"><b>GSE150321</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">laryngeal squamous cell carcinoma</td>
+      <td name="td10">Larynx</td>
+      <td name="td11">Larynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.158937</td>
+      <td name="td1">Alysandratos et al JCI Insight</td>
+      <td name="td2">2023</td>
+      <td name="td3">Culture impact on the transcriptomic programs of primary and iPSC-derived human alveolar type 2 cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193716" target="_blank" style="color:#020e65"><b>GSE193716</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12931-021-01675-2</td>
+      <td name="td1">Li et al Respir Res</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single cell RNA sequencing identifies IGFBP5 and QKI as ciliated epithelial cell genes associated with severe COPD</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167295" target="_blank" style="color:#020e65"><b>GSE167295</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Chronic obstructive pulmoriary disease(COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adf8549</td>
+      <td name="td1">Olatoke et al Sci Adv</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell multiomic analysis identifies a HOX-PBX gene network regulating the survival of lymphangioleiomyomatosis cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217107" target="_blank" style="color:#020e65"><b>GSE217107</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lymphangioleiomyomatosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abg6356</td>
+      <td name="td1">Ma et al Sci Immunol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell analysis pinpoints distinct populations of cytotoxic CD4+ T cells and an IL-10+CD109+ TH2 cell population in nasal polyps</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179292" target="_blank" style="color:#020e65"><b>GSE179292</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Nasal polyps</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2022.1087843</td>
+      <td name="td1">Jimenez et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell analysis of myeloid cells in HPV+ tonsillar cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE219210" target="_blank" style="color:#020e65"><b>GSE219210</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Tonsillar cancer</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">Tonsil</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-56501-w</td>
+      <td name="td1">Zhao et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Cloned airway basal progenitor cells to repair fibrotic lung through re-epithelialization.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE260778" target="_blank" style="color:#020e65"><b>GSE260778</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">bleomycin-injured</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/cam4.2113</td>
+      <td name="td1">Song et al Cancer Med</td>
+      <td name="td2">2019</td>
+      <td name="td3">Dissecting intratumoral myeloid cell plasticity by single cell RNA-seq</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117570" target="_blank" style="color:#020e65"><b>GSE117570</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1093/qjmed/hcad090</td>
+      <td name="td1">Yang et al QJM</td>
+      <td name="td2">2023</td>
+      <td name="td3">Emergence of hybrid airway neutrophils with increased mitochondrial metabolism and low inflammatory response in neutrophilic asthma: evidence supporting targeting inhibition of neutrophil glycolysis in this asthma sub-group</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE227744" target="_blank" style="color:#020e65"><b>GSE227744</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">neutrophilic asthma</td>
+      <td name="td10">Bronchi, Lung</td>
+      <td name="td11">bronchoalveolar lavage fluid</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-025-07461-w</td>
+      <td name="td1">Khateeb et al Commun Biology</td>
+      <td name="td2">2025</td>
+      <td name="td3">Optimized gene transduction in human lung organoids: A high-efficiency method for advanced research applications.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284689" target="_blank" style="color:#020e65"><b>GSE284689</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41587-025-02569-0</td>
+      <td name="td1">Pezet et al Nat Biotechnol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Human respiratory airway progenitors derived from pluripotent cells generate alveolar epithelial cells and model pulmonary fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245722" target="_blank" style="color:#020e65"><b>GSE245722</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy, idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-019-1884-x</td>
+      <td name="td1">Xue et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">Rapid non-uniform adaptation to conformation-specific KRAS(G12C) inhibition</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137912" target="_blank" style="color:#020e65"><b>GSE137912</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">non small cell lung cancer,  Squamous cell carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2020.10.19.343954</td>
+      <td name="td1">Fiege et al PLoS Pathog</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single cell resolution of SARS-CoV-2 tropism,  antiviral responses,  and susceptibility to therapies in primary human airway epithelium</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157526" target="_blank" style="color:#020e65"><b>GSE157526</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Trachea, Bronchi</td>
+      <td name="td11">Trachea, Bronchi</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-021-01332-7</td>
+      <td name="td1">Carraro et al Nat Med</td>
+      <td name="td2">2021</td>
+      <td name="td3">Transcriptional analysis of cystic fibrosis airways at single-cell resolution reveals altered epithelial cell states and composition</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150674" target="_blank" style="color:#020e65"><b>GSE150674</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Cystic Fibrosis</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Airway Liquid Interface Culture</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fbioe.2022.844119</td>
+      <td name="td1">Khan et al Front Bioeng Biotechnol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Basal-Like Cell-Conditioned Medium Exerts Anti-Fibrotic Effects <i>In Vitro</i> and <i>In Vivo</i>.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145439" target="_blank" style="color:#020e65"><b>GSE145439</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Basal</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-019-0468-5</td>
+      <td name="td1">Vieira Braga et al Nat Med</td>
+      <td name="td2">2019</td>
+      <td name="td3">A cellular census of human lungs identifies novel cell states in health and in asthma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148" target="_blank" style="color:#020e65"><b>GSE130148</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">upper lobe,  main bronchus</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2024.03.017</td>
+      <td name="td1">Claire L Burgess et al Cell Stem Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Generation of human alveolar epithelial type I cells from pluripotent stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246243" target="_blank" style="color:#020e65"><b>GSE246243</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2024.03.017</td>
+      <td name="td1">Burgess et al Cell Stem Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Generation of human alveolar epithelial type I cells from pluripotent stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221344" target="_blank" style="color:#020e65"><b>GSE221344</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2022-0293OC</td>
+      <td name="td1">Welfley et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-Cell Profiling of Premature Neonate Airways Reveals a Continuum of Myeloid Differentiation.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208328" target="_blank" style="color:#020e65"><b>GSE208328</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adu2079</td>
+      <td name="td1">Dirvin et al Sci Adv</td>
+      <td name="td2">2025</td>
+      <td name="td3">Identification and targeting of regulators of SARS-CoV-2-host interactions in the airway epithelium.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262298" target="_blank" style="color:#020e65"><b>GSE262298</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adu2079</td>
+      <td name="td1">Dirvin et al Sci Adv</td>
+      <td name="td2">2025</td>
+      <td name="td3">Identification and targeting of regulators of SARS-CoV-2-host interactions in the airway epithelium</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262588" target="_blank" style="color:#020e65"><b>GSE262588</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/jitc-2020-000778</td>
+      <td name="td1">Garrido-Martin et al J Immunother Cancer.</td>
+      <td name="td2">2020</td>
+      <td name="td3">M1hot tumor-associated macrophages boost tissue-resident memory T cells infiltration and survival in human lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116948" target="_blank" style="color:#020e65"><b>GSE116948</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2025.112387</td>
+      <td name="td1">Tian et al iScience</td>
+      <td name="td2">2025</td>
+      <td name="td3">Epigenomic analysis identifies DTP subpopulation using HOPX to develop targeted therapy resistance in lung adenocarcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275199" target="_blank" style="color:#020e65"><b>GSE275199</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2024.03.017</td>
+      <td name="td1">Burgess et al Cell Stem Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Generation of human alveolar epithelial type I cells from pluripotent stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221343" target="_blank" style="color:#020e65"><b>GSE221343</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-22210-3</td>
+      <td name="td1">Ferreira-Gomes et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">SARS-CoV-2 in severe COVID-19 induces a TGF-β-dominated chronic immune response that does not target itself</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158037" target="_blank" style="color:#020e65"><b>GSE158037</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s12276-022-00836-7</td>
+      <td name="td1">Heo et al Exp Mol Med</td>
+      <td name="td2">2022</td>
+      <td name="td3">DNA methylome and single-cell transcriptome analyses reveal CDA as a potential druggable target for ALK inhibitor-resistant lung cancer therapy.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139388" target="_blank" style="color:#020e65"><b>GSE139388</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s13059-020-02210-0</td>
+      <td name="td1">He et al Genome Biol</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell transcriptome profiling of an adult human cell atlas of 15 major organs.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159929" target="_blank" style="color:#020e65"><b>GSE159929</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.122211</td>
+      <td name="td1">Habiel et al JCI Insight</td>
+      <td name="td2">2018</td>
+      <td name="td3">CCR10+ epithelial cells from idiopathic pulmonary fibrosis lungs drive remodeling</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115982" target="_blank" style="color:#020e65"><b>GSE115982</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">IPF</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-15647-5</td>
+      <td name="td1">Tsukui et al Nat Communs</td>
+      <td name="td2">2020</td>
+      <td name="td3">Collagen-producing lung cell atlas identifies multiple subsets with distinct localization and relevance to fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147066" target="_blank" style="color:#020e65"><b>GSE147066</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung mesenchyme</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2024.03.017</td>
+      <td name="td1">Burgess et al Cell Stem Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Generation of human alveolar epithelial type I cells from pluripotent stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221342" target="_blank" style="color:#020e65"><b>GSE221342</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41416-022-02103-y</td>
+      <td name="td1">Zhang et al Br J Cancer</td>
+      <td name="td2">2023</td>
+      <td name="td3">Molecular features and evolutionary trajectory of ASCL1+ and NEUROD1+ SCLC cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164404" target="_blank" style="color:#020e65"><b>GSE164404</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Small Cell Lung Cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41422-021-00529-2</td>
+      <td name="td1">Liu et al Cell Res</td>
+      <td name="td2">2021</td>
+      <td name="td3">Delineating spatiotemporal and hierarchical development of human fetal innate lymphoid cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE163587" target="_blank" style="color:#020e65"><b>GSE163587</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal, Newborn, Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1152/ajplung.00260.2021</td>
+      <td name="td1">Moghbeli et al Am J Physiol Lung Cell Mol Physiol</td>
+      <td name="td2">2021</td>
+      <td name="td3">β-Agonist exposure preferentially impacts lung macrophage cyclic AMP-related gene expression in asthma and asthma COPD overlap syndrome</td>
+      <td name="td6"><a href="https://doi.org/10.6084/m9.figshare.14782377.v1" target="_blank" style="color:#020e65"><b>14782377.v1</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">ACOS(asthma+COPD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-022-03536-0</td>
+      <td name="td1">Shichino et al Commun Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">TAS-Seq is a robust and sensitive amplification method for bead-based scRNA-seq</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE180139" target="_blank" style="color:#020e65"><b>GSE180139</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.00562-2024</td>
+      <td name="td1">Maurat et al Eur Respir J</td>
+      <td name="td2">2024</td>
+      <td name="td3">A novel <i>in vitro</i> tubular model to recapitulate features of distal airways: The bronchioid.</td>
+      <td name="td6"><a href="https://zenodo.org/records/10834205" target="_blank" style="color:#020e65"><b>10.5281/zenodo.10834205</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COPD</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.15252/embj.2020105912</td>
+      <td name="td1">Lamers et al EMBO J</td>
+      <td name="td2">2021</td>
+      <td name="td3">An organoid-derived bronchioalveolar model for SARS-CoV-2 infection of human alveolar type II-like cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161934" target="_blank" style="color:#020e65"><b>GSE161934</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126906" target="_blank" style="color:#020e65"><b>GSE126906</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-50281-5</td>
+      <td name="td1">Quach et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Early human fetal lung atlas reveals the temporal dynamics of epithelial cell plasticity</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266789" target="_blank" style="color:#020e65"><b>GSE266789</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung; organoids</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3390/cells12141854</td>
+      <td name="td1">Park et al Cells</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cryobiopsy: A Breakthrough Strategy for Clinical Utilization of Lung Cancer Organoids</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE230537" target="_blank" style="color:#020e65"><b>GSE230537</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2021.109920</td>
+      <td name="td1">Duan et al Cell Rep</td>
+      <td name="td2">2021</td>
+      <td name="td3">An airway organoid-based screen identifies a role for the HIF1&#x3b1;-glycolysis axis in SARS-CoV-2 infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160231" target="_blank" style="color:#020e65"><b>GSE160231</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE111108" target="_blank" style="color:#020e65"><b>GSE111108</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118706" target="_blank" style="color:#020e65"><b>GSE118706</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s13059-021-02525-6</td>
+      <td name="td1">Tian et al Genome Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Comprehensive characterization of single-cell full-length isoforms in human and mouse with long-read sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154870" target="_blank" style="color:#020e65"><b>GSE154870</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/ijc.33192</td>
+      <td name="td1">Song et al International Journal of Cancer</td>
+      <td name="td2">2020</td>
+      <td name="td3">Cellular heterogeneity landscape in laryngeal squamous cell carcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150321" target="_blank" style="color:#020e65"><b>GSE150321</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">laryngeal squamous cell carcinoma</td>
+      <td name="td10">Larynx</td>
+      <td name="td11">Larynx</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102551</td>
+      <td name="td1">Liu et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Categorization of lung mesenchymal cells in development and fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157376" target="_blank" style="color:#020e65"><b>GSE157376</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Mesenchymal</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41598-019-45842-4</td>
+      <td name="td1">Waise et al Sci Rep</td>
+      <td name="td2">2019</td>
+      <td name="td3">An optimised tissue disaggregation and data processing pipeline for characterising fibroblast phenotypes using single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126111" target="_blank" style="color:#020e65"><b>GSE126111</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2020.107872</td>
+      <td name="td1">Jackson et al Cell reports</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-Cell and Population Transcriptomics Reveal Pan-epithelial Remodeling in Type 2-High Asthma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145013" target="_blank" style="color:#020e65"><b>GSE145013</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">asthma</td>
+      <td name="td10">Trachea, Lung</td>
+      <td name="td11">Trachea, Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201912-2445OC</td>
+      <td name="td1">Guo et al Am J Respir Crit Care Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-Cell Transcriptomic Analysis Identifies a Unique Pulmonary Lymphangioleiomyomatosis Cell</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135851" target="_blank" style="color:#020e65"><b>GSE135851</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lymphangioleiomyomatosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI148517</td>
+      <td name="td1">Ahn et al Journal of Clinical Investigation</td>
+      <td name="td2">2021</td>
+      <td name="td3">Nasal ciliated cells are primary targets for SARS-CoV-2 replication in the early stage of COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155113" target="_blank" style="color:#020e65"><b>GSE155113</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Nose</td>
+      <td name="td11">nasal cavity</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117450" target="_blank" style="color:#020e65"><b>GSE117450</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126908" target="_blank" style="color:#020e65"><b>GSE126908</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.aaw3413</td>
+      <td name="td1">Duclos et al Science Advances</td>
+      <td name="td2">2019</td>
+      <td name="td3">Characterizing smoking-induced transcriptional heterogeneity in the human bronchial epithelium at single-cell resolution</td>
+      <td name="td6"><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131391/suppl/GSE131391_cell_barcodes.txt.gz;https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131391/suppl/GSE131391_count_matrix.txt.gz" target="_blank" style="color:#020e65"><b>GSE131391</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">right mainstem bronchus</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2020.04.035</td>
+      <td name="td1">Ziegler et al Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">SARS-CoV-2 Receptor ACE2 Is an Interferon-Stimulated Gene in Human Airway Epithelial Cells and Is Detected in Specific Cell Subsets across Tissues.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148829" target="_blank" style="color:#020e65"><b>GSE148829</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">SARS-CoV-2</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s13059-021-02525-6</td>
+      <td name="td1">Tian et al Genome Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Comprehensive characterization of single-cell full-length isoforms in human and mouse with long-read sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154869" target="_blank" style="color:#020e65"><b>GSE154869</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41419-023-05823-y</td>
+      <td name="td1">Chen et al Cell Death Dis</td>
+      <td name="td2">2023</td>
+      <td name="td3">Identification of RAC1 in promoting brain metastasis of lung adenocarcinoma using single-cell transcriptome sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198291" target="_blank" style="color:#020e65"><b>GSE198291</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-019-0425-8</td>
+      <td name="td1">Tian et al Nat Methods</td>
+      <td name="td2">2019</td>
+      <td name="td3">Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118704" target="_blank" style="color:#020e65"><b>GSE118704</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI174598</td>
+      <td name="td1">Cohen et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">A fibroblast-dependent TGF-β1/sFRP2 noncanonical Wnt signaling axis promotes epithelial metaplasia in idiopathic pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239664" target="_blank" style="color:#020e65"><b>GSE239664</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">fibrotic lung,  idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-022-03828-5</td>
+      <td name="td1">Hoffmann et al Commun Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human alveolar progenitors generate dual lineage bronchioalveolar organoids.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197949" target="_blank" style="color:#020e65"><b>GSE197949</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Homo sapiens</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">HT280+ cells</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.113182</td>
+      <td name="td1">Devarajan et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cytotoxic CD4 development requires CD4 effectors to concurrently recognize local antigen and encounter type I IFN-induced IL-15</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225552" target="_blank" style="color:#020e65"><b>GSE225552</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">paternal pathogenic viral infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-024-07113-9</td>
+      <td name="td1">Han et al Nature</td>
+      <td name="td2">2024</td>
+      <td name="td3">An atlas of epithelial cell states and plasticity in lung adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE222901" target="_blank" style="color:#020e65"><b>GSE222901</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41592-024-02239-0</td>
+      <td name="td1">Wu et al Nat Methods</td>
+      <td name="td2">2024</td>
+      <td name="td3">Simultaneous single-cell three-dimensional genome and gene expression profiling uncovers dynamic enhancer connectivity underlying olfactory receptor choice</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239876" target="_blank" style="color:#020e65"><b>GSE239876</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Nose</td>
+      <td name="td11">olfactory epithelium</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1179094</td>
+      <td name="td1">Wang et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Integrated multi-omics analyses reveal the altered transcriptomic characteristics of pulmonary macrophages in immunocompromised hosts with Pneumocystis pneumonia</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225246" target="_blank" style="color:#020e65"><b>GSE225246</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pneumocystis infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-39560-9</td>
+      <td name="td1">Zhang et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Intranasal influenza-vectored COVID-19 vaccine restrains the SARS-CoV-2 inflammatory response in hamsters</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE228594" target="_blank" style="color:#020e65"><b>GSE228594</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-023-01210-z</td>
+      <td name="td1">Duplaquet et al Nat Cell Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">KDM6A epigenetically regulates subtype plasticity in small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE211242" target="_blank" style="color:#020e65"><b>GSE211242</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-025-07589-9</td>
+      <td name="td1">Banaschewski et al Commun Bio</td>
+      <td name="td2">2025</td>
+      <td name="td3">Emergence of inflammatory fibroblasts with aging in Hermansky-Pudlak syndrome associated pulmonary fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE272904" target="_blank" style="color:#020e65"><b>GSE272904</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Hermansky-Pudlak syndrome</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2023.02.002</td>
+      <td name="td1">Goodwin et al Dev Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Plasticity in airway smooth muscle differentiation during mouse lung development.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203171" target="_blank" style="color:#020e65"><b>GSE203171</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1242/dev.199512</td>
+      <td name="td1">Negretti et al Development</td>
+      <td name="td2">2021</td>
+      <td name="td3">A single-cell atlas of mouse lung development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165063" target="_blank" style="color:#020e65"><b>GSE165063</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2024.1425466</td>
+      <td name="td1">Moos et al Front Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Spatial and phenotypic heterogeneity of resident and monocyte-derived macrophages during inflammatory exacerbations leading to pulmonary fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE247520" target="_blank" style="color:#020e65"><b>GSE247520</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-021-02381-x</td>
+      <td name="td1">Pan et al Commun Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Inhibition of lung tumorigenesis by a small molecule CA170 targeting the immune checkpoint protein VISTA</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176091" target="_blank" style="color:#020e65"><b>GSE176091</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7717/peerj.18772</td>
+      <td name="td1">Wu et al PeerJ</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-cell transcriptome analysis reveals cellular reprogramming and changes of immune cell subsets following tetramethylpyrazine treatment in LPS-induced acute lung injury.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276682" target="_blank" style="color:#020e65"><b>GSE276682</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Acute lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1093/narcan/zcae011</td>
+      <td name="td1">Sesink et al NAR Cancer</td>
+      <td name="td2">2024</td>
+      <td name="td3">The AsiDNA™ decoy mimicking DSBs protects the normal tissue from radiation toxicity through a DNA-PK/p53/p21-dependent G1/S arrest</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE211713" target="_blank" style="color:#020e65"><b>GSE211713</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Radiation Induced Lung Injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/advs.202501797</td>
+      <td name="td1">Lu et al Adv Sci (Weinh)</td>
+      <td name="td2">2025</td>
+      <td name="td3">FLASH Irradiation Modulates Immune Responses and Accelerates Lung Recovery: A Single-Cell Perspective</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298566" target="_blank" style="color:#020e65"><b>GSE298566</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">radiation-induced lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12943-025-02352-4</td>
+      <td name="td1">Senent et al Mol Cancer</td>
+      <td name="td2">2025</td>
+      <td name="td3">Co-targeting of epigenetic regulators and BCL-XL improves efficacy of immune checkpoint blockade therapy in multiple solid tumors</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288231" target="_blank" style="color:#020e65"><b>GSE288231</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-53038-2</td>
+      <td name="td1">Han et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Distinctive CD39+CD9+ lung interstitial macrophages suppress IL-23/Th17-mediated neutrophilic asthma by inhibiting NETosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE222456" target="_blank" style="color:#020e65"><b>GSE222456</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abg9296</td>
+      <td name="td1">Ulrich et al Sci Immunol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Allergic airway recall responses require IL-9 from resident memory CD4+ T cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190795" target="_blank" style="color:#020e65"><b>GSE190795</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Allergic Asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-021-22817-6</td>
+      <td name="td1">Little et al Nat Commun</td>
+      <td name="td2">2021</td>
+      <td name="td3">Differential chromatin binding of the lung lineage transcription factor NKX2-1 resolves opposing murine alveolar cell fates in vivo.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158192" target="_blank" style="color:#020e65"><b>GSE158192</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.172977</td>
+      <td name="td1">Rodriguez et al JCI Insight</td>
+      <td name="td2">2023</td>
+      <td name="td3">PGF2α signaling drives fibrotic remodeling and fibroblast population dynamics in mice</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234604" target="_blank" style="color:#020e65"><b>GSE234604</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Idiopathic Pulmonary Fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1152/ajplung.00223.2022</td>
+      <td name="td1">Moore et al Am J Physiol Lung Cell Mol Physiol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell RNA sequencing reveals unique monocyte-derived interstitial macrophage subsets during lipopolysaccharide-induced acute lung inflammation.</td>
+      <td name="td6"><a href="https://ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218884" target="_blank" style="color:#020e65"><b>GSE218884</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute lung inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s44318-024-00113-5</td>
+      <td name="td1">Moye et al EMBO J</td>
+      <td name="td2">2024</td>
+      <td name="td3">Early-stage lung cancer is driven by a transitional cell state dependent on a KRAS-ITGA3-SRC axis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253461" target="_blank" style="color:#020e65"><b>GSE253461</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-49545-x</td>
+      <td name="td1">Raslan et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lung injury-induced activated endothelial cell states persist in aging-associated progressive fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264151" target="_blank" style="color:#020e65"><b>GSE264151</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI171430</td>
+      <td name="td1">Mason et al J Clin Invest</td>
+      <td name="td2">2023</td>
+      <td name="td3">Activation of mTOR signaling in adult lung microvascular progenitor cells accelerates lung aging</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242065" target="_blank" style="color:#020e65"><b>GSE242065</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary microvascular disease</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1078-0432.CCR-24-0049</td>
+      <td name="td1">Reinecke et al Clinical Cancer Research</td>
+      <td name="td2">2024</td>
+      <td name="td3">Aberrant activation of wound healing programs within the metastatic niche facilitates lung colonization by osteosarcoma cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE252703" target="_blank" style="color:#020e65"><b>GSE252703</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung tumor,   tibia tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI183092</td>
+      <td name="td1">Wu et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">A correctable immune niche for epithelial stem cell reprogramming and post-viral lung diseases</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263930" target="_blank" style="color:#020e65"><b>GSE263930</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">epithelial injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/science.abc1944</td>
+      <td name="td1">Quinn et al Science</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell lineages reveal the rates,   routes,   and drivers of metastasis in cancer xenografts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161363" target="_blank" style="color:#020e65"><b>GSE161363</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">LA</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI140766</td>
+      <td name="td1">Schuler et al J Clin Invest</td>
+      <td name="td2">2021</td>
+      <td name="td3">Age-determined expression of priming protease TMPRSS2 and localization of SARS-CoV-2 in lung epithelium.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160876" target="_blank" style="color:#020e65"><b>GSE160876</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Fetal,  Children,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.adk8623</td>
+      <td name="td1">McCall et al Sci Transl Med</td>
+      <td name="td2">2025</td>
+      <td name="td3">Hypoxia-inducible factor 2 regulates alveolar regeneration after repetitive injury in three-dimensional cellular and in vivo models</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243252" target="_blank" style="color:#020e65"><b>GSE243252</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-28067-4</td>
+      <td name="td1">Magaletta et al Nat Communs</td>
+      <td name="td2">2022</td>
+      <td name="td3">Integration of single-cell transcriptomes and chromatin landscapes reveals regulatory programs driving pharyngeal organ development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE182135&format=file;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE182136&format=file" target="_blank" style="color:#020e65"><b>GSE182135;GSE182136</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Pharynx</td>
+      <td name="td11">pharyngeal endoderm</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-49545-x</td>
+      <td name="td1">Raslan et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lung injury-induced activated endothelial cell states persist in aging-associated progressive fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264162" target="_blank" style="color:#020e65"><b>GSE264162</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41389-024-00513-6</td>
+      <td name="td1">Stone et al Oncogenesis</td>
+      <td name="td2">2024</td>
+      <td name="td3">Acidovorax temperans skews neutrophil maturation and polarizes Th17 cells to promote lung adenocarcinoma development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207477" target="_blank" style="color:#020e65"><b>GSE207477</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-46469-4</td>
+      <td name="td1">Martins et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell division tracing and transcriptomics reveal cell types and differentiation paths in the regenerating lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223816" target="_blank" style="color:#020e65"><b>GSE223816</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/2326-6066.CIR-21-0326</td>
+      <td name="td1">Pfirschke et al Cancer Immunol Res</td>
+      <td name="td2">2022</td>
+      <td name="td3">Macrophage-Targeted Therapy Unlocks Antitumoral Cross-talk between IFNγ-Secreting Lymphocytes and IL12-Producing Dendritic Cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161771" target="_blank" style="color:#020e65"><b>GSE161771</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-42021-y</td>
+      <td name="td1">Kasmani et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">A spatial sequencing atlas of age-induced changes in the lung during influenza infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202325" target="_blank" style="color:#020e65"><b>GSE202325</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">influenza infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s44319-023-00041-1</td>
+      <td name="td1">Lipskaia et al EMBO Rep</td>
+      <td name="td2">2024</td>
+      <td name="td3">mTert induction in p21-positive cells counteracts capillary rarefaction and pulmonary emphysema</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165218" target="_blank" style="color:#020e65"><b>GSE165218</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">capillary rarefaction and pulmonary emphysema</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-018-0393-7</td>
+      <td name="td1">Montoro et al Nature</td>
+      <td name="td2">2018</td>
+      <td name="td3">A revised airway epithelial hierarchy includes CFTR-expressing ionocytes</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE103354" target="_blank" style="color:#020e65"><b>GSE103354</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-23-3257</td>
+      <td name="td1">Xu et al Cancer Res</td>
+      <td name="td2">2024</td>
+      <td name="td3">A Prime-Boost Vaccination Approach Induces Lung Resident Memory CD8+ T Cells Derived from Central Memory T Cells That Prevent Tumor Lung Metastasis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE238223" target="_blank" style="color:#020e65"><b>GSE238223</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">melanoma lung metastasis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.165837</td>
+      <td name="td1">Angeles-Lopez et al JCI Insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">Regulation of lung progenitor plasticity and repair by fatty acid oxidation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8625032" target="_blank" style="color:#020e65"><b>GSE284440</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.matbio.2025.01.005</td>
+      <td name="td1">Reese et al Matrix Biol</td>
+      <td name="td2">2025</td>
+      <td name="td3">CD45+/ Col I+ Fibrocytes: Major source of collagen in the fibrotic lung,   but not in passaged fibroblast cultures.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE259367" target="_blank" style="color:#020e65"><b>GSE259367</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Fibrotic Lung</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2022-0021OC</td>
+      <td name="td1">Watson et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Antifibrotic Drug Nintedanib Inhibits CSF1R to Promote IL-4-associated Tissue Repair Macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE151374" target="_blank" style="color:#020e65"><b>GSE151374</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2025.04.003</td>
+      <td name="td1">Zhu et al Cancer Cell</td>
+      <td name="td2">2025</td>
+      <td name="td3">Spatial and multiomics analysis of human and mouse lung adenocarcinoma precursors reveals TIM-3 as a putative target for precancer interception.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293720" target="_blank" style="color:#020e65"><b>GSE293720</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung adenocarcinoa</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/science.abc3172</td>
+      <td name="td1">Zepp et al Science</td>
+      <td name="td2">2021</td>
+      <td name="td3">Genomic,   epigenomic,   and biophysical cues controlling the emergence of the lung alveolus</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149563" target="_blank" style="color:#020e65"><b>GSE149563</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Fetal,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1242/dev.177428</td>
+      <td name="td1">García et al Development</td>
+      <td name="td2">2019</td>
+      <td name="td3">Novel dynamics of human mucociliary differentiation revealed by single-cell RNA sequencing of nasal epithelial cultures</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE121600&format=file" target="_blank" style="color:#020e65"><b>GSE121600</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Airway epithelial</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-018-0394-6</td>
+      <td name="td1">Plasschaert et al Nature</td>
+      <td name="td2">2018</td>
+      <td name="td3">A single-cell atlas of the airway epithelium reveals the CFTR-rich pulmonary ionocyte</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE102580" target="_blank" style="color:#020e65"><b>GSE102580</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2024.03.020</td>
+      <td name="td1">Mandula et al Immunity</td>
+      <td name="td2">2024</td>
+      <td name="td3">Jagged2 targeting in lung cancer activates anti-tumor immunity via Notch-induced functional reprogramming of tumor-associated macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE228105" target="_blank" style="color:#020e65"><b>GSE228105</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis Lung Carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-28809-4</td>
+      <td name="td1">Gizem Günes Günsel et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">The arginine methyltransferase PRMT7 promotes extravasation of monocytes resulting in tissue injury in COPD</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE185006" target="_blank" style="color:#020e65"><b>GSE185006</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2018.09.009</td>
+      <td name="td1">Cohen et al Cell</td>
+      <td name="td2">2018</td>
+      <td name="td3">Lung Single-Cell Signaling Interaction Map Reveals Basophil Role in Macrophage Imprinting</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE119228" target="_blank" style="color:#020e65"><b>GSE119228</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/mco2.193</td>
+      <td name="td1">Hu et al MedComm</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell transcriptomics reveals distinct cell response between acute and chronic pulmonary infection of Pseudomonas aeruginosa</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE192890" target="_blank" style="color:#020e65"><b>GSE192890</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-43336-6</td>
+      <td name="td1">Otaki et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Activation of ILC2s through constitutive IFNγ signaling reduction leads to spontaneous pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164220" target="_blank" style="color:#020e65"><b>GSE164220</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2023.07.016</td>
+      <td name="td1">Herriges et al Cell Stem Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Durable alveolar engraftment of PSC-derived lung epithelial cells into immunocompetent mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200886" target="_blank" style="color:#020e65"><b>GSE200886</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2023.106442</td>
+      <td name="td1">Coelho et al iSci</td>
+      <td name="td2">2023</td>
+      <td name="td3">SOCS1 regulates a subset of NFκB-target genes through direct chromatin binding and defines macrophage functional phenotypes</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225834" target="_blank" style="color:#020e65"><b>GSE225834</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.ads4227</td>
+      <td name="td1">Armstrong et al Sci Adv</td>
+      <td name="td2">2025</td>
+      <td name="td3">MAGE-A4 induces non-small cell lung cancer and tumor-promoting plasma cell accumulation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267420" target="_blank" style="color:#020e65"><b>GSE267420</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.adn0136</td>
+      <td name="td1">Li et al Sci Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Comparative single-cell analysis reveals IFN-γ as a driver of respiratory sequelae after acute COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263817" target="_blank" style="color:#020e65"><b>GSE263817</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">R-PASC</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1242/dev.200909</td>
+      <td name="td1">Chandrasekaran et al Development</td>
+      <td name="td2">2022</td>
+      <td name="td3">CXCL12 defines lung endothelial heterogeneity and promotes distal vascular growth.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE202132&format=file" target="_blank" style="color:#020e65"><b>GSE202132</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fmicb.2021.637500</td>
+      <td name="td1">Yang et al Front Microbiol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-Cell TCR Sequencing Reveals the Dynamics of T Cell Repertoire Profiling During Pneumocystis Infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157627" target="_blank" style="color:#020e65"><b>GSE157627</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pneumocystis pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abq4341</td>
+      <td name="td1">Ualiyeva et al Sci Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">A nasal cell atlas reveals heterogeneity of tuft cells and their role in directing olfactory stem cell proliferation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245074" target="_blank" style="color:#020e65"><b>GSE245074</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Alternaria</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.66522</td>
+      <td name="td1">Ryu et al Elife</td>
+      <td name="td2">2021</td>
+      <td name="td3">Ketogenic diet restrains aging-induced exacerbation of coronavirus infection in mice</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155347" target="_blank" style="color:#020e65"><b>GSE155347</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102551</td>
+      <td name="td1">Liu et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Categorization of lung mesenchymal cells in development and fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157379" target="_blank" style="color:#020e65"><b>GSE157379</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Mesenchymal</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-023-01504-2</td>
+      <td name="td1">Glasner et al Nat Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Conserved transcriptional connectivity of regulatory T cells in the tumor microenvironment informs new combination cancer therapy strategies.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202159" target="_blank" style="color:#020e65"><b>GSE202159</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung tumor and lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-59093-7</td>
+      <td name="td1">Yan et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Targeted immunotherapy rescues pulmonary fibrosis by reducing activated fibroblasts and regulating alveolar cell profile.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283267" target="_blank" style="color:#020e65"><b>GSE283267</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ebiom.2024.105339</td>
+      <td name="td1">Chang et al EBioMedicine</td>
+      <td name="td2">2024</td>
+      <td name="td3">Therapeutic single-cell landscape: methotrexate exacerbates interstitial lung disease by compromising the stemness of alveolar epithelial cells under systemic inflammation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271209" target="_blank" style="color:#020e65"><b>GSE271209</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pneumonitis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102551</td>
+      <td name="td1">Liu et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Categorization of lung mesenchymal cells in development and fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157654" target="_blank" style="color:#020e65"><b>GSE157654</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea,  Lung</td>
+      <td name="td11">Lung,   Trachea</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-023-06253-8</td>
+      <td name="td1">Kaiser et al Nature</td>
+      <td name="td2">2023</td>
+      <td name="td3">p53 governs an AT1 differentiation programme in lung cancer suppression.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE231681" target="_blank" style="color:#020e65"><b>GSE231681</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2023.02.15.528365</td>
+      <td name="td1">Seo et al bioRxiv</td>
+      <td name="td2">2024</td>
+      <td name="td3">Actin Dysregulation Induces Neuroendocrine Plasticity and Immune Evasion: A Vulnerability of Small Cell Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218544" target="_blank" style="color:#020e65"><b>GSE218544</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Small Cell Lung Carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12967-024-05118-6</td>
+      <td name="td1">Yang et al J Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Single-cell RNA sequencing reveals recruitment of the M2-like CCL8<sup>high</sup> macrophages in Lewis lung carcinoma-bearing mice following hypofractionated radiotherapy.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE256051" target="_blank" style="color:#020e65"><b>GSE256051</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis lung carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-40185-1</td>
+      <td name="td1">Beck et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Trimannose-coupled antimiR-21 for macrophage-targeted inhalation treatment of acute inflammatory lung damage</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235135" target="_blank" style="color:#020e65"><b>GSE235135</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute inflammatory lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.154098</td>
+      <td name="td1">Haake et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">Ligand-independent integrin β1 signaling supports lung adenocarcinoma development</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175687" target="_blank" style="color:#020e65"><b>GSE175687</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.bbrc.2025.151780</td>
+      <td name="td1">Li et al Biochem Biophys Res Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-cell transcriptomics reveals the mechanisms of lung injury induced by galt gene editing in mouse.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283551" target="_blank" style="color:#020e65"><b>GSE283551</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1161/CIRCULATIONAHA.122.061900</td>
+      <td name="td1">Zhou et al Circulation</td>
+      <td name="td2">2022</td>
+      <td name="td3">Targeting VEGF-A/VEGFR2 Y949 Signaling-Mediated Vascular Permeability Alleviates Hypoxic Pulmonary Hypertension</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE209854" target="_blank" style="color:#020e65"><b>GSE209854</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">hypoxia exposure</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.112525</td>
+      <td name="td1">Kapellos et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Systemic alterations in neutrophils and their precursors in early-stage chronic obstructive pulmonary disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205078" target="_blank" style="color:#020e65"><b>GSE205078</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COPD</td>
+      <td name="td10">Bronchi,  Blood</td>
+      <td name="td11">alveolar,   blood</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2020.06.020</td>
+      <td name="td1">Choi et al Cell stem cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Inflammatory Signals Induce AT2 Cell-Derived Damage-Associated Transient Progenitors that Mediate Alveolar Regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145031" target="_blank" style="color:#020e65"><b>GSE145031</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Unclassified</td>
+      <td name="td10">Lung,  Blood</td>
+      <td name="td11">Lung,  PBMC</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1541-7786.MCR-22-0881</td>
+      <td name="td1">Wollenzien et al Mol Cancer Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-Cell Evolutionary Analysis Reveals Drivers of Plasticity and Mediators of Chemoresistance in Small Cell Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216182" target="_blank" style="color:#020e65"><b>GSE216182</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Small Cell Lung Cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.4049/jimmunol.2300459</td>
+      <td name="td1">Yao et al J Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Neutrophil Heterogeneity Is Modified during Acute Lung Inflammation in Apoa1-/- Mice</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234287" target="_blank" style="color:#020e65"><b>GSE234287</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute airway inflammation</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-024-07377-1</td>
+      <td name="td1">Brian Lin et al Nature</td>
+      <td name="td2">2024</td>
+      <td name="td3">Airway hillocks are injury-resistant reservoirs of unique plastic stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244215" target="_blank" style="color:#020e65"><b>GSE244215</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.53072</td>
+      <td name="td1">Niethamer et al eLife</td>
+      <td name="td2">2020</td>
+      <td name="td3">Defining the role of pulmonary endothelial cell heterogeneity in the response to acute lung injury</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128944" target="_blank" style="color:#020e65"><b>GSE128944</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-48796-y</td>
+      <td name="td1">Das et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Neutrophils and galectin-3 defend mice from lethal bacterial infection and humans from acute respiratory failure.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE237646" target="_blank" style="color:#020e65"><b>GSE237646</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Bacterial Pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-52810-8</td>
+      <td name="td1">Benjamin Ng et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Interleukin-11 causes alveolar type 2 cell dysfunction and prevents alveolar regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261793" target="_blank" style="color:#020e65"><b>GSE261793</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelial</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2025.115645</td>
+      <td name="td1">Song et al Cell Rep</td>
+      <td name="td2">2025</td>
+      <td name="td3">YAP/TAZ activity in PDGFRα-expressing alveolar fibroblasts modulates AT2 proliferation through Wnt4</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE291641" target="_blank" style="color:#020e65"><b>GSE291641</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2877-5</td>
+      <td name="td1">Boyd et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Exuberant fibroblast activity compromises lung function via ADAMTS4</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA612345&cmd=DetailsSearch" target="_blank" style="color:#020e65"><b>PRJNA612345</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute respiratory distress syndrome</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.4049/immunohorizons.2300104</td>
+      <td name="td1">Gonzalez-Ferrer et al Immunohorizons</td>
+      <td name="td2">2024</td>
+      <td name="td3">STAT1 Employs Myeloid Cell-Extrinsic Mechanisms to Regulate the Neutrophil Response and Provide Protection against Invasive Klebsiella pneumoniae Lung Infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE252663" target="_blank" style="color:#020e65"><b>GSE252663</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Klebsiella infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-44184-0</td>
+      <td name="td1">Toth et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Alveolar epithelial progenitor cells require Nkx2-1 to maintain progenitor-specific epigenomic state during lung homeostasis and regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215824" target="_blank" style="color:#020e65"><b>GSE215824</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-023-06797-9</td>
+      <td name="td1">LaMarche et al Nature</td>
+      <td name="td2">2024</td>
+      <td name="td3">An IL-4 signalling axis in bone marrow drives pro-tumorigenic myelopoiesis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245236" target="_blank" style="color:#020e65"><b>GSE245236</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.intimp.2023.110545</td>
+      <td name="td1">Chen et al Int Immunopharmacol</td>
+      <td name="td2">2023</td>
+      <td name="td3">AT2 cell-derived IgA trapped by the extracellular matrix in silica-induced pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183682" target="_blank" style="color:#020e65"><b>GSE183682</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">silica-induced pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2023.10.17.560801</td>
+      <td name="td1">Shen et al bioRxiv</td>
+      <td name="td2">2023</td>
+      <td name="td3">GRAMD2 + alveolar type I cell plasticity facilitates cell state transitions in organoid culture</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235217" target="_blank" style="color:#020e65"><b>GSE235217</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-018-0276-y</td>
+      <td name="td1">Aran et al Nat Immunol</td>
+      <td name="td2">2019</td>
+      <td name="td3">Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE111664" target="_blank" style="color:#020e65"><b>GSE111664</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1111/all.15766</td>
+      <td name="td1">Xu et al Allergy</td>
+      <td name="td2">2023</td>
+      <td name="td3">Adventitial stromal cells and myofibroblasts recruit pro- and anti-inflammatory immune cells in allergic airway inflammation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223860" target="_blank" style="color:#020e65"><b>GSE223860</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">allergic airway inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03651-8</td>
+      <td name="td1">Casanova-Acebes et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Tissue-resident macrophages provide a pro-tumorigenic niche to early NSCLC cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156231" target="_blank" style="color:#020e65"><b>GSE156231</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-28062-9</td>
+      <td name="td1">Sauler et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">Characterization of the COPD alveolar niche using single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168299" target="_blank" style="color:#020e65"><b>GSE168299</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">emphysema(cs expose and ra expose)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-52846-w</td>
+      <td name="td1">Pisu et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">The frequency of CD38+ alveolar macrophages correlates with early control of M. tuberculosis in the murine lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245950" target="_blank" style="color:#020e65"><b>GSE245950</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary Tuberculosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fmed.2023.1003121</td>
+      <td name="td1">Armstead et al Front Med (Lausanne)</td>
+      <td name="td2">2023</td>
+      <td name="td3">Application of single cell multiomics points to changes in chromatin accessibility near calcitonin receptor like receptor and a possible role for adrenomedullin in the post-shock lung.</td>
+      <td name="td6"><a href="https://doi.org/10.26300/dm01-zr98" target="_blank" style="color:#020e65"><b>dm01-zr98</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">ARDS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.xcrm.2023.101282</td>
+      <td name="td1">Li et al Cell Rep Med</td>
+      <td name="td2">2023</td>
+      <td name="td3">Aurora A kinase inhibition induces accumulation of SCLC tumor cells in mitosis with restored interferon signaling to increase response to PD-L1</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214485" target="_blank" style="color:#020e65"><b>GSE214485</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">small cell lung cancers</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-021-01897-6</td>
+      <td name="td1">Maroni et al Commun Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Identification of a targetable KRAS-mutant epithelial population in non-small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136246" target="_blank" style="color:#020e65"><b>GSE136246</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung nodule</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2023.10.001</td>
+      <td name="td1">Konkimalla et al Cell Stem Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Transitional cell states sculpt tissue topology during lung regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218666" target="_blank" style="color:#020e65"><b>GSE218666</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">AT1 cell ablation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">left lobe</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.167211</td>
+      <td name="td1">Sucre et al JCI Insight</td>
+      <td name="td2">2023</td>
+      <td name="td3">Alveolar repair following LPS-induced injury requires cell-ECM interactions</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205882" target="_blank" style="color:#020e65"><b>GSE205882</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jaci.2022.07.022</td>
+      <td name="td1">Helou et al J Allergy Clin Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Human PD-1 agonist treatment alleviates neutrophilic asthma by reprogramming T cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210349" target="_blank" style="color:#020e65"><b>GSE210349</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Neutrophilic asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI157975</td>
+      <td name="td1">Yang et al J Clin Invest</td>
+      <td name="td2">2022</td>
+      <td name="td3">IL-1β-dependent extravasation of preexisting lung-restricted autoantibodies during lung transplantation activates complement and mediates primary graft dysfunction</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE211501" target="_blank" style="color:#020e65"><b>GSE211501</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">primary graft dysfunction</td>
+      <td name="td10">Lung</td>
+      <td name="td11">left lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2023.11.002</td>
+      <td name="td1">Kotov et al Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Early cellular mechanisms of type I interferon-driven susceptibility to tuberculosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216023" target="_blank" style="color:#020e65"><b>GSE216023</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Active tuberculosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2019.11.003</td>
+      <td name="td1">Zhang et al Cancer Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">CDK7 Inhibition Potentiates Genome Instability Triggering Anti-tumor Immunity in Small Cell Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129298" target="_blank" style="color:#020e65"><b>GSE129298</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Small Cell Lung Cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">BAL</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41591-019-0750-6</td>
+      <td name="td1">Laughney et al at Nat Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Regenerative lineages and immune-mediated pruning in lung cancer metastasis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123903" target="_blank" style="color:#020e65"><b>GSE123903</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12967-024-05895-0</td>
+      <td name="td1">Pan et al J Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Inhalation of itraconazole mitigates bleomycin-induced lung fibrosis via regulating SPP1 and C3 signaling pathway pivotal in the interaction between phagocytic macrophages and diseased fibroblasts.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267861" target="_blank" style="color:#020e65"><b>GSE267861</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary Fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-48589-3</td>
+      <td name="td1">Zhao et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Vascular endothelial-derived SPARCL1 exacerbates viral pneumonia through pro-inflammatory macrophage activation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE201631" target="_blank" style="color:#020e65"><b>GSE201631</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">endothelial</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.168911</td>
+      <td name="td1">Mei et al JCI Insight</td>
+      <td name="td2">2024</td>
+      <td name="td3">Eosinophils restrain humoral alloimmunity after lung transplantation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223268" target="_blank" style="color:#020e65"><b>GSE223268</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1152/ajplung.00250.2024</td>
+      <td name="td1">Kass-Gergi et al Am J Physiol Lung Cell Mol Physiol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Disruption of immune responses by type 1 diabetes exacerbates SARS-CoV-2 mediated lung injury</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276765" target="_blank" style="color:#020e65"><b>GSE276765</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung Injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2025.115612</td>
+      <td name="td1">Yu et al Cell Rep</td>
+      <td name="td2">2025</td>
+      <td name="td3">Single-cell and spatial transcriptomics reveal the pathogenesis of chronic granulomatous disease in a natural model.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271387" target="_blank" style="color:#020e65"><b>GSE271387</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2022.105114</td>
+      <td name="td1">Konkimalla et al iScience</td>
+      <td name="td2">2022</td>
+      <td name="td3">Multi-apical polarity of alveolar stem cells and their dynamics during lung development and regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE173878" target="_blank" style="color:#020e65"><b>GSE173878</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">AT2 cell ablation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2024.1382449</td>
+      <td name="td1">Kang et al Front Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Heterogeneity of immune cells and their communications unveiled by transcriptome profiling in acute inflammatory lung injury</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264032" target="_blank" style="color:#020e65"><b>GSE264032</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary Acute lung injury,   Extrapulmonary Acute lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41392-025-02190-2</td>
+      <td name="td1">Guo et al Signal Transduct Target Ther</td>
+      <td name="td2">2025</td>
+      <td name="td3">Targeting tumor-intrinsic S100 calcium-binding protein A1 augments antitumor immunity and potentiates immunotherapy efficacy</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE285657" target="_blank" style="color:#020e65"><b>GSE285657</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis Lung Carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41418-021-00866-0</td>
+      <td name="td1">Musiu et al Cell Death Differ</td>
+      <td name="td2">2022</td>
+      <td name="td3">Fatal cytokine release syndrome by an aberrant FLIP/STAT3 axis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168098" target="_blank" style="color:#020e65"><b>GSE168098</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">cytokine release syndromev</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1242381</td>
+      <td name="td1">Wellems et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Loss of CFTR function in macrophages alters the cell transcriptional program and delays lung resolution of inflammation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE233733" target="_blank" style="color:#020e65"><b>GSE233733</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">macrophage-specific cystic fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fcell.2023.1287133</td>
+      <td name="td1">Wu et al Front Cell Dev Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Deciphering the age-dependent changes of pulmonary fibroblasts in mice by single-cell transcriptomics.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE237757" target="_blank" style="color:#020e65"><b>GSE237757</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.xcrm.2024.101479</td>
+      <td name="td1">Lim et al Cell Rep Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">CXCL9/10-engineered dendritic cells promote T cell activation and enhance immune checkpoint blockade for lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE232730" target="_blank" style="color:#020e65"><b>GSE232730</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non small cell lung cancer,   Squamous cell carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2022.1011132</td>
+      <td name="td1">Verma et al Front Immunol</td>
+      <td name="td2">2022</td>
+      <td name="td3">IFN-&#x3b3; transforms the transcriptomic landscape and triggers myeloid cell hyperresponsiveness to cause lethal lung injury.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE212402&format=file" target="_blank" style="color:#020e65"><b>GSE212402</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">ARDS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-022-03828-5</td>
+      <td name="td1">Hoffmann et al Commun Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Human alveolar progenitors generate dual lineage bronchioalveolar organoids.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197949" target="_blank" style="color:#020e65"><b>GSE197949</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">HT280+ cells</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.164380</td>
+      <td name="td1">Trempus et al JCI Insight</td>
+      <td name="td2">2023</td>
+      <td name="td3">Functional Pdgfra fibroblast heterogeneity in normal and fibrotic mouse lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183423" target="_blank" style="color:#020e65"><b>GSE183423</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung,   Alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.112064</td>
+      <td name="td1">Tomlinson et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Staphylococcus aureus stimulates neutrophil itaconate production that suppresses the oxidative burst</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215195" target="_blank" style="color:#020e65"><b>GSE215195</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Staphylococcus aureus pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/scitranslmed.adc8930</td>
+      <td name="td1">Stokes et al Sci Transl Med</td>
+      <td name="td2">2024</td>
+      <td name="td3">Rescuing lung development through embryonic inhibition of histone acetylation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246194" target="_blank" style="color:#020e65"><b>GSE246194</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.biomaterials.2023.122097</td>
+      <td name="td1">Keenum et al Biomaterials</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-cell epitope-transcriptomics reveal lung stromal and immune cell response kinetics to nanoparticle-delivered RIG-I and TLR4 agonists</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220436" target="_blank" style="color:#020e65"><b>GSE220436</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2019.06.009</td>
+      <td name="td1">Nagashima et al Immunity</td>
+      <td name="td2">2019</td>
+      <td name="td3">Neuropeptide CGRP Limits Group 2 Innate Lymphoid Cell Responses and Constrains Type 2 Inflammation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131996" target="_blank" style="color:#020e65"><b>GSE131996</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">type 2 inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-023-06253-8</td>
+      <td name="td1">Kaiser et al Nature</td>
+      <td name="td2">2023</td>
+      <td name="td3">p53 governs an AT1 differentiation programme in lung cancer suppression</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE231674" target="_blank" style="color:#020e65"><b>GSE231674</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinomas</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.57525</td>
+      <td name="td1">Tan et al Elife</td>
+      <td name="td2">2021</td>
+      <td name="td3">The role of the NMD factor UPF3B in olfactory sensory neurons.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146043" target="_blank" style="color:#020e65"><b>GSE146043</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose Epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-52154-3</td>
+      <td name="td1">He et al Nat Common</td>
+      <td name="td2">2024</td>
+      <td name="td3">PRDM3/16 Regulate Chromatin Accessibility Required for NKX2-1 Mediated Alveolar Epithelial Differentiation and Function.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE250365" target="_blank" style="color:#020e65"><b>GSE250365</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-49477-6</td>
+      <td name="td1">Wang et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Identification of endothelial and mesenchymal FOXF1 enhancers involved in alveolar capillary dysplasia.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217194" target="_blank" style="color:#020e65"><b>GSE217194</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung mesoderm</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abl9041</td>
+      <td name="td1">Loos et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Dampening type 2 properties of group 2 innate lymphoid cells by a gammaherpesvirus infection reprograms alveolar macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218247" target="_blank" style="color:#020e65"><b>GSE218247</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">MuHV-4 infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fmicb.2025.1554961</td>
+      <td name="td1">Chen et al Front Microbio</td>
+      <td name="td2">2025</td>
+      <td name="td3">The single-cell transcriptional landscape of lung cells from PCV2d-infected mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278049" target="_blank" style="color:#020e65"><b>GSE278049</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">PCV2driven inflammatory lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-57819-1</td>
+      <td name="td1">Chang et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">CD4 T cell dysfunction is associated with bacterial recrudescence during chronic tuberculosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE211323" target="_blank" style="color:#020e65"><b>GSE211323</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Mycobacterium tuberculosis infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1136/jitc-2023-006896</td>
+      <td name="td1">Salehi-Rad et al J Immunother Cancer</td>
+      <td name="td2">2023</td>
+      <td name="td3">CCL21-DC in situ vaccination in murine NSCLC overcomes resistance to immunotherapy and generates systemic tumor-specific immunity.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE222158" target="_blank" style="color:#020e65"><b>GSE222158</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-023-01700-0</td>
+      <td name="td1">Lee et al Nat Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">BCG vaccination stimulates integrated organ immunity by feedback of the adaptive immune response to imprint prolonged innate antiviral resistance.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244126" target="_blank" style="color:#020e65"><b>GSE244126</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2024.09.016</td>
+      <td name="td1">Dalla et al Cell</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lung-resident alveolar macrophages regulate the timing of breast cancer metastasis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278454" target="_blank" style="color:#020e65"><b>GSE278454</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">MMTV-HER2 early lung,   MMTV-HER2 late lung</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.antiviral.2023.105656</td>
+      <td name="td1">Jung et al Antiviral Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Intranasal delivery of an adenovirus-vector vaccine co-expressing a modified spike protein and a genetic adjuvant confers lasting mucosal immunity against SARS-CoV-2</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229622" target="_blank" style="color:#020e65"><b>GSE229622</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41423-023-01008-x</td>
+      <td name="td1">Jeong et al Cell Mol Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Regulation of c-SMAC formation and AKT-mTOR signaling by the TSG101-IFT20 axis in CD4+ T cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179622" target="_blank" style="color:#020e65"><b>GSE179622</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">asthma-like inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.158079</td>
+      <td name="td1">Zhang et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptomic profiling of lung endothelial cells identifies dynamic inflammatory and regenerative subpopulations.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148499" target="_blank" style="color:#020e65"><b>GSE148499</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Endothelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adf0348</td>
+      <td name="td1">Zhu et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Inhibition of the mitochondrial pyruvate carrier simultaneously mitigates hyperinflammation and hyperglycemia in COVID-19</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE181798" target="_blank" style="color:#020e65"><b>GSE181798</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.00646-2019</td>
+      <td name="td1">Joshi et al Eur Respir J</td>
+      <td name="td2">2020</td>
+      <td name="td3">A spatially restricted fibrotic niche in pulmonary fibrosis is sustained by M-CSF/M-CSFR signalling in monocyte-derived alveolar macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE127803" target="_blank" style="color:#020e65"><b>GSE127803</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2022.104934</td>
+      <td name="td1">Woodring et al iScience</td>
+      <td name="td2">2022</td>
+      <td name="td3">Distinctive populations of CD4+T cells associated with vaccine efficacy</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198466" target="_blank" style="color:#020e65"><b>GSE198466</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Blastomyces dermatitidis infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1161/HYPERTENSIONAHA.123.21241</td>
+      <td name="td1">Yi et al Hypertension</td>
+      <td name="td2">2023</td>
+      <td name="td3">E2F1 Mediates SOX17 Deficiency-Induced Pulmonary Hypertension</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218398" target="_blank" style="color:#020e65"><b>GSE218398</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary arterial hypertension</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-025-02124-8</td>
+      <td name="td1">Cembellin-Prieto et al Nat Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">B cells modulate lung antiviral inflammatory responses via the neurotransmitter acetylcholine</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290363" target="_blank" style="color:#020e65"><b>GSE290363</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1186/s12931-025-03103-1</td>
+      <td name="td1">Fukada et al Respir Res</td>
+      <td name="td2">2025</td>
+      <td name="td3">Integrin α8 is a useful cell surface marker of alveolar lipofibroblasts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244237" target="_blank" style="color:#020e65"><b>GSE244237</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.abl9041</td>
+      <td name="td1">Loos et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Dampening type 2 properties of group 2 innate lymphoid cells by a gammaherpesvirus infection reprograms alveolar macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218246" target="_blank" style="color:#020e65"><b>GSE218246</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">MuHV-4 infected,   asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-15647-5</td>
+      <td name="td1">Tsukui et al Nat Communs</td>
+      <td name="td2">2020</td>
+      <td name="td3">Collagen-producing lung cell atlas identifies multiple subsets with distinct localization and relevance to fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132771" target="_blank" style="color:#020e65"><b>GSE132771</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-023-06253-8</td>
+      <td name="td1">Kaiser et al Nature</td>
+      <td name="td2">2023</td>
+      <td name="td3">p53 governs an AT1 differentiation programme in lung cancer suppression</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE231675" target="_blank" style="color:#020e65"><b>GSE231675</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1084/jem.20182293</td>
+      <td name="td1">Ghaedi et al J Exp Med</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single-cell analysis of RORα tracer mouse lung reveals ILC progenitors and effector ILC2 subsets</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122762" target="_blank" style="color:#020e65"><b>GSE122762</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1111/acel.14503</td>
+      <td name="td1">Lingampally et al Aging Cell</td>
+      <td name="td2">2025</td>
+      <td name="td3">Unraveling Alveolar Fibroblast and Activated Myofibroblast Heterogeneity and Differentiation Trajectories During Lung Fibrosis Development and Resolution in Young and Old Mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253453" target="_blank" style="color:#020e65"><b>GSE253453</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy,  Idiopathic pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.adl4913</td>
+      <td name="td1">Hasegaw et al Sci Adv</td>
+      <td name="td2">2024</td>
+      <td name="td3">Pulmonary osteoclast-like cells in silica induced pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274372" target="_blank" style="color:#020e65"><b>GSE274372</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.175290</td>
+      <td name="td1">Tan et al JCI Insight</td>
+      <td name="td2">2024</td>
+      <td name="td3">Targeting CEBPA to restore cellular identity and tissue homeostasis in pulmonary fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264629" target="_blank" style="color:#020e65"><b>GSE264629</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Fibrosis in the lung</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2022.02.023</td>
+      <td name="td1">Xu et al Dev Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">Excess neuropeptides in lung signal through endothelial cells to impair gas exchange</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171907" target="_blank" style="color:#020e65"><b>GSE171907</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Neuroendocrine Cell Hyperplasia of Infancy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2922-4</td>
+      <td name="td1">Kyle et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">A molecular cell atlas of the human lung from single-cell RNA sequencing</td>
+      <td name="td6"><a href="nan" target="_blank" style="color:#020e65"><b>syn21041851</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126_sciimmunol.adf8161_1</td>
+      <td name="td1">Oyesola et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Exposure to lung-migrating helminth protects against murine SARS-CoV-2 infection through macrophage-dependent T cell activation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218401" target="_blank" style="color:#020e65"><b>GSE218401</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Helminth infection,   Helminth infection + COVID-19,   COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2024.114286</td>
+      <td name="td1">Kim et al Cell Rep</td>
+      <td name="td2">2024</td>
+      <td name="td3">CRACD loss induces neuroendocrine cell plasticity of lung adenocarcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229982" target="_blank" style="color:#020e65"><b>GSE229982</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-022-05395-5</td>
+      <td name="td1">Jarick et al Nature</td>
+      <td name="td2">2022</td>
+      <td name="td3">Non-redundant functions of group 2 innate lymphoid cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212940" target="_blank" style="color:#020e65"><b>GSE212940</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea,  Lung</td>
+      <td name="td11">lung,   trachea</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03651-8</td>
+      <td name="td1">Casanova-Acebes et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Tissue-resident macrophages provide a pro-tumorigenic niche to early NSCLC cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156232" target="_blank" style="color:#020e65"><b>GSE156232</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2023.01.032</td>
+      <td name="td1">Wang et al Immunity</td>
+      <td name="td2">2023</td>
+      <td name="td3">Dysregulated lung stroma drives emphysema exacerbation by potentiating resident lymphocytes to suppress an epithelial stem cell reservoir</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206721" target="_blank" style="color:#020e65"><b>GSE206721</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Hhip-deleted lungs</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41392-023-01490-9</td>
+      <td name="td1">Xu et al Signal Transduct Target Ther</td>
+      <td name="td2">2023</td>
+      <td name="td3">Molecular mechanisms underlying the high mortality of hypervirulent Klebsiella pneumoniae and its effective therapy development.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220594" target="_blank" style="color:#020e65"><b>GSE220594</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">hypervirulent Klebsiella pneumoniae</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.00482-2023</td>
+      <td name="td1">Lingampally et al Eur Respir J</td>
+      <td name="td2">2025</td>
+      <td name="td3">Evidence for a lipofibroblast-to-<i>Cthrc1</i> <sup>+</sup> myofibroblast reversible switch during the development and resolution of lung fibrosis in young mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221402" target="_blank" style="color:#020e65"><b>GSE221402</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.4049/immunohorizons.2300082</td>
+      <td name="td1">Lin et al Immunohorizons</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lung Epithelial Regnase-1 Dampens Local Immune Response but Does Not Worsen Susceptibility to Klebsiella pneumoniae.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE248351" target="_blank" style="color:#020e65"><b>GSE248351</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Klebsiella pneumoniae</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI170118</td>
+      <td name="td1">Farahnak et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">B cells mediate lung ischemia/reperfusion injury by recruiting classical monocytes via synergistic B cell receptor/TLR4 signaling</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249242" target="_blank" style="color:#020e65"><b>GSE249242</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Ischemia reperfusion injury-mediated primary graft dysfunction</td>
+      <td name="td10">Lung</td>
+      <td name="td11">left lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.129359</td>
+      <td name="td1">Parimon et al JCI Insight</td>
+      <td name="td2">2019</td>
+      <td name="td3">Syndecan-1 promotes lung fibrosis by regulating epithelial reprogramming through extracellular vesicles</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131800" target="_blank" style="color:#020e65"><b>GSE131800</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/mBio.02749-21</td>
+      <td name="td1">Vanderheiden et al mBio</td>
+      <td name="td2">2022</td>
+      <td name="td3">CCR2 Signaling Restricts SARS-CoV-2 Infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186360" target="_blank" style="color:#020e65"><b>GSE186360</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2024.08.12.607602</td>
+      <td name="td1">Snyder et al bioRxiv</td>
+      <td name="td2">2024</td>
+      <td name="td3">The Aryl Hydrocarbon Receptor Controls IFNγ-Induced Immune Checkpoints PD-L1 and IDO via the JAK/STAT Pathway in Lung Adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241979" target="_blank" style="color:#020e65"><b>GSE241979</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.156648</td>
+      <td name="td1">Smirnova et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptome mapping identifies a local,   innate B cell population driving chronic rejection after lung transplantation.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE166386" target="_blank" style="color:#020e65"><b>GSE166386</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-28619-8</td>
+      <td name="td1">Murray et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">LKB1 drives stasis and C/EBP-mediated reprogramming to an alveolar type II fate in lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179501" target="_blank" style="color:#020e65"><b>GSE179501</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2018.03.067</td>
+      <td name="td1">Black et al Cell Rep</td>
+      <td name="td2">2018</td>
+      <td name="td3">FOXF1 Inhibits Pulmonary Fibrosis by Preventing CDH2-CDH11 Cadherin Switch in Myofibroblasts</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213017" target="_blank" style="color:#020e65"><b>GSE213016</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2023.107197</td>
+      <td name="td1">Wu et al iScience</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single cell RNA sequencing unravels mechanisms underlying senescence-like phenotypes of alveolar macrophages.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205982" target="_blank" style="color:#020e65"><b>GSE205982</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-57819-1</td>
+      <td name="td1">Chang et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">CD4 T cell dysfunction is associated with bacterial recrudescence during chronic tuberculosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE265891" target="_blank" style="color:#020e65"><b>GSE265891</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Mycobacterium tuberculosis infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/gad.348295.121</td>
+      <td name="td1">Olsen et al Genes Dev</td>
+      <td name="td2">2021</td>
+      <td name="td3">ASCL1 represses a SOX9+ neural crest stem-like state in small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE169529" target="_blank" style="color:#020e65"><b>GSE169529</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-14348-3</td>
+      <td name="td1">Ikonomou et al Nat Commun</td>
+      <td name="td2">2020</td>
+      <td name="td3">The in vivo genetic program of murine primordial lung epithelial progenitors</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139186" target="_blank" style="color:#020e65"><b>GSE139186</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">endoderm</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-023-01475-4</td>
+      <td name="td1">Park et al Nat Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">TREM2 macrophages drive NK cell paucity and dysfunction in lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184304" target="_blank" style="color:#020e65"><b>GSE184304</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">GFP-expressing KP lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41392-025-02263-2</td>
+      <td name="td1">Yu et al Signal Transduct Target Ther</td>
+      <td name="td2">2025</td>
+      <td name="td3">Microbiota-derived butyrate alleviates asthma via inhibiting Tfh13-mediated IgE production.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE252579" target="_blank" style="color:#020e65"><b>GSE252579</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">mediastinal lymph node</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-024-08542-2</td>
+      <td name="td1">Fang et al Nature</td>
+      <td name="td2">2025</td>
+      <td name="td3">RUNX2 promotes fibrosis via an alveolar-to-pathological fibroblast transition.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276546" target="_blank" style="color:#020e65"><b>GSE276546</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-35985-4</td>
+      <td name="td1">Yao et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Timing and cell specificity of senescence drives postnatal lung development and injury</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207866" target="_blank" style="color:#020e65"><b>GSE207866</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.182228</td>
+      <td name="td1">Lasse-Opsahl et al JCI Insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">KRASG12D drives immunosuppression in lung adenocarcinoma through paracrine signaling</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE281744" target="_blank" style="color:#020e65"><b>GSE281744</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">right lower lobe</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-33458-8</td>
+      <td name="td1">Weigert et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">Fibrocytes boost tumor-supportive phenotypic switches in the lung cancer niche via the endothelin system</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206843" target="_blank" style="color:#020e65"><b>GSE206843</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis lung carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-023-05626-z</td>
+      <td name="td1">Wang et al Commun Biol</td>
+      <td name="td2">2023</td>
+      <td name="td3">COVID-19 and influenza infections mediate distinct pulmonary cellular and transcriptomic changes</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE248775" target="_blank" style="color:#020e65"><b>GSE248775</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI186705</td>
+      <td name="td1">Komaru et al J Clin Invest</td>
+      <td name="td2">2025</td>
+      <td name="td3">Acute kidney injury triggers hypoxemia by lung intravascular neutrophil retention that reduces capillary blood flow.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249928" target="_blank" style="color:#020e65"><b>GSE249928</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Remote lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-35701-8</td>
+      <td name="td1">Taniguchi et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">In vivo induction of activin A-producing alveolar macrophages supports the progression of lung cell carcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193914" target="_blank" style="color:#020e65"><b>GSE193914</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2019.11.003</td>
+      <td name="td1">Zhang et al Cancer Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">CDK7 Inhibition Potentiates Genome Instability Triggering Anti-tumor Immunity in Small Cell Lung Cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129297" target="_blank" style="color:#020e65"><b>GSE129297</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Small Cell Lung Cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">BAL</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2018.02.001</td>
+      <td name="td1">Han et al Cell</td>
+      <td name="td2">2018</td>
+      <td name="td3">Mapping the Mouse Cell Atlas by Microwell-Seq</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108097" target="_blank" style="color:#020e65"><b>GSE108097</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.4049/jimmunol.2200946</td>
+      <td name="td1">Heredia et al J Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single-Cell Transcriptomic Analysis Links Nonmyelinating Schwann Cells to Proinflammatory Response in the Lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235904" target="_blank" style="color:#020e65"><b>GSE235904</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung inflammatory</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/science.abf3326</td>
+      <td name="td1">Reyes et al Science</td>
+      <td name="td2">2022</td>
+      <td name="td3">Sentinel p16INK4a+ cells in the basement membrane form a reparative niche in the lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140656" target="_blank" style="color:#020e65"><b>GSE140656</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2023-0109OC</td>
+      <td name="td1">Saux et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2024</td>
+      <td name="td3">BCL-2 Modulates IRE1α Activation to Attenuate Endoplasmic Reticulum Stress and Pulmonary Fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244568" target="_blank" style="color:#020e65"><b>GSE244568</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1371/journal.pone.0240707</td>
+      <td name="td1">Gaurav et al PLoS One</td>
+      <td name="td2">2021</td>
+      <td name="td3">High-throughput analysis of lung immune cells in a combined murine model of agriculture dust-triggered airway inflammation with rheumatoid arthritis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155436" target="_blank" style="color:#020e65"><b>GSE155436</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">airway inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/2159-8290.CD-23-0434</td>
+      <td name="td1">Kuhlmann-Hogan et al Cancer Discov</td>
+      <td name="td2">2024</td>
+      <td name="td3">EGFR-Driven Lung Adenocarcinomas Co-opt Alveolar Macrophage Metabolism and Function to Support EGFR Signaling and Growth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249658" target="_blank" style="color:#020e65"><b>GSE249658</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2020-0095MA</td>
+      <td name="td1">Koenitzer et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-Nucleus RNA-Sequencing Profiling of Mouse Lung. Reduced Dissociation Bias and Improved Rare Cell-Type Detection Compared with Single-Cell RNA Sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145998" target="_blank" style="color:#020e65"><b>GSE145998</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s43587-023-00488-w</td>
+      <td name="td1">Silva et al Nat Aging</td>
+      <td name="td2">2023</td>
+      <td name="td3">Nuclear envelope disruption triggers hallmarks of aging in lung alveolar macrophages</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146080" target="_blank" style="color:#020e65"><b>GSE146080</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lamin A deficiency</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/msphere.00375-23</td>
+      <td name="td1">Khatun et al mSphere</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cell-intrinsic and -extrinsic effects of SARS-CoV-2 RNA on pathogenesis: single-cell meta-analysis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239835" target="_blank" style="color:#020e65"><b>GSE239835</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-28619-8</td>
+      <td name="td1">Murray et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">LKB1 drives stasis and C/EBP-mediated reprogramming to an alveolar type II fate in lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179502" target="_blank" style="color:#020e65"><b>GSE179502</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-22-3140</td>
+      <td name="td1">Fan et al Cancer Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Elevated Mast Cell Abundance Is Associated with Enrichment of CCR2+ Cytotoxic T Cells and Favorable Prognosis in Lung Adenocarcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE127465" target="_blank" style="color:#020e65"><b>GSE127465</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">LA</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2025.115479</td>
+      <td name="td1">Zhang et al Cell Rep</td>
+      <td name="td2">2025</td>
+      <td name="td3">Pyroptosis of pulmonary fibroblasts and macrophages through NLRC4 inflammasome leads to acute respiratory failure</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269196" target="_blank" style="color:#020e65"><b>GSE269196</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Acute lung injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jaci.2022.03.036</td>
+      <td name="td1">Li et al Journal of Allergy and Clinical Immunology</td>
+      <td name="td2">2022</td>
+      <td name="td3">DJ-1 governs airway progenitor cell/eosinophil interactions to promote allergic inflammation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203079" target="_blank" style="color:#020e65"><b>GSE203079</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">allergic lung inflammation</td>
+      <td name="td10">Trachea,  Lung</td>
+      <td name="td11">Trachea,  Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/2326-6066.CIR-19-0828</td>
+      <td name="td1">Son et al Cancer Immunol Res</td>
+      <td name="td2">2020</td>
+      <td name="td3">Tumor-Infiltrating Regulatory T-cell Accumulation in the Tumor Microenvironment Is Mediated by IL33/ST2 Signaling</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE152022" target="_blank" style="color:#020e65"><b>GSE152022</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.185834</td>
+      <td name="td1">Manji et al JCI Insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">Effect of aging on pulmonary cellular responses during mechanical ventilation.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274828" target="_blank" style="color:#020e65"><b>GSE274828</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">ARDS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1093/toxsci/kfaa080</td>
+      <td name="td1">Hsu et al Toxicol Sci</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-cell RNA-seq Analysis Reveals That Prenatal Arsenic Exposure Results in Long-term,   Adverse Effects on Immune Gene Expression in Response to Influenza A Infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142047" target="_blank" style="color:#020e65"><b>GSE142047</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-23-0258</td>
+      <td name="td1">Scortegagna et al Cancer Res</td>
+      <td name="td2">2023</td>
+      <td name="td3">Ubiquitin Ligases Siah1a/2 Control Alveolar Macrophage Functions to Limit Carcinogen-Induced Lung Adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215992" target="_blank" style="color:#020e65"><b>GSE215992</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">small cell lung cancers</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.147593</td>
+      <td name="td1">Gao et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">IFN-&#x3b3; is essential for alveolar macrophage-driven pulmonary inflammation in macrophage activation syndrome.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE169325" target="_blank" style="color:#020e65"><b>GSE169325</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">MAS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-019-08831-9</td>
+      <td name="td1">Angelidis et al Nat Communs</td>
+      <td name="td2">2019</td>
+      <td name="td3">An atlas of the aging lung mapped by single cell transcriptomics and deep tissue proteomics</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124872" target="_blank" style="color:#020e65"><b>GSE124872</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adc9081</td>
+      <td name="td1">Silva-Sanchez et al Sci Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Activation of regulatory dendritic cells by Mertk coincides with a temporal wave of apoptosis in neonatal lungs</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224178" target="_blank" style="color:#020e65"><b>GSE224178</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1183/13993003.00482-2023</td>
+      <td name="td1">Lingampally et al Eur Respir J</td>
+      <td name="td2">2025</td>
+      <td name="td3">Evidence for a lipofibroblast-to-<i>Cthrc1</i> <sup>+</sup> myofibroblast reversible switch during the development and resolution of lung fibrosis in young mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223664" target="_blank" style="color:#020e65"><b>GSE223664</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-024-06872-5</td>
+      <td name="td1">Wang et al Commun Biol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Deficiency of Tlr7 and Irf7 in mice increases the severity of COVID-19 through the reduced interferon production</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274686" target="_blank" style="color:#020e65"><b>GSE274686</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1164/rccm.201712-2410OC</td>
+      <td name="td1">Reyfman et al American journal of respiratory and critical care medicine</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-Cell Transcriptomic Analysis of Human Lung Provides Insights into the Pathobiology of Pulmonary Fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121611" target="_blank" style="color:#020e65"><b>GSE121611</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI172116</td>
+      <td name="td1">Lin et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">Hyperactive mTORC1 in lung mesenchyme induces endothelial cell dysfunction and pulmonary vascular remodeling.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249634" target="_blank" style="color:#020e65"><b>GSE249634</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lymphangioleiomyomatosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.177084</td>
+      <td name="td1">Soucy et al JCI Insight</td>
+      <td name="td2">2025</td>
+      <td name="td3">Transcriptomic responses of lung mesenchymal cells during pneumonia.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242498" target="_blank" style="color:#020e65"><b>GSE242498</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">acute pneumococcal pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-023-01468-3</td>
+      <td name="td1">Vanneste et al Nat Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">MafB-restricted local monocyte proliferation precedes lung interstitial macrophage differentiation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193896" target="_blank" style="color:#020e65"><b>GSE193896</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Diphtheria toxin-induced lung immune injury</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-020-14348-3</td>
+      <td name="td1">Ikonomou et al Nat Commun</td>
+      <td name="td2">2020</td>
+      <td name="td3">The in vivo genetic program of murine primordial lung epithelial progenitors</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE113320" target="_blank" style="color:#020e65"><b>GSE113320</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">endoderm</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2025.1557583</td>
+      <td name="td1">Poole et al Front Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Lung disease in relation to unique monocyte-macrophage subpopulations induced by combined inhalant endotoxin and collagen-induced arthritis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284234" target="_blank" style="color:#020e65"><b>GSE284234</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Acute pulmonary inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stemcr.2023.07.006</td>
+      <td name="td1">Li et al Stem Cell Reports</td>
+      <td name="td2">2023</td>
+      <td name="td3">DOT1L regulates lung developmental epithelial cell fate and adult alveolar stem cell differentiation after acute injury.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210800" target="_blank" style="color:#020e65"><b>GSE210800</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102551</td>
+      <td name="td1">Liu et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Categorization of lung mesenchymal cells in development and fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157377" target="_blank" style="color:#020e65"><b>GSE157377</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41564-023-01523-7</td>
+      <td name="td1">Amaral et al Nat Microbiol</td>
+      <td name="td2">2024</td>
+      <td name="td3">BACH1 promotes tissue necrosis and Mycobacterium tuberculosis susceptibility.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236053" target="_blank" style="color:#020e65"><b>GSE236053</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary Tuberculosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/0008-5472.CAN-21-0101</td>
+      <td name="td1">Huggins et al Cancer Res</td>
+      <td name="td2">2022</td>
+      <td name="td3">Characterizing Macrophage Diversity in Metastasis-Bearing Lungs Reveals a Lipid-Associated Macrophage Subset.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164302" target="_blank" style="color:#020e65"><b>GSE164302</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Primary tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2020.108210</td>
+      <td name="td1">van der Linden et al Cell Rep</td>
+      <td name="td2">2021</td>
+      <td name="td3">Olfactory Stimulation Regulates the Birth of Neurons That Express Specific Odorant Receptors.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157119" target="_blank" style="color:#020e65"><b>GSE157119</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Nose</td>
+      <td name="td11">Nose Epithelium</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1073/pnas.2215449120</td>
+      <td name="td1">Fu et al Proc Natl Acad Sci U S A</td>
+      <td name="td2">2023</td>
+      <td name="td3">c-JUN-mediated transcriptional responses in lymphatic endothelial cells are required for lung fluid clearance at birth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213743" target="_blank" style="color:#020e65"><b>GSE213743</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1080/2162402X.2022.2114740</td>
+      <td name="td1">Zhong et al Oncoimmunology</td>
+      <td name="td2">2022</td>
+      <td name="td3">scRNA-seq reveals ATPIF1 activity in control of T cell antitumor activity.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE158278&format=file" target="_blank" style="color:#020e65"><b>GSE158278</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">B16 melanoma tumor</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41423-025-01285-8</td>
+      <td name="td1">Schacht et al Cell Mol Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Activation and maturation of antigen-specific B cells in nonectopic lung infiltrates are independent of germinal center reactions in the draining lymph node</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274693" target="_blank" style="color:#020e65"><b>GSE274693</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung inflammation</td>
+      <td name="td10">Trachea,  Lung</td>
+      <td name="td11">lymph node,   lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2024.08.018</td>
+      <td name="td1">Lercher et al Immunity</td>
+      <td name="td2">2024</td>
+      <td name="td3">Antiviral innate immune memory in alveolar macrophages following SARS-CoV-2 infection ameliorates secondary influenza A virus disease</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264701" target="_blank" style="color:#020e65"><b>GSE264701</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">COVID-19</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.mucimm.2024.11.009</td>
+      <td name="td1">Matarazzo et al Mucosal Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Neutrophil subsets enhance the efficacy of host-directed therapy in pneumococcal pneumonia</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269163" target="_blank" style="color:#020e65"><b>GSE269163</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pneumococcal pneumonia</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2020-0095MA</td>
+      <td name="td1">Koenitzer et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">Single-Nucleus RNA-Sequencing Profiling of Mouse Lung. Reduced Dissociation Bias and Improved Rare Cell-Type Detection Compared with Single-Cell RNA Sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145998" target="_blank" style="color:#020e65"><b>GSE145998</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-018-0201-4</td>
+      <td name="td1">Ricardo-Gonzalez et al Nat Immunol</td>
+      <td name="td2">2018</td>
+      <td name="td3">Tissue signals imprint ILC2 identity with anticipatory function</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117567" target="_blank" style="color:#020e65"><b>GSE117567</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.158079</td>
+      <td name="td1">Zhang et al JCI Insight</td>
+      <td name="td2">2022</td>
+      <td name="td3">Single-cell transcriptomic profiling of lung endothelial cells identifies dynamic inflammatory and regenerative subpopulations.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE201541" target="_blank" style="color:#020e65"><b>GSE201541</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">H1N1</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI147343</td>
+      <td name="td1">Braeuer et al J Clin Invest</td>
+      <td name="td2">2021</td>
+      <td name="td3">Transcription factor FOXF1 identifies compartmentally distinct mesenchymal cells with a role in lung allograft fibrogenesis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179034" target="_blank" style="color:#020e65"><b>GSE179034</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2025.115513</td>
+      <td name="td1">Wen et al Cell Rep</td>
+      <td name="td2">2025</td>
+      <td name="td3">A spatiotemporal cell atlas of cardiopulmonary progenitor cell allocation during development.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267719" target="_blank" style="color:#020e65"><b>GSE267719</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/jci.insight.123637</td>
+      <td name="td1">Riemondy et al JCI Insight</td>
+      <td name="td2">2020</td>
+      <td name="td3">Single cell RNA sequencing identifies TGF&#x3b2; as a key regenerative cue following LPS-induced lung injury.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE113049" target="_blank" style="color:#020e65"><b>GSE113049</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.ccell.2020.06.012</td>
+      <td name="td1">Marjanovic et al Cancer Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Emergence of a High-Plasticity Cell State during Lung Cancer Evolution</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE152607&format=file" target="_blank" style="color:#020e65"><b>GSE152607</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung Adenocarcinoma(LUAD)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1127485</td>
+      <td name="td1">Jirmo et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Single cell RNA sequencing reveals distinct clusters of Irf8-expressing pulmonary conventional dendritic cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE195899" target="_blank" style="color:#020e65"><b>GSE195899</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">asthma,   multiplexed sample (Alum,   OVA,   Tolerization protocol)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2023.05.005</td>
+      <td name="td1">Guilbaud et al Cell Stem Cell</td>
+      <td name="td2">2023</td>
+      <td name="td3">Cholesterol efflux pathways hinder KRAS-driven lung tumor progenitor cell expansion</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE226597" target="_blank" style="color:#020e65"><b>GSE226597</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung adenocarcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-025-58931-y</td>
+      <td name="td1">Schmidt et al Nat Commun</td>
+      <td name="td2">2025</td>
+      <td name="td3">Inflammatory conditions shape phenotypic and functional characteristics of lung-resident memory T cells in mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261708" target="_blank" style="color:#020e65"><b>GSE261708</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">intranasal H1N1 infection,  intranasal adenoviral immunization</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2021.102551</td>
+      <td name="td1">Liu et al iScience</td>
+      <td name="td2">2021</td>
+      <td name="td3">Categorization of lung mesenchymal cells in development and fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156329" target="_blank" style="color:#020e65"><b>GSE156329</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2018.03.010</td>
+      <td name="td1">Xie et al Cell Report</td>
+      <td name="td2">2018</td>
+      <td name="td3">Single-Cell Deconvolution of Fibroblast Heterogeneity in Mouse Pulmonary Fibrosis</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104154" target="_blank" style="color:#020e65"><b>GSE104154</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Idiopathic pulmonary fibrosis (IPF)</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Mesenchymal</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2023.112451</td>
+      <td name="td1">Cardenas-Diaz et al Cell Rep</td>
+      <td name="td2">2023</td>
+      <td name="td3">Temporal and spatial staging of lung alveolar regeneration is determined by the grainyhead transcription factor Tfcp2l1</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE204786" target="_blank" style="color:#020e65"><b>GSE204786</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-018-07770-1</td>
+      <td name="td1">Guo et al Nat Commun</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single cell RNA analysis identifies cellular heterogeneity and adaptive responses of the lung at birth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122329" target="_blank" style="color:#020e65"><b>GSE122329</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-024-08542-2</td>
+      <td name="td1">Fang et al Nature</td>
+      <td name="td2">2025</td>
+      <td name="td3">RUNX2 promotes fibrosis via an alveolar-to-pathological fibroblast transition.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229523" target="_blank" style="color:#020e65"><b>GSE229523</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">pulmonary fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1073/pnas.1719474115</td>
+      <td name="td1">Wang et al Proc Natl Acad Sci U S A</td>
+      <td name="td2">2018</td>
+      <td name="td3">Pulmonary alveolar type I cell population consists of two distinct subtypes that differ in cell fate</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106960" target="_blank" style="color:#020e65"><b>GSE106960</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung: AT1,  AT2</td>
+      <td name="td11">Adult,  Children,  Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41598-024-70880-y</td>
+      <td name="td1">Huang et al Sci Rep</td>
+      <td name="td2">2024</td>
+      <td name="td3">PIP-seq identifies novel heterogeneous lung innate lymphocyte population activation after combustion product exposure</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261844" target="_blank" style="color:#020e65"><b>GSE261844</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">neutrophilic lung inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-022-31890-4</td>
+      <td name="td1">Caporarello et al Nat Commun</td>
+      <td name="td2">2022</td>
+      <td name="td3">Dysfunctional ERG signaling drives pulmonary vascular aging and persistent fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE187333" target="_blank" style="color:#020e65"><b>GSE187333</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cels.2018.05.008</td>
+      <td name="td1">Steuerman et al Cell Syst</td>
+      <td name="td2">2019</td>
+      <td name="td3">Dissection of Influenza Infection In&#xa0;Vivo by Single-Cell RNA Sequencing.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE107947" target="_blank" style="color:#020e65"><b>GSE107947</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza A</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fimmu.2023.1227175</td>
+      <td name="td1">Mindt et al Front Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Differential <i>in vivo</i> labeling with barcoded antibodies allows for simultaneous transcriptomic profiling of airway,   lung tissue and intravascular immune cells.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246845" target="_blank" style="color:#020e65"><b>GSE246845</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenzae</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1073/pnas.1906663116</td>
+      <td name="td1">Little et al Proc Natl Acad Sci U S A</td>
+      <td name="td2">2019</td>
+      <td name="td3">Transcriptional control of lung alveolar type 1 cell development and maintenance by NK homeobox 2-1</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129584" target="_blank" style="color:#020e65"><b>GSE129584</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">AT1 cell developmental defects</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2025.115868</td>
+      <td name="td1">Can et al Cell Rep</td>
+      <td name="td2">2025</td>
+      <td name="td3">Rapid group-2 innate lymphoid cell mobilization from the intestine aids in early lung defense and repair</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288743" target="_blank" style="color:#020e65"><b>GSE288743</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">helminth infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2023-0351LE</td>
+      <td name="td1">Barr et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Airway Microfold Cells Emerge in the Post-Influenza Lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244279" target="_blank" style="color:#020e65"><b>GSE244279</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-024-49477-6</td>
+      <td name="td1">Wang et al Nat Commun</td>
+      <td name="td2">2024</td>
+      <td name="td3">Identification of endothelial and mesenchymal FOXF1 enhancers involved in alveolar capillary dysplasia.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217194" target="_blank" style="color:#020e65"><b>GSE217194</b></a></td>
+      <td name="td4">snRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fcell.2024.1335061</td>
+      <td name="td1">Chandran et al Front Cell Dev Biol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Dedifferentiated early postnatal lung myofibroblasts redifferentiate in adult disease.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE252660" target="_blank" style="color:#020e65"><b>GSE252660</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI173371</td>
+      <td name="td1">Lee et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">An in vivo screening platform identifies senolytic compounds that target p16INK4a+ fibroblasts in lung fibrosis.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235352" target="_blank" style="color:#020e65"><b>GSE235352</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pulmonary Fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1101/2024.08.03.606484</td>
+      <td name="td1">Eastburn et al bioRxiv</td>
+      <td name="td2">2024</td>
+      <td name="td3">High-throughput gene expression analysis with TempO-LINC sensitively resolves complex brain,   lung and kidney heterogeneity at single-cell resolution.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275129" target="_blank" style="color:#020e65"><b>GSE275129</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung lobe</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.abg1850</td>
+      <td name="td1">Wu et al Sci Adv</td>
+      <td name="td2">2021</td>
+      <td name="td3">YAP drives fate conversion and chemoresistance of small cell lung cancer</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161741" target="_blank" style="color:#020e65"><b>GSE161741</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciadv.aaw3851</td>
+      <td name="td1">Raredon et al Sci Adv</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-cell connectomic analysis of adult mammalian lungs</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133747" target="_blank" style="color:#020e65"><b>GSE133747</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1007/s00018-022-04599-2</td>
+      <td name="td1">Chu et al Cell Mol Life Sci</td>
+      <td name="td2">2022</td>
+      <td name="td3">GLI1+ cells are a source of repair-supportive mesenchymal cells (RSMCs) during airway epithelial regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215094" target="_blank" style="color:#020e65"><b>GSE215094</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1152/ajplung.00325.2021</td>
+      <td name="td1">Na et al Am J Physiol Lung Cell Mol Physiol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Epithelial LIF signaling limits apoptosis and lung injury during bacterial pneumonia</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179855" target="_blank" style="color:#020e65"><b>GSE179855</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">bacterial pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">left lobes</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2019.02.002</td>
+      <td name="td1">Dahlgren et al Immunity</td>
+      <td name="td2">2019</td>
+      <td name="td3">Adventitial Stromal Cells Define Group 2 Innate Lymphoid Cell Tissue Niches</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125492" target="_blank" style="color:#020e65"><b>GSE125492</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">N.brasiliensis infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1002/advs.202101501</td>
+      <td name="td1">Wang et al Adv Sci (Weinh)</td>
+      <td name="td2">2021</td>
+      <td name="td3">IL-36γ and IL-36Ra Reciprocally Regulate NSCLC Progression by Modulating GSH Homeostasis and Oxidative Stress-Induced Cell Death</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165641" target="_blank" style="color:#020e65"><b>GSE165641</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/mbio.03299-23</td>
+      <td name="td1">Das et al mBio</td>
+      <td name="td2">2024</td>
+      <td name="td3">Lung type 3 innate lymphoid cells respond early following Mycobacterium tuberculosis infection</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249667" target="_blank" style="color:#020e65"><b>GSE249667</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Mtb infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2021.04.027</td>
+      <td name="td1">Jiang et al Developmental Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">VEGF receptor 2 (KDR) protects airways from mucus metaplasia through a Sox9 dependent pathway</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE171571&format=file" target="_blank" style="color:#020e65"><b>GSE171571</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung Epithelium</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1165/rcmb.2023-0078OC</td>
+      <td name="td1">Yao et al Am J Respir Cell Mol Biol</td>
+      <td name="td2">2024</td>
+      <td name="td3">Mutual Regulation of Transcriptomes between Murine Pneumocytes and Fibroblasts Mediates Alveolar Regeneration in Air-Liquid Interface Cultures</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244333" target="_blank" style="color:#020e65"><b>GSE244333</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.celrep.2020.108553</td>
+      <td name="td1">Engler et al Cell Report</td>
+      <td name="td2">2020</td>
+      <td name="td3">Airway-Associated Macrophages in Homeostasis and Repair</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE152501&format=file" target="_blank" style="color:#020e65"><b>GSE152501</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Trachea,  Airway,  Lung</td>
+      <td name="td11">Tracheal epithelium,  Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.55526</td>
+      <td name="td1">Kuwahara et al eLife</td>
+      <td name="td2">2020</td>
+      <td name="td3">Delineating the early transcriptional specification of the mammalian trachea and esophagus</td>
+      <td name="td6"><a href="https://doi.org/10.7272/Q6WW7FVB" target="_blank" style="color:#020e65"><b>Q6WW7FVB</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Pharynx,  Trachea,  Lung</td>
+      <td name="td11">Pharynx,  Trachea,  Lung</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/1078-0432.CCR-19-1440</td>
+      <td name="td1">Fouillade et al Clin Cancer Res</td>
+      <td name="td2">2020</td>
+      <td name="td3">FLASH Irradiation Spares Lung Progenitor Cells and Limits the Incidence of Radio-induced Senescence</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133992" target="_blank" style="color:#020e65"><b>GSE133992</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Radiation-induced lung injury/inflammation</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-023-37515-8</td>
+      <td name="td1">Chung et al Nat Commun</td>
+      <td name="td2">2023</td>
+      <td name="td3">Smad3 is essential for polarization of tumor-associated neutrophils in non-small cell lung carcinoma.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186530" target="_blank" style="color:#020e65"><b>GSE186530</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lewis lung carcinoma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-020-2922-4</td>
+      <td name="td1">Kyle et al Nature</td>
+      <td name="td2">2020</td>
+      <td name="td3">A molecular cell atlas of the human lung from single-cell RNA sequencing</td>
+      <td name="td6"><a href="https://www.synapse.org/#!Synapse:syn21041851/files/" target="_blank" style="color:#020e65"><b>syn21041851</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03651-8</td>
+      <td name="td1">Casanova-Acebes et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Tissue-resident macrophages provide a pro-tumorigenic niche to early NSCLC cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157711" target="_blank" style="color:#020e65"><b>GSE157711</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/mbio.00550-24</td>
+      <td name="td1">Sojati et al mBio</td>
+      <td name="td2">2024</td>
+      <td name="td3">IFN-λ drives distinct lung immune landscape changes and antiviral responses in human metapneumovirus infection.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261511" target="_blank" style="color:#020e65"><b>GSE261511</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Human metapneumovirus infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1158/2159-8290.CD-19-0780</td>
+      <td name="td1">Li et al Cancer Discov</td>
+      <td name="td2">2020</td>
+      <td name="td3">In Vivo Epigenetic CRISPR Screen Identifies Asf1a as an Immunotherapeutic Target in Kras-Mutant Lung Adenocarcinoma</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133604" target="_blank" style="color:#020e65"><b>GSE133604</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.jaci.2023.07.016</td>
+      <td name="td1">Moon et al J Allergy Clin Immunol</td>
+      <td name="td2">2023</td>
+      <td name="td3">Complement C1q essential for aeroallergen sensitization via CSF1R+ conventional dendritic cells type 2</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221208" target="_blank" style="color:#020e65"><b>GSE221208</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">asthma</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41421-019-0104-z</td>
+      <td name="td1">Chu et al Cell Discov</td>
+      <td name="td2">2019</td>
+      <td name="td3">STK11 is required for the normal program of ciliated cell differentiation in airways</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123838" target="_blank" style="color:#020e65"><b>GSE123838</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1161/CIRCULATIONAHA.124.070925</td>
+      <td name="td1">Yang et al Circulation</td>
+      <td name="td2">2025</td>
+      <td name="td3">Arterial-Lymphatic-Like Endothelial Cells Appear in Hereditary Hemorrhagic Telangiectasia 2 and Contribute to Vascular Leakage and Arteriovenous Malformations.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242741" target="_blank" style="color:#020e65"><b>GSE242741</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Hereditary Hemorrhagic Telangiectasia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-021-03651-8</td>
+      <td name="td1">Casanova-Acebes et al Nature</td>
+      <td name="td2">2021</td>
+      <td name="td3">Tissue-resident macrophages provide a pro-tumorigenic niche to early NSCLC cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160711" target="_blank" style="color:#020e65"><b>GSE160711</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">non-small cell lung cancer</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.3389/fphar.2022.875887</td>
+      <td name="td1">Nguyen et al Front Pharmacol</td>
+      <td name="td2">2022</td>
+      <td name="td3">Immunophenotyping of Acute Inflammatory Exacerbations of Lung Injury Driven by Mutant Surfactant Protein-C: A Role for Inflammatory Eosinophils.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE196657" target="_blank" style="color:#020e65"><b>GSE196657</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1172/JCI176828</td>
+      <td name="td1">Lin et al J Clin Invest</td>
+      <td name="td2">2024</td>
+      <td name="td3">Viral infection induces inflammatory signals that coordinate YAP regulation of dysplastic cells in lung alveoli</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234082" target="_blank" style="color:#020e65"><b>GSE234082</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Left lung lobe</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adj2654</td>
+      <td name="td1">Huang et al Sci Immunol</td>
+      <td name="td2">2024</td>
+      <td name="td3">GFI1B specifies developmental potential of innate lymphoid cell progenitors in the lungs.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE233653" target="_blank" style="color:#020e65"><b>GSE233653</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1128/mbio.03137-22</td>
+      <td name="td1">Holloman et al mBio</td>
+      <td name="td2">2023</td>
+      <td name="td3">Aryl Hydrocarbon Receptor Activation Ameliorates Acute Respiratory Distress Syndrome through Regulation of Th17 and Th22 Cells in the Lungs</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224938" target="_blank" style="color:#020e65"><b>GSE224938</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">ARDS</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.cell.2017.07.034</td>
+      <td name="td1">Zepp et al Cell</td>
+      <td name="td2">2017</td>
+      <td name="td3">Distinct Mesenchymal Lineages and Niches Promote Epithelial Self-Renewal and Myofibrogenesis in the Lung.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE99714" target="_blank" style="color:#020e65"><b>GSE99714</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Lung damage</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">nan</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2020.06.020</td>
+      <td name="td1">Choi et al Cell stem cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Inflammatory Signals Induce AT2 Cell-Derived Damage-Associated Transient Progenitors that Mediate Alveolar Regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144468" target="_blank" style="color:#020e65"><b>GSE144468</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Unclassified</td>
+      <td name="td10">Lung,  Blood</td>
+      <td name="td11">Lung,  PBMC</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2019.12.014</td>
+      <td name="td1">Kathiriya et al Cell Stem Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Distinct Airway Epithelial Stem Cells Hide among Club Cells but Mobilize to Promote Alveolar Regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129937" target="_blank" style="color:#020e65"><b>GSE129937</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Distal lung epithelium</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1126/sciimmunol.adr4977</td>
+      <td name="td1">Peng et al Sci Immunol</td>
+      <td name="td2">2025</td>
+      <td name="td3">Endothelial-driven TGFβ signaling supports lung interstitial macrophage development from monocytes.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE285104" target="_blank" style="color:#020e65"><b>GSE285104</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Unclassified</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1111/acel.13470</td>
+      <td name="td1">D'Souza et al Aging Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">Type I Interferon signaling controls the accumulation and transcriptomes of monocytes in the aged lung.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167236" target="_blank" style="color:#020e65"><b>GSE167236</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult,  Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2020.07.022</td>
+      <td name="td1">Dost et al Cell Stem Cell</td>
+      <td name="td2">2020</td>
+      <td name="td3">Organoids Model Transcriptional Hallmarks of Oncogenic KRAS Activation in Lung Epithelial Progenitor Cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149909" target="_blank" style="color:#020e65"><b>GSE149909</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Ad5CMV(cre) infected</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Epithelial organoid cells</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.devcel.2021.05.016</td>
+      <td name="td1">Kiyokawa et al Developmental Cell</td>
+      <td name="td2">2021</td>
+      <td name="td3">Airway basal stem cells reutilize the embryonic proliferation regulator,   Tgfβ-Id2 axis,   for tissue regeneration</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE152692&format=file" target="_blank" style="color:#020e65"><b>GSE152692</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Tracheal epithelium</td>
+      <td name="td11">Adult,  Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.36865</td>
+      <td name="td1">Li et al Elife</td>
+      <td name="td2">2018</td>
+      <td name="td3">Pdgfra marks a cellular lineage with distinct contributions to myofibroblasts in lung maturation and injury response</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118555" target="_blank" style="color:#020e65"><b>GSE118555</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.80083</td>
+      <td name="td1">Zhou et al eLife</td>
+      <td name="td2">2022</td>
+      <td name="td3">Airway basal cells show regionally distinct potential to undergo metaplastic differentiation</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE134064&format=file" target="_blank" style="color:#020e65"><b>GSE134064</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-022-03536-0</td>
+      <td name="td1">Shichino et al Commun Biol</td>
+      <td name="td2">2022</td>
+      <td name="td3">TAS-Seq is a robust and sensitive amplification method for bead-based scRNA-seq</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE180139" target="_blank" style="color:#020e65"><b>GSE180139</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung fibrosis</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1111/acel.13470</td>
+      <td name="td1">D'Souza et al Aging Cell</td>
+      <td name="td2">2022</td>
+      <td name="td3">Type I Interferon signaling controls the accumulation and transcriptomes of monocytes in the aged lung.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167170" target="_blank" style="color:#020e65"><b>GSE167170</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s42003-021-01703-3</td>
+      <td name="td1">Koss et al Commun Biol</td>
+      <td name="td2">2021</td>
+      <td name="td3">IL36 is a critical upstream amplifier of neutrophilic lung inflammation in mice</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159161" target="_blank" style="color:#020e65"><b>GSE159161</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung inflammation</td>
+      <td name="td10">Bronchi</td>
+      <td name="td11">alveolar</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2022.104900</td>
+      <td name="td1">Xu et al iScience</td>
+      <td name="td2">2023</td>
+      <td name="td3">Integrative analysis of spatial transcriptome with single-cell transcriptome and single-cell epigenome in mouse lungs after immunization.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190225" target="_blank" style="color:#020e65"><b>GSE190225</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">inoculated with heat-killed K. pneumoniae</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s44319-023-00054-w</td>
+      <td name="td1">Kim et al EMBO Rep</td>
+      <td name="td2">2024</td>
+      <td name="td3">Pericytes contribute to pulmonary vascular remodeling via HIF2α signaling.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249461" target="_blank" style="color:#020e65"><b>GSE249461</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.isci.2023.106097</td>
+      <td name="td1">Zanini et al iScience</td>
+      <td name="td2">2023</td>
+      <td name="td3">Developmental diversity and unique sensitivity to injury of lung endothelial subtypes during postnatal growth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159804" target="_blank" style="color:#020e65"><b>GSE159804</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung pulmonary endothelium</td>
+      <td name="td11">Fetal</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-019-09639-3</td>
+      <td name="td1">Sun et al Nat Commun</td>
+      <td name="td2">2019</td>
+      <td name="td3">A Bayesian mixture model for clustering droplet-based single-cell transcriptomic data from population studies</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066" target="_blank" style="color:#020e65"><b>GSE128066</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Pneumonia</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.74183</td>
+      <td name="td1">Radtke et al Elife</td>
+      <td name="td2">2022</td>
+      <td name="td3">Th2 single-cell heterogeneity and clonal distribution at distant sites in helminth-infected mice.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE181342" target="_blank" style="color:#020e65"><b>GSE181342</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Nippostrongylus brasiliensis infection</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2018.09.020</td>
+      <td name="td1">Mollaoglu et al Immunity</td>
+      <td name="td2">2018</td>
+      <td name="td3">The Lineage-Defining Transcription Factors SOX2 and NKX2-1 Determine Lung Cancer Cell Fate and Shape the Tumor Immune Microenvironment</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118245" target="_blank" style="color:#020e65"><b>GSE118245</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">lung squamous cell carcinoma</td>
+      <td name="td10">Lung,  Blood</td>
+      <td name="td11">Lung,   PBMC</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-018-0590-4</td>
+      <td name="td1">Consortium et al Nature</td>
+      <td name="td2">2018</td>
+      <td name="td3">Single-cell transcriptomics of 20 mouse organs creates a Tabula Muris</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE109774" target="_blank" style="color:#020e65"><b>GSE109774</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/sdata.2018.160</td>
+      <td name="td1">He et al Sci Data</td>
+      <td name="td2">2018</td>
+      <td name="td3">Single-cell RNA sequencing of mouse brain and lung vascular and vessel-associated cell types</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE99235" target="_blank" style="color:#020e65"><b>GSE99235</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">NSCLC</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung vascular</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-018-0590-4</td>
+      <td name="td1">Consortium et al Nature</td>
+      <td name="td2">2018</td>
+      <td name="td3">Single-cell transcriptomics of 20 mouse organs creates a Tabula Muris</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE109774" target="_blank" style="color:#020e65"><b>GSE109774</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41556-020-0569-x</td>
+      <td name="td1">Paris et al Nat Cell Biol</td>
+      <td name="td2">2020</td>
+      <td name="td3">STAT3-BDNF-TrkB signalling promotes alveolar epithelial regeneration after lung injury.</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132533" target="_blank" style="color:#020e65"><b>GSE132533</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Mesenchymal</td>
+      <td name="td11">Unclassified</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41590-019-0582-z</td>
+      <td name="td1">Sajti et al Nat Immunol</td>
+      <td name="td2">2020</td>
+      <td name="td3">Transcriptomic and epigenetic mechanisms underlying myeloid diversity in the lung</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136915" target="_blank" style="color:#020e65"><b>GSE136915</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.immuni.2019.05.014</td>
+      <td name="td1">Tibbitt et al Immunity</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single-Cell RNA Sequencing of the T Helper Cell Response to House Dust Mites Defines a Distinct Gene Expression Signature in Airway Th2 Cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131935" target="_blank" style="color:#020e65"><b>GSE131935</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">asthma</td>
+      <td name="td10">Nose,  Airway,  Lung</td>
+      <td name="td11">Nose,  Airway,  Lung</td>
+      <td name="td11">Children</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.7554/eLife.78074</td>
+      <td name="td1">Barr et al Elife</td>
+      <td name="td2">2022</td>
+      <td name="td3">Injury-induced pulmonary tuft cells are heterogenous,   arise independent of key Type 2 cytokines,   and are dispensable for dysplastic repair</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197162" target="_blank" style="color:#020e65"><b>GSE197162</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Influenza</td>
+      <td name="td10">Lung</td>
+      <td name="td11">lung</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1016/j.stem.2018.03.018</td>
+      <td name="td1">Tata et al Cell Stem Cell</td>
+      <td name="td2">2019</td>
+      <td name="td3">Myoepithelial Cells of Submucosal Glands Can Function as Reserve Stem Cells to Regenerate Airways after Injury</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE111598" target="_blank" style="color:#020e65"><b>GSE111598</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Naphthalene Injury</td>
+      <td name="td10">Airway</td>
+      <td name="td11">Epithelial</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41586-024-07377-1</td>
+      <td name="td1">Lin et al Nature</td>
+      <td name="td2">2024</td>
+      <td name="td3">Airway hillocks are injury-resistant reservoirs of unique plastic stem cells</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207479" target="_blank" style="color:#020e65"><b>GSE207479</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Trachea</td>
+      <td name="td11">Trachea</td>
+      <td name="td11">Adult</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-018-07770-1</td>
+      <td name="td1">Guo et al Nat Commun</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single cell RNA analysis identifies cellular heterogeneity and adaptive responses of the lung at birth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122330" target="_blank" style="color:#020e65"><b>GSE122330</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Left and right lobes</td>
+      <td name="td11">Newborn</td>
+    </tr>
+
+            
+
+     <tr>
+      <td name="td0">10.1038/s41467-018-07770-1</td>
+      <td name="td1">Guo et al Nat Commun</td>
+      <td name="td2">2019</td>
+      <td name="td3">Single cell RNA analysis identifies cellular heterogeneity and adaptive responses of the lung at birth</td>
+      <td name="td6"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122331" target="_blank" style="color:#020e65"><b>GSE122331</b></a></td>
+      <td name="td4">scRNA-seq</td>
+      <td name="td7">Mus musculus</td>
+      <td name="td10">Healthy</td>
+      <td name="td10">Lung</td>
+      <td name="td11">Lung</td>
+      <td name="td11">Fetal,  Newborn</td>
+    </tr>
+
+            
+</table>
+    

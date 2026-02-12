@@ -67,9 +67,10 @@ permalink: /dataviewer_hdlc/
 <div class="container-fluid">
   <div class="row">
   <div class="col-xs-12">
-  <p><b>The Data Viewer may take dozens of seconds to load due to the substantial volume of data present in the Developmental Lung Cell Atlas. <a href="https://1drv.ms/u/c/7b024e3a3857ddc3/EWEYBoVDt0VFnaqVRYZXfV0BnbG12XHgA_-CtC9F34HUSg?e=NAFp7o" style="color:#587B39;">Click here to download all data (H5ad File).</a></p>
+  <p><b>The Data Viewer may take dozens of seconds to load due to the substantial volume of data present in the Developmental Lung Cell Atlas. <a href="https://1drv.ms/u/c/7b024e3a3857ddc3/EWEYBoVDt0VFnaqVRYZXfV0BnbG12XHgA_-CtC9F34HUSg?e=NAFp7o" style="color:#00528e;">Click here to download all data (H5ad File).</a></p>
   
-  <iframe src="../cirro/index.html#q=%7B%22dataset%22%3A%22Adult%22%2C%22embeddings%22%3A%5B%7B%22name%22%3A%22X_umap%22%2C%22dimensions%22%3A2%7D%5D%2C%22layers%22%3A%5B%5D%2C%22camera%22%3A%7B%22position%22%3A%5B0%2C-0.000004000000000115023%2C3.999999999997996%5D%2C%22target%22%3A%5B0%2C0%2C0%5D%2C%22zoom%22%3A1%7D%2C%22activeFeature%22%3A%7B%22name%22%3A%22cell_type%22%2C%22type%22%3A%22obsCat%22%2C%22embeddingKey%22%3A%22cell_type_X_umap%22%7D%2C%22q%22%3A%5B%7B%22id%22%3A%22cell_type%22%2C%22type%22%3A%22obsCat%22%7D%5D%7D" class="rounded-iframe" width="100%" height="1200" frameborder="0"></iframe>
+  <!-- <iframe src="../cirro/index.html#q=%7B%22dataset%22%3A%22Adult%22%2C%22embeddings%22%3A%5B%7B%22name%22%3A%22X_umap%22%2C%22dimensions%22%3A2%7D%5D%2C%22layers%22%3A%5B%5D%2C%22camera%22%3A%7B%22position%22%3A%5B0%2C-0.000004000000000115023%2C3.999999999997996%5D%2C%22target%22%3A%5B0%2C0%2C0%5D%2C%22zoom%22%3A1%7D%2C%22activeFeature%22%3A%7B%22name%22%3A%22cell_type%22%2C%22type%22%3A%22obsCat%22%2C%22embeddingKey%22%3A%22cell_type_X_umap%22%7D%2C%22q%22%3A%5B%7B%22id%22%3A%22cell_type%22%2C%22type%22%3A%22obsCat%22%7D%5D%7D" class="rounded-iframe" width="100%" height="1200" frameborder="0"></iframe> -->
+  <iframe src="https://singlecellvis.app.bio-it.tech/#/?dataset=HDLCA" class="rounded-iframe" width="100%" height="1200" frameborder="0"></iframe>
   </div>
   </div>
 </div>

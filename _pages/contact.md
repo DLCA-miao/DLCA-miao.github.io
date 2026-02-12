@@ -11,13 +11,13 @@ permalink: /contact/
 <br>
 <!-- <div class="col-lg-10 col-lg-offset-1 text-center"> -->
 <div class="col-lg-10 col-lg-offset-1 text-center">
-<h3><b>Ziliang Huang</b></h3>
+<h3><b>Jie Wu</b></h3>
 <h4><b>Guangzhou Laboratory</b></h4>
 <p>International Bio-island, <br/>
 Guangzhou, 510005, China</p>
 <ul class="list-unstyled">
-<a href="mailto:huang_ziliang@gzlab.ac.cn?subject=[Help]%20RCA">
-<li><i class="fa fa-envelope fa-fw"></i> huang_ziliang@gzlab.ac.cn</li></a><div>
+<a href="mailto:wu_jie@gzlab.ac.cn?subject=[Help]%20RCA">
+<li><i class="fa fa-envelope fa-fw"></i> wu_jie@gzlab.ac.cn</li></a><div>
 <br>
 
 <h3><b>Shuo Feng</b></h3>
@@ -42,7 +42,7 @@ Guangzhou, 510005, China</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3670.9607940189653!2d113.3728525!3d23.0618989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34025549978de655%3A0xbfef76e0d9d7b9!2z5bm_5bee55Sf54mp5bKb5Zu96ZmF5YWs5a-T!5e0!3m2!1sen!2skr!4v1716198561625!5m2!1sen!2skr" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div>
-<a href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank"><img src="{{ site.url }}{{ site.baseurl }}/images/helpPage/contact_clikme.png" alt="drawing" style="width:400px;display:block;margin:0 auto;" /></a>
+<a href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank"><img src="{{ site.url }}{{ site.baseurl }}/images/helpPage/feedback.svg" alt="drawing" style="width:400px;display:block;margin:0 auto;" /></a>
 </div>
 <footer>
 <p class="meta text-muted">

@@ -16,11 +16,11 @@ permalink: /Helps/
 
 **Developmental Lung Cell Atlas is a comprehensive and unified atlas of the lung that was built across studies, regions and sequencing platforms. We integrated the majority of the single-nuclei/single-cell transcriptomic datasets published from 2017 to present from a diverse source of lung samples that provide a unified cell type and manually curated metadata annotated framework for lung cell research in the development.**
 
-<h1 style="background-color: #587B39; color:#ffffff;">Data Viewer</h1>
+<h1 style="background-color: #00528e; color:#ffffff;">Data Viewer</h1>
 <p id="Data Viewer"> </p>
 <p>The Data Viewer page features the UMAP that presents the sample characteristics and gene expressions in the Developmental Lung Cell Atlas.
 From the "Data Viewer" tab, you can choose to view a particular UMAP of lung.</p>
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview.png" style='height: 70%; width: 70%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_2.png" style='height: 80%; width: 80%; margin: 0;'>
 <!-- <p>The left panel plot is a plotly.js module that displays the integrative UMAPs of the Adult Lung, Fetal Lung, Tumour and Organoids in the Respire Cell Atlas.</p>
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_figure_Dataviewer_left.png" style='height: 800px; width: auto; margin: 0;'> -->
 <p>(1) By clicking  the selection from "Cell Metadata", you can view coloured cells from a certain attribute for the cells. Several other dimiensions to view the UMAP are described as below:
@@ -34,46 +34,46 @@ A list of selectable attributes to display the UMAPs are shown in the left colum
   </thead>
   <tbody>
     <tr>
-      <td>sample_ID</td>
+      <td>Sample ID</td>
       <td>Sample ID of the cells or nuclei.</td>
     </tr>
     <tr>
-      <td>donor_ID</td>
+      <td>Donor ID</td>
       <td>Author specified donor IDs, which are indicated in the original publications.</td>
     </tr>
     <tr>
-      <td>donor_gender</td>
+      <td>Gender</td>
       <td>F = Female; M = Male; Unclassified = Unknown.</td>
     </tr>
     <tr>
-      <td>donor_age</td>
-      <td>For postnatal individuals, 6 months old is denoted by 6mo; 21 years old is denoted by "21yr".
-For prenatal individuals, 9w stands for 9 gestational weeks (GW).
+      <td>Age</td>
+      <td>For postnatal individuals, 6 months old is denoted by 6mo; 21 years old is denoted by "21 yr".
+For prenatal individuals, 9 w stands for 9 gestational weeks (GW).
 For organoids, use d (days in culture)
 Eg. 10d.</td>
     </tr>
     <tr>
-      <td>donor_status</td>
-      <td>Each donor's disease status corresponds to common names appearing in MONDO Diseased Ontology.</td>
+      <td>Development Stage</td>
+      <td>Development stage of each individual.</td>
     </tr>
     <tr>
-      <td>DEGregion</td>
-      <td>Anatomical structure level 1 (Please find details in the first table of the Help Page).</td>
-    </tr>
-    <tr>
-      <td>sample_status</td>
+      <td>Sample Status</td>
       <td>Each disease status corresponds to common names appearing in MONDO Diseased Ontology.</td>
     </tr>
     <tr>
-      <td>project_code</td>
+      <td>Region</td>
+      <td>Anatomical structure level 1 (Please find details in the first table of the Help Page).</td>
+    </tr>
+    <tr>
+      <td>Project Code</td>
       <td>Project codes are the data accession codes or strings of abbreviation of the study provided by the authors.
 Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
      <tr>
-      <td>seq_method</td>
+      <td>Sequencing methods</td>
       <td>Sequencing method of the cells or nuclei.</td>
     </tr>
     <tr>
-      <td>seq_tech</td>
+      <td>Sequencing Technology</td>
       <td>Sequencing technology of the cells or nuclei.</td>
     </tr>
     </tr>
@@ -90,11 +90,11 @@ Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
 <p><b>(3)</b> You may download the UMAP, using selection tools to crop an area and zoom-in/out by clicking on the tool bars on the top-right of the panel (Some tools may take several seconds to load).</p> -->
 
 <br><br>
-<h1 style="background-color: #587B39; color:#ffffff;"> Portrait</h1>
+<h1 style="background-color: #00528e; color:#ffffff;"> Portrait</h1>
 <p id="Portrait"> </p>
 <!-- <p class="header_box">Portrait</p> -->
 The interactive viewer shows the human lung and includes all the major regions from the data used in Developmental Lung Cell Atlas. You can click on the relevant label and the page will direct to the data viewer page to display information about that area. 
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_portrait.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_portrait_2.png" style='height: 100%; width: 80%; margin: 0;'>
 <style>
   .table-custom {
     font-size: 0.9rem; /* 调整字体大小 */
@@ -295,7 +295,7 @@ The interactive viewer shows the human lung and includes all the major regions f
 
 <p id="Genes"> </p>
 <br><br>
-<h1 ref="" style="background-color: #587B39; color:#ffffff;">Gene</h1>
+<h1 ref="" style="background-color: #00528e; color:#ffffff;">Gene</h1>
 <!-- <p class="header_box" >Gene</p> -->
 <p>Users can obtain a list of differentially expressed genes of the cell types from a selected lung region.<br>
 The cell type name is defined by the most scored prediced cell type computed from the 8 machine-learning-based annotation methods:</p>
@@ -320,34 +320,17 @@ The cell type name is defined by the most scored prediced cell type computed fro
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" style='height: 100%; width: 70%; margin: 0;'>
 </div>
 
-<h1 style="background-color: #587B39; color:#ffffff;">Region DEG & Cell type DEG</h1>
+<h1 style="background-color: #00528e; color:#ffffff;">Region DEG & Cell type DEG</h1>
 <p>Region DEG (Differential expression Genes) compares different cell types from the same region. A violin plot of the top 3 DEGs for each different cell types of the region will be shown after selection of the input.</p>
 <p>Cell type DEG compares the same cell type from different regions. Likewise, a violin plot of the top 3 DEGs for this cell type across different region will be shown after selection of the input.</p>
 <div style="display: flex">
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" style='height: 100%; width: 70%; margin: 0;'>
 </div>
 
-<!-- <h1>Cell type DEG</h1> -->
-
-<!-- <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/brain_celltype.png" style='height: 100%; width: 100%; margin: 0;'>
-</div> -->
-<p id="Exploration"> </p>
-<br><br>
-<h1 style="background-color: #587B39; color:#ffffff;">Exploration</h1>
-<p>This page present the statistics of Developmental Lung Cell Atlas with various of plots.<br>
-You can locate the lung region to get summary information about the relevant resources in the Developmental Lung Cell Atlas. From the "Data Viewer" tab, you can choose the Atlas from  Developmental Lung. Then, select some meta information from the "Cell Metadata" tab and click on the "COMPOSITION" button to view the statistics information. For example, in "Cell Metadata", select "donor_gender" and "donor_age", and then click "COMPOSITION" to see the gender ratio for each age.</p>
-<ul>
-  <li><b>Cell Proportion</b><br>The bar plot shows the proportion of different donor gender in the different ages. The cell types are annotated with <a href="https://github.com/rnacentre/scAnnot">scAnnot</a>.</li>
-</ul>
-<div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_explore.png" style='height: 100%; width: 70%; margin: 0;'>
-</div>
-
 <p id="Dataset"></p>
 <br><br>
-<h1 style="background-color: #587B39; color:#ffffff;">Dataset</h1>
+<h1 style="background-color: #00528e; color:#ffffff;">Dataset</h1>
 <p>The Dataset page includes all the datasets used in the Developmental Lung Cell Atlas, a full list of the studies and authors from this page can be found here. Processed data with re-annotated cell type metadata will be avaiable for download upon publication. All data can be downloaded by four buttons: Copy, CSV, Excel, PDF etc.</p>
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-dataset.png" style='height: 100%; width: 70%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-dataset_2.png" style='height: 100%; width: 80%; margin: 0;'>
 </div>

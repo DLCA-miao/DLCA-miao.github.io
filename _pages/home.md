@@ -8,10 +8,54 @@ permalink: /
 <!-- <div class="container"> -->
 <br>
 <br>
-<p class="text-center" style="color:#587B39; font-size:40px;">Developmental Lung Cell Atlas</p>
+<p class="text-center" style="color:#00528e; font-size:40px;">Developmental Lung Cell Atlas</p>
 <p class="text-center" style="font-size:20px;">The website offer a comprehensive lung development atlas that covers all stages from embryonic development to adulthood. The website hope this atlas will contribute to advancements and breakthroughs in the field of lung development research.</p>
 <div class="wrapper box_style">
 <div class="well" style="border: 0px solid #C9C9C9; background-color: #fff;">
+
+<!-- Statistics Section -->
+<div markdown="0" class="stats-container">
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/home-icon/publications.png" alt="Publications">
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Publications</div>
+      <div class="stat-number" data-target="225">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/home-icon/cells.png" alt="Cells">
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Cells</div>
+      <div class="stat-number" data-target="18000000">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/home-icon/samples.png" alt="Samples">
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Samples</div>
+      <div class="stat-number" data-target="3133">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/home-icon/sampling locations.png" alt="Locations">
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Locations</div>
+      <div class="stat-number" data-target="34">0</div>
+    </div>
+  </div>
+</div>
+
 <section class="sectiontitle"> 
 <div>
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
@@ -30,13 +74,13 @@ permalink: /
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure1.svg" alt="Slide 1" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <div class="item ">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure2.png" alt="Slide 2" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/region_summary_gender_seq_donor_2.svg" alt="Slide 2" style=" width:1500px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
  <div class="item">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure3.png" alt="Slide 2" style=" width:500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/region_summary_gender_seq_donor_2_copy.svg" alt="Slide 2" style=" width:1500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <div class="item">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure31.png" alt="Slide 3" style="width:580px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/donor_age_region_celnumber_heatmap_new2.svg" alt="Slide 3" style="width:2000px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <!--<div class="item">
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure1.svg" alt="Slide 4" style=" width:1000px; object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
@@ -61,31 +105,174 @@ permalink: /
 .wrapper.box_style.line {
 border-width: 0;
 }
+
+/* Statistics Section Styles */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 20px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 20px;
+  background: #dae3f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 250px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  margin-right: 20px;
+  flex-shrink: 0;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+.stat-icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.stat-content {
+  display: flex;
+  border-left: 4px solid #666;
+  padding-left: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 600;
+  color: #00528e;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+}
 </style>
 
 
 
 <br/>
-<p class="text-center" style="color:#587B39; font-size:30px;">The UMAP of Developmental Lung Cell Atlas</p>
+<p class="text-center" style="color:#00528e; font-size:30px;">The UMAP of Developmental Lung Cell Atlas</p>
 <div class="container">
 <div class="row" >
 <div class="image-container">
-<img id="photo" src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_umap.png" alt="Default Photo" style="height: 600px; width=600px">
+<img id="photo" src="{{ site.url }}{{ site.baseurl }}/images/homePage/umap.svg" alt="Default Photo" style="height: 600px; width=600px">
 </div>
 </div>
 </div>
 
-<h3 style="color:#587B39">Cite us </h3>
+<h3 style="color:#00528e">Cite us </h3>
 <div class="left-aligned" style="width: 100%;">
-Chen, X., Huang, Y., Huang, L. et al. <strong style="color:#587B39;font-weight: bold">A brain cell atlas integrating single-cell transcriptomes across human brain regions. 10.1038/s41591-024-03150-z.</strong><br>
+Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan.</strong><br>
 <!-- <a> Unpublished</a> -->
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Statistics counter animation
+    function animateCounter(element, target, duration) {
+      let start = 0;
+      const increment = target / (duration / 16); // 60fps
+      const isLargeNumber = target >= 1000000;
+      
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          start = target;
+          clearInterval(timer);
+        }
+        
+        // Format number based on size
+        let displayValue;
+        if (isLargeNumber) {
+          displayValue = (start / 1000000).toFixed(1) + 'M';
+        } else if (start >= 1000) {
+          displayValue = Math.floor(start).toLocaleString();
+        } else {
+          displayValue = Math.floor(start);
+        }
+        
+        element.textContent = displayValue;
+      }, 16);
+    }
+    
+    // Intersection Observer for triggering animation when visible
+    const observerOptions = {
+      threshold: 0.3,
+      rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'));
+            animateCounter(stat, target, 2000); // 2 seconds animation
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+      observer.observe(statsContainer);
+    }
+    
+    // Original code
     var adultButton = document.querySelector('.col-lg-4:nth-child(1) .card-clickable');
-    adultButton.click();
+    if (adultButton) {
+      adultButton.click();
+    }
   });
+  
   function showImage0(photoName) {
     var photoElement = document.getElementById('photo');
     photoElement.src = photoName;
@@ -133,7 +320,7 @@ Chen, X., Huang, Y., Huang, L. et al. <strong style="color:#587B39;font-weight: 
         transition: transform 0.3s;
     }
     .photo-card.clicked {
-        border-color: #587B39;
+        border-color: #00528e;
     }
 </style>
 <script>

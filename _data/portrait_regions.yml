@@ -1,0 +1,92 @@
+- concrete_region: "Distal airway"
+  broad_region: "Distal airway"
+  anatomical_region: "Distal airway"
+
+- concrete_region: "Lung"
+  broad_region: "Whole lung"
+  anatomical_region: "Whole lung"
+
+- concrete_region: "Peripheral lung"
+  broad_region: "Periphery"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "d_LowLeftPar"
+  broad_region: "Parenchyma"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "e_TopLeftPar"
+  broad_region: "Parenchyma"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "c_Bronchi.4"
+  broad_region: "Bronchi"
+  anatomical_region: "Bronchi"
+
+- concrete_region: "Distal lung"
+  broad_region: "Distal lung"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "Whole lung"
+  broad_region: "Whole lung"
+  anatomical_region: "Whole lung"
+
+- concrete_region: "Right lobes"
+  broad_region: "Right lobes"
+  anatomical_region: "Right lobes"
+
+- concrete_region: "Middle airway"
+  broad_region: "Middle airway"
+  anatomical_region: "Middle airway"
+
+- concrete_region: "Proximal airway epithelium"
+  broad_region: "Proximal airway"
+  anatomical_region: "Proximal airway"
+
+- concrete_region: "a_Trachea"
+  broad_region: "Trachea"
+  anatomical_region: "Trachea"
+
+- concrete_region: "Right middle lobe"
+  broad_region: "Right middle lobe"
+  anatomical_region: "Right middle lobe"
+
+- concrete_region: "Left lower lobe periphery region"
+  broad_region: "Periphery"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "Right upper lobe periphery region"
+  broad_region: "Periphery"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "b_Bronchi.2.3"
+  broad_region: "Bronchi"
+  anatomical_region: "Primary bronchus"
+
+- concrete_region: "Not applicable"
+  broad_region: "Trachea"
+  anatomical_region: "Trachea"
+
+- concrete_region: "Proximal lung"
+  broad_region: "Proximal lung"
+  anatomical_region: "Proximal lung"
+
+- concrete_region: "Right upper lobe mid-bronchial region"
+  broad_region: "Bronchi"
+  anatomical_region: "Bronchi"
+
+- concrete_region: "Left lower lobe bronchus region"
+  broad_region: "Bronchi"
+  anatomical_region: "Bronchi"
+
+- concrete_region: "Left upper lobe periphery"
+  broad_region: "Periphery"
+  anatomical_region: "Bronchioles/alveoli"
+
+- concrete_region: "Bronchus"
+  broad_region: "Bronchi"
+  anatomical_region: "Bronchi"
+
+- concrete_region: "Bronchiole"
+  broad_region: "Bronchiole"
+  anatomical_region: "Bronchioles"
+

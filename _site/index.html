@@ -81,14 +81,20 @@
 	  <div class="search">
 		<h2>GZNL's Respiratory Data Centre, GZNL-RDC</h2>
 		<div class="i"><img src="http://localhost:4000/images/header/HDLCA-logo-green-large.svg">
-		  <h1>Developmental lung data</h1>
+		  <h1>Developmental Lung Cell Atlas</h1>
 		</div>
-		<p>Developmental Lung Cell Atlas</p>
-		<script async src="https://cse.google.com/cse.js?cx=560632b54571a4f6c"></script>
-		  <div class="gcse-search"></div>
+		<!-- <script async src="https://cse.google.com/cse.js?cx=560632b54571a4f6c"></script> -->
+		  <div class="gcse-search">
+			<input type="text" id="search-input" placeholder="Search...">
+			<button type="button" class="search-btn" onclick="search()">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+				</svg>
+			</button>
+		  </div>
   
 		<!--p class="tip">Example searches: Lung, Nose, Airway</p-->
-		<p style="color:red; font-size:20px;">The search function is under construction</p>
+		<!-- <p style="color:red; font-size:20px;">The search function is under construction</p> -->
 		<!-- <p>Example: 
 		  <a class="tip" href="https://aptamer.ribocentre.org/Ribocentre-aptamer/">Limbic system</a>&nbsp;&nbsp;
 		  <a class="tip" href="https://aptamer.ribocentre.org/SELEX/">Cerebellum</a>&nbsp;&nbsp;
@@ -112,7 +118,7 @@
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
-    background: url(http://localhost:4000/images/homePage/lung_dev_background2.jpeg) no-repeat;
+    background: url(http://localhost:4000/images/homePage/lung_dev_bg.png) no-repeat;
 
     background-size: cover; /* 使用 cover 让背景图片填充整个容器 */
     background-position: center; /* 让背景图片在容器中水平和垂直居中 */
@@ -170,8 +176,9 @@
   }
   
   .search .i img {
-	  width: 70px;
-	  height: 50px;
+	  width: 150px;
+	  height: 70px;
+	  margin-bottom: 10px;
 	  object-fit: contain
   }
   
@@ -227,8 +234,8 @@
 	width: 600px;
   }
   .gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
-	  border-color: #587B39;
-	  background-color: #587B39;
+	  border-color: #00528e;
+	  background-color: #00528e;
 	  background-image: none;
 	  filter: none;
 	  height: 38px
@@ -242,6 +249,58 @@
   .gsc-input {
 	  font-size: 16px;
 	  color: #000000;
+  }
+  /* 新的搜索框样式 */
+  .gcse-search {
+	  display: flex;
+	  align-items: center;
+	  margin: 15px 0 8px 0;
+	  width: 532px;
+	  padding-bottom: 10px;
+  }
+  
+  .gcse-search input {
+	  flex: 1;
+	  height: 35px;
+	  padding: 0 15px;
+	  border: 1px solid #e0e0e0;
+	  font-size: 14px;
+	  outline: none;
+	  background: #fff;
+	  color: #333;
+	  transition: border-color 0.3s ease;
+  }
+  
+  .gcse-search input:focus {
+	  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.1);
+  }
+  
+  .gcse-search input::placeholder {
+	  color: #999;
+	  font-size: 13px;
+  }
+  
+  .search-btn {
+	  width: 69px;
+	  height: 38px;
+	  margin-left: 12px;
+	  background: #00528e;
+	  border: none;
+	  color: white;
+	  cursor: pointer;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  transition: background-color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+	  background: #0066b3;
+  }
+  
+  .search-btn svg {
+	  width: 18px;
+	  height: 18px;
   }
   </style>
 
@@ -276,11 +335,11 @@
 				Data Viewer <span class="caret"></span>
 			</a> -->
 			<!-- <ul class="dropdown-menu">
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_adult">Adult brain</a></li> -->
-				<!-- <li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_fetal">Fetal brain</a></li>
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_tumour">Tumour</a></li>
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_organoid">Organoid</a></li>
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/dataviewer_mouse">Mouse brain</a></li> -->
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/dataviewer_adult">Adult brain</a></li> -->
+				<!-- <li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/dataviewer_fetal">Fetal brain</a></li>
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/dataviewer_tumour">Tumour</a></li>
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/dataviewer_organoid">Organoid</a></li>
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/dataviewer_mouse">Mouse brain</a></li> -->
 			<!-- </ul> -->
 		<li><a class="nav-link-1" href="http://localhost:4000/dataviewer_hdlc">Data Viewer</a></li>
 		<li><a class="nav-link-1" href="http://localhost:4000/portrait">Portrait</a></li>
@@ -289,9 +348,9 @@
 				Gene <span class="caret"></span>
 			</a>
 			<ul class="dropdown-menu">
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/markers">Markers</a></li>
-				<li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/deg">DEG</a></li>
-				<!-- <li><a class="nav-link-1" style="color: #587B39;" href="http://localhost:4000/celltypedeg">CellType DEG</a></li> -->
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/markers">Markers</a></li>
+				<li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/deg">DEG</a></li>
+				<!-- <li><a class="nav-link-1" style="color: #00528e;" href="http://localhost:4000/celltypedeg">CellType DEG</a></li> -->
 			</ul>
 		<!-- <li><a class="nav-link-1" href="http://localhost:4000/exploration"><b>Exploration</b></a></li> -->
 		<li><a class="nav-link-1" href="http://localhost:4000/database">Dataset</a></li>
@@ -301,7 +360,19 @@
 	</div>
   </div>
 </div>
-
+<script>
+	document.getElementById('search-input').addEventListener('keyup', function(event) {
+	  if (event.key === 'Enter') {
+		search();
+	  }
+	});
+	function search() {
+	  const searchInput = document.getElementById('search-input');
+	  const searchValue = searchInput.value;
+	  const url = `http://localhost:4000/database?search=${searchValue}`;
+	  window.location.href = url;
+	}
+  </script>
 
     <div class="container-fluid">
       <div class="row">
@@ -309,10 +380,54 @@
 	<!-- <div class="container"> -->
 <p><br />
 <br /></p>
-<p class="text-center" style="color:#587B39; font-size:40px;">Developmental Lung Cell Atlas</p>
+<p class="text-center" style="color:#00528e; font-size:40px;">Developmental Lung Cell Atlas</p>
 <p class="text-center" style="font-size:20px;">The website offer a comprehensive lung development atlas that covers all stages from embryonic development to adulthood. The website hope this atlas will contribute to advancements and breakthroughs in the field of lung development research.</p>
 <div class="wrapper box_style">
   <div class="well" style="border: 0px solid #C9C9C9; background-color: #fff;">
+
+    <!-- Statistics Section -->
+    <div class="stats-container">
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="http://localhost:4000/images/home-icon/publications.png" alt="Publications" />
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Publications</div>
+      <div class="stat-number" data-target="225">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="http://localhost:4000/images/home-icon/cells.png" alt="Cells" />
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Cells</div>
+      <div class="stat-number" data-target="18000000">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="http://localhost:4000/images/home-icon/samples.png" alt="Samples" />
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Samples</div>
+      <div class="stat-number" data-target="3133">0</div>
+    </div>
+  </div>
+  
+  <div class="stat-item">
+    <div class="stat-icon">
+      <img src="http://localhost:4000/images/home-icon/sampling locations.png" alt="Locations" />
+    </div>
+    <div class="stat-content">
+      <div class="stat-label">Locations</div>
+      <div class="stat-number" data-target="34">0</div>
+    </div>
+  </div>
+</div>
+
     <section class="sectiontitle">
       <div>
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
@@ -331,13 +446,13 @@
 <img src="http://localhost:4000/images/homePage/home_figure1.svg" alt="Slide 1" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
 </div>
 <div class="item ">
-<img src="http://localhost:4000/images/homePage/home_figure2.png" alt="Slide 2" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
+<img src="http://localhost:4000/images/homePage/region_summary_gender_seq_donor_2.svg" alt="Slide 2" style=" width:1500px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
 </div>
  <div class="item">
-<img src="http://localhost:4000/images/homePage/home_figure3.png" alt="Slide 2" style=" width:500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
+<img src="http://localhost:4000/images/homePage/region_summary_gender_seq_donor_2_copy.svg" alt="Slide 2" style=" width:1500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
 </div>
 <div class="item">
-<img src="http://localhost:4000/images/homePage/home_figure31.png" alt="Slide 3" style="width:580px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
+<img src="http://localhost:4000/images/homePage/donor_age_region_celnumber_heatmap_new2.svg" alt="Slide 3" style="width:2000px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;" />
 </div>
 <!--<div class="item">
 <img src="http://localhost:4000/images/homePage/home_figure1.svg" alt="Slide 4" style=" width:1000px; object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
@@ -362,34 +477,172 @@
 .wrapper.box_style.line {
 border-width: 0;
 }
+
+/* Statistics Section Styles */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 20px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 20px;
+  background: #dae3f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 250px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  margin-right: 20px;
+  flex-shrink: 0;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+.stat-icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.stat-content {
+  display: flex;
+  border-left: 4px solid #666;
+  padding-left: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 600;
+  color: #00528e;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+}
 </style>
 
       <p><br /></p>
-      <p class="text-center" style="color:#587B39; font-size:30px;">The UMAP of Developmental Lung Cell Atlas</p>
+      <p class="text-center" style="color:#00528e; font-size:30px;">The UMAP of Developmental Lung Cell Atlas</p>
       <div class="container">
         <div class="row">
           <div class="image-container">
-            <p><img id="photo" src="http://localhost:4000/images/homePage/home_umap.png" alt="Default Photo" style="height: 600px; width=600px" /></p>
+            <p><img id="photo" src="http://localhost:4000/images/homePage/umap.svg" alt="Default Photo" style="height: 600px; width=600px" /></p>
           </div>
         </div>
       </div>
 
-      <!-- <h3>Cite us </h3>
-<p>Chen, Xinyue & Huang, Yin & Huang, Ziliang & Xu, Lahong & Huang, Liangfeng & Ye, Mingli & You, Renke & Zhang, Xuegong & Miao, Zhichao*. (2023). Brain Cell Atlas: An Integrative Ensemble of Cell Transcriptomes Across Human Brain Regions. 10.21203/rs.3.rs-3221500/v1.</p>
-<br/> -->
-
-      <h3 style="color:#587B39">Cite us </h3>
+      <h3 style="color:#00528e">Cite us </h3>
       <div class="left-aligned" style="width: 100%;">
-        <p>Chen, Xinyue &amp; Huang, Yin &amp; Huang, Ziliang &amp; Xu, Lahong &amp; Huang, Liangfeng &amp; Ye, Mingli &amp; You, Renke &amp; Zhang, Xuegong &amp; Miao, Zhichao*. <br />
-<strong style="color:#587B39;font-weight: bold">Brain Cell Atlas: An Integrative Ensemble of Cell Transcriptomes Across Human Brain Regions. 10.21203/rs.3.rs-3221500/v1.</strong><br />
+        <p>Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan.</strong><br />
 <!-- <a> Unpublished</a> --></p>
       </div>
 
       <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Statistics counter animation
+    function animateCounter(element, target, duration) {
+      let start = 0;
+      const increment = target / (duration / 16); // 60fps
+      const isLargeNumber = target >= 1000000;
+      
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          start = target;
+          clearInterval(timer);
+        }
+        
+        // Format number based on size
+        let displayValue;
+        if (isLargeNumber) {
+          displayValue = (start / 1000000).toFixed(1) + 'M';
+        } else if (start >= 1000) {
+          displayValue = Math.floor(start).toLocaleString();
+        } else {
+          displayValue = Math.floor(start);
+        }
+        
+        element.textContent = displayValue;
+      }, 16);
+    }
+    
+    // Intersection Observer for triggering animation when visible
+    const observerOptions = {
+      threshold: 0.3,
+      rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'));
+            animateCounter(stat, target, 2000); // 2 seconds animation
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+      observer.observe(statsContainer);
+    }
+    
+    // Original code
     var adultButton = document.querySelector('.col-lg-4:nth-child(1) .card-clickable');
-    adultButton.click();
+    if (adultButton) {
+      adultButton.click();
+    }
   });
+  
   function showImage0(photoName) {
     var photoElement = document.getElementById('photo');
     photoElement.src = photoName;
@@ -438,7 +691,7 @@ border-width: 0;
         transition: transform 0.3s;
     }
     .photo-card.clicked {
-        border-color: #587B39;
+        border-color: #00528e;
     }
 </style>
 
@@ -479,21 +732,21 @@ border-width: 0;
 		<div class="col-sm-4">
 			
 		  <p>&copy 2024 GZNL-RDC. </p>
-		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#587B39">Guangzhou Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#587B39">RNAcentre</a>.</p>
-		  <p>Site made with <a href="https://jekyllrb.com" style="color:#587B39">Jekyll</a>;  <a href="http://localhost:4000/aboutwebsite.html" style="color:#587B39">copy and  modify it for your own research group.</a></p>
+		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#00528e">Guangzhou Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#00528e">RNAcentre</a>.</p>
+		  <p>Site made with <a href="https://jekyllrb.com" style="color:#00528e">Jekyll</a>;  <a href="http://localhost:4000/aboutwebsite.html" style="color:#00528e">copy and  modify it for your own research group.</a></p>
 		  <p>  </p>
 		  <p>  </p>
 		</div>
 		
 		<div class="col-sm-4">
 		  Funding:<br />
-          - <a href="https://gzlab.ac.cn" style="color:#587B39">R&D Programs of Guangzhou Laboratory</a><br />
-          - <a href="http://www.most.gov.cn/" style="color:#587B39">MOST IT+BT projects</a> <br />
-          - <a href="https://www.nsfc.gov.cn/" style="color:#587B39">NSFC</a> <br />	 
+          - <a href="https://gzlab.ac.cn" style="color:#00528e">R&D Programs of Guangzhou Laboratory</a><br />
+          - <a href="http://www.most.gov.cn/" style="color:#00528e">MOST IT+BT projects</a> <br />
+          - <a href="https://www.nsfc.gov.cn/" style="color:#00528e">NSFC</a> <br />	 
 		  <br>
-		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" style="color:#587B39"></script>
+		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" style="color:#00528e"></script>
 		  <!--<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_uv"><strong>: <a href=""><span id="busuanzi_value_site_uv"></span></strong></a> </span> &nbsp;&nbsp;
-		  !--><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_pv">: <a href="" style="color:#587B39"><span id="busuanzi_value_site_pv"></span></a> </span> 
+		  !--><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_pv">: <a href="" style="color:#00528e"><span id="busuanzi_value_site_pv"></span></a> </span> 
 		</div>
 		
 		<div class="col-sm-4">
@@ -501,7 +754,7 @@ border-width: 0;
 		  Building B2, Guangzhou National Laboratory<br />
 		  96 Xingdao South Road, Guangzhou International Bio Island, <br />
 		  Haizhu District, Guangzhou, Guangdong, China.<br />
-          (<a href="https://goo.gl/maps/hDLr6siEAS2Eaypt8" style="color:#587B39">Maps</a>)
+          (<a href="https://goo.gl/maps/hDLr6siEAS2Eaypt8" style="color:#00528e">Maps</a>)
 		</div>
 	  </div>
 	</div>

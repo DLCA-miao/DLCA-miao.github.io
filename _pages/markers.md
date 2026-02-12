@@ -23,15 +23,15 @@ permalink: /markers/
 
     <style>
 		th {
-        background-color: #587B39;
-        background-color: #587B39;
-        background-color: #587B39;
+        background-color: #00528e;
+        background-color: #00528e;
+        background-color: #00528e;
         color: rgba(255,255,255,0.9);
 		    cursor: pointer;
         }
 	</style>
 
-<!-- <p class="text-center" style="color:#587B39; font-size:20px; "> (This page shows the differentially expressed genes (DEGs) according to the regions/cell types)</p> -->
+<!-- <p class="text-center" style="color:#00528e; font-size:20px; "> (This page shows the differentially expressed genes (DEGs) according to the regions/cell types)</p> -->
 <!-- <div class="container">
 <p><b>Step1</b> Click below to select a target dataset for analysis.</p>
 <div class="row" style="display: flex; justify-content: space-between;">
@@ -41,7 +41,7 @@ permalink: /markers/
 </div> -->
 <!-- <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39;">
+<b style="font-size: 24px; color: #00528e;">
 ADULT BRAIN
 </b>
 </p>
@@ -54,7 +54,7 @@ ADULT BRAIN
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39;">
+<b style="font-size: 24px; color: #00528e;">
 FETAL BRAIN
 </b>
 </p>
@@ -68,7 +68,7 @@ FETAL BRAIN
 </div> -->
 <!-- <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39;">
+<b style="font-size: 24px; color: #00528e;">
 TUMOR
 </b>
 </p>
@@ -81,7 +81,7 @@ TUMOR
 </div> -->
 <!-- <div> -->
 <!-- <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39;">
+<b style="font-size: 24px; color: #00528e;">
 ORGANOID
 </b>
 </p>
@@ -89,6 +89,9 @@ ORGANOID
 <!-- </div>
 </div>
 </div> -->
+<div class="markers-description container" style="">
+The section shows the differentially expressed genes (DEGs) of the target region or the target Cell type.
+</div>
 <br/>
 <div class="container" style="box-shadow: 0 0 2px;">
 <p><b>Step1</b> Click the buttons to show the differentially expressed genes (DEGs) of the target region or the target Cell type.</p>
@@ -100,22 +103,44 @@ ORGANOID
 <div class="container" style="box-shadow: 0 0 2px;">
 <p><b>Step2</b> Select the target Cell type/Region to show the DEGs.</p>
   <p id="sentence"></p>
-  <select id="selectBox1" style="width: 200px; margin: 0 10px" onchange="handleSelectChange()"></select>
-  <select id="selectBox2" style="width: 200px; margin: 5px" onchange="handleSelectChange()"></select>
-  <!-- <button type="button" class="btn btn-primary btn-sm" onclick="toggleContent();displaySelectedImage();displaySelectedTable();">Markers</button> -->
-  <button type="button" class="btn btn-primary btn-sm" style="text-transform: capitalize;" onclick="toggleContent();displaySelectedImage();displaySelectedTable();">Markers</button>
+  
+  <!-- Region Selection Cards -->
+  <div id="regionSelectionContainer" class="selection-container">
+    <p class="selection-label">Select Region:</p>
+    <div id="regionCards" class="card-grid"></div>
+  </div>
+  
+  <!-- Cell Type Selection Cards -->
+  <div id="cellTypeSelectionContainer" class="selection-container">
+    <p class="selection-label">Select Cell Type:</p>
+    <div id="cellTypeCards" class="card-grid-celltype"></div>
+  </div>
+  
+  <button type="button" class="btn btn-primary btn-sm" style="text-transform: capitalize;" onclick="showResults();">Markers</button>
 </div>
 <br/>
 <div id="contentContainer" style="display: none;">
+<!-- Volcano Plot Section -->
 <div class="container" style="box-shadow: 0 0 2px;">
 <div class="image-container">
 <b>Result</b> Volcano Plot.
-<img id="selectedImage" src="" alt="Selected Image">
+<!-- Volcano Plot Loading Indicator -->
+<div id="volcanoLoadingIndicator" style="display: none; text-align: center; padding: 20px;">
+  <div class="spinner"></div>
+  <p>Loading volcano plot...</p>
+</div>
+<img id="selectedImage" src="" alt="Selected Image" style="display: none;">
 </div>
 </div>
 <br/>
+<!-- Table Section -->
 <div class="container">
 <b>Result</b> The table of DEGs.
+<!-- Table Loading Indicator -->
+<div id="tableLoadingIndicator" style="display: none; text-align: center; padding: 20px;">
+  <div class="spinner"></div>
+  <p>Loading table data...</p>
+</div>
 <div id="csvTableContainer" style="max-height: 500px; overflow-y: auto; box-shadow: 0 0 2px;"></div>
 </div>
 </div>
@@ -165,7 +190,7 @@ jQuery( document ).ready(function( $ ) {
     height: 38px
   }
   .active {
-    background-color: #587B39; 
+    background-color: #00528e; 
     color: white;
   }
   .image-container {
@@ -182,10 +207,170 @@ jQuery( document ).ready(function( $ ) {
     height: 100%;
     object-fit: contain;
   }
-/*   .table-container {
-    max-height: 500px; 
+  
+  /* Card Selection Styles */
+  .selection-container {
+    margin: 20px 0;
+  }
+  
+  .selection-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-height: 400px;
     overflow-y: auto;
-  } */
+    overflow-x: hidden;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  /* 自定义滚动条样式 - region */
+  .card-grid::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .card-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .card-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .region-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 140px;
+    text-align: center;
+  }
+  
+  .region-card:hover {
+    border-color: #00528e;
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .region-card.selected {
+    border-color: #00528e;
+    background-color: #00528e;
+    color: white;
+  }
+  
+  .region-card .region-name {
+    font-size: 12px;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+  
+  .card-grid-celltype {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  /* 自定义滚动条样式 */
+  .card-grid-celltype::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card-grid-celltype::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .card-grid-celltype::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .card-grid-celltype::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .celltype-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 140px;
+    text-align: center;
+  }
+  
+  .celltype-card:hover {
+    border-color: #00528e;
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .celltype-card.selected {
+    border-color: #00528e;
+    background-color: #00528e;
+    color: white;
+  }
+  
+  .celltype-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+  
+  .celltype-card .celltype-name {
+    font-size: 12px;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+  
+  /* Loading Spinner */
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00528e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 </style>
 <script type="text/javascript"  src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -197,57 +382,170 @@ jQuery( document ).ready(function( $ ) {
 <script type="text/javascript"  src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 <div id="csvTableContainer"></div>
 <script>
-  var selectBox1 = document.getElementById('selectBox1');
-  var selectBox2 = document.getElementById('selectBox2');
+  var regionOptions = [];
+  var cellTypeOptions = [];
+  var selectedRegion = null;
+  var selectedCellType = null;
+  var selectedOptions = [];
+  var imageLoaded = false; // 添加图片加载状态变量
+  var selectedButton = 'A'; // 添加选中按钮状态变量
+  var originalOrder = true; // 添加顺序状态变量
+  
   document.addEventListener('DOMContentLoaded', function() {
     loadInitialData();
   });
+  
   function loadInitialData() {
-    // 加载 RegionDEG.json 并填充 selectBox1
+    // 加载 RegionDEG.json
     fetch('{{ site.url }}{{ site.baseurl }}/js/genepage/RegionDEG.json')
       .then(response => response.json())
       .then(data => {
         // 假设我们只关心第一个键的值
         var firstKey = Object.keys(data)[0];
-        var options = data[firstKey] || []; // 使用空数组如果 data[firstKey] 未定义
-        updateSelectBoxOptions('selectBox1', options);
-        handleSelectChange(); // 确保选中第一个选项
+        <!-- // 使用空数组如果 data[firstKey] 未定义 -->
+        regionOptions = data[firstKey] || [];
+        createRegionCards(regionOptions);
+        updateSelectedOptions();
       })
       .catch(error => {
         console.error('Error loading RegionDEG.json:', error);
       });
-    // 加载 CellTypeDEG.json 并填充 selectBox2
+    
+    // 加载 CellTypeDEG.json
     fetch('{{ site.url }}{{ site.baseurl }}/js/genepage/CellTypeDEG.json')
       .then(response => response.json())
       .then(data => {
         // 假设我们只关心第一个键的值
         var firstKey = Object.keys(data)[0];
-        var options = data[firstKey] || []; // 使用空数组如果 data[firstKey] 未定义
-        updateSelectBoxOptions('selectBox2', options);
-        handleSelectChange(); // 确保选中第一个选项
+        cellTypeOptions = data[firstKey] || [];
+        createCellTypeCards(cellTypeOptions);
+        updateSelectedOptions();
       })
       .catch(error => {
         console.error('Error loading CellTypeDEG.json:', error);
       });
-    displaySelectedImage();
   }
-  function handleSelectChange() {
-    var selectBox1 = document.getElementById('selectBox1');
-    var selectBox2 = document.getElementById('selectBox2');
-    var option1 = selectBox1.options[selectBox1.selectedIndex].value;
-    var option2 = selectBox2.options[selectBox2.selectedIndex].value;
-    selectedOptions = [option1, option2];
-    resetDisplay();
-    displaySelectedImage();
-    displaySelectedTable();
-  }
-  function resetDisplay() {
-      var contentContainer = document.getElementById('contentContainer');
-      var clickMessageContainer = document.getElementById('clickMessageContainer');
-      contentContainer.style.display = 'none';
-      clickMessageContainer.style.display = 'block';
+  
+  function updateSelectedOptions() {
+    if (selectedRegion && selectedCellType) {
+      selectedOptions = [selectedRegion, selectedCellType];
     }
+  }
+  
+  function createRegionCards(options) {
+    var container = document.getElementById('regionCards');
+    container.innerHTML = '';
+    
+    options.forEach(function(option, index) {
+      var card = document.createElement('div');
+      card.className = 'region-card';
+      if (index === 0) {
+        card.classList.add('selected');
+        selectedRegion = option;
+      }
+      
+      // Create name element
+      var name = document.createElement('div');
+      name.className = 'region-name';
+      name.textContent = option;
+      
+      card.appendChild(name);
+      card.onclick = function() {
+        selectRegionCard(this, option);
+      };
+      container.appendChild(card);
+    });
+  }
+  
+  function createCellTypeCards(options) {
+    var container = document.getElementById('cellTypeCards');
+    container.innerHTML = '';
+    
+    // Cell type images mapping (you may need to adjust these paths)
+    var cellTypeImages = {
+      'Amygdala excitatory': '{{ site.url }}{{ site.baseurl }}/images/celltypes/excitatory.png',
+      'Astrocyte': '{{ site.url }}{{ site.baseurl }}/images/celltypes/astrocyte.png',
+      'Cerebellar inhibitory': '{{ site.url }}{{ site.baseurl }}/images/celltypes/inhibitory.png',
+      'CGE interneuron': '{{ site.url }}{{ site.baseurl }}/images/celltypes/interneuron.png',
+      'Committed oligodendrocyte precursor': '{{ site.url }}{{ site.baseurl }}/images/celltypes/oligodendrocyte.png',
+      'Deep layer corticothalamic and 6b': '{{ site.url }}{{ site.baseurl }}/images/celltypes/cortical.png',
+      'Deep layer near-projecting': '{{ site.url }}{{ site.baseurl }}/images/celltypes/projecting.png',
+      'Eccentric medium spiny neuron': '{{ site.url }}{{ site.baseurl }}/images/celltypes/neuron.png',
+      'Ependymal': '{{ site.url }}{{ site.baseurl }}/images/celltypes/ependymal.png',
+      'Fibroblast': '{{ site.url }}{{ site.baseurl }}/images/celltypes/fibroblast.png',
+      'Hippocampal CA1-3': '{{ site.url }}{{ site.baseurl }}/images/celltypes/hippocampal.png',
+      'Hippocampal CA4': '{{ site.url }}{{ site.baseurl }}/images/celltypes/hippocampal.png',
+      'LAMP5-LHX6 and Chandelier': '{{ site.url }}{{ site.baseurl }}/images/celltypes/lamp5.png'
+    };
+    
+    options.forEach(function(option, index) {
+      var card = document.createElement('div');
+      card.className = 'celltype-card';
+      if (index === 0) {
+        card.classList.add('selected');
+        selectedCellType = option;
+      }
+      
+      // Add image if available
+      var img = document.createElement('img');
+      img.src = cellTypeImages[option] || '{{ site.url }}{{ site.baseurl }}/images/celltypes/default.png';
+      img.alt = option;
+      img.onerror = function() {
+        this.style.display = 'none';
+      };
+      
+      var name = document.createElement('div');
+      name.className = 'celltype-name';
+      name.textContent = option;
+      
+      card.appendChild(img);
+      card.appendChild(name);
+      card.onclick = function() {
+        selectCellTypeCard(this, option);
+      };
+      container.appendChild(card);
+    });
+  }
+  
+  function selectRegionCard(cardElement, value) {
+    // Remove selected class from all region cards
+    var allCards = document.querySelectorAll('.region-card');
+    allCards.forEach(function(card) {
+      card.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked card
+    cardElement.classList.add('selected');
+    selectedRegion = value;
+    updateSelectedOptions();
+    // 不隐藏结果,保持当前显示状态
+  }
+  
+  function selectCellTypeCard(cardElement, value) {
+    // Remove selected class from all celltype cards
+    var allCards = document.querySelectorAll('.celltype-card');
+    allCards.forEach(function(card) {
+      card.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked card
+    cardElement.classList.add('selected');
+    selectedCellType = value;
+    updateSelectedOptions();
+    // 不隐藏结果,保持当前显示状态
+  }
 function displaySelectedImage() {
+  // 显示 volcano plot loading
+  var volcanoLoading = document.getElementById('volcanoLoadingIndicator');
+  var imageElement = document.getElementById('selectedImage');
+  
+  if (volcanoLoading) {
+    volcanoLoading.style.display = 'block';
+  }
+  if (imageElement) {
+    imageElement.style.display = 'none';
+  }
+  
   if (selectedOptions.length === 2) {
     var imageName = 'Atlas' + '_' + encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.png';
     var imagePath;
@@ -257,10 +555,11 @@ function displaySelectedImage() {
       imagePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/Volcano/png/' + imageName;
     } else {
       console.error('Invalid button selection:', selectedButton);
-      return; // 退出函数
+      hideVolcanoLoading();
+      return;
     }
     console.log('Image path:', imagePath); // 调试信息
-    var imageElement = document.getElementById('selectedImage');
+    
     if (imageElement) {
       // 处理图片加载成功
       imageElement.onload = function() {
@@ -269,30 +568,41 @@ function displaySelectedImage() {
         if (errorMessage) {
           errorMessage.remove();
         }
-        imageLoaded = true; // 图片加载成功
+        imageLoaded = true;
+        hideVolcanoLoading();
+        imageElement.style.display = 'block';
       };
       // 处理图片加载错误
       imageElement.onerror = function() {
         console.error('Failed to load image:', imagePath);
-        imageElement.src = ''; // 清空src属性
+        imageElement.src = '';
         imageElement.alt = '';
         displayErrorMessage('No region or cell type in this dataset');
-        imageLoaded = false; // 图片加载失败
+        imageLoaded = false;
+        hideVolcanoLoading();
       };
       // 设置图片路径和样式
       imageElement.src = imagePath;
       imageElement.style.width = '500px'; // 设置宽度
       imageElement.style.height = 'auto'; // 高度自动调整
-      imageElement.style.display = 'block'; // 设置图片为块级元素
       imageElement.style.margin = '0 auto'; // 图片居中
     } else {
       console.error('Element with id "selectedImage" not found.');
+      hideVolcanoLoading();
     }
   } else {
     console.log('Please select the necessary options.');
-    hideTableAndShowMessage(); // 当没有图片展示时，隐藏表格并显示 "No table" 消息
+    hideVolcanoLoading();
   }
 }
+
+function hideVolcanoLoading() {
+  var volcanoLoading = document.getElementById('volcanoLoadingIndicator');
+  if (volcanoLoading) {
+    volcanoLoading.style.display = 'none';
+  }
+}
+
 function displayErrorMessage(message) {
   var imageElement = document.getElementById('selectedImage');
   var errorMessage = document.getElementById('errorMessage');
@@ -318,6 +628,8 @@ function hideTableAndShowMessage() {
     noTableMessage.style.textAlign = 'center';
     tableContainer.appendChild(noTableMessage);
   }
+  // 确保隐藏 table loading
+  hideTableLoading();
 }
 // function sortTable(columnIndex) {
 //     var table = document.getElementById("your-table-id"); // 替换为你的表格的ID
@@ -340,16 +652,19 @@ function hideTableAndShowMessage() {
 //         });
 // })
 function displaySelectedTable() {
-  clearTableAndMessage();
-  if (!imageLoaded) {
-    console.log('No image to show.');
-    hideTableAndShowMessage();
-    return;
+  // 显示表格 loading
+  var tableLoading = document.getElementById('tableLoadingIndicator');
+  var tableContainer = document.getElementById('csvTableContainer');
+  
+  if (tableLoading) {
+    tableLoading.style.display = 'block';
   }
+  
+  clearTableAndMessage();
+  
   if (selectedOptions.length === 2) {
     var tableName;
     var tablePath;
-    // 根据 selectedButton 来生成表格文件名和路径
     if (selectedButton === 'A') {
       tableName = 'Atlas' + '_' + encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
       tablePath = 'https://data.braincellatlas.org/mock/volcano/ByRegion/' + tableName;
@@ -358,27 +673,21 @@ function displaySelectedTable() {
       tablePath = 'https://data.braincellatlas.org/mock/volcano/ByCellType/' + tableName;
     } else {
       console.log('Please select an image and options.');
-      hideTableAndShowMessage(); // 结束函数的执行，并显示 "No table" 消息
-      return; // 结束函数的执行
+      hideTableAndShowMessage();
+      hideTableLoading();
+      return;
     }
-    console.log('Table Path:', tablePath);
+    
     var xhr = new XMLHttpRequest();
     xhr.open('GET', tablePath, true);
     xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        var csvData = xhr.responseText;
-        console.log('CSV Data:', csvData);
-        // 检查是否有 "No figure to show" 消息
-        var errorMessage = document.getElementById('errorMessage');
-        if (errorMessage && errorMessage.textContent === 'No the region or cell type in this dataset') {
-          hideTableAndShowMessage(); // 隐藏表格并显示 "No table" 消息
-          return;
-        }
-        var tableContainer = document.getElementById('csvTableContainer');
-        // 解析 CSV 数据
-        var rows = csvData.split('\n');
-        var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%">';
-        var headerHtml = `<thead>
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var csvData = xhr.responseText;
+          
+          var rows = csvData.split('\n');
+          var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%">';
+          var headerHtml = `<thead>
         <tr>
             <th>genes</th>
             <th>avg_log2FC</th>
@@ -387,33 +696,47 @@ function displaySelectedTable() {
         </tr>
         </thead>
         <tbody>`;
-        tableHtml += headerHtml;
-        for (var i = 1; i < rows.length; i++) {
-          var cells = rows[i].split(',');
-          tableHtml += '<tr>';
-          for (var j = 0; j < cells.length; j++) {
-            // 去掉每个单元格内容的引号
-            var cellContent = cells[j].replace(/^"(.*)"$/, '$1');
-            tableHtml += '<td>' + cellContent + '</td>';
+          tableHtml += headerHtml;
+          for (var i = 1; i < rows.length; i++) {
+            var cells = rows[i].split(',');
+            tableHtml += '<tr>';
+            for (var j = 0; j < cells.length; j++) {
+              var cellContent = cells[j].replace(/^"(.*)"$/, '$1');
+              tableHtml += '<td>' + cellContent + '</td>';
+            }
+            tableHtml += '</tr>';
           }
-          tableHtml += '</tr>';
-        }
-        tableHtml += `</tbody>
+          tableHtml += `</tbody>
         </table>`;
-        // 清除 "No table" 消息
-        var noTableMessage = document.getElementById('noTableMessage');
-        if (noTableMessage) {
-          noTableMessage.remove();
+          var noTableMessage = document.getElementById('noTableMessage');
+          if (noTableMessage) {
+            noTableMessage.remove();
+          }
+          tableContainer.innerHTML = tableHtml;
+          
+          // 表格 HTML 已插入，立即隐藏 loading
+          hideTableLoading();
+          
+          // 然后初始化 DataTable（不影响 loading 显示）
+          initializeDataTable();
+        } else {
+          hideTableAndShowMessage();
+          hideTableLoading();
         }
-        tableContainer.innerHTML = tableHtml;
-        // 初始化表格并按第二列排序
-        initializeDataTable();
       }
     };
     xhr.send();
   } else {
     console.log('Please select the necessary options.');
-    hideTableAndShowMessage(); // 隐藏表格并显示 "No table" 消息
+    hideTableAndShowMessage();
+    hideTableLoading();
+  }
+}
+
+function hideTableLoading() {
+  var tableLoading = document.getElementById('tableLoadingIndicator');
+  if (tableLoading) {
+    tableLoading.style.display = 'none';
   }
 }
 jQuery( document ).ready(function( $ ) {
@@ -422,42 +745,46 @@ jQuery( document ).ready(function( $ ) {
         var table = $('#mytable').DataTable();
         });
 })
-function initializeDataTable() {
-  jQuery(document).ready(function($) {
-    $.noConflict();
-    $('#mytable').DataTable({
-      "order": [[1, "asc"]] // 默认按第二列（索引1）升序排序
-    });
-  });
+function initializeDataTable(callback) {
+  // 使用 setTimeout 确保 DOM 已更新
+  setTimeout(function() {
+    try {
+      var $ = jQuery.noConflict();
+      // 销毁已存在的 DataTable 实例
+      if ($.fn.DataTable.isDataTable('#mytable')) {
+        $('#mytable').DataTable().destroy();
+      }
+      // 初始化新的 DataTable
+      $('#mytable').DataTable({
+        "order": [[1, "asc"]], // 默认按第二列（索引1）升序排序
+        "initComplete": function(settings, json) {
+          // DataTable 初始化完成后执行回调
+          console.log('DataTable initialized');
+          if (callback && typeof callback === 'function') {
+            callback();
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Error initializing DataTable:', error);
+      // 如果初始化失败，也要隐藏 loading
+      if (callback && typeof callback === 'function') {
+        callback();
+      }
+    }
+  }, 100);
 }
 function clearTableAndMessage() {
-  // 清除表格内容
+  // 清除表格内容和错误消息
   var tableContainer = document.getElementById('csvTableContainer');
   tableContainer.innerHTML = '';
-  // 显示 "No table" 消息
+  
+  // 移除可能存在的错误消息
   var noTableMessage = document.getElementById('noTableMessage');
-  if (!noTableMessage) {
-    noTableMessage = document.createElement('div');
-    noTableMessage.id = 'noTableMessage';
-    noTableMessage.textContent = 'No the region or cell type in this dataset';
-    noTableMessage.style.textAlign = 'center';
-    tableContainer.appendChild(noTableMessage);
+  if (noTableMessage) {
+    noTableMessage.remove();
   }
 }
-function updateSelectBoxOptions(selectBoxId, options) {
-    var selectBox = document.getElementById(selectBoxId);
-    selectBox.innerHTML = generateOptionsHtml(options);
-    if (options.length > 0) {
-        selectBox.value = options[0]; // 默认选中第一个选项
-    }
-  }
-  function generateOptionsHtml(options) {
-    var optionsHtml = '';
-    for (var i = 0; i < options.length; i++) {
-      optionsHtml += '<option value="' + options[i] + '">' + options[i] + '</option>';
-    }
-    return optionsHtml;
-  }
 document.addEventListener('DOMContentLoaded', function() {
     var buttonA = document.getElementById('buttonA');
     var buttonB = document.getElementById('buttonB');
@@ -471,6 +798,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var sentenceElement = document.getElementById("sentence");
     var buttonA = document.getElementById('buttonA');
     var buttonB = document.getElementById('buttonB');
+    var contentContainer = document.getElementById('contentContainer');
+    var clickMessageContainer = document.getElementById('clickMessageContainer');
+    
     if (button === 'A') {
       buttonA.classList.add('active');
       buttonB.classList.remove('active');
@@ -479,6 +809,9 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedButton = button;
       originalOrder = true;
       resetSelectBoxes();
+      // Step1切换时隐藏结果
+      contentContainer.style.display = 'none';
+      clickMessageContainer.style.display = 'block';
     } else if (button === 'B') {
       buttonA.classList.remove('active');
       buttonB.classList.add('active');
@@ -487,26 +820,40 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedButton = button;
       originalOrder = false;
       resetSelectBoxes();
-      resetDisplay();
-    }
- }   
-  function resetSelectBoxes() {
-    if (originalOrder) {
-      selectBox1.parentNode.insertBefore(selectBox1, selectBox2);
-    } else {
-      selectBox2.parentNode.insertBefore(selectBox2, selectBox1);
-    }
-  }
-  function toggleContent() {
-    var contentContainer = document.getElementById('contentContainer');
-    var clickMessageContainer = document.getElementById('clickMessageContainer');
-    if (contentContainer.style.display === 'none') {
-      contentContainer.style.display = 'block';
-      clickMessageContainer.style.display = 'none';
-    } else {
+      // Step1切换时隐藏结果
       contentContainer.style.display = 'none';
       clickMessageContainer.style.display = 'block';
     }
+ }   
+  function resetSelectBoxes() {
+    var regionContainer = document.getElementById('regionSelectionContainer');
+    var cellTypeContainer = document.getElementById('cellTypeSelectionContainer');
+    
+    if (originalOrder) {
+      // By Region: Region first, then Cell Type
+      regionContainer.parentNode.insertBefore(regionContainer, cellTypeContainer);
+    } else {
+      // By Cell Type: Cell Type first, then Region
+      cellTypeContainer.parentNode.insertBefore(cellTypeContainer, regionContainer);
+    }
+  }
+  
+  function showResults() {
+    var contentContainer = document.getElementById('contentContainer');
+    var clickMessageContainer = document.getElementById('clickMessageContainer');
+    
+    // Show content container and hide click message
+    contentContainer.style.display = 'block';
+    clickMessageContainer.style.display = 'none';
+    
+    // Load image and table (they have their own loading indicators)
+    displaySelectedImage();
+    displaySelectedTable();
+  }
+  
+  function toggleContent() {
+    // This function is now replaced by showResults
+    showResults();
   }
 
 
@@ -547,6 +894,11 @@ function showImage0(photoName) {
   border-radius: 10px; /* 设置边框圆角的半径，可以根据需要进行调整 */
   padding: 10px; /* 可选：添加内边距以增加内容与边框之间的间距 */
 }
+.markers-description { 
+  font-weight: 600;
+  box-shadow: 0 0 0px grey;
+  padding: 0px;
+}
   #buttonA, #buttonB {
       font-size: 17px; /* Increase font size */
       /* padding: 15px 30px; /* Increase padding */
@@ -555,12 +907,12 @@ function showImage0(photoName) {
       height: 38px; /* Set button height */
       /* cursor: pointer;
       border: none;
-      background-color: #587B39; /* Change background color */
+      background-color: #00528e; /* Change background color */
       /* color: white; Change text color */
       /* border-radius: 5px; Add border radius  */
     }
     /* #buttonA:hover, #buttonB:hover {
-      background-color: #587B39; Change background color on hover */
+      background-color: #00528e; Change background color on hover */
     /* } */
 </style>
 <style>
@@ -587,7 +939,7 @@ function showImage0(photoName) {
         transition: transform 0.3s;
     }
     .photo-card.clicked {
-        border-color: #587B39;
+        border-color: #00528e;
     }
 </style>
 </body>

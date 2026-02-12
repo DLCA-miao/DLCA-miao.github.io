@@ -17,7 +17,7 @@ ATLAS
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 ADULT BRAIN
 </b>
 </p>
@@ -30,7 +30,7 @@ ADULT BRAIN
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 FETAL BRAIN
 </b>
 </p>
@@ -42,7 +42,7 @@ FETAL BRAIN
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 TUMOR
 </b>
 </p>
@@ -54,7 +54,7 @@ TUMOR
 </div>
 <div>
 <p class="text-center" style="margin-top: 16px;">
-<b style="font-size: 24px; color: #587B39">
+<b style="font-size: 24px; color: #00528e">
 ORGANOID
 </b>
 </p>
@@ -126,15 +126,15 @@ ORGANOID
         transition: transform 0.3s;
     }
     .photo-card.clicked {
-        border-color: #587B39;
+        border-color: #00528e;
     }
 </style>
 
 <div class="container" style>
-<p class="text-left" style="color:#587B39; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of regions in a cell type.</p>
+<p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of regions in a cell type.</p>
 
 <p><b> Select the target Cell type.</b></p>
-  <b style="font-size: 24px; color: #587B39">Celltype</b>
+  <b style="font-size: 24px; color: #00528e">Celltype</b>
   <br>
   <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>
@@ -143,10 +143,10 @@ ORGANOID
 
 <br>
 <div class="container">
-<p class="text-left" style="color:#587B39; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of cell types in a region.</p>
+<p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of cell types in a region.</p>
 
 <p><b>Select the target Region.<b></p>
-  <b style="font-size: 24px; color: #587B39">Region</b>
+  <b style="font-size: 24px; color: #00528e">Region</b>
   <br>
   <select id="selectBox2" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>
@@ -225,7 +225,11 @@ ORGANOID
 
           if (options.length > 0) {
             selectBox.selectedIndex = 0;
-            document.getElementById(imageIdContainerId).textContent = 'Atlas: ' + firstKey;
+            // document.getElementById(imageIdContainerId).textContent = 'Atlas: ' + firstKey;
+             var idContainer = document.getElementById(imageIdContainerId);
+            if (idContainer) {
+              idContainer.textContent = 'Atlas: ' + firstKey;
+            }
             handleSelectChange(selectBox, imageElement, imageFolder, width, height);
           }
         })
@@ -235,6 +239,7 @@ ORGANOID
     }
 
     function handleSelectChange(selectBox, imageElement, imageFolder, width, height) {
+      console.log('Selected option:', imageElement);
       var selectedOption = selectBox.options[selectBox.selectedIndex].value;
       displaySelectedImage(selectedOption, imageElement, imageFolder, width, height);
     }
