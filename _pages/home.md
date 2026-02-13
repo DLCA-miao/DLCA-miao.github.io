@@ -71,7 +71,7 @@ permalink: /
 
 <div class="carousel-inner" markdown="0">
 <div class="item active">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/dev_stage.png" alt="Slide 1" style=" width:1150px; height:500px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/dev_stage.png" alt="Slide 1" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <div class="item ">
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/region_summary_gender_seq_donor_2.svg" alt="Slide 2" style=" width:1500px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
@@ -342,4 +342,5 @@ Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated s
         text-align: center
     }
 </style>
+
 
