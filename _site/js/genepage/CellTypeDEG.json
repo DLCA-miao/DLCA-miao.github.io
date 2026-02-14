@@ -45,7 +45,8 @@
 "ASCL1+ GRP-hi NE",
 "GRP+ ASCL1- NE",
 "GRP+ DLK1+ NE",
-"GRP+ NLGN1- NE','Splatter','Prol fibro",
+"GRP+ NLGN1- NE",
+"Splatter","Prol fibro",
 "Early fibro",
 "Alveolar fibro",
 "Adventitial fibro",
@@ -141,4 +142,5 @@
 "Prol neuronal",
 "GPM6A+ neuronal"
   ]
+
 }
