@@ -314,17 +314,17 @@ The cell type name is defined by the most scored prediced cell type computed fro
 
 <!-- <div style="display: flex; justify-content: center;"> -->
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_gene1.png" style='height: 100%; width: 70%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_gene1.png" style='height: 100%; width: 80%; margin: 0;'>
 </div>
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" style='height: 100%; width: 70%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" style='height: 100%; width: 80%; margin: 0;'>
 </div>
 
 <h1 style="background-color: #00528e; color:#ffffff;">Region DEG & Cell type DEG</h1>
 <p>Region DEG (Differential expression Genes) compares different cell types from the same region. A violin plot of the top 3 DEGs for each different cell types of the region will be shown after selection of the input.</p>
 <p>Cell type DEG compares the same cell type from different regions. Likewise, a violin plot of the top 3 DEGs for this cell type across different region will be shown after selection of the input.</p>
 <div style="display: flex">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" style='height: 100%; width: 70%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" style='height: 100%; width: 80%; margin: 0;'>
 </div>
 
 <p id="Dataset"></p>
