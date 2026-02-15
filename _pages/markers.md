@@ -692,8 +692,12 @@ function displaySelectedTable() {
         <tr>
             <th>genes</th>
             <th>avg_log2FC</th>
+            <th>logCPM</th>
+            <th>LR</th>
             <th>p_val</th>
             <th>p_val_adj</th>
+            <th>pct.1</th>
+            <th>pct.2</th>
         </tr>
         </thead>
         <tbody>`;
