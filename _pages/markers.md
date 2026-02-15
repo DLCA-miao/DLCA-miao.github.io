@@ -547,7 +547,7 @@ function displaySelectedImage() {
   }
   
   if (selectedOptions.length === 2) {
-    var imageName = 'Atlas' + '_' + encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.png';
+    var imageName =  encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.png';
     var imagePath;
     if (selectedButton === 'A') {
       imagePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/Volcano/png/' + imageName;
@@ -666,10 +666,10 @@ function displaySelectedTable() {
     var tableName;
     var tablePath;
     if (selectedButton === 'A') {
-      tableName = 'Atlas' + '_' + encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
+      tableName = encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
       tablePath = 'https://data.braincellatlas.org/mock/volcano/ByRegion/' + tableName;
     } else if (selectedButton === 'B') {
-      tableName = 'Atlas' + '_' + encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
+      tableName = encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
       tablePath = 'https://data.braincellatlas.org/mock/volcano/ByCellType/' + tableName;
     } else {
       console.log('Please select an image and options.');
