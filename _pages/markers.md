@@ -547,12 +547,13 @@ function displaySelectedImage() {
   }
   
   if (selectedOptions.length === 2) {
-    var imageName =  encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.png';
+    var imageName = encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.png';
+    var imageName2 = encodeURIComponent(selectedOptions[1]) + '_' + encodeURIComponent(selectedOptions[0]) + '.png';
     var imagePath;
     if (selectedButton === 'A') {
       imagePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/Volcano/png/' + imageName;
     } else if (selectedButton === 'B') {
-      imagePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/Volcano/png/' + imageName;
+      imagePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/Volcano/png/' + imageName2;
     } else {
       console.error('Invalid button selection:', selectedButton);
       hideVolcanoLoading();
@@ -666,11 +667,11 @@ function displaySelectedTable() {
     var tableName;
     var tablePath;
     if (selectedButton === 'A') {
-      tableName = encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
-      tablePath = 'https://data.braincellatlas.org/mock/volcano/ByRegion/' + tableName;
+      tableName =  encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '.csv';
+      tablePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/' + tableName;
     } else if (selectedButton === 'B') {
-      tableName = encodeURIComponent(selectedOptions[0]) + '_' + encodeURIComponent(selectedOptions[1]) + '_cell_type.csv';
-      tablePath = 'https://data.braincellatlas.org/mock/volcano/ByCellType/' + tableName;
+      tableName = encodeURIComponent(selectedOptions[1]) + '_' + encodeURIComponent(selectedOptions[0]) + '.csv';
+      tablePath = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/' + tableName;
     } else {
       console.log('Please select an image and options.');
       hideTableAndShowMessage();

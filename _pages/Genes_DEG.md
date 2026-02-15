@@ -247,7 +247,7 @@ ORGANOID
     function displaySelectedImage(optionValue, imageElement, imageFolder, width, height) {
       if (optionValue) {
         var encodedOption = encodeURIComponent(optionValue);
-        var imageName = 'Atlas_' + encodedOption + '.png';
+        var imageName = encodedOption + '.png';
         var imagePath = 'https://data.braincellatlas.org/mock/volcano/figures/stacked_violin_/' + imageFolder + '/' + imageName;
 
         if (imageElement) {
