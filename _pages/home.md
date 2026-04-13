@@ -80,7 +80,7 @@ permalink: /
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_c.svg" alt="Slide 2" style=" width:1500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <div class="item">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_f.svg" alt="Slide 3" style="width:2000px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_f.png" alt="Slide 3" style="width:2000px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
 </div>
 <!--<div class="item">
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure1.svg" alt="Slide 4" style=" width:1000px; object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
