@@ -2,7 +2,7 @@
 title: "Developmental Lung Cell Atlas - DEG"
 layout: homelay
 excerpt: "Developmental Lung Cell Atlas -- DEG"
-permalink: /DEG/
+permalink: /deg/
 ---
 <!-- <div class="container"> -->
 <!--b style="font-size: 24px; color: #BF5701">
