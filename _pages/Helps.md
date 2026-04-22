@@ -105,66 +105,36 @@ The interactive viewer shows the human lung and includes all the major regions f
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th>Concrete Region</th>
+      <th>Original Region</th>
       <th>Broad Region</th>
-      <th>Anatomical Region</th>
+      <th>Region</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Distal airway</td>
-      <td>Distal airway</td>
-      <td>Distal airway</td>
+      <td>Lung</td>
+      <td>Lung</td>
+      <td>Lung</td>
     </tr>
     <tr>
-      <td>Lung</td>
-      <td>Whole lung</td>
-      <td>Whole lung</td>
+      <td>Right lobes</td>
+      <td>Lung lobe</td>
+      <td>Right lobes</td>
     </tr>
     <tr>
       <td>Peripheral lung</td>
       <td>Periphery</td>
-      <td>Bronchioles/alveoli</td>
+      <td>Periphery</td>
+    </tr>
+    <tr>
+      <td>Whole lung</td>
+      <td>Whole lung</td>
+      <td>Whole lung</td>
     </tr>
     <tr>
       <td>d_LowLeftPar</td>
       <td>Parenchyma</td>
-      <td>Bronchioles/alveoli</td>
-    </tr>
-    <tr>
-      <td>e_TopLeftPar</td>
       <td>Parenchyma</td>
-      <td>Bronchioles/alveoli</td>
-    </tr>
-    <tr>
-      <td>c_Bronchi.4</td>
-      <td>Bronchi</td>
-      <td>Bronchi</td>
-    </tr>
-    <tr>
-      <td>Distal lung</td>
-      <td>Distal lung</td>
-      <td>Bronchioles/alveoli</td>
-    </tr>
-    <tr>
-      <td>Whole lung</td>
-      <td>Whole lung</td>
-      <td>Whole lung</td>
-    </tr>
-    <tr>
-      <td>Right lobes</td>
-      <td>Right lobes</td>
-      <td>Right lobes</td>
-    </tr>
-    <tr>
-      <td>Middle airway</td>
-      <td>Middle airway</td>
-      <td>Middle airway</td>
-    </tr>
-    <tr>
-      <td>Proximal airway epithelium</td>
-      <td>Proximal airway</td>
-      <td>Proximal airway</td>
     </tr>
     <tr>
       <td>a_Trachea</td>
@@ -172,41 +142,71 @@ The interactive viewer shows the human lung and includes all the major regions f
       <td>Trachea</td>
     </tr>
     <tr>
+      <td>Distal lung</td>
+      <td>Distal lung</td>
+      <td>Distal lung</td>
+    </tr>
+    <tr>
+      <td>e_TopLeftPar</td>
+      <td>Parenchyma</td>
+      <td>Parenchyma</td>
+    </tr>
+    <tr>
       <td>Right middle lobe</td>
       <td>Right middle lobe</td>
       <td>Right middle lobe</td>
     </tr>
+     <tr>
+      <td>Distal airway</td>
+      <td>Distal airway</td>
+      <td>Distal airway</td>
+    </tr>   
     <tr>
-      <td>Left lower lobe periphery region</td>
-      <td>Periphery</td>
-      <td>Bronchioles/alveoli</td>
+      <td>Proximal airway epithelium</td>
+      <td>Proximal airway</td>
+      <td>Proximal airway</td>
     </tr>
     <tr>
-      <td>Right upper lobe periphery region</td>
-      <td>Periphery</td>
-      <td>Bronchioles/alveoli</td>
+      <td>c_Bronchi.4</td>
+      <td>Bronchi</td>
+      <td>Bronchi</td>
     </tr>
     <tr>
+      <td>Proximal lung</td>
+      <td>Proximal lung</td>
+      <td>Proximal lung</td>
+    </tr>
+    <tr>
+      <td>Middle airway</td>
+      <td>Middle airway</td>
+      <td>Middle airway</td>
+    </tr>
+      <tr>
       <td>b_Bronchi.2.3</td>
       <td>Bronchi</td>
-      <td>Primary bronchus</td>
+      <td>Bronchi</td>
+    </tr>  
+      <tr>
+      <td>Right upper lobe periphery region</td>
+      <td>Periphery</td>
+      <td>Periphery</td>
     </tr>
-    <tr>
-      <td>Not applicable</td>
+      <tr>
+      <td>Left lower lobe periphery region</td>
+      <td>Periphery</td>
+      <td>Periphery</td>
+    </tr>
+     <tr>
       <td>Trachea</td>
       <td>Trachea</td>
+      <td>Trachea</td>
     </tr>
-    <tr>
-      <td>Proximal lung</td>
-      <td>Proximal lung</td>
-      <td>Proximal lung</td>
-    </tr>
-    <tr>
+      <tr>
       <td>Right upper lobe mid-bronchial region</td>
       <td>Bronchi</td>
       <td>Bronchi</td>
     </tr>
-    <tr>
+       <tr>
       <td>Left lower lobe bronchus region</td>
       <td>Bronchi</td>
       <td>Bronchi</td>
@@ -214,7 +214,12 @@ The interactive viewer shows the human lung and includes all the major regions f
     <tr>
       <td>Left upper lobe periphery</td>
       <td>Periphery</td>
-      <td>Bronchioles/alveoli</td>
+      <td>Periphery</td>
+    </tr>
+    <tr>
+      <td>Right lobes</td>
+      <td>Right lobes</td>
+      <td>Right lobes</td>
     </tr>
     <tr>
       <td>Bronchus</td>
