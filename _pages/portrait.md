@@ -45,9 +45,9 @@ permalink: /portrait/
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th>Concrete Region</th>
+      <th>Original Region</th>
       <th>Broad Region</th>
-      <th>Anatomical Region</th>
+      <th>Region</th>
     </tr>
   </thead>
   <tbody>
