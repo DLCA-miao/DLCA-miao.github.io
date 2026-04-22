@@ -2,7 +2,7 @@
   broad_region: "Lung"
   anatomical_region: "Lung"
 
-- concrete_region: "right lobes"
+- concrete_region: "Right lobes"
   broad_region: "Lung lobe"
   anatomical_region: "Right lobes"
 
@@ -10,7 +10,7 @@
   broad_region: "Periphery"
   anatomical_region: "Periphery"
 
-- concrete_region: "whole lung"
+- concrete_region: "Whole lung"
   broad_region: "Whole lung"
   anatomical_region: "Whole lung"
 
@@ -30,11 +30,11 @@
   broad_region: "Parenchyma"
   anatomical_region: "Parenchyma"
 
-- concrete_region: "right middle lobe"
+- concrete_region: "Right middle lobe"
   broad_region: "Lung lobe"
   anatomical_region: "Right middle lobe"
 
-- concrete_region: "distal airway"
+- concrete_region: "Distal airway"
   broad_region: "Distal airway"
   anatomical_region: "Distal airway"
 
@@ -46,15 +46,15 @@
   broad_region: "Bronchi"
   anatomical_region: "Bronchi"
 
-- concrete_region: "proximal lung"
+- concrete_region: "Proximal lung"
   broad_region: "Proximal lung"
   anatomical_region: "Proximal lung"
 
-- concrete_region: "distal lung"
+- concrete_region: "Distal lung"
   broad_region: "Distal lung"
   anatomical_region: "Distal lung"
 
-- concrete_region: "middle airway"
+- concrete_region: "Middle airway"
   broad_region: "Middle airway"
   anatomical_region: "Middle airway"
 
@@ -62,11 +62,11 @@
   broad_region: "Bronchi"
   anatomical_region: "Bronchi"
 
-- concrete_region: "right upper lobe periphery region"
+- concrete_region: "Right upper lobe periphery region"
   broad_region: "Periphery"
   anatomical_region: "Periphery"
 
-- concrete_region: "left lower lobe periphery region"
+- concrete_region: "Left lower lobe periphery region"
   broad_region: "Periphery"
   anatomical_region: "Periphery"
 
@@ -74,22 +74,22 @@
   broad_region: "Trachea"
   anatomical_region: "Trachea"
 
-- concrete_region: "right upper lobe mid-bronchial region"
+- concrete_region: "Right upper lobe mid-bronchial region"
   broad_region: "Bronchi"
   anatomical_region: "Bronchi"
 
-- concrete_region: "left lower lobe bronchus region"
+- concrete_region: "Left lower lobe bronchus region"
   broad_region: "Bronchi"
   anatomical_region: "Bronchi"
 
-- concrete_region: "left upper lobe periphery region"
+- concrete_region: "Left upper lobe periphery region"
   broad_region: "Periphery"
   anatomical_region: "Periphery"
 
-- concrete_region: "bronchus"
+- concrete_region: "Bronchus"
   broad_region: "Bronchi"
   anatomical_region: "Bronchi"
 
-- concrete_region: "bronchiole"
+- concrete_region: "Bronchiole"
   broad_region: "Bronchiole"
   anatomical_region: "Bronchiole"
