@@ -299,7 +299,7 @@ class="organ-img">
 
 <div class="Lung">
 <!-- 肺部全图层 -->
-<img v-show="activeBrain == 'Lung' && activePart(null)" src="../assets/lung/lung.png" alt="Lung"
+<img v-show="activeBrain == 'Lung' && activePart(null)" src="../assets/lung/全景图.png" alt="Lung"
 class="organ-img">
 <!-- 独立器官图层 -->
 <img v-show="activePart('Bronchioles')" src="../assets/lung/bronchioles.png" alt="Bronchioles"
