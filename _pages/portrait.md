@@ -6,11 +6,12 @@ permalink: /portrait/
 ---
 <style>
   .table-custom {
-    font-size: 0.9rem;
-    width: 300px;
-    height: 100px;
+    font-size: 0.9rem; /* 调整字体大小 */
+    width: 300px; /* 调整表格宽度 */
+    height:100px
   }
-
+  
+  /* 表格表头样式 */
   .table thead th {
     background-color: #00528e;
     color: rgba(255,255,255,0.9);
@@ -59,24 +60,25 @@ permalink: /portrait/
   <iframe src="../dist/index.html" class="rounded-iframe portrait-iframe"></iframe>
 </div>
 <br>
-<p class="table-description">The table shows the standardization of region naming across different publications.</p>
+<p class="table-description">The table shows the standardization of region naming across different publications.
+</p>
 <div class="portrait-table-wrap">
-  <table class="table table-hover table-bordered">
-    <thead>
-      <tr>
-        <th>Concrete Region</th>
-        <th>Broad Region</th>
-        <th>Anatomical Region</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for region in site.data.portrait_regions %}
-      <tr>
-        <td>{{ region.concrete_region }}</td>
-        <td>{{ region.broad_region }}</td>
-        <td>{{ region.anatomical_region }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Original Region</th>
+      <th>Broad Region</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for region in site.data.portrait_regions %}
+    <tr>
+     <td>{{ region.concrete_region }}</td>
+      <td>{{ region.broad_region }}</td>
+      <td>{{ region.anatomical_region }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 </div>
