@@ -7,11 +7,13 @@ permalink: /Helps/
 
 # Help
 
+<div class="help-nav">
 <a class="btn btn-default" href="#Data Viewer" >Data Viewer</a>
 <a class="btn btn-default" href="#Portrait">Portrait</a>
 <a class="btn btn-default" href="#Genes">Genes</a>
 <a class="btn btn-default" href="#Exploration">Exploration</a>
 <a class="btn btn-default" href="#Dataset">Dataset</a>
+</div>
 <br><br>
 
 **Developmental Lung Cell Atlas is a comprehensive and unified atlas of the lung that was built across studies, regions and sequencing platforms. We integrated the majority of the single-nuclei/single-cell transcriptomic datasets published from 2017 to present from a diverse source of lung samples that provide a unified cell type and manually curated metadata annotated framework for lung cell research in the development.**
@@ -20,11 +22,12 @@ permalink: /Helps/
 <p id="Data Viewer"> </p>
 <p>The Data Viewer page features the UMAP that presents the sample characteristics and gene expressions in the Developmental Lung Cell Atlas.
 From the "Data Viewer" tab, you can choose to view a particular UMAP of lung.</p>
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_2.png" style='height: 80%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_2.png" class="help-image">
 <!-- <p>The left panel plot is a plotly.js module that displays the integrative UMAPs of the Adult Lung, Fetal Lung, Tumour and Organoids in the Respire Cell Atlas.</p>
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_figure_Dataviewer_left.png" style='height: 800px; width: auto; margin: 0;'> -->
 <p>(1) By clicking  the selection from "Cell Metadata", you can view coloured cells from a certain attribute for the cells. Several other dimiensions to view the UMAP are described as below:
 A list of selectable attributes to display the UMAPs are shown in the left column.</p>
+<div class="help-table-wrap">
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -79,6 +82,7 @@ Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
     </tr>
   </tbody>
 </table>
+</div>
 
 <!-- <ul>
   <li>The scAnnot cell type names are models that predicted cell names based on the transcriptomic expressions and known brain cell names. The model was built using a well-annotated adult human brain snRNA dataset <a href="https://www.science.org/doi/10.1126/science.add7046">(Siletti et al, 2023)</a> and the fetal human brain scRNA resource <a href="https://www.biorxiv.org/content/10.1101/2022.10.24.513487v1">(Braun et al, 2022)</a>.</li>
@@ -94,7 +98,7 @@ Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
 <p id="Portrait"> </p>
 <!-- <p class="header_box">Portrait</p> -->
 The interactive viewer shows the human lung and includes all the major regions from the data used in Developmental Lung Cell Atlas. You can click on the relevant label and the page will direct to the data viewer page to display information about that area. 
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_portrait_2.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_portrait_2.png" class="help-image">
 <style>
   .table-custom {
     font-size: 0.9rem; /* 调整字体大小 */
@@ -102,6 +106,7 @@ The interactive viewer shows the human lung and includes all the major regions f
     height:100px
   }
 </style>
+<div class="help-table-wrap">
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -228,6 +233,7 @@ The interactive viewer shows the human lung and includes all the major regions f
     </tr>
   </tbody>
 </table>
+</div>
 <p>The table shows the information of regions. The Concrete Region is the original annotation of studies; the Broad Region is rough region; the Anatomical Region is the anatomical division of the region.</p> 
 <!-- <table class="table table-hover table-bordered">
   <thead>
@@ -314,17 +320,17 @@ The cell type name is defined by the most scored prediced cell type computed fro
 
 <!-- <div style="display: flex; justify-content: center;"> -->
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_gene1.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_gene1.png" class="help-image">
 </div>
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" class="help-image">
 </div>
 
 <h1 style="background-color: #00528e; color:#ffffff;">Region DEG & Cell type DEG</h1>
 <p>Region DEG (Differential expression Genes) compares different cell types from the same region. A violin plot of the top 3 DEGs for each different cell types of the region will be shown after selection of the input.</p>
 <p>Cell type DEG compares the same cell type from different regions. Likewise, a violin plot of the top 3 DEGs for this cell type across different region will be shown after selection of the input.</p>
 <div style="display: flex">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" class="help-image">
 </div>
 
 <p id="Dataset"></p>
@@ -332,5 +338,84 @@ The cell type name is defined by the most scored prediced cell type computed fro
 <h1 style="background-color: #00528e; color:#ffffff;">Dataset</h1>
 <p>The Dataset page includes all the datasets used in the Developmental Lung Cell Atlas, a full list of the studies and authors from this page can be found here. Processed data with re-annotated cell type metadata will be avaiable for download upon publication. All data can be downloaded by four buttons: Copy, CSV, Excel, PDF etc.</p>
 <div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-dataset_2.png" style='height: 100%; width: 80%; margin: 0;'>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-dataset_2.png" class="help-image">
 </div>
+
+<style>
+  .help-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+  }
+
+  .help-image {
+    width: min(100%, 80%);
+    height: auto;
+    margin: 0;
+  }
+
+  .help-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .help-nav .btn {
+    border-radius: 999px;
+    border-color: #c9d6e4;
+  }
+
+  h1[style*="background-color"] {
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+  }
+
+  p, li {
+    line-height: 1.75;
+  }
+
+  table.table {
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 767px) {
+    .help-nav {
+      top: 6px;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .help-nav .btn {
+      width: 100%;
+    }
+
+    .help-image {
+      width: 100%;
+    }
+
+    .help-table-wrap table {
+      min-width: 640px;
+    }
+
+    h1[style*="background-color"] {
+      font-size: 26px;
+      line-height: 1.3;
+      padding: 8px 12px;
+    }
+
+    p, li {
+      line-height: 1.7;
+    }
+  }
+</style>

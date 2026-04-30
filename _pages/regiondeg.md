@@ -132,14 +132,14 @@ ORGANOID
 </style>
 
 
-<div class="container" style="width: 800px">
+<div class="container regiondeg-panel">
 <p><b>Step1</b> Select the target Region.</p>
   <b style="font-size: 24px; color: #00528e">Expression</b>
   <div id="imageIdContainer"></div>
   <br/>
   <b style="font-size: 24px; color: #00528e">Region</b>
   <br>
-  <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
+  <select id="selectBox1" class="regiondeg-select" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>
   <div id="imageContainer"></div> <!-- 新增的div用于展示图片 -->
 </div>
@@ -175,6 +175,31 @@ ORGANOID
     box-shadow: 0 0 15px grey;
     border-radius: 10px; 
     padding: 10px; 
+  }
+
+  .regiondeg-panel {
+    width: min(100%, 800px);
+  }
+
+  .regiondeg-select {
+    width: min(100%, 400px) !important;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .regiondeg-panel {
+      padding: 12px;
+      box-shadow: 0 0 6px grey;
+    }
+
+    .regiondeg-select {
+      width: 100% !important;
+    }
+
+    #imageIdContainer,
+    #imageContainer {
+      overflow-x: auto;
+    }
   }
 </style>
 

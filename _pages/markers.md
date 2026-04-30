@@ -89,24 +89,29 @@ ORGANOID
 <!-- </div>
 </div>
 </div> -->
-<div class="markers-description container" style="">
+<div class="markers-description container markers-panel">
 The section shows the differentially expressed genes (DEGs) of the target region or the target Cell type.
 </div>
 <br/>
-<div class="container" style="box-shadow: 0 0 2px;">
+<div class="container markers-panel">
 <p><b>Step1</b> Click the buttons to show the differentially expressed genes (DEGs) of the target region or the target Cell type.</p>
-  <button id="buttonA" onclick="changeOrder('A')">By Region</button>
-  <button id="buttonB" onclick="changeOrder('B')">By Cell type</button>
+  <div class="markers-button-row">
+    <button id="buttonA" onclick="changeOrder('A')">By Region</button>
+    <button id="buttonB" onclick="changeOrder('B')">By Cell type</button>
+  </div>
 </div>
   <br/>
 
-<div class="container" style="box-shadow: 0 0 2px;">
+<div class="container markers-panel">
 <p><b>Step2</b> Select the target Cell type/Region to show the DEGs.</p>
   <p id="sentence"></p>
   
   <!-- Region Selection Cards -->
   <div id="regionSelectionContainer" class="selection-container">
-    <p class="selection-label">Select Region:</p>
+    <div class="selection-label-row">
+      <p class="selection-label">Select Region:</p>
+      <button type="button" id="allRegionButton" class="all-region-button" onclick="selectAllRegion()">All</button>
+    </div>
     <div id="regionCards" class="card-grid"></div>
   </div>
   
@@ -121,7 +126,14 @@ The section shows the differentially expressed genes (DEGs) of the target region
 <br/>
 <div id="contentContainer" style="display: none;">
 <!-- Volcano Plot Section -->
-<div class="container" style="box-shadow: 0 0 2px;">
+<div class="container markers-panel">
+<div class="result-selection-bar" id="volcanoSelectionSummary" style="display: none;">
+  <span class="selection-summary-title">Search by</span>
+  <span class="selection-summary-item">Region :</span>
+  <span class="selection-pill" id="selectedRegionPillTop"></span>
+  <span class="selection-summary-item">Cell type :</span>
+  <span class="selection-pill" id="selectedCellTypePillTop"></span>
+</div>
 <div class="image-container">
 <b>Result</b> Volcano Plot.
 <!-- Volcano Plot Loading Indicator -->
@@ -134,26 +146,24 @@ The section shows the differentially expressed genes (DEGs) of the target region
 </div>
 <br/>
 <!-- Table Section -->
-<div class="container">
+<div class="container markers-panel">
+<div class="result-selection-bar" id="tableSelectionSummary" style="display: none;">
+  <span class="selection-summary-title">Search by</span>
+  <span class="selection-summary-item">Region :</span>
+  <span class="selection-pill" id="selectedRegionPillBottom"></span>
+  <span class="selection-summary-item">Cell type :</span>
+  <span class="selection-pill" id="selectedCellTypePillBottom"></span>
+</div>
 <b>Result</b> The table of DEGs.
 <!-- Table Loading Indicator -->
 <div id="tableLoadingIndicator" style="display: none; text-align: center; padding: 20px;">
   <div class="spinner"></div>
   <p>Loading table data...</p>
 </div>
-<div id="csvTableContainer" style="max-height: 500px; overflow-y: auto; box-shadow: 0 0 2px;"></div>
+<div id="csvTableContainer" style="overflow-x: auto; box-shadow: 0 0 2px;"></div>
 </div>
 </div>
-<script>
-jQuery( document ).ready(function( $ ) {
-        $(document).ready( function () {
-        $.noConflict();
-        var table = $('#mytable').DataTable();
-        });
-})
-</script>
-
-<div class="container" style="box-shadow: 0 0 2px;">
+<div class="container markers-panel">
 <p id="clickMessageContainer" style="display: block;">Please click on the <b>Markers</b> button above.</p>
 </div>
 
@@ -165,15 +175,12 @@ jQuery( document ).ready(function( $ ) {
 </style>
 <style>
   #csvTableContainer {
-    max-height: 500px;
-    overflow-y: auto;
+    overflow-x: auto;
   }
 
   /* 将表格头部固定 */
   #csvTableContainer thead {
-    position: sticky;
-    top: 0;
-    background-color: white;
+    position: static;
   }
 </style>
 
@@ -217,6 +224,225 @@ jQuery( document ).ready(function( $ ) {
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 16px;
+  }
+
+  .selection-label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .selection-label-row .selection-label {
+    margin-bottom: 0;
+  }
+
+  .all-region-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    height: 32px;
+    padding: 0 14px;
+    border: 1px solid #d8e6f5;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #00528e;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .all-region-button.is-selected {
+    background: #00528e;
+    border-color: #00528e;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 82, 142, 0.18);
+  }
+
+  .markers-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .result-selection-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #4d5f75;
+    font-size: 14px;
+  }
+
+  .selection-summary-title {
+    color: #00528e;
+    font-weight: 700;
+  }
+
+  .selection-summary-item {
+    color: #5f6f82;
+  }
+
+  .selection-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 12px;
+    border: 1px solid #d8e6f5;
+    border-radius: 999px;
+    background: #eef5fc;
+    color: #4d6f92;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  #csvTableContainer .column-filters input {
+    width: 100%;
+    min-width: 90px;
+    padding: 4px 6px;
+    border: 1px solid #d5dce6;
+    border-radius: 4px;
+    font-size: 12px;
+    box-sizing: border-box;
+    color: #1f2d3d;
+    background-color: #ffffff;
+    caret-color: #1f2d3d;
+    opacity: 1;
+  }
+
+  #csvTableContainer .column-filters input::placeholder {
+    color: #7a8796;
+    opacity: 1;
+  }
+
+  #csvTableContainer .dt-buttons {
+    margin-bottom: 8px;
+  }
+
+  #csvTableContainer .dt-button {
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .table-progress {
+    margin: 8px 0 12px;
+    color: #5f6f82;
+    font-size: 13px;
+  }
+
+  #csvTableContainer .markers-table-toolbar,
+  #csvTableContainer .markers-table-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+  }
+
+  #csvTableContainer .markers-table-footer {
+    justify-content: space-between;
+  }
+
+  #csvTableContainer .dataTables_paginate,
+  #csvTableContainer .dataTables_info,
+  #csvTableContainer .dataTables_length,
+  #csvTableContainer .dataTables_filter {
+    display: block !important;
+  }
+
+  #csvTableContainer .dataTables_paginate {
+    margin-left: auto;
+  }
+
+  .markers-custom-toolbar,
+  .markers-custom-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+  }
+
+  .markers-custom-footer {
+    justify-content: space-between;
+  }
+
+  .markers-download-link,
+  .markers-page-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #d5dce6;
+    border-radius: 4px;
+    background: #fff;
+    color: #00528e;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .markers-page-btn.is-active {
+    background: #00528e;
+    border-color: #00528e;
+    color: #fff;
+  }
+
+  .markers-page-btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .markers-page-size {
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #d5dce6;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .markers-sortable {
+    cursor: pointer;
+    position: relative;
+    padding-right: 28px !important;
+    user-select: none;
+  }
+
+  .markers-sortable::before,
+  .markers-sortable::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    opacity: 0.38;
+    transition: opacity 0.16s ease, border-color 0.16s ease;
+  }
+
+  .markers-sortable::before {
+    top: calc(50% - 7px);
+    border-bottom: 5px solid #ffffff;
+  }
+
+  .markers-sortable::after {
+    top: calc(50% + 2px);
+    border-top: 5px solid #ffffff;
+  }
+
+  .markers-sortable:hover::before,
+  .markers-sortable:hover::after {
+    opacity: 0.72;
+  }
+
+  .markers-sortable.sort-asc::before,
+  .markers-sortable.sort-desc::after {
+    opacity: 1;
   }
   
   .card-grid {
@@ -371,6 +597,68 @@ jQuery( document ).ready(function( $ ) {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  @media (max-width: 767px) {
+    .markers-panel {
+      padding: 12px;
+    }
+
+    .markers-description {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .markers-button-row {
+      flex-direction: column;
+    }
+
+    #buttonA, #buttonB {
+      width: 100%;
+      max-width: none;
+    }
+
+    .selection-label {
+      font-size: 15px;
+    }
+
+    .result-selection-bar {
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .selection-pill {
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .card-grid,
+    .card-grid-celltype {
+      gap: 10px;
+      max-height: 320px;
+      padding: 8px;
+    }
+
+    .region-card,
+    .celltype-card {
+      width: calc(50% - 5px);
+      min-height: 110px;
+      padding: 12px 8px;
+    }
+
+    .celltype-card img {
+      width: 44px;
+      height: 44px;
+    }
+
+    #csvTableContainer {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #csvTableContainer table {
+      min-width: 720px;
+    }
+  }
 </style>
 <script type="text/javascript"  src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript"  src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -380,7 +668,6 @@ jQuery( document ).ready(function( $ ) {
 <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
 <script type="text/javascript"  src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-<div id="csvTableContainer"></div>
 <script>
   var regionOptions = [];
   var cellTypeOptions = [];
@@ -391,6 +678,11 @@ jQuery( document ).ready(function( $ ) {
   var selectedButton = 'A'; // 添加选中按钮状态变量
   var originalOrder = true; // 添加顺序状态变量
   
+  var latestImageRequestId = 0;
+  var latestTableRequestId = 0;
+  var latestResolvedTableUrl = '';
+  var markersTableState = null;
+
   document.addEventListener('DOMContentLoaded', function() {
     loadInitialData();
   });
@@ -429,19 +721,52 @@ jQuery( document ).ready(function( $ ) {
   function updateSelectedOptions() {
     if (selectedRegion && selectedCellType) {
       selectedOptions = [selectedRegion, selectedCellType];
+    } else {
+      selectedOptions = [];
     }
+    updateAllRegionButtonState();
+    updateSelectionSummary();
+  }
+
+  function updateSelectionSummary() {
+    var regionValue = selectedRegion || 'Not selected';
+    var cellTypeValue = selectedCellType || 'Not selected';
+    var summaryIds = ['volcanoSelectionSummary', 'tableSelectionSummary'];
+    var regionPillIds = ['selectedRegionPillTop', 'selectedRegionPillBottom'];
+    var cellTypePillIds = ['selectedCellTypePillTop', 'selectedCellTypePillBottom'];
+
+    summaryIds.forEach(function(id) {
+      var summary = document.getElementById(id);
+      if (summary) {
+        summary.style.display = selectedRegion && selectedCellType ? 'flex' : 'none';
+      }
+    });
+
+    regionPillIds.forEach(function(id) {
+      var pill = document.getElementById(id);
+      if (pill) {
+        pill.textContent = regionValue;
+      }
+    });
+
+    cellTypePillIds.forEach(function(id) {
+      var pill = document.getElementById(id);
+      if (pill) {
+        pill.textContent = cellTypeValue;
+      }
+    });
   }
   
   function createRegionCards(options) {
     var container = document.getElementById('regionCards');
     container.innerHTML = '';
+    selectedRegion = options.length ? options[0] : null;
     
     options.forEach(function(option, index) {
       var card = document.createElement('div');
       card.className = 'region-card';
       if (index === 0) {
         card.classList.add('selected');
-        selectedRegion = option;
       }
       
       // Create name element
@@ -455,6 +780,8 @@ jQuery( document ).ready(function( $ ) {
       };
       container.appendChild(card);
     });
+
+    updateAllRegionButtonState();
   }
   
   function createCellTypeCards(options) {
@@ -521,6 +848,27 @@ jQuery( document ).ready(function( $ ) {
     // 不隐藏结果,保持当前显示状态
   }
   
+  function selectAllRegion() {
+    var allCards = document.querySelectorAll('.region-card');
+    allCards.forEach(function(card) {
+      card.classList.remove('selected');
+    });
+
+    selectedRegion = 'All';
+    updateSelectedOptions();
+  }
+
+  function updateAllRegionButtonState() {
+    var allRegionButton = document.getElementById('allRegionButton');
+    if (!allRegionButton) {
+      return;
+    }
+
+    var isSelected = selectedRegion === 'All';
+    allRegionButton.classList.toggle('is-selected', isSelected);
+    allRegionButton.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+  }
+
   function selectCellTypeCard(cardElement, value) {
     // Remove selected class from all celltype cards
     var allCards = document.querySelectorAll('.celltype-card');
@@ -584,7 +932,8 @@ function displaySelectedImage() {
       };
       // 设置图片路径和样式
       imageElement.src = imagePath;
-      imageElement.style.width = '500px'; // 设置宽度
+      imageElement.style.width = '100%'; // 设置宽度
+      imageElement.style.maxWidth = '500px';
       imageElement.style.height = 'auto'; // 高度自动调整
       imageElement.style.margin = '0 auto'; // 图片居中
     } else {
@@ -686,24 +1035,34 @@ function displaySelectedTable() {
         if (xhr.status === 200) {
           var csvData = xhr.responseText;
           
-          var rows = csvData.split('\n');
+          var rows = csvData.split(/\r?\n/).filter(function(row) {
+            return row.trim() !== '';
+          });
+          if (!rows.length) {
+            hideTableAndShowMessage();
+            hideTableLoading();
+            return;
+          }
+
+          var headers = rows[0].split(',').map(function(header) {
+            return header.replace(/^"(.*)"$/, '$1').trim();
+          });
           var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%">';
-          var headerHtml = `<thead>
-        <tr>
-            <th>genes</th>
-            <th>avg_log2FC</th>
-            <th>logCPM</th>
-            <th>LR</th>
-            <th>p_val</th>
-            <th>p_val_adj</th>
-            <th>pct.1</th>
-            <th>pct.2</th>
-        </tr>
-        </thead>
-        <tbody>`;
+          var headerHtml = '<thead><tr>';
+          headers.forEach(function(header) {
+            headerHtml += '<th>' + header + '</th>';
+          });
+          headerHtml += '</tr><tr class="column-filters">';
+          headers.forEach(function(header) {
+            headerHtml += '<th><input type="text" placeholder="filter" aria-label="filter ' + header + '" /></th>';
+          });
+          headerHtml += '</tr></thead><tbody>';
           tableHtml += headerHtml;
           for (var i = 1; i < rows.length; i++) {
             var cells = rows[i].split(',');
+            if (!cells.length || (cells.length === 1 && cells[0].trim() === '')) {
+              continue;
+            }
             tableHtml += '<tr>';
             for (var j = 0; j < cells.length; j++) {
               var cellContent = cells[j].replace(/^"(.*)"$/, '$1');
@@ -744,12 +1103,6 @@ function hideTableLoading() {
     tableLoading.style.display = 'none';
   }
 }
-jQuery( document ).ready(function( $ ) {
-        $(document).ready( function () {
-        $.noConflict();
-        var table = $('#mytable').DataTable();
-        });
-})
 function initializeDataTable(callback) {
   // 使用 setTimeout 确保 DOM 已更新
   setTimeout(function() {
@@ -790,6 +1143,904 @@ function clearTableAndMessage() {
     noTableMessage.remove();
   }
 }
+function buildDownloadFileName() {
+  var parts = ['markers'];
+  if (selectedRegion) {
+    parts.push(selectedRegion.replace(/\s+/g, '_'));
+  }
+  if (selectedCellType) {
+    parts.push(selectedCellType.replace(/\s+/g, '_'));
+  }
+  return parts.join('_');
+}
+
+function buildRemoteFileCandidates(baseUrl, firstValue, secondValue, extension) {
+  var rawName = firstValue + '_' + secondValue + '.' + extension;
+  var encodedPartName = encodeURIComponent(firstValue) + '_' + encodeURIComponent(secondValue) + '.' + extension;
+  var encodedWholeName = encodeURI(rawName);
+  var spaceAsUnderscoreName = firstValue.replace(/\s+/g, '_') + '_' + secondValue.replace(/\s+/g, '_') + '.' + extension;
+  var plusAsTextName = firstValue.replace(/\+/g, 'plus') + '_' + secondValue.replace(/\+/g, 'plus') + '.' + extension;
+
+  return Array.from(new Set([
+    baseUrl + rawName,
+    baseUrl + encodedPartName,
+    baseUrl + encodedWholeName,
+    baseUrl + spaceAsUnderscoreName,
+    baseUrl + encodeURI(spaceAsUnderscoreName),
+    baseUrl + plusAsTextName,
+    baseUrl + encodeURI(plusAsTextName)
+  ]));
+}
+
+function getActiveMarkerMode() {
+  var buttonB = document.getElementById('buttonB');
+  if (buttonB && buttonB.classList.contains('active')) {
+    return 'B';
+  }
+  return selectedButton === 'B' ? 'B' : 'A';
+}
+
+function buildMarkerRequestCandidates(kind, extension) {
+  if (selectedOptions.length !== 2) {
+    return [];
+  }
+
+  var mode = getActiveMarkerMode();
+  var baseUrl;
+  var firstValue;
+  var secondValue;
+
+  if (selectedRegion === 'All') {
+    baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/' + (kind === 'image' ? 'Volcano/png/' : '');
+    firstValue = selectedRegion;
+    secondValue = selectedCellType;
+  } else if (mode === 'B') {
+    baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/' + (kind === 'image' ? 'Volcano/png/' : '');
+    firstValue = selectedCellType;
+    secondValue = selectedRegion;
+  } else {
+    baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/' + (kind === 'image' ? 'Volcano/png/' : '');
+    firstValue = selectedRegion;
+    secondValue = selectedCellType;
+  }
+
+  if (!firstValue || !secondValue) {
+    return [];
+  }
+
+  return buildRemoteFileCandidates(baseUrl, firstValue, secondValue, extension);
+}
+
+function loadImageWithFallback(imageElement, candidates, onSuccess, onFailure) {
+  var index = 0;
+
+  function tryNext() {
+    if (index >= candidates.length) {
+      imageElement.onload = null;
+      imageElement.onerror = null;
+      if (onFailure) {
+        onFailure();
+      }
+      return;
+    }
+
+    var candidate = candidates[index++];
+    imageElement.onload = function() {
+      imageElement.onload = null;
+      imageElement.onerror = null;
+      if (onSuccess) {
+        onSuccess(candidate);
+      }
+    };
+    imageElement.onerror = function() {
+      tryNext();
+    };
+    imageElement.src = candidate;
+  }
+
+  tryNext();
+}
+
+function requestTextWithFallback(candidates, onSuccess, onFailure) {
+  var index = 0;
+
+  function tryNext() {
+    if (index >= candidates.length) {
+      if (onFailure) {
+        onFailure();
+      }
+      return;
+    }
+
+    var candidate = candidates[index++];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', candidate, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== 4) {
+        return;
+      }
+      if (xhr.status === 200) {
+        onSuccess(xhr.responseText, candidate);
+      } else {
+        tryNext();
+      }
+    };
+    xhr.onerror = tryNext;
+    xhr.send();
+  }
+
+  tryNext();
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderTableRowsInBatches(tableBody, dataRows, requestId, done) {
+  var batchSize = 200;
+  var index = 0;
+  var progressElement = document.getElementById('tableProgress');
+
+  function renderNextBatch() {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+
+    var fragment = document.createDocumentFragment();
+    var end = Math.min(index + batchSize, dataRows.length);
+
+    for (; index < end; index++) {
+      var row = dataRows[index];
+      if (!row.length || (row.length === 1 && row[0].trim() === '')) {
+        continue;
+      }
+
+      var tr = document.createElement('tr');
+      for (var j = 0; j < row.length; j++) {
+        var td = document.createElement('td');
+        td.textContent = row[j].replace(/^"(.*)"$/, '$1');
+        tr.appendChild(td);
+      }
+      fragment.appendChild(tr);
+    }
+
+    tableBody.appendChild(fragment);
+
+    if (progressElement) {
+      progressElement.textContent = 'Rendering rows: ' + Math.min(index, dataRows.length) + ' / ' + dataRows.length;
+    }
+
+    if (index < dataRows.length) {
+      setTimeout(renderNextBatch, 0);
+      return;
+    }
+
+    if (progressElement) {
+      progressElement.remove();
+    }
+
+    done();
+  }
+
+  renderNextBatch();
+}
+
+function displaySelectedImage() {
+  var volcanoLoading = document.getElementById('volcanoLoadingIndicator');
+  var imageElement = document.getElementById('selectedImage');
+  var requestId = ++latestImageRequestId;
+  var errorMessage = document.getElementById('errorMessage');
+
+  if (volcanoLoading) {
+    volcanoLoading.style.display = 'block';
+  }
+  if (imageElement) {
+    imageElement.style.display = 'none';
+  }
+  if (errorMessage) {
+    errorMessage.remove();
+  }
+
+  if (selectedOptions.length !== 2) {
+    hideVolcanoLoading();
+    return;
+  }
+
+  var imageCandidates = buildMarkerRequestCandidates('image', 'png');
+  if (!imageCandidates.length) {
+    hideVolcanoLoading();
+    return;
+  }
+
+  if (!imageElement) {
+    hideVolcanoLoading();
+    return;
+  }
+
+  loadImageWithFallback(imageElement, imageCandidates, function(imagePath) {
+    if (requestId !== latestImageRequestId) {
+      return;
+    }
+    imageElement.onload = null;
+    imageElement.onerror = null;
+    imageLoaded = true;
+    hideVolcanoLoading();
+    imageElement.style.display = 'block';
+    console.log('Image loaded successfully:', imagePath);
+  }, function() {
+    if (requestId !== latestImageRequestId) {
+      return;
+    }
+    imageElement.onload = null;
+    imageElement.onerror = null;
+    imageElement.src = '';
+    imageElement.alt = '';
+    imageLoaded = false;
+    hideVolcanoLoading();
+    displayErrorMessage('No region or cell type in this dataset');
+    console.error('Failed to load image from all candidates:', imageCandidates);
+  });
+
+  imageElement.style.width = '100%';
+  imageElement.style.maxWidth = '500px';
+  imageElement.style.height = 'auto';
+  imageElement.style.margin = '0 auto';
+}
+
+function displaySelectedTable() {
+  var tableLoading = document.getElementById('tableLoadingIndicator');
+  var tableContainer = document.getElementById('csvTableContainer');
+  var requestId = ++latestTableRequestId;
+
+  if (tableLoading) {
+    tableLoading.style.display = 'block';
+  }
+
+  clearTableAndMessage();
+
+  if (selectedOptions.length !== 2) {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  var tableCandidates = buildMarkerRequestCandidates('table', 'csv');
+  if (!tableCandidates.length) {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  requestTextWithFallback(tableCandidates, function(csvData, resolvedUrl) {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+    latestResolvedTableUrl = resolvedUrl || '';
+    var rows = csvData.split(/\r?\n/).filter(function(row) {
+      return row.trim() !== '';
+    });
+    if (!rows.length) {
+      hideTableAndShowMessage();
+      hideTableLoading();
+      return;
+    }
+
+    var headers = rows[0].split(',').map(function(header) {
+      return header.replace(/^"(.*)"$/, '$1').trim();
+    });
+    var dataRows = [];
+    for (var i = 1; i < rows.length; i++) {
+      var cells = rows[i].split(',');
+      if (!cells.length || (cells.length === 1 && cells[0].trim() === '')) {
+        continue;
+      }
+      dataRows.push(cells.map(function(cell) {
+        return cell.replace(/^"(.*)"$/, '$1');
+      }));
+    }
+
+    renderDataTable(tableContainer, headers, dataRows, requestId);
+  }, function() {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+    hideTableAndShowMessage();
+    hideTableLoading();
+    console.error('Failed to load table from all candidates:', tableCandidates);
+  });
+}
+
+function renderDataTable(tableContainer, headers, dataRows, requestId) {
+  var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%"><thead><tr>';
+  headers.forEach(function(header) {
+    tableHtml += '<th>' + escapeHtml(header) + '</th>';
+  });
+  tableHtml += '</tr><tr class="column-filters">';
+  headers.forEach(function(header) {
+    tableHtml += '<th><input type="text" placeholder="filter" aria-label="filter ' + escapeHtml(header) + '" /></th>';
+  });
+  tableHtml += '</tr></thead><tbody>';
+  dataRows.forEach(function(row) {
+    tableHtml += '<tr>';
+    row.forEach(function(cell) {
+      tableHtml += '<td>' + escapeHtml(cell) + '</td>';
+    });
+    tableHtml += '</tr>';
+  });
+  tableHtml += '</tbody></table>';
+
+  tableContainer.innerHTML = tableHtml;
+  hideTableLoading();
+  initializeDataTable(requestId);
+}
+
+function initializeDataTable(requestId, callback) {
+  setTimeout(function() {
+    try {
+      if (typeof requestId === 'number' && requestId !== latestTableRequestId) {
+        return;
+      }
+      var $ = jQuery.noConflict();
+      if ($.fn.DataTable.isDataTable('#mytable')) {
+        $('#mytable').DataTable().destroy();
+      }
+      $('#mytable').DataTable({
+        destroy: true,
+        deferRender: true,
+        orderCellsTop: true,
+        pageLength: 10,
+        lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
+        order: [[1, 'desc']],
+        dom: 'Bfrtip',
+        buttons: [
+          {
+            extend: 'csvHtml5',
+            text: 'csv',
+            title: null,
+            filename: function() {
+              return buildDownloadFileName();
+            }
+          },
+          {
+            extend: 'pdfHtml5',
+            text: 'pdf',
+            title: buildDownloadFileName(),
+            filename: function() {
+              return buildDownloadFileName();
+            }
+          }
+        ],
+        paging: true,
+        searching: true,
+        info: true,
+        scrollX: true,
+        language: {
+          search: 'Search:',
+          lengthMenu: 'Show _MENU_',
+          info: 'Showing _START_ to _END_ of _TOTAL_ entries',
+          infoEmpty: 'Showing 0 to 0 of 0 entries'
+        },
+        initComplete: function() {
+          var api = this.api();
+          var headerRows = api.table().header().rows;
+          var filterRow = headerRows && headerRows.length > 1 ? headerRows[1] : null;
+
+          if (filterRow) {
+            api.columns().every(function(colIdx) {
+              var column = this;
+              var input = $('input', filterRow.cells[colIdx]);
+              input.off('keyup change').on('keyup change', function() {
+                if (column.search() !== this.value) {
+                  column.search(this.value).draw();
+                }
+              });
+            });
+          }
+
+          api.draw(false);
+          if (callback && typeof callback === 'function') {
+            callback();
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Error initializing DataTable:', error);
+      if (callback && typeof callback === 'function') {
+        callback();
+      }
+    }
+  }, 100);
+}
+
+function clearTableAndMessage() {
+  var tableContainer = document.getElementById('csvTableContainer');
+
+  try {
+    var $ = jQuery.noConflict();
+    if ($.fn.DataTable && $.fn.DataTable.isDataTable('#mytable')) {
+      $('#mytable').DataTable().destroy();
+    }
+  } catch (error) {
+    console.error('Error destroying DataTable:', error);
+  }
+
+  tableContainer.innerHTML = '';
+
+  var noTableMessage = document.getElementById('noTableMessage');
+  if (noTableMessage) {
+    noTableMessage.remove();
+  }
+}
+
+function renderMarkersTableV3() {
+  var tableLoading = document.getElementById('tableLoadingIndicator');
+  var tableContainer = document.getElementById('csvTableContainer');
+  var requestId = ++latestTableRequestId;
+
+  if (tableLoading) {
+    tableLoading.style.display = 'block';
+  }
+
+  clearTableAndMessage();
+  markersTableState = null;
+
+  if (selectedOptions.length !== 2) {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  var tableCandidates = buildMarkerRequestCandidates('table', 'csv');
+  if (!tableCandidates.length) {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  requestTextWithFallback(tableCandidates, function(csvData, resolvedUrl) {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+
+    latestResolvedTableUrl = resolvedUrl || '';
+
+    var rows = csvData.split(/\r?\n/).filter(function(row) {
+      return row.trim() !== '';
+    });
+    if (!rows.length) {
+      hideTableAndShowMessage();
+      hideTableLoading();
+      return;
+    }
+
+    var headers = rows[0].split(',').map(function(header) {
+      return header.replace(/^"(.*)"$/, '$1').trim();
+    });
+
+    var dataRows = [];
+    for (var i = 1; i < rows.length; i++) {
+      var cells = rows[i].split(',');
+      if (!cells.length || (cells.length === 1 && cells[0].trim() === '')) {
+        continue;
+      }
+      dataRows.push(cells.map(function(cell) {
+        return cell.replace(/^"(.*)"$/, '$1');
+      }));
+    }
+
+    markersTableState = {
+      headers: headers,
+      rows: dataRows,
+      filters: headers.map(function() { return ''; }),
+      sortColumn: 1,
+      sortDirection: 'desc',
+      page: 1,
+      pageSize: 10,
+      requestId: requestId
+    };
+
+    renderMarkersTableShell(tableContainer, headers);
+    hideTableLoading();
+    updateMarkersTableView();
+  }, function() {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+    hideTableAndShowMessage();
+    hideTableLoading();
+  });
+}
+
+function renderMarkersTableShell(tableContainer, headers) {
+  var toolbarHtml = '<div class="markers-custom-toolbar">';
+  if (latestResolvedTableUrl) {
+    toolbarHtml += '<a class="markers-download-link" href="' + escapeHtml(latestResolvedTableUrl) + '" download="' + escapeHtml(buildDownloadFileName()) + '.csv">csv</a>';
+  }
+  toolbarHtml += '</div>';
+
+  var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%"><thead><tr>';
+  headers.forEach(function(header, index) {
+    tableHtml += '<th class="markers-sortable" data-column-index="' + index + '" role="button" tabindex="0" aria-sort="none" title="Click to sort">' + escapeHtml(header) + '</th>';
+  });
+  tableHtml += '</tr><tr class="column-filters">';
+  headers.forEach(function(header, index) {
+    tableHtml += '<th><input type="text" data-filter-index="' + index + '" placeholder="filter" aria-label="filter ' + escapeHtml(header) + '" /></th>';
+  });
+  tableHtml += '</tr></thead><tbody></tbody></table>';
+  tableHtml += '<div class="markers-custom-footer"><div id="markersTableInfo"></div><div id="markersTablePagination"></div></div>';
+
+  tableContainer.innerHTML = toolbarHtml + tableHtml;
+
+  var filterInputs = tableContainer.querySelectorAll('[data-filter-index]');
+  filterInputs.forEach(function(input) {
+    input.addEventListener('input', function(event) {
+      var index = Number(event.target.getAttribute('data-filter-index'));
+      markersTableState.filters[index] = event.target.value.toLowerCase();
+      markersTableState.page = 1;
+      updateMarkersTableView();
+    });
+  });
+
+  var sortableHeaders = tableContainer.querySelectorAll('[data-column-index]');
+  sortableHeaders.forEach(function(header) {
+    function sortByHeader(event) {
+      var index = Number(event.currentTarget.getAttribute('data-column-index'));
+      if (markersTableState.sortColumn === index) {
+        markersTableState.sortDirection = markersTableState.sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        markersTableState.sortColumn = index;
+        markersTableState.sortDirection = 'asc';
+      }
+      markersTableState.page = 1;
+      updateMarkersTableView();
+    }
+
+    header.addEventListener('click', sortByHeader);
+    header.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        sortByHeader(event);
+      }
+    });
+  });
+
+  updateMarkersSortIndicators();
+}
+
+function updateMarkersTableView() {
+  if (!markersTableState || markersTableState.requestId !== latestTableRequestId) {
+    return;
+  }
+
+  var filteredRows = markersTableState.rows.filter(function(row) {
+    return markersTableState.filters.every(function(filterValue, index) {
+      if (!filterValue) {
+        return true;
+      }
+      return String(row[index] || '').toLowerCase().indexOf(filterValue) !== -1;
+    });
+  });
+
+  filteredRows.sort(function(a, b) {
+    var col = markersTableState.sortColumn;
+    var left = a[col];
+    var right = b[col];
+    var leftNum = Number(left);
+    var rightNum = Number(right);
+    var result;
+
+    if (!isNaN(leftNum) && !isNaN(rightNum)) {
+      result = leftNum - rightNum;
+    } else {
+      result = String(left).localeCompare(String(right), 'en', { numeric: true, sensitivity: 'base' });
+    }
+
+    return markersTableState.sortDirection === 'asc' ? result : -result;
+  });
+
+  var total = filteredRows.length;
+  var totalPages = Math.max(1, Math.ceil(total / markersTableState.pageSize));
+  if (markersTableState.page > totalPages) {
+    markersTableState.page = totalPages;
+  }
+
+  var startIndex = (markersTableState.page - 1) * markersTableState.pageSize;
+  var endIndex = Math.min(startIndex + markersTableState.pageSize, total);
+  var pageRows = filteredRows.slice(startIndex, endIndex);
+
+  renderMarkersTableBody(pageRows);
+  renderMarkersTableFooter(total, totalPages, startIndex, endIndex);
+  updateMarkersSortIndicators();
+}
+
+function updateMarkersSortIndicators() {
+  if (!markersTableState) {
+    return;
+  }
+
+  var headers = document.querySelectorAll('#csvTableContainer .markers-sortable');
+  headers.forEach(function(header) {
+    var index = Number(header.getAttribute('data-column-index'));
+    var isActive = index === markersTableState.sortColumn;
+    header.classList.toggle('sort-asc', isActive && markersTableState.sortDirection === 'asc');
+    header.classList.toggle('sort-desc', isActive && markersTableState.sortDirection === 'desc');
+    header.setAttribute('aria-sort', isActive ? (markersTableState.sortDirection === 'asc' ? 'ascending' : 'descending') : 'none');
+  });
+}
+
+function renderMarkersTableBody(rows) {
+  var tableBody = document.querySelector('#csvTableContainer #mytable tbody');
+  if (!tableBody) {
+    return;
+  }
+
+  var html = '';
+  rows.forEach(function(row) {
+    html += '<tr>';
+    row.forEach(function(cell) {
+      html += '<td>' + escapeHtml(cell) + '</td>';
+    });
+    html += '</tr>';
+  });
+
+  tableBody.innerHTML = html || '<tr><td colspan="' + markersTableState.headers.length + '" style="text-align:center;">No matching records</td></tr>';
+}
+
+function renderMarkersTableFooter(total, totalPages, startIndex, endIndex) {
+  var info = document.getElementById('markersTableInfo');
+  var pagination = document.getElementById('markersTablePagination');
+  if (!info || !pagination) {
+    return;
+  }
+
+  info.innerHTML = 'Showing ' + (total ? startIndex + 1 : 0) + ' to ' + endIndex + ' of ' + total + ' entries ' +
+    '<select id="markersPageSize" class="markers-page-size">' +
+    '<option value="10"' + (markersTableState.pageSize === 10 ? ' selected' : '') + '>10</option>' +
+    '<option value="25"' + (markersTableState.pageSize === 25 ? ' selected' : '') + '>25</option>' +
+    '<option value="50"' + (markersTableState.pageSize === 50 ? ' selected' : '') + '>50</option>' +
+    '<option value="100"' + (markersTableState.pageSize === 100 ? ' selected' : '') + '>100</option>' +
+    '</select>';
+
+  var pageSizeSelect = document.getElementById('markersPageSize');
+  if (pageSizeSelect) {
+    pageSizeSelect.onchange = function(event) {
+      markersTableState.pageSize = Number(event.target.value);
+      markersTableState.page = 1;
+      updateMarkersTableView();
+    };
+  }
+
+  var html = '';
+  html += '<button class="markers-page-btn" ' + (markersTableState.page === 1 ? 'disabled' : '') + ' data-page-action="prev">Prev</button>';
+  for (var page = 1; page <= totalPages; page++) {
+    if (page === 1 || page === totalPages || Math.abs(page - markersTableState.page) <= 1) {
+      html += '<button class="markers-page-btn' + (page === markersTableState.page ? ' is-active' : '') + '" data-page-number="' + page + '">' + page + '</button>';
+    } else if (page === 2 && markersTableState.page > 4) {
+      html += '<span>...</span>';
+    } else if (page === totalPages - 1 && markersTableState.page < totalPages - 3) {
+      html += '<span>...</span>';
+    }
+  }
+  html += '<button class="markers-page-btn" ' + (markersTableState.page === totalPages ? 'disabled' : '') + ' data-page-action="next">Next</button>';
+  pagination.innerHTML = html;
+
+  pagination.querySelectorAll('[data-page-number]').forEach(function(button) {
+    button.onclick = function(event) {
+      markersTableState.page = Number(event.currentTarget.getAttribute('data-page-number'));
+      updateMarkersTableView();
+    };
+  });
+
+  pagination.querySelectorAll('[data-page-action]').forEach(function(button) {
+    button.onclick = function(event) {
+      var action = event.currentTarget.getAttribute('data-page-action');
+      if (action === 'prev' && markersTableState.page > 1) {
+        markersTableState.page -= 1;
+      }
+      if (action === 'next' && markersTableState.page < totalPages) {
+        markersTableState.page += 1;
+      }
+      updateMarkersTableView();
+    };
+  });
+}
+
+function renderMarkersTableV2() {
+  var tableLoading = document.getElementById('tableLoadingIndicator');
+  var tableContainer = document.getElementById('csvTableContainer');
+  var requestId = ++latestTableRequestId;
+
+  if (tableLoading) {
+    tableLoading.style.display = 'block';
+  }
+
+  clearTableAndMessage();
+
+  if (selectedOptions.length !== 2) {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  var tableCandidates;
+  if (selectedButton === 'A') {
+    tableCandidates = buildRemoteFileCandidates(
+      'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/',
+      selectedOptions[0],
+      selectedOptions[1],
+      'csv'
+    );
+  } else if (selectedButton === 'B') {
+    tableCandidates = buildRemoteFileCandidates(
+      'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/',
+      selectedOptions[1],
+      selectedOptions[0],
+      'csv'
+    );
+  } else {
+    hideTableAndShowMessage();
+    hideTableLoading();
+    return;
+  }
+
+  requestTextWithFallback(tableCandidates, function(csvData) {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+
+    var rows = csvData.split(/\r?\n/).filter(function(row) {
+      return row.trim() !== '';
+    });
+    if (!rows.length) {
+      hideTableAndShowMessage();
+      hideTableLoading();
+      return;
+    }
+
+    var headers = rows[0].split(',').map(function(header) {
+      return header.replace(/^"(.*)"$/, '$1').trim();
+    });
+
+    var dataRows = [];
+    for (var i = 1; i < rows.length; i++) {
+      var cells = rows[i].split(',');
+      if (!cells.length || (cells.length === 1 && cells[0].trim() === '')) {
+        continue;
+      }
+      dataRows.push(cells.map(function(cell) {
+        return cell.replace(/^"(.*)"$/, '$1');
+      }));
+    }
+
+    var tableHtml = '<table id="mytable" class="mytable table table-striped table-bordered" cellspacing="0" width="100%"><thead><tr>';
+    headers.forEach(function(header) {
+      tableHtml += '<th>' + escapeHtml(header) + '</th>';
+    });
+    tableHtml += '</tr><tr class="column-filters">';
+    headers.forEach(function(header) {
+      tableHtml += '<th><input type="text" placeholder="filter" aria-label="filter ' + escapeHtml(header) + '" /></th>';
+    });
+    tableHtml += '</tr></thead><tbody></tbody></table>';
+    tableContainer.innerHTML = tableHtml;
+    mountMarkersDataTableV2(headers, dataRows, requestId);
+  }, function() {
+    if (requestId !== latestTableRequestId) {
+      return;
+    }
+    hideTableAndShowMessage();
+    hideTableLoading();
+  });
+}
+
+function mountMarkersDataTableV2(headers, dataRows, requestId) {
+  setTimeout(function() {
+    try {
+      if (requestId !== latestTableRequestId) {
+        return;
+      }
+
+      var $ = jQuery.noConflict();
+      if (!$.fn.DataTable) {
+        return;
+      }
+
+      if ($.fn.DataTable.isDataTable('#mytable')) {
+        $('#mytable').DataTable().destroy();
+      }
+
+      var columnDefs = headers.map(function(header) {
+        return { title: header };
+      });
+
+      var dataTable = $('#mytable').DataTable({
+        destroy: true,
+        deferRender: true,
+        processing: true,
+        orderCellsTop: true,
+        autoWidth: false,
+        pageLength: 10,
+        lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
+        paging: true,
+        pagingType: 'simple_numbers',
+        searching: true,
+        info: true,
+        order: [[1, 'desc']],
+        dom: '<"markers-table-toolbar"f>rt<"markers-table-footer"lip>',
+        data: dataRows,
+        columns: columnDefs,
+        scrollX: true,
+        language: {
+          search: 'Search:',
+          lengthMenu: 'Show _MENU_',
+          info: 'Showing _START_ to _END_ of _TOTAL_ entries',
+          infoEmpty: 'Showing 0 to 0 of 0 entries',
+          paginate: {
+            previous: 'Prev',
+            next: 'Next'
+          }
+        },
+        initComplete: function() {
+          var api = this.api();
+          var headerRows = api.table().header().rows;
+          var filterRow = headerRows && headerRows.length > 1 ? headerRows[1] : null;
+
+          if (filterRow) {
+            api.columns().every(function(colIdx) {
+              var column = this;
+              var input = $('input', filterRow.cells[colIdx]);
+              input.off('keyup change').on('keyup change', function() {
+                if (column.search() !== this.value) {
+                  column.search(this.value).draw();
+                }
+              });
+            });
+          }
+
+          if ($.fn.dataTable && $.fn.dataTable.Buttons) {
+            new $.fn.dataTable.Buttons(dataTable, {
+              buttons: [
+                {
+                  extend: 'csvHtml5',
+                  text: 'csv',
+                  title: null,
+                  filename: function() {
+                    return buildDownloadFileName();
+                  }
+                },
+                {
+                  extend: 'pdfHtml5',
+                  text: 'pdf',
+                  title: buildDownloadFileName(),
+                  filename: function() {
+                    return buildDownloadFileName();
+                  }
+                }
+              ]
+            });
+            dataTable.buttons().container().prependTo($(dataTable.table().container()).find('.markers-table-toolbar'));
+          } else if (latestResolvedTableUrl) {
+            $(dataTable.table().container()).find('.markers-table-toolbar').prepend(
+              '<a class="dt-button" href="' + escapeHtml(latestResolvedTableUrl) + '" download="' + escapeHtml(buildDownloadFileName()) + '.csv">csv</a>'
+            );
+          }
+
+          hideTableLoading();
+        }
+      });
+
+      dataTable.page.len(10).draw(false);
+    } catch (error) {
+      console.error('Error initializing markers DataTable:', error);
+      hideTableLoading();
+    }
+  }, 50);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var buttonA = document.getElementById('buttonA');
     var buttonB = document.getElementById('buttonB');
@@ -850,10 +2101,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show content container and hide click message
     contentContainer.style.display = 'block';
     clickMessageContainer.style.display = 'none';
+    updateSelectionSummary();
     
     // Load image and table (they have their own loading indicators)
     displaySelectedImage();
-    displaySelectedTable();
+    renderMarkersTableV3();
   }
   
   function toggleContent() {
@@ -862,13 +2114,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-</script>
-
-<script>
-  $(document).ready( function () {
-    $.noConflict();
-    var table = $('#mytable').DataTable();
-} );
 </script>
 
 <script>

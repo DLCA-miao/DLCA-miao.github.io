@@ -130,25 +130,25 @@ ORGANOID
     }
 </style>
 
-<div class="container" style>
+<div class="container genes-deg-panel">
 <p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of regions in a cell type.</p>
 
 <p><b> Select the target Cell type.</b></p>
   <b style="font-size: 24px; color: #00528e">Celltype</b>
   <br>
-  <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
+  <select id="selectBox1" class="genes-deg-select" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>
   <div id="imageContainer"></div> <!-- 新增的div用于展示图片 -->
 </div>
 
 <br>
-<div class="container">
+<div class="container genes-deg-panel">
 <p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of cell types in a region.</p>
 
 <p><b>Select the target Region.<b></p>
   <b style="font-size: 24px; color: #00528e">Region</b>
   <br>
-  <select id="selectBox2" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
+  <select id="selectBox2" class="genes-deg-select" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>
   <div id="imageContainer1"></div> <!-- 新增的div用于展示图片 -->
 </div>
@@ -193,6 +193,30 @@ ORGANOID
     box-shadow: 0 0 15px grey;
     border-radius: 10px; 
     padding: 10px; 
+  }
+
+  .genes-deg-panel {
+    width: 100%;
+  }
+
+  .genes-deg-select {
+    width: min(100%, 400px) !important;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .genes-deg-panel {
+      padding: 12px;
+    }
+
+    .genes-deg-select {
+      width: 100% !important;
+    }
+
+    .genes-deg-panel p[style*="font-size:20px"] {
+      font-size: 16px !important;
+      line-height: 1.6;
+    }
   }
 </style>
 
@@ -252,7 +276,8 @@ ORGANOID
 
         if (imageElement) {
           imageElement.src = imagePath;
-          imageElement.style.width = width;
+          imageElement.style.width = '100%';
+          imageElement.style.maxWidth = width;
           imageElement.style.height = height;
           imageElement.style.display = 'block';
           imageElement.style.margin = '0 auto';

@@ -8,8 +8,10 @@ permalink: /
 <!-- <div class="container"> -->
 <br>
 <br>
-<p class="text-center" style="color:#00528e; font-size:40px;">Developmental Lung Cell Atlas</p>
-<p class="text-center" style="font-size:20px;">This website provides a comprehensive, up-to-date lung cell atlas by systematically curating and integrating single-cell transcriptomic datasets from over 200 publications across the human lifespan. The atlas covers the majority of anatomical regions of the upper and lower respiratory tracts in both health and disease. It provides a valuable resource for the lung community and beyond, and enables cross-conditional comparisons of respiratory cell types.</p>
+<div class="home-intro-block">
+<p class="text-center home-intro-title" style="color:#00528e;">Developmental Lung Cell Atlas</p>
+<p class="text-center home-intro-text">This website provides a comprehensive, up-to-date lung cell atlas by systematically curating and integrating single-cell transcriptomic datasets from over 200 publications across the human lifespan. The atlas covers the majority of anatomical regions of the upper and lower respiratory tracts in both health and disease. It provides a valuable resource for the lung community and beyond, and enables cross-conditional comparisons of respiratory cell types.</p>
+</div>
 <div class="wrapper box_style">
 <div class="well" style="border: 0px solid #C9C9C9; background-color: #fff;">
 
@@ -71,16 +73,16 @@ permalink: /
 
 <div class="carousel-inner" markdown="0">
 <div class="item active">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/dev_stage.png" alt="Slide 1" style=" width:1150px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/dev_stage.png" alt="Slide 1" class="home-carousel-image"/>
 </div>
 <div class="item ">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_main_B.svg" alt="Slide 2" style=" width:1500px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_main_B.svg" alt="Slide 2" class="home-carousel-image"/>
 </div>
  <div class="item">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_c.svg" alt="Slide 2" style=" width:1500px;  height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_c.svg" alt="Slide 2" class="home-carousel-image"/>
 </div>
 <div class="item">
-<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_f.png" alt="Slide 3" style="width:2000px; height:300px;object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
+<img src="{{ site.url }}{{ site.baseurl }}/images/homePage/F1_E1_f.png" alt="Slide 3" class="home-carousel-image"/>
 </div>
 <!--<div class="item">
 <img src="{{ site.url }}{{ site.baseurl }}/images/homePage/home_figure1.svg" alt="Slide 4" style=" width:1000px; object-fit: cover;border-radius:0%;display: block; margin: 0 auto;"/>
@@ -106,6 +108,24 @@ permalink: /
 border-width: 0;
 }
 
+.home-intro-block {
+  max-width: 1040px;
+  margin: 0 auto 28px;
+}
+
+.home-intro-title {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.home-intro-text {
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 auto;
+  color: #334155;
+}
+
 /* Statistics Section Styles */
 .stats-container {
   display: flex;
@@ -113,7 +133,7 @@ border-width: 0;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px 20px;
+  padding: 24px 20px;
   background: #ffffff;
   margin-bottom: 30px;
 }
@@ -125,10 +145,10 @@ border-width: 0;
   padding: 15px 20px;
   background: #dae3f5;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  border-radius: 16px;
   width: 250px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 82, 142, 0.08);
 }
 
 .stat-icon {
@@ -177,20 +197,53 @@ border-width: 0;
   line-height: 1;
 }
 
+.home-carousel-image {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
+  .home-intro-block {
+    margin-bottom: 20px;
+  }
+
+  .home-intro-title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .home-intro-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
   .stats-container {
     flex-direction: column;
-    padding: 20px 15px;
-    gap: 15px;
+    padding: 10px 0 0;
+    gap: 12px;
+    margin-bottom: 22px;
   }
   
   .stat-item {
     width: 100%;
     min-width: auto;
+    padding: 14px 16px;
+    border-radius: 14px;
   }
   
   .stat-number {
     font-size: 28px;
+  }
+
+  .home-carousel-image {
+    height: 180px;
+    border-radius: 12px;
   }
 }
 </style>
@@ -198,11 +251,11 @@ border-width: 0;
 
 
 <br/>
-<p class="text-center" style="color:#00528e; font-size:30px;">The UMAP of Developmental Lung Cell Atlas</p>
+<p class="text-center home-umap-title" style="color:#00528e;">The UMAP of Developmental Lung Cell Atlas</p>
 <div class="container">
 <div class="row" >
 <div class="image-container">
-<img id="photo" src="{{ site.url }}{{ site.baseurl }}/images/homePage/umap.svg" alt="Default Photo" style="height: 600px; width=600px">
+<img id="photo" src="{{ site.url }}{{ site.baseurl }}/images/homePage/umap.svg" alt="Default Photo" class="home-umap-image">
 </div>
 </div>
 </div>
@@ -281,6 +334,12 @@ Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated s
 </script>
 
 <style>
+  .home-umap-title {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
   .image-container {
     max-width: 100%;
     max-height: 100%;
@@ -294,6 +353,24 @@ Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated s
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .home-umap-image {
+    max-height: 600px;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .home-umap-title {
+      font-size: 24px;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .home-umap-image {
+      max-height: 320px;
+      border-radius: 12px;
+    }
   }
 </style>
 <style>

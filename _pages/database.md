@@ -212,7 +212,59 @@ permalink: /database/
       color: rgba(255,255,255,0.9);
       cursor: pointer;
       white-space: nowrap;
-      padding: 10px 40px 10px 10px;
+      padding: 10px 28px 10px 10px;
+      position: relative;
+    }
+
+    #cfttable thead th.sorting,
+    #cfttable thead th.sorting_asc,
+    #cfttable thead th.sorting_desc {
+      background-image: none !important;
+    }
+
+    #cfttable thead th.sorting::before,
+    #cfttable thead th.sorting::after,
+    #cfttable thead th.sorting_asc::before,
+    #cfttable thead th.sorting_asc::after,
+    #cfttable thead th.sorting_desc::before,
+    #cfttable thead th.sorting_desc::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      opacity: 0.38;
+      transition: opacity 0.16s ease, border-color 0.16s ease;
+    }
+
+    #cfttable thead th.sorting::before,
+    #cfttable thead th.sorting_asc::before,
+    #cfttable thead th.sorting_desc::before {
+      top: calc(50% - 7px);
+      border-bottom: 5px solid #ffffff;
+    }
+
+    #cfttable thead th.sorting::after,
+    #cfttable thead th.sorting_asc::after,
+    #cfttable thead th.sorting_desc::after {
+      top: calc(50% + 2px);
+      border-top: 5px solid #ffffff;
+    }
+
+    #cfttable thead th.sorting:hover::before,
+    #cfttable thead th.sorting:hover::after,
+    #cfttable thead th.sorting_asc:hover::before,
+    #cfttable thead th.sorting_asc:hover::after,
+    #cfttable thead th.sorting_desc:hover::before,
+    #cfttable thead th.sorting_desc:hover::after {
+      opacity: 0.72;
+    }
+
+    #cfttable thead th.sorting_asc::before,
+    #cfttable thead th.sorting_desc::after {
+      opacity: 1;
     }
     
     td {
@@ -404,7 +456,7 @@ permalink: /database/
     
     /* 物种切换按钮样式 */
     .species-filter-container {
-      margin-bottom: 30px;
+      margin: 24px 0 30px;
       display: flex;
       gap: 15px;
       align-items: center;
@@ -435,6 +487,106 @@ permalink: /database/
     .species-btn.active {
       background-color: #00528e;
       color: white;
+    }
+
+    @media (max-width: 991px) {
+      .page-container {
+        flex-direction: column;
+      }
+
+      .filter-sidebar {
+        width: 100%;
+        max-height: none;
+      }
+
+      .charts-container {
+        grid-template-columns: 1fr;
+      }
+
+      .drawer {
+        right: -100%;
+        width: min(100%, 480px);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .page-container {
+        gap: 16px;
+      }
+
+      .filter-sidebar,
+      .chart-box,
+      .drawer-content {
+        padding: 16px;
+      }
+
+      .chart-content {
+        height: 240px;
+      }
+
+      .species-filter-container {
+        margin: 24px 0 24px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .species-filter-label {
+        width: 100%;
+      }
+
+      .species-btn {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 120px;
+        padding: 10px 16px;
+      }
+
+      .drawer {
+        width: 100%;
+      }
+
+      .drawer-header {
+        padding: 16px;
+      }
+
+      .drawer-title {
+        font-size: 18px;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table.dataTable th,
+      table.dataTable td,
+      th,
+      td {
+        white-space: nowrap;
+      }
+
+      div.dataTables_wrapper {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .dt-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .dataTables_filter,
+      .dataTables_length {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .dataTables_filter input {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 8px;
+      }
     }
   </style>
 </head> 
@@ -734,6 +886,9 @@ permalink: /database/
       ],
       autoWidth: true,
       scrollX: true,
+      orderFixed: {
+        pre: [[6, 'asc']]
+      },
       infoCallback: function(settings, start, end, max, total, pre) {
         // 自定义info显示，移除"(filtered from X total entries)"部分
         if (max === total) {
@@ -898,6 +1053,24 @@ permalink: /database/
     updateChartsAfterSearch();
     updateFilterCountsAfterSearch();
   }
+
+  function matchesMultiValueFilter(rowValue, selectedValues) {
+    if (!rowValue) {
+      return false;
+    }
+
+    if (selectedValues.includes(rowValue)) {
+      return true;
+    }
+
+    var normalizedValues = rowValue.split(',').map(function(value) {
+      return value.trim();
+    });
+
+    return selectedValues.some(function(selectedValue) {
+      return normalizedValues.includes(selectedValue);
+    });
+  }
   
   // 更新表格显示
   function updateTableDisplay() {
@@ -932,15 +1105,7 @@ permalink: /database/
         // 检查Seq Tech（可能包含逗号分隔的多个值）
         if (selectedFilters.seqtech.length > 0) {
           var rowSeqtech = $row.attr('data-seqtech');
-          if (rowSeqtech) {
-            var seqtechs = rowSeqtech.split(',').map(function(s) { return s.trim(); });
-            var hasMatch = selectedFilters.seqtech.some(function(selectedSeqtech) {
-              return seqtechs.includes(selectedSeqtech);
-            });
-            if (!hasMatch) {
-              return false;
-            }
-          } else {
+          if (!matchesMultiValueFilter(rowSeqtech, selectedFilters.seqtech)) {
             return false;
           }
         }
@@ -948,15 +1113,7 @@ permalink: /database/
         // 检查Seq Method（可能包含逗号分隔的多个值）
         if (selectedFilters.seqmethod.length > 0) {
           var rowSeqmethod = $row.attr('data-seqmethod');
-          if (rowSeqmethod) {
-            var seqmethods = rowSeqmethod.split(',').map(function(s) { return s.trim(); });
-            var hasMatch = selectedFilters.seqmethod.some(function(selectedSeqmethod) {
-              return seqmethods.includes(selectedSeqmethod);
-            });
-            if (!hasMatch) {
-              return false;
-            }
-          } else {
+          if (!selectedFilters.seqmethod.includes(rowSeqmethod)) {
             return false;
           }
         }
@@ -964,15 +1121,7 @@ permalink: /database/
         // 检查Region（可能包含逗号分隔的多个值）
         if (selectedFilters.region.length > 0) {
           var rowRegion = $row.attr('data-region');
-          if (rowRegion) {
-            var regions = rowRegion.split(',').map(function(r) { return r.trim(); });
-            var hasMatch = selectedFilters.region.some(function(selectedRegion) {
-              return regions.includes(selectedRegion);
-            });
-            if (!hasMatch) {
-              return false;
-            }
-          } else {
+          if (!matchesMultiValueFilter(rowRegion, selectedFilters.region)) {
             return false;
           }
         }
@@ -980,15 +1129,7 @@ permalink: /database/
         // 检查Disease（可能包含逗号分隔的多个值）
         if (selectedFilters.disease.length > 0) {
           var rowDisease = $row.attr('data-disease');
-          if (rowDisease) {
-            var diseases = rowDisease.split(',').map(function(d) { return d.trim(); });
-            var hasMatch = selectedFilters.disease.some(function(selectedDisease) {
-              return diseases.includes(selectedDisease);
-            });
-            if (!hasMatch) {
-              return false;
-            }
-          } else {
+          if (!matchesMultiValueFilter(rowDisease, selectedFilters.disease)) {
             return false;
           }
         }
@@ -1060,6 +1201,41 @@ permalink: /database/
     if (!text) return '';
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength) + '...';
+  }
+
+  function getDiseaseLabels(item) {
+    var shortLabel = item['Donor status'] || item['Disease'] || '';
+    var fullLabel = item['Donor staus_all'] || item['Donor status_all'] || shortLabel;
+    return {
+      shortLabel: shortLabel,
+      fullLabel: fullLabel
+    };
+  }
+
+  function buildDiseaseChartData(dataset) {
+    var diseaseData = {};
+    dataset.forEach(function(item) {
+      var labels = getDiseaseLabels(item);
+      if (!labels.shortLabel) {
+        return;
+      }
+
+      if (!diseaseData[labels.shortLabel]) {
+        diseaseData[labels.shortLabel] = {
+          name: labels.shortLabel,
+          fullName: labels.fullLabel,
+          value: 0
+        };
+      }
+
+      diseaseData[labels.shortLabel].value += 1;
+    });
+
+    return Object.keys(diseaseData).map(function(key) {
+      return diseaseData[key];
+    }).sort(function(a, b) {
+      return b.value - a.value;
+    }).slice(0, 15);
   }
   
   // 更新图表（基于全表数据）
@@ -1231,11 +1407,7 @@ permalink: /database/
       }
     });
     
-    var sortedData = Object.keys(diseaseData).map(function(key) {
-      return {name: key, value: diseaseData[key]};
-    }).sort(function(a, b) {
-      return b.value - a.value;
-    }).slice(0, 15);
+    var sortedData = buildDiseaseChartData(datasetToUse);
     
     var chart = echarts.init(document.getElementById('chart-disease'));
     var option = {
@@ -1243,6 +1415,11 @@ permalink: /database/
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
+        },
+        formatter: function(params) {
+          if (!params.length) return '';
+          var data = params[0].data || {};
+          return (data.fullName || params[0].name) + ': ' + params[0].value;
         }
       },
       grid: {
@@ -1268,7 +1445,12 @@ permalink: /database/
       },
       series: [{
         type: 'bar',
-        data: sortedData.map(function(d) { return d.value; }),
+        data: sortedData.map(function(d) {
+          return {
+            value: d.value,
+            fullName: d.fullName
+          };
+        }),
         itemStyle: {
           color: '#4472C4'
         }
@@ -1362,10 +1544,6 @@ permalink: /database/
     
     if (data.doi) {
       content += '<a href="' + data.doi + '" target="_blank" class="drawer-button">View Publication</a>';
-    }
-    
-    if (data.download) {
-      content += '<a href="' + data.download + '" target="_blank" class="drawer-button">Download Data</a>';
     }
     
     content += '</div>';
@@ -1613,7 +1791,7 @@ permalink: /database/
       var seqtech = item['Seq tech'] || '';
       var seqmethod = item['Seq method'] || '';
       var region = item['Region'] || '';
-      var disease = item['Donor status'] || '';
+      var disease = item['Disease'] || '';
       var devstage = item['Developmental stage'] || '';
       
       filterData.year[year] = (filterData.year[year] || 0) + 1;
@@ -1788,17 +1966,13 @@ permalink: /database/
     // Disease Chart
     var diseaseData = {};
     visibleData.forEach(function(item) {
-      var disease = item['Donor status'] || '';
+      var disease = item['Disease'] || '';
       if (disease) {
         diseaseData[disease] = (diseaseData[disease] || 0) + 1;
       }
     });
     
-    var diseaseSortedData = Object.keys(diseaseData).map(function(key) {
-      return {name: key, value: diseaseData[key]};
-    }).sort(function(a, b) {
-      return b.value - a.value;
-    }).slice(0, 15);
+    var diseaseSortedData = buildDiseaseChartData(visibleData);
     
     var diseaseChart = echarts.init(document.getElementById('chart-disease'));
     diseaseChart.setOption({
@@ -1806,6 +1980,11 @@ permalink: /database/
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
+        },
+        formatter: function(params) {
+          if (!params.length) return '';
+          var data = params[0].data || {};
+          return (data.fullName || params[0].name) + ': ' + params[0].value;
         }
       },
       grid: {
@@ -1831,7 +2010,12 @@ permalink: /database/
       },
       series: [{
         type: 'bar',
-        data: diseaseSortedData.map(function(d) { return d.value; }),
+        data: diseaseSortedData.map(function(d) {
+          return {
+            value: d.value,
+            fullName: d.fullName
+          };
+        }),
         itemStyle: {
           color: '#4472C4'
         }
