@@ -199,7 +199,7 @@ border-width: 0;
 
 .home-carousel-image {
   width: 100%;
-  max-width: 100%;
+  max-width: 2000px;
   height: 300px;
   object-fit: cover;
   border-radius: 16px;
@@ -242,8 +242,8 @@ border-width: 0;
   }
 
   .home-carousel-image {
-    height: 180px;
-    border-radius: 12px;
+    height: 300px;
+    border-radius: 0%;
   }
 }
 </style>
