@@ -197,7 +197,12 @@ border-width: 0;
   line-height: 1;
 }
 
-.home-carousel-image {
+#carousel .carousel-inner,
+#carousel .carousel-inner > .item {
+  height: 300px;
+}
+
+#carousel .carousel-inner > .item > img.home-carousel-image {
   width: 100%;
   max-width: 100%;
   height: 300px;
@@ -241,7 +246,12 @@ border-width: 0;
     font-size: 28px;
   }
 
-  .home-carousel-image {
+  #carousel .carousel-inner,
+  #carousel .carousel-inner > .item {
+    height: 180px;
+  }
+
+  #carousel .carousel-inner > .item > img.home-carousel-image {
     height: 180px;
     border-radius: 12px;
   }
