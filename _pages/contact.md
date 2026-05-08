@@ -79,47 +79,47 @@ permalink: /contact/
 
 <br>
 <div class="contact-page">
-  <div class="contact-grid">
-    <section class="contact-card">
-      <h3><b>Jie Wu</b></h3>
-      <h4><b>Guangzhou Laboratory</b></h4>
-      <p>International Bio-island,<br>Guangzhou, 510005, China</p>
-      <ul>
-        <li><a href="mailto:wu_jie@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> wu_jie@gzlab.ac.cn</a></li>
-      </ul>
-    </section>
+<div class="contact-grid">
+<section class="contact-card">
+  <h3><b>Jie Wu</b></h3>
+  <h4><b>Guangzhou Laboratory</b></h4>
+  <p>International Bio-island,<br>Guangzhou, 510005, China</p>
+  <ul>
+    <li><a href="mailto:wu_jie@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> wu_jie@gzlab.ac.cn</a></li>
+  </ul>
+</section>
 
-    <section class="contact-card">
-      <h3><b>Shuo Feng</b></h3>
-      <h4><b>Guangzhou Laboratory</b></h4>
-      <p>International Bio-island,<br>Guangzhou, 510005, China</p>
-      <ul>
-        <li><a href="mailto:fengshuo@mail.ustc.edu.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> fengshuo@mail.ustc.edu.cn</a></li>
-      </ul>
-    </section>
+<section class="contact-card">
+  <h3><b>Shuo Feng</b></h3>
+  <h4><b>Guangzhou Laboratory</b></h4>
+  <p>International Bio-island,<br>Guangzhou, 510005, China</p>
+  <ul>
+    <li><a href="mailto:fengshuo@mail.ustc.edu.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> fengshuo@mail.ustc.edu.cn</a></li>
+  </ul>
+</section>
 
-    <section class="contact-card">
-      <h3><b>Zhichao (Chichau) Miao</b></h3>
-      <h4><b>Guangzhou Laboratory</b></h4>
-      <h4><b>Guangzhou Medical University</b></h4>
-      <p>International Bio-island,<br>Guangzhou, 510005, China</p>
-      <ul>
-        <li><a href="mailto:miao_zhichao@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> miao_zhichao@gzlab.ac.cn</a></li>
-      </ul>
-    </section>
-  </div>
+<section class="contact-card">
+  <h3><b>Zhichao (Chichau) Miao</b></h3>
+  <h4><b>Guangzhou Laboratory</b></h4>
+  <h4><b>Guangzhou Medical University</b></h4>
+  <p>International Bio-island,<br>Guangzhou, 510005, China</p>
+  <ul>
+    <li><a href="mailto:miao_zhichao@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> miao_zhichao@gzlab.ac.cn</a></li>
+  </ul>
+</section>
+</div>
 
-  <div class="map-wrap">
-    <iframe
-      class="map-frame"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3670.9607940189653!2d113.3728525!3d23.0618989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34025549978de655%3A0xbfef76e0d9d7b9!2z5bm_5bee55Sf54mp5bKb5Zu96ZmF5YWs5a-T!5e0!3m2!1sen!2skr!4v1716198561625!5m2!1sen!2skr"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="map-wrap">
+<iframe
+  class="map-frame"
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3670.9607940189653!2d113.3728525!3d23.0618989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34025549978de655%3A0xbfef76e0d9d7b9!2z5bm_5bee55Sf54mp5bKb5Zu96ZmF5YWs5a-T!5e0!3m2!1sen!2skr!4v1716198561625!5m2!1sen!2skr"
+  allowfullscreen>
+</iframe>
+</div>
 
-  <div>
-    <a class="feedback-link" href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank">
-      <img src="{{ site.url }}{{ site.baseurl }}/images/helpPage/feedback.svg" alt="Feedback form">
-    </a>
-  </div>
+<div>
+<a class="feedback-link" href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/helpPage/feedback.svg" alt="Feedback form">
+</a>
+</div>
 </div>
