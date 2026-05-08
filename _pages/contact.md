@@ -53,10 +53,15 @@ permalink: /contact/
   .map-wrap {
     margin-bottom: 24px;
   }
-
+  
+  .feedback-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  }
   .feedback-link img {
     width: min(100%, 400px);
-    display: block;
+    display: inline-block;
     margin: 0 auto;
   }
 
