@@ -694,23 +694,24 @@ permalink: /database/
             <thead>
             <tr>
             <th onclick="sortTable(0)">DOI</th>
-            <th onclick="sortTable(1)">Author</th>
-            <th onclick="sortTable(2)">Year</th>
-            <th onclick="sortTable(3)">Title</th>
-            <th onclick="sortTable(5)">Accession code</th>
-            <th onclick="sortTable(6)">Seq method</th>
-            <th onclick="sortTable(7)">Species</th>
-            <th onclick="sortTable(8)">Donor status</th>
-            <th onclick="sortTable(9)">Organ</th>
-            <th onclick="sortTable(10)">Region</th>
-            <th onclick="sortTable(11)">Developmental stage</th>
-            <th onclick="sortTable(4)">Download link</th>
+            <th onclick="sortTable(2)">Author</th>
+            <th onclick="sortTable(3)">Year</th>
+            <th onclick="sortTable(4)">Title</th>
+            <th onclick="sortTable(6)">Accession code</th>
+            <th onclick="sortTable(7)">Seq technology</th>
+            <th onclick="sortTable(8)">Seq method</th>
+            <th onclick="sortTable(9)">Species</th>
+            <th onclick="sortTable(10)">Donor status</th>
+            <th onclick="sortTable(11)">Organ</th>
+            <th onclick="sortTable(12)">Region</th>
+            <th onclick="sortTable(13)">Developmental stage</th>
+            <th onclick="sortTable(14)">Cloud drive link</th>
           </tr>
             </thead>
     <tbody>
         {% for item in site.data.dataset_table   %}
            <tr data-year="{{item.Year}}" 
-               data-seqtech="{{item['Seq tech']}}" 
+               data-seqtech="{{item['Seq technology']}}" 
                data-seqmethod="{{item['Seq method']}}" 
                data-region="{{item.Region}}" 
                data-disease="{{item['Donor status']}}" 
@@ -729,18 +730,19 @@ permalink: /database/
                data-journal="{{item.Journal}}"
                data-pmid="{{item.PMID}}"
                onclick="openDrawer(this)">
-              <td name="td0">{{item.DOI}} <i>et al.</i></td>
-              <td name="td1">{{item.Author}}</td>
-              <td name="td2">{{item.Year}}</td>
-              <td name="td3">{{item.Title}}</td>
-              <td name="td5"><a href="{{item['Download link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["Accession code"]}}</b></a></td>
-              <td name="td6">{{item['Seq method']}}</td>
-              <td name="td7">{{item['Species']}}</td>
-              <td name="td8">{{item['Donor status']}}</td>
-              <td name="td9">{{item.Organ}}</td>
-              <td name="td10">{{item.Region}}</td>
-              <td name="td11">{{item['Developmental stage']}}</td>
-              <td name="td4"><a href="{{item['Download link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>Link</b></a></td>
+              <td name="td0"><a href="{{item['Article link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["DOI"]}}</b></a></td>
+              <td name="td2">{{item.Author}}</td>
+              <td name="td3">{{item.Year}}</td>
+              <td name="td4">{{item.Title}}</td>
+              <td name="td6"><a href="{{item['Download link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["Accession code"]}}</b></a></td>
+              <td name="td7">{{item['Seq technology']}}</td>
+              <td name="td8">{{item['Seq method']}}</td>
+              <td name="td9">{{item['Species']}}</td>
+              <td name="td10">{{item['Donor status']}}</td>
+              <td name="td11">{{item.Organ}}</td>
+              <td name="td12">{{item.Region}}</td>
+              <td name="td13">{{item['Developmental stage']}}</td>
+              <td name="td14"><a href="{{item['Cloud drive link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>Link</b></a></td>
             </tr>
         {% endfor %}
        
@@ -954,7 +956,7 @@ permalink: /database/
     var datasetToUse = getFilteredDatasetBySpecies();
     datasetToUse.forEach(function(item) {
       var year = item.Year || '';
-      var seqtech = item['Seq tech'] || '';
+      var seqtech = item['Seq technology'] || '';
       var seqmethod = item['Seq method'] || '';
       var region = item.Region || '';
       var disease = item['Donor status'] || '';
@@ -1716,7 +1718,7 @@ permalink: /database/
     var datasetToUse = getFilteredDatasetBySpecies();
     datasetToUse.forEach(function(item) {
       var year = item.Year || '';
-      var seqtech = item['Seq tech'] || '';
+      var seqtech = item['Seq technology'] || '';
       var seqmethod = item['Seq method'] || '';
       var region = item.Region || '';
       var disease = item['Donor status']|| '';
@@ -1788,7 +1790,7 @@ permalink: /database/
     
     visibleData.forEach(function(item) {
       var year = item['Year'] || '';
-      var seqtech = item['Seq tech'] || '';
+      var seqtech = item['Seq technology'] || '';
       var seqmethod = item['Seq method'] || '';
       var region = item['Region'] || '';
       var disease = item['Disease'] || '';
