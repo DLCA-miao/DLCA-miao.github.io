@@ -85,14 +85,6 @@ permalink: /contact/
 <br>
 <div class="contact-page">
 <div class="contact-grid">
-<section class="contact-card">
-  <h3><b>Jie Wu</b></h3>
-  <h4><b>Guangzhou Laboratory</b></h4>
-  <p>International Bio-island,<br>Guangzhou, 510005, China</p>
-  <ul>
-    <li><a href="mailto:wu_jie@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> wu_jie@gzlab.ac.cn</a></li>
-  </ul>
-</section>
 
 <section class="contact-card">
   <h3><b>Shuo Feng</b></h3>
