@@ -92,18 +92,23 @@ permalink: /database/
     .filter-option {
       margin: 8px 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      gap: 8px;
     }
     
     .filter-option input[type="checkbox"] {
-      margin-right: 8px;
+      margin: 2px 0 0 0;
       cursor: pointer;
+      flex-shrink: 0;
     }
     
     .filter-option label {
       font-size: 13px;
       cursor: pointer;
       flex: 1;
+      margin-bottom: 0;
+      font-weight: normal;
+      line-height: 1.4;
     }
     
     .filter-count {
@@ -715,6 +720,7 @@ permalink: /database/
                data-seqmethod="{{item['Seq method']}}" 
                data-region="{{item.Region}}" 
                data-disease="{{item['Donor status']}}" 
+               data-disease-full="{{item.Disease}}"
                data-devstage="{{item['Developmental stage']}}"
                data-name="{{item.Name}}"
                data-title="{{item.Title}}"
@@ -952,7 +958,7 @@ permalink: /database/
       devstage: {}
     };
     
-    // 使用完整数据集进行统计（直接使用原始值，不分割逗号）
+    // 使用完整数据集进行统计（Seq Tech 使用原始完整值，组合项如 10X,Cite-seq 单独计数）
     var datasetToUse = getFilteredDatasetBySpecies();
     datasetToUse.forEach(function(item) {
       var year = item.Year || '';
@@ -964,7 +970,6 @@ permalink: /database/
       
       filterData.year[year] = (filterData.year[year] || 0) + 1;
       
-      // 直接使用原始值统计
       if (seqtech) {
         filterData.seqtech[seqtech] = (filterData.seqtech[seqtech] || 0) + 1;
       }
@@ -1056,6 +1061,18 @@ permalink: /database/
     updateFilterCountsAfterSearch();
   }
 
+  function splitMultiValue(value) {
+    if (!value) {
+      return [];
+    }
+
+    return value.split(',').map(function(part) {
+      return part.trim();
+    }).filter(function(part) {
+      return part && part !== 'undefined' && part !== 'null';
+    });
+  }
+
   function matchesMultiValueFilter(rowValue, selectedValues) {
     if (!rowValue) {
       return false;
@@ -1065,9 +1082,7 @@ permalink: /database/
       return true;
     }
 
-    var normalizedValues = rowValue.split(',').map(function(value) {
-      return value.trim();
-    });
+    var normalizedValues = splitMultiValue(rowValue);
 
     return selectedValues.some(function(selectedValue) {
       return normalizedValues.includes(selectedValue);
@@ -1104,10 +1119,10 @@ permalink: /database/
           }
         }
         
-        // 检查Seq Tech（可能包含逗号分隔的多个值）
+        // 检查Seq Tech（精确匹配完整值，10X,Cite-seq 与 10X 为不同选项）
         if (selectedFilters.seqtech.length > 0) {
           var rowSeqtech = $row.attr('data-seqtech');
-          if (!matchesMultiValueFilter(rowSeqtech, selectedFilters.seqtech)) {
+          if (!selectedFilters.seqtech.includes(rowSeqtech)) {
             return false;
           }
         }
@@ -1207,7 +1222,7 @@ permalink: /database/
 
   function getDiseaseLabels(item) {
     var shortLabel = item['Donor status'] || item['Disease'] || '';
-    var fullLabel = item['Donor staus_all'] || item['Donor status_all'] || shortLabel;
+    var fullLabel = item['Disease'] || shortLabel;
     return {
       shortLabel: shortLabel,
       fullLabel: fullLabel
@@ -1764,10 +1779,11 @@ permalink: /database/
       var $row = $(this.node());
       var rowData = {
         'Year': $row.attr('data-year'),
-        'Seq tech': $row.attr('data-seqtech'),
+        'Seq technology': $row.attr('data-seqtech'),
         'Seq method': $row.attr('data-seqmethod'),
         'Region': $row.attr('data-region'),
-        'Disease': $row.attr('data-disease'),
+        'Donor status': $row.attr('data-disease'),
+        'Disease': $row.attr('data-disease-full'),
         'Developmental stage': $row.attr('data-devstage')
       };
       visibleData.push(rowData);
@@ -1793,7 +1809,7 @@ permalink: /database/
       var seqtech = item['Seq technology'] || '';
       var seqmethod = item['Seq method'] || '';
       var region = item['Region'] || '';
-      var disease = item['Disease'] || '';
+      var disease = item['Donor status'] || item['Disease'] || '';
       var devstage = item['Developmental stage'] || '';
       
       filterData.year[year] = (filterData.year[year] || 0) + 1;
@@ -1968,7 +1984,7 @@ permalink: /database/
     // Disease Chart
     var diseaseData = {};
     visibleData.forEach(function(item) {
-      var disease = item['Disease'] || '';
+      var disease = item['Donor status'] || item['Disease'] || '';
       if (disease) {
         diseaseData[disease] = (diseaseData[disease] || 0) + 1;
       }

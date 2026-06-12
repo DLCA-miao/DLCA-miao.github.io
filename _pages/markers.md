@@ -117,7 +117,10 @@ The section shows the differentially expressed genes (DEGs) of the target region
   
   <!-- Cell Type Selection Cards -->
   <div id="cellTypeSelectionContainer" class="selection-container">
-    <p class="selection-label">Select Cell Type:</p>
+    <div class="selection-label-row">
+      <p class="selection-label">Select Cell Type:</p>
+      <button type="button" id="allCellTypeButton" class="all-region-button" onclick="selectAllCellType()" style="display: none;">All</button>
+    </div>
     <div id="cellTypeCards" class="card-grid-celltype"></div>
   </div>
   
@@ -316,6 +319,118 @@ The section shows the differentially expressed genes (DEGs) of the target region
   #csvTableContainer .column-filters input::placeholder {
     color: #7a8796;
     opacity: 1;
+  }
+
+  #csvTableContainer .column-filters th.markers-text-filter-cell {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  #csvTableContainer .column-filters th.markers-text-filter-cell input {
+    display: inline-block;
+    width: auto;
+    min-width: 90px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #csvTableContainer .column-filters th.markers-numeric-filter-cell {
+    vertical-align: middle;
+    text-align: center;
+    padding: 6px 4px;
+  }
+
+  #csvTableContainer .markers-numeric-filter {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2px 18px 2px 2px;
+  }
+
+  #csvTableContainer .markers-numeric-filter-row {
+    display: inline-flex;
+    align-items: stretch;
+    overflow: hidden;
+    border: 1px solid #c8d6e6;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 35, 60, 0.06);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #csvTableContainer .markers-numeric-filter.is-active .markers-numeric-filter-row.is-bound-active {
+    border-color: #7eb0d8;
+    box-shadow: 0 0 0 2px rgba(126, 176, 216, 0.18);
+  }
+
+  #csvTableContainer .markers-numeric-filter select,
+  #csvTableContainer .markers-numeric-filter input {
+    height: 26px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    color: #1f2d3d;
+    background: #ffffff;
+    box-sizing: border-box;
+  }
+
+  #csvTableContainer .markers-numeric-filter select {
+    width: 46px;
+    flex: 0 0 46px;
+    padding: 0 2px;
+    border-right: 1px solid #e4ebf3;
+    cursor: pointer;
+    text-align: center;
+    color: #00528e;
+    font-weight: 600;
+    background: #f8fbfe;
+  }
+
+  #csvTableContainer .markers-numeric-filter input {
+    flex: 0 0 68px;
+    width: 68px;
+    min-width: 68px;
+    max-width: 68px;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  #csvTableContainer .markers-numeric-filter input::placeholder {
+    color: #9aa8b8;
+    font-size: 11px;
+  }
+
+  #csvTableContainer .markers-numeric-filter-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #6b7c90;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(15, 35, 60, 0.12);
+    visibility: hidden;
+  }
+
+  #csvTableContainer .markers-numeric-filter.is-active .markers-numeric-filter-clear {
+    visibility: visible;
+  }
+
+  #csvTableContainer .markers-numeric-filter-clear:hover {
+    background: #ffffff;
+    color: #00528e;
   }
 
   #csvTableContainer .dt-buttons {
@@ -724,7 +839,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
     } else {
       selectedOptions = [];
     }
-    updateAllRegionButtonState();
+    updateAllButtonStates();
     updateSelectionSummary();
   }
 
@@ -781,7 +896,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
       container.appendChild(card);
     });
 
-    updateAllRegionButtonState();
+    updateAllButtonStates();
   }
   
   function createCellTypeCards(options) {
@@ -858,15 +973,36 @@ The section shows the differentially expressed genes (DEGs) of the target region
     updateSelectedOptions();
   }
 
-  function updateAllRegionButtonState() {
+  function selectAllCellType() {
+    var allCards = document.querySelectorAll('.celltype-card');
+    allCards.forEach(function(card) {
+      card.classList.remove('selected');
+    });
+
+    selectedCellType = 'All';
+    updateSelectedOptions();
+  }
+
+  function updateAllButtonStates() {
     var allRegionButton = document.getElementById('allRegionButton');
-    if (!allRegionButton) {
-      return;
+    var allCellTypeButton = document.getElementById('allCellTypeButton');
+    var mode = getActiveMarkerMode();
+
+    if (allRegionButton) {
+      var showRegionAll = mode === 'A';
+      allRegionButton.style.display = showRegionAll ? '' : 'none';
+      var isRegionAllSelected = showRegionAll && selectedRegion === 'All';
+      allRegionButton.classList.toggle('is-selected', isRegionAllSelected);
+      allRegionButton.setAttribute('aria-pressed', isRegionAllSelected ? 'true' : 'false');
     }
 
-    var isSelected = selectedRegion === 'All';
-    allRegionButton.classList.toggle('is-selected', isSelected);
-    allRegionButton.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    if (allCellTypeButton) {
+      var showCellTypeAll = mode === 'B';
+      allCellTypeButton.style.display = showCellTypeAll ? '' : 'none';
+      var isCellTypeAllSelected = showCellTypeAll && selectedCellType === 'All';
+      allCellTypeButton.classList.toggle('is-selected', isCellTypeAllSelected);
+      allCellTypeButton.setAttribute('aria-pressed', isCellTypeAllSelected ? 'true' : 'false');
+    }
   }
 
   function selectCellTypeCard(cardElement, value) {
@@ -1190,10 +1326,14 @@ function buildMarkerRequestCandidates(kind, extension) {
   var firstValue;
   var secondValue;
 
-  if (selectedRegion === 'All') {
+  if (mode === 'A' && selectedRegion === 'All') {
     baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByRegion/' + (kind === 'image' ? 'Volcano/png/' : '');
     firstValue = selectedRegion;
     secondValue = selectedCellType;
+  } else if (mode === 'B' && selectedCellType === 'All') {
+    baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/' + (kind === 'image' ? 'Volcano/png/' : '');
+    firstValue = selectedCellType;
+    secondValue = selectedRegion;
   } else if (mode === 'B') {
     baseUrl = 'https://data.braincellatlas.org/mock/volcano/markers/ByCellType/' + (kind === 'image' ? 'Volcano/png/' : '');
     firstValue = selectedCellType;
@@ -1577,6 +1717,196 @@ function clearTableAndMessage() {
   }
 }
 
+function isMarkersNumericValue(value) {
+  if (value === null || value === undefined || String(value).trim() === '') {
+    return false;
+  }
+  var num = Number(value);
+  return !isNaN(num) && isFinite(num);
+}
+
+function detectMarkersColumnTypes(headers, rows) {
+  return headers.map(function(_, colIndex) {
+    var sampleSize = Math.min(rows.length, 100);
+    var numericCount = 0;
+    var nonEmptyCount = 0;
+
+    for (var i = 0; i < sampleSize; i++) {
+      var value = rows[i][colIndex];
+      if (value === null || value === undefined || String(value).trim() === '') {
+        continue;
+      }
+      nonEmptyCount++;
+      if (isMarkersNumericValue(value)) {
+        numericCount++;
+      }
+    }
+
+    if (nonEmptyCount === 0) {
+      return 'string';
+    }
+
+    return numericCount / nonEmptyCount >= 0.8 ? 'numeric' : 'string';
+  });
+}
+
+function createMarkersNumericBound() {
+  return { operator: '', value: '' };
+}
+
+function createMarkersColumnFilter(columnType) {
+  if (columnType === 'numeric') {
+    return {
+      type: 'numeric',
+      lower: createMarkersNumericBound(),
+      upper: createMarkersNumericBound()
+    };
+  }
+  return { type: 'text', value: '' };
+}
+
+function isMarkersNumericBoundActive(bound) {
+  return !!(bound && bound.operator && String(bound.value).trim() !== '' && !isNaN(Number(bound.value)));
+}
+
+function isMarkersNumericFilterActive(filter) {
+  return isMarkersNumericBoundActive(filter.lower) || isMarkersNumericBoundActive(filter.upper);
+}
+
+function matchesMarkersNumericBound(num, bound) {
+  if (!isMarkersNumericBoundActive(bound)) {
+    return true;
+  }
+
+  var threshold = Number(bound.value);
+  switch (bound.operator) {
+    case '>=':
+      return num >= threshold;
+    case '<=':
+      return num <= threshold;
+    case '>':
+      return num > threshold;
+    case '<':
+      return num < threshold;
+    default:
+      return true;
+  }
+}
+
+function matchesMarkersNumericFilter(cellValue, filter) {
+  if (!isMarkersNumericFilterActive(filter)) {
+    return true;
+  }
+
+  if (!isMarkersNumericValue(cellValue)) {
+    return false;
+  }
+
+  var num = Number(cellValue);
+  return matchesMarkersNumericBound(num, filter.lower) && matchesMarkersNumericBound(num, filter.upper);
+}
+
+function matchesMarkersColumnFilter(cellValue, filter) {
+  if (filter.type === 'numeric') {
+    return matchesMarkersNumericFilter(cellValue, filter);
+  }
+
+  if (!filter.value) {
+    return true;
+  }
+
+  return String(cellValue || '').toLowerCase().indexOf(filter.value) !== -1;
+}
+
+function buildMarkersNumericOperatorOptions(selectedValue) {
+  var options = [
+    { value: '', label: '—' },
+    { value: '>=', label: '&ge;' },
+    { value: '<=', label: '&le;' },
+    { value: '>', label: '&gt;' },
+    { value: '<', label: '&lt;' }
+  ];
+
+  return options.map(function(option) {
+    var selected = option.value === selectedValue ? ' selected' : '';
+    return '<option value="' + option.value + '"' + selected + '>' + option.label + '</option>';
+  }).join('');
+}
+
+function buildMarkersNumericBoundRow(boundKey, header, bound) {
+  return '<div class="markers-numeric-filter-row" data-bound="' + boundKey + '">' +
+    '<select data-filter-part="operator" aria-label="operator for ' + escapeHtml(header) + '">' +
+    buildMarkersNumericOperatorOptions(bound ? bound.operator : '') +
+    '</select>' +
+    '<input type="text" data-filter-part="value" inputmode="decimal" placeholder="value" value="' + escapeHtml(bound ? bound.value : '') + '" aria-label="value for ' + escapeHtml(header) + '" />' +
+    '</div>';
+}
+
+function buildMarkersNumericFilterHtml(index, header) {
+  return '<div class="markers-numeric-filter" data-filter-index="' + index + '">' +
+    buildMarkersNumericBoundRow('lower', header) +
+    buildMarkersNumericBoundRow('upper', header) +
+    '<button type="button" class="markers-numeric-filter-clear" data-filter-part="clear" aria-label="clear filter for ' + escapeHtml(header) + '" title="Clear">&times;</button>' +
+    '</div>';
+}
+
+function readMarkersNumericBoundFromRow(row) {
+  if (!row) {
+    return createMarkersNumericBound();
+  }
+
+  var operatorSelect = row.querySelector('[data-filter-part="operator"]');
+  var valueInput = row.querySelector('[data-filter-part="value"]');
+  return {
+    operator: operatorSelect ? operatorSelect.value : '',
+    value: valueInput ? valueInput.value.trim() : ''
+  };
+}
+
+function syncMarkersNumericBoundRow(row, bound) {
+  if (!row || !bound) {
+    return;
+  }
+
+  var operatorSelect = row.querySelector('[data-filter-part="operator"]');
+  var valueInput = row.querySelector('[data-filter-part="value"]');
+  if (operatorSelect) {
+    operatorSelect.value = bound.operator || '';
+  }
+  if (valueInput) {
+    valueInput.value = bound.value || '';
+  }
+  row.classList.toggle('is-bound-active', isMarkersNumericBoundActive(bound));
+}
+
+function syncMarkersNumericFilterPanel(panel, filter) {
+  if (!panel || !filter) {
+    return;
+  }
+
+  syncMarkersNumericBoundRow(panel.querySelector('[data-bound="lower"]'), filter.lower);
+  syncMarkersNumericBoundRow(panel.querySelector('[data-bound="upper"]'), filter.upper);
+  panel.classList.toggle('is-active', isMarkersNumericFilterActive(filter));
+}
+
+function applyMarkersNumericFilterFromPanel(index, panel) {
+  var filter = markersTableState.filters[index];
+  filter.lower = readMarkersNumericBoundFromRow(panel.querySelector('[data-bound="lower"]'));
+  filter.upper = readMarkersNumericBoundFromRow(panel.querySelector('[data-bound="upper"]'));
+  syncMarkersNumericFilterPanel(panel, filter);
+  markersTableState.page = 1;
+  updateMarkersTableView();
+}
+
+function clearMarkersNumericFilter(index, panel) {
+  var filter = markersTableState.filters[index];
+  filter.lower = createMarkersNumericBound();
+  filter.upper = createMarkersNumericBound();
+  syncMarkersNumericFilterPanel(panel, filter);
+  markersTableState.page = 1;
+  updateMarkersTableView();
+}
+
 function renderMarkersTableV3() {
   var tableLoading = document.getElementById('tableLoadingIndicator');
   var tableContainer = document.getElementById('csvTableContainer');
@@ -1633,10 +1963,13 @@ function renderMarkersTableV3() {
       }));
     }
 
+    var columnTypes = detectMarkersColumnTypes(headers, dataRows);
+
     markersTableState = {
       headers: headers,
       rows: dataRows,
-      filters: headers.map(function() { return ''; }),
+      columnTypes: columnTypes,
+      filters: columnTypes.map(createMarkersColumnFilter),
       sortColumn: 1,
       sortDirection: 'desc',
       page: 1,
@@ -1669,21 +2002,64 @@ function renderMarkersTableShell(tableContainer, headers) {
   });
   tableHtml += '</tr><tr class="column-filters">';
   headers.forEach(function(header, index) {
-    tableHtml += '<th><input type="text" data-filter-index="' + index + '" placeholder="filter" aria-label="filter ' + escapeHtml(header) + '" /></th>';
+    if (markersTableState.columnTypes[index] === 'numeric') {
+      tableHtml += '<th class="markers-numeric-filter-cell">' + buildMarkersNumericFilterHtml(index, header) + '</th>';
+    } else {
+      tableHtml += '<th class="markers-text-filter-cell"><input type="text" data-filter-index="' + index + '" data-filter-type="text" placeholder="filter" aria-label="filter ' + escapeHtml(header) + '" /></th>';
+    }
   });
   tableHtml += '</tr></thead><tbody></tbody></table>';
   tableHtml += '<div class="markers-custom-footer"><div id="markersTableInfo"></div><div id="markersTablePagination"></div></div>';
 
   tableContainer.innerHTML = toolbarHtml + tableHtml;
 
-  var filterInputs = tableContainer.querySelectorAll('[data-filter-index]');
-  filterInputs.forEach(function(input) {
+  var textFilterInputs = tableContainer.querySelectorAll('[data-filter-type="text"]');
+  textFilterInputs.forEach(function(input) {
     input.addEventListener('input', function(event) {
       var index = Number(event.target.getAttribute('data-filter-index'));
-      markersTableState.filters[index] = event.target.value.toLowerCase();
+      markersTableState.filters[index].value = event.target.value.toLowerCase();
       markersTableState.page = 1;
       updateMarkersTableView();
     });
+  });
+
+  var numericFilterPanels = tableContainer.querySelectorAll('.markers-numeric-filter');
+  numericFilterPanels.forEach(function(panel) {
+    var index = Number(panel.getAttribute('data-filter-index'));
+    var boundRows = panel.querySelectorAll('[data-bound]');
+    var clearButton = panel.querySelector('[data-filter-part="clear"]');
+
+    boundRows.forEach(function(row) {
+      var operatorSelect = row.querySelector('[data-filter-part="operator"]');
+      var valueInput = row.querySelector('[data-filter-part="value"]');
+
+      if (operatorSelect) {
+        operatorSelect.addEventListener('change', function() {
+          applyMarkersNumericFilterFromPanel(index, panel);
+        });
+      }
+
+      if (valueInput) {
+        valueInput.addEventListener('input', function() {
+          applyMarkersNumericFilterFromPanel(index, panel);
+        });
+        valueInput.addEventListener('keydown', function(event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            applyMarkersNumericFilterFromPanel(index, panel);
+          }
+        });
+      }
+    });
+
+    if (clearButton) {
+      clearButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        clearMarkersNumericFilter(index, panel);
+      });
+    }
+
+    syncMarkersNumericFilterPanel(panel, markersTableState.filters[index]);
   });
 
   var sortableHeaders = tableContainer.querySelectorAll('[data-column-index]');
@@ -1719,10 +2095,7 @@ function updateMarkersTableView() {
 
   var filteredRows = markersTableState.rows.filter(function(row) {
     return markersTableState.filters.every(function(filterValue, index) {
-      if (!filterValue) {
-        return true;
-      }
-      return String(row[index] || '').toLowerCase().indexOf(filterValue) !== -1;
+      return matchesMarkersColumnFilter(row[index], filterValue);
     });
   });
 
@@ -2065,6 +2438,7 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedButton = button;
       originalOrder = true;
       resetSelectBoxes();
+      resetAllSelectionOnModeChange('A');
       // Step1切换时隐藏结果
       contentContainer.style.display = 'none';
       clickMessageContainer.style.display = 'block';
@@ -2076,11 +2450,30 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedButton = button;
       originalOrder = false;
       resetSelectBoxes();
+      resetAllSelectionOnModeChange('B');
       // Step1切换时隐藏结果
       contentContainer.style.display = 'none';
       clickMessageContainer.style.display = 'block';
     }
  }   
+  function resetAllSelectionOnModeChange(mode) {
+    if (mode === 'A' && selectedCellType === 'All' && cellTypeOptions.length) {
+      selectedCellType = cellTypeOptions[0];
+      var cellTypeCards = document.querySelectorAll('.celltype-card');
+      cellTypeCards.forEach(function(card, index) {
+        card.classList.toggle('selected', index === 0);
+      });
+    } else if (mode === 'B' && selectedRegion === 'All' && regionOptions.length) {
+      selectedRegion = regionOptions[0];
+      var regionCards = document.querySelectorAll('.region-card');
+      regionCards.forEach(function(card, index) {
+        card.classList.toggle('selected', index === 0);
+      });
+    }
+    updateAllButtonStates();
+    updateSelectedOptions();
+  }
+
   function resetSelectBoxes() {
     var regionContainer = document.getElementById('regionSelectionContainer');
     var cellTypeContainer = document.getElementById('cellTypeSelectionContainer');
@@ -2092,6 +2485,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // By Cell Type: Cell Type first, then Region
       cellTypeContainer.parentNode.insertBefore(cellTypeContainer, regionContainer);
     }
+    updateAllButtonStates();
   }
   
   function showResults() {
