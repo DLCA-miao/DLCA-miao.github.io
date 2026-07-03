@@ -2042,4 +2042,5 @@ permalink: /database/
     // 更新图表（基于新的物种数据）
     updateCharts();
   }
-  </script>      
+  </script> 
+       
