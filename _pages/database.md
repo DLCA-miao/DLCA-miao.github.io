@@ -725,9 +725,11 @@ permalink: /database/
                data-name="{{item.Name}}"
                data-title="{{item.Title}}"
                data-accession="{{item['Accession code']}}"
-               data-doi="{{item['Download link']}}"
+               data-doi="{{item['Article link']}}"
+               data-doi-text="{{item.DOI}}"
                data-species="{{item['Species']}}"
                data-download="{{item['Download link']}}"
+               data-cloud-link="{{item['Cloud drive link']}}"
                data-cellnumber="{{item['Cell number']}}"
                data-samplesize="{{item['Sample size']}}"
                data-age="{{item.Age}}"
@@ -784,6 +786,42 @@ permalink: /database/
     devstage: []
   };
   
+  // 导出时去除 HTML，使用 data 属性中的纯文本/URL
+  // 列索引: 0=DOI, 1=Author, 2=Year, 3=Title, 4=Accession, 5=Seq tech, 6=Seq method,
+  //         7=Species, 8=Donor status, 9=Organ, 10=Region, 11=Dev stage, 12=Cloud link
+  function formatExportCell(data, row, column, node) {
+    var $tr = $(node).closest('tr');
+    if (column === 0) {
+      return $tr.attr('data-doi-text') || $(node).text().trim() || data;
+    }
+    if (column === 3) {
+      return $tr.attr('data-title') || $(node).text().trim() || data;
+    }
+    if (column === 4) {
+      var downloadUrl = $tr.attr('data-download') || $(node).find('a').attr('href');
+      if (downloadUrl) {
+        return downloadUrl;
+      }
+      return $tr.attr('data-accession') || $(node).text().trim() || data;
+    }
+    if (column === 12) {
+      return $tr.attr('data-cloud-link') || $(node).find('a').attr('href') || data;
+    }
+    if (typeof data === 'string' && data.indexOf('<') !== -1) {
+      return $('<div>').html(data).text().trim();
+    }
+    return data;
+  }
+
+  var exportFormatOptions = {
+    format: {
+      body: formatExportCell
+    },
+    modifier: {
+      page: 'all'
+    }
+  };
+
   $(document).ready(function() {
     $.noConflict();
     
@@ -791,106 +829,27 @@ permalink: /database/
     dataTable = $('#cfttable').DataTable({
       dom: 'Bfrtip',
       buttons: [
+        { extend: 'copy', exportOptions: exportFormatOptions },
         {
-          extend: 'copy',
-          exportOptions: {
-            format: {
-              body: function(data, row, column, node) {
-                // Accession列（索引3）- 使用DOI链接
-                if (column === 3) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-doi') || data;
-                }
-                // Download列（索引8）- 使用下载链接
-                if (column === 8) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-download') || data;
-                }
-                return data;
-              }
-            }
+          extend: 'csvHtml5',
+          exportOptions: exportFormatOptions,
+          bom: true,
+          charset: 'utf-8'
+        },
+        { extend: 'excelHtml5', exportOptions: exportFormatOptions },
+        {
+          extend: 'pdfHtml5',
+          orientation: 'landscape',
+          pageSize: 'A2',
+          title: 'Developmental Lung Cell Atlas - Database',
+          exportOptions: exportFormatOptions,
+          customize: function(doc) {
+            doc.defaultStyle.fontSize = 6;
+            doc.styles.tableHeader.fontSize = 7;
+            doc.pageMargins = [8, 24, 8, 12];
           }
         },
-        {
-          extend: 'csv',
-          exportOptions: {
-            format: {
-              body: function(data, row, column, node) {
-                // Accession列（索引3）- 使用DOI链接
-                if (column === 3) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-doi') || data;
-                }
-                // Download列（索引8）- 使用下载链接
-                if (column === 8) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-download') || data;
-                }
-                return data;
-              }
-            }
-          }
-        },
-        {
-          extend: 'excel',
-          exportOptions: {
-            format: {
-              body: function(data, row, column, node) {
-                // Accession列（索引3）- 使用DOI链接
-                if (column === 3) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-doi') || data;
-                }
-                // Download列（索引8）- 使用下载链接
-                if (column === 8) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-download') || data;
-                }
-                return data;
-              }
-            }
-          }
-        },
-        {
-          extend: 'pdf',
-          exportOptions: {
-            format: {
-              body: function(data, row, column, node) {
-                // Accession列（索引3）- 使用DOI链接
-                if (column === 3) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-doi') || data;
-                }
-                // Download列（索引8）- 使用下载链接
-                if (column === 8) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-download') || data;
-                }
-                return data;
-              }
-            }
-          }
-        },
-        {
-          extend: 'print',
-          exportOptions: {
-            format: {
-              body: function(data, row, column, node) {
-                // Accession列（索引3）- 使用DOI链接
-                if (column === 3) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-doi') || data;
-                }
-                // Download列（索引8）- 使用下载链接
-                if (column === 8) {
-                  var $tr = $(node).closest('tr');
-                  return $tr.attr('data-download') || data;
-                }
-                return data;
-              }
-            }
-          }
-        }
+        { extend: 'print', exportOptions: exportFormatOptions }
       ],
       autoWidth: true,
       scrollX: true,
