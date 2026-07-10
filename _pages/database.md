@@ -787,8 +787,9 @@ permalink: /database/
   };
   
   // 导出时去除 HTML，使用 data 属性中的纯文本/URL
-  // 列索引: 0=DOI, 1=Author, 2=Year, 3=Title, 4=Accession, 5=Seq tech, 6=Seq method,
-  //         7=Species, 8=Donor status, 9=Organ, 10=Region, 11=Dev stage, 12=Cloud link
+  // 表格列索引: 0=DOI, 1=Author, 2=Year, 3=Title, 4=Accession, 5=Seq tech,
+  //             6=Seq method, 7=Species, 8=Donor status, 9=Organ, 10=Region,
+  //             11=Dev stage, 12=Cloud link
   function formatExportCell(data, row, column, node) {
     var $tr = $(node).closest('tr');
     if (column === 0) {
@@ -798,10 +799,6 @@ permalink: /database/
       return $tr.attr('data-title') || $(node).text().trim() || data;
     }
     if (column === 4) {
-      var downloadUrl = $tr.attr('data-download') || $(node).find('a').attr('href');
-      if (downloadUrl) {
-        return downloadUrl;
-      }
       return $tr.attr('data-accession') || $(node).text().trim() || data;
     }
     if (column === 12) {
@@ -813,13 +810,28 @@ permalink: /database/
     return data;
   }
 
+  function addDownloadLinksToExport(exportData) {
+    var exportedRows = dataTable.rows({
+      search: 'applied',
+      order: 'applied',
+      page: 'all'
+    }).nodes().toArray();
+
+    exportData.header.splice(5, 0, 'Accession code link');
+    exportData.body.forEach(function(row, index) {
+      var downloadUrl = $(exportedRows[index]).attr('data-download') || '';
+      row.splice(5, 0, downloadUrl);
+    });
+  }
+
   var exportFormatOptions = {
     format: {
       body: formatExportCell
     },
     modifier: {
       page: 'all'
-    }
+    },
+    customizeData: addDownloadLinksToExport
   };
 
   $(document).ready(function() {

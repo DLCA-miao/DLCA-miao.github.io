@@ -499,6 +499,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
     color: #00528e;
     text-decoration: none;
     cursor: pointer;
+    font: inherit;
   }
 
   .markers-page-btn.is-active {
@@ -796,6 +797,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
   var latestImageRequestId = 0;
   var latestTableRequestId = 0;
   var latestResolvedTableUrl = '';
+  var latestCsvData = '';
   var markersTableState = null;
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -1290,6 +1292,31 @@ function buildDownloadFileName() {
   return parts.join('_');
 }
 
+function downloadMarkersCsv() {
+  if (!latestCsvData) {
+    return;
+  }
+
+  try {
+    var csvBlob = new Blob(['\uFEFF', latestCsvData], {
+      type: 'text/csv;charset=utf-8;'
+    });
+    var objectUrl = URL.createObjectURL(csvBlob);
+    var downloadLink = document.createElement('a');
+    downloadLink.href = objectUrl;
+    downloadLink.download = buildDownloadFileName() + '.csv';
+    downloadLink.style.display = 'none';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    setTimeout(function() {
+      URL.revokeObjectURL(objectUrl);
+    }, 0);
+  } catch (error) {
+    console.error('CSV download failed.');
+  }
+}
+
 function buildRemoteFileCandidates(baseUrl, firstValue, secondValue, extension) {
   var rawName = firstValue + '_' + secondValue + '.' + extension;
   var encodedPartName = encodeURIComponent(firstValue) + '_' + encodeURIComponent(secondValue) + '.' + extension;
@@ -1561,6 +1588,7 @@ function displaySelectedTable() {
       return;
     }
     latestResolvedTableUrl = resolvedUrl || '';
+    latestCsvData = csvData;
     var rows = csvData.split(/\r?\n/).filter(function(row) {
       return row.trim() !== '';
     });
@@ -1938,6 +1966,7 @@ function renderMarkersTableV3() {
     }
 
     latestResolvedTableUrl = resolvedUrl || '';
+    latestCsvData = csvData;
 
     var rows = csvData.split(/\r?\n/).filter(function(row) {
       return row.trim() !== '';
@@ -1991,8 +2020,8 @@ function renderMarkersTableV3() {
 
 function renderMarkersTableShell(tableContainer, headers) {
   var toolbarHtml = '<div class="markers-custom-toolbar">';
-  if (latestResolvedTableUrl) {
-    toolbarHtml += '<a class="markers-download-link" href="' + escapeHtml(latestResolvedTableUrl) + '" download="' + escapeHtml(buildDownloadFileName()) + '.csv">csv</a>';
+  if (latestCsvData) {
+    toolbarHtml += '<button class="markers-download-link" type="button" data-action="download-markers-csv">csv</button>';
   }
   toolbarHtml += '</div>';
 
@@ -2012,6 +2041,11 @@ function renderMarkersTableShell(tableContainer, headers) {
   tableHtml += '<div class="markers-custom-footer"><div id="markersTableInfo"></div><div id="markersTablePagination"></div></div>';
 
   tableContainer.innerHTML = toolbarHtml + tableHtml;
+
+  var downloadButton = tableContainer.querySelector('[data-action="download-markers-csv"]');
+  if (downloadButton) {
+    downloadButton.addEventListener('click', downloadMarkersCsv);
+  }
 
   var textFilterInputs = tableContainer.querySelectorAll('[data-filter-type="text"]');
   textFilterInputs.forEach(function(input) {
@@ -2397,9 +2431,9 @@ function mountMarkersDataTableV2(headers, dataRows, requestId) {
             });
             dataTable.buttons().container().prependTo($(dataTable.table().container()).find('.markers-table-toolbar'));
           } else if (latestResolvedTableUrl) {
-            $(dataTable.table().container()).find('.markers-table-toolbar').prepend(
-              '<a class="dt-button" href="' + escapeHtml(latestResolvedTableUrl) + '" download="' + escapeHtml(buildDownloadFileName()) + '.csv">csv</a>'
-            );
+            var fallbackButton = $('<button class="dt-button" type="button">csv</button>');
+            fallbackButton.on('click', downloadMarkersCsv);
+            $(dataTable.table().container()).find('.markers-table-toolbar').prepend(fallbackButton);
           }
 
           hideTableLoading();
