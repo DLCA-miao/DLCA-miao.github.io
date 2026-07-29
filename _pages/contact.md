@@ -88,7 +88,7 @@ permalink: /contact/
 
 <section class="contact-card">
   <h3><b>Shuo Feng</b></h3>
-  <h4><b>Guangzhou Laboratory</b></h4>
+  <h4><b>Guangzhou National Laboratory</b></h4>
   <p>International Bio-island,<br>Guangzhou, 510005, China</p>
   <ul>
     <li><a href="mailto:fengshuo@mail.ustc.edu.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> fengshuo@mail.ustc.edu.cn</a></li>
@@ -97,7 +97,7 @@ permalink: /contact/
 
 <section class="contact-card">
   <h3><b>Zhichao (Chichau) Miao</b></h3>
-  <h4><b>Guangzhou Laboratory</b></h4>
+  <h4><b>Guangzhou National Laboratory</b></h4>
   <h4><b>Guangzhou Medical University</b></h4>
   <p>International Bio-island,<br>Guangzhou, 510005, China</p>
   <ul>

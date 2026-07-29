@@ -134,7 +134,7 @@ ORGANOID
 <p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of regions in a cell type.</p>
 
 <p><b> Select the target Cell type.</b></p>
-  <b style="font-size: 24px; color: #00528e">Celltype</b>
+  <b style="font-size: 24px; color: #00528e">Cell Type</b>
   <br>
   <select id="selectBox1" class="genes-deg-select" selectedIndex="0"></select>
   <br/>

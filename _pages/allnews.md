@@ -1,7 +1,7 @@
 ---
 title: "News"
 layout: textlay
-excerpt: "Miao Lab at Guangzhou Laboratory"
+excerpt: "Miao Lab at Guangzhou National Laboratory"
 sitemap: false
 permalink: /allnews.html
 ---

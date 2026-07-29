@@ -10,7 +10,7 @@ permalink: /
 <br>
 <div class="home-intro-block">
 <p class="text-center home-intro-title" style="color:#00528e;">Developmental Lung Cell Atlas</p>
-<p class="text-center home-intro-text">This website provides a comprehensive, up-to-date lung cell atlas by systematically curating and integrating single-cell transcriptomic datasets from over 200 publications across the human lifespan. The atlas covers the majority of anatomical regions of the upper and lower respiratory tracts in both health and disease. It provides a valuable resource for the lung community and beyond, and enables cross-conditional comparisons of respiratory cell types.</p>
+<p class="text-center home-intro-text">This website provides a comprehensive, up-to-date Human Developmental Lung Cell Atlas (HDLCA) by curating and integrating single-cell datasets from over 200 publications across the lifespan. The atlas covers the whole human respiratory system in both health and disease. It provides a valuable resource for the lung community and beyond, and enables cross-conditional comparisons of respiratory cell types. The HDLCA is maintained as a live resource with continuous updates.</p>
 </div>
 <div class="wrapper box_style">
 <div class="well" style="border: 0px solid #C9C9C9; background-color: #fff;">
@@ -43,7 +43,7 @@ permalink: /
     </div>
     <div class="stat-content">
       <div class="stat-label">Samples</div>
-      <div class="stat-number" data-target="3133">0</div>
+      <div class="stat-number" data-target="3198">0</div>
     </div>
   </div>
   
@@ -272,7 +272,7 @@ border-width: 0;
 
 <h3 style="color:#00528e">Cite us </h3>
 <div class="left-aligned" style="width: 100%;">
-Huang, L. et al. <strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan.</strong><br>
+Liangfeng Huang#, Ziliang Huang#, Shuo Feng#, Ke Fang#, Jie Wu#, Ying Ao, Lijing Huang, Jin Zhang, Hao Sun, Zhichao Miao*. <strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan.</strong><br>
 <!-- <a> Unpublished</a> -->
 </div>
 

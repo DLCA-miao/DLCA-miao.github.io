@@ -90,14 +90,14 @@ ORGANOID
 </div>
 </div> -->
 <div class="markers-description container markers-panel">
-The section shows the differentially expressed genes (DEGs) of the target region or the target Cell type.
+The section shows the differentially expressed genes (DEGs) of the target region or the target cell type.
 </div>
 <br/>
 <div class="container markers-panel">
-<p><b>Step1</b> Click the buttons to show the differentially expressed genes (DEGs) of the target region or the target Cell type.</p>
+<p><b>Step1</b> Click the buttons to show the differentially expressed genes (DEGs) of the target region or the target cell type.</p>
   <div class="markers-button-row">
     <button id="buttonA" onclick="changeOrder('A')">By Region</button>
-    <button id="buttonB" onclick="changeOrder('B')">By Cell type</button>
+    <button id="buttonB" onclick="changeOrder('B')">By Cell Type</button>
   </div>
 </div>
   <br/>
@@ -134,7 +134,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
   <span class="selection-summary-title">Search by</span>
   <span class="selection-summary-item">Region :</span>
   <span class="selection-pill" id="selectedRegionPillTop"></span>
-  <span class="selection-summary-item">Cell type :</span>
+  <span class="selection-summary-item">Cell Type :</span>
   <span class="selection-pill" id="selectedCellTypePillTop"></span>
 </div>
 <div class="image-container">
@@ -154,7 +154,7 @@ The section shows the differentially expressed genes (DEGs) of the target region
   <span class="selection-summary-title">Search by</span>
   <span class="selection-summary-item">Region :</span>
   <span class="selection-pill" id="selectedRegionPillBottom"></span>
-  <span class="selection-summary-item">Cell type :</span>
+  <span class="selection-summary-item">Cell Type :</span>
   <span class="selection-pill" id="selectedCellTypePillBottom"></span>
 </div>
 <b>Result</b> The table of DEGs.

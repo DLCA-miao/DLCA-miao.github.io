@@ -700,17 +700,18 @@ permalink: /database/
             <tr>
             <th onclick="sortTable(0)">DOI</th>
             <th onclick="sortTable(2)">Author</th>
-            <th onclick="sortTable(3)">Year</th>
-            <th onclick="sortTable(4)">Title</th>
-            <th onclick="sortTable(6)">Accession code</th>
-            <th onclick="sortTable(7)">Seq technology</th>
-            <th onclick="sortTable(8)">Seq method</th>
-            <th onclick="sortTable(9)">Species</th>
-            <th onclick="sortTable(10)">Donor status</th>
-            <th onclick="sortTable(11)">Organ</th>
-            <th onclick="sortTable(12)">Region</th>
-            <th onclick="sortTable(13)">Developmental stage</th>
-            <th onclick="sortTable(14)">Cloud drive link</th>
+            <th onclick="sortTable(3)">Journal</th>
+            <th onclick="sortTable(4)">Year</th>
+            <th onclick="sortTable(5)">Title</th>
+            <th onclick="sortTable(7)">Accession code</th>
+            <th onclick="sortTable(8)">Seq technology</th>
+            <th onclick="sortTable(9)">Seq method</th>
+            <th onclick="sortTable(10)">Species</th>
+            <th onclick="sortTable(11)">Donor status</th>
+            <th onclick="sortTable(12)">Organ</th>
+            <th onclick="sortTable(13)">Region</th>
+            <th onclick="sortTable(14)">Developmental stage</th>
+            <th onclick="sortTable(15)">Cloud drive link</th>
           </tr>
             </thead>
     <tbody>
@@ -740,17 +741,18 @@ permalink: /database/
                onclick="openDrawer(this)">
               <td name="td0"><a href="{{item['Article link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["DOI"]}}</b></a></td>
               <td name="td2">{{item.Author}}</td>
-              <td name="td3">{{item.Year}}</td>
-              <td name="td4">{{item.Title}}</td>
-              <td name="td6"><a href="{{item['Download link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["Accession code"]}}</b></a></td>
-              <td name="td7">{{item['Seq technology']}}</td>
-              <td name="td8">{{item['Seq method']}}</td>
-              <td name="td9">{{item['Species']}}</td>
-              <td name="td10">{{item['Donor status']}}</td>
-              <td name="td11">{{item.Organ}}</td>
-              <td name="td12">{{item.Region}}</td>
-              <td name="td13">{{item['Developmental stage']}}</td>
-              <td name="td14"><a href="{{item['Cloud drive link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>Link</b></a></td>
+              <td name="td3">{{item.Journal}}</td>
+              <td name="td4">{{item.Year}}</td>
+              <td name="td5">{{item.Title}}</td>
+              <td name="td7"><a href="{{item['Download link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>{{item["Accession code"]}}</b></a></td>
+              <td name="td8">{{item['Seq technology']}}</td>
+              <td name="td9">{{item['Seq method']}}</td>
+              <td name="td10">{{item['Species']}}</td>
+              <td name="td11">{{item['Donor status']}}</td>
+              <td name="td12">{{item.Organ}}</td>
+              <td name="td13">{{item.Region}}</td>
+              <td name="td14">{{item['Developmental stage']}}</td>
+              <td name="td15"><a href="{{item['Cloud drive link']}}" target="_blank" style="color:#00528e" onclick="event.stopPropagation();"><b>Link</b></a></td>
             </tr>
         {% endfor %}
        
@@ -787,21 +789,21 @@ permalink: /database/
   };
   
   // 导出时去除 HTML，使用 data 属性中的纯文本/URL
-  // 表格列索引: 0=DOI, 1=Author, 2=Year, 3=Title, 4=Accession, 5=Seq tech,
-  //             6=Seq method, 7=Species, 8=Donor status, 9=Organ, 10=Region,
-  //             11=Dev stage, 12=Cloud link
+  // 表格列索引: 0=DOI, 1=Author, 2=Journal,3=Year, 4=Title, 5=Accession, 6=Seq tech,
+  //             7=Seq method, 8=Species, 9=Donor status, 10=Organ, 11=Region,
+  //             12=Dev stage, 13=Cloud link
   function formatExportCell(data, row, column, node) {
     var $tr = $(node).closest('tr');
     if (column === 0) {
       return $tr.attr('data-doi-text') || $(node).text().trim() || data;
     }
-    if (column === 3) {
+    if (column === 4) {
       return $tr.attr('data-title') || $(node).text().trim() || data;
     }
-    if (column === 4) {
+    if (column === 5) {
       return $tr.attr('data-accession') || $(node).text().trim() || data;
     }
-    if (column === 12) {
+    if (column === 13) {
       return $tr.attr('data-cloud-link') || $(node).find('a').attr('href') || data;
     }
     if (typeof data === 'string' && data.indexOf('<') !== -1) {

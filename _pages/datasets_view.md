@@ -498,7 +498,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">lung adenocarcinomas</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -642,7 +642,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">coal-workers pneumoconiosis</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -690,7 +690,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -770,7 +770,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -1138,7 +1138,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -1362,7 +1362,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -2274,7 +2274,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Fetal</td>
     </tr>
 
@@ -2626,7 +2626,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">non small cell lung cancer,  Squamous cell carcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Unclassified</td>
     </tr>
 
@@ -3074,7 +3074,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -3394,7 +3394,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Homo sapiens</td>
       <td name="td10">non small cell lung cancer,  Squamous cell carcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4162,7 +4162,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinomas</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4194,7 +4194,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Pneumocystis infection</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -4306,7 +4306,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung tumor</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -4370,7 +4370,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Lewis lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4386,7 +4386,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">asthma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -4402,7 +4402,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Allergic Asthma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4466,7 +4466,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4642,7 +4642,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung injury</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -4850,7 +4850,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Lewis Lung Carcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Unclassified</td>
     </tr>
 
@@ -4962,7 +4962,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non-small cell lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5106,7 +5106,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">pneumonitis</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5186,7 +5186,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">acute inflammatory lung damage</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5522,7 +5522,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non-small cell lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5586,7 +5586,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">small cell lung cancers</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5650,7 +5650,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Neutrophilic asthma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -5762,7 +5762,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Healthy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5778,7 +5778,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Lung Injury</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -5858,7 +5858,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">cytokine release syndromev</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Unclassified</td>
     </tr>
 
@@ -5906,7 +5906,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non small cell lung cancer,   Squamous cell carcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Unclassified</td>
     </tr>
 
@@ -6034,7 +6034,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinomas</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6210,7 +6210,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">asthma-like inflammation</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Unclassified</td>
     </tr>
 
@@ -6306,7 +6306,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">influenza</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6418,7 +6418,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">pulmonary fibrosis</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6450,7 +6450,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Neuroendocrine Cell Hyperplasia of Infancy</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Newborn</td>
     </tr>
 
@@ -6530,7 +6530,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non-small cell lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6690,7 +6690,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6882,7 +6882,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">influenza</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -6962,7 +6962,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung inflammatory</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -7026,7 +7026,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -7090,7 +7090,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung adenocarcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -7154,7 +7154,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -7202,7 +7202,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">small cell lung cancers</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -7282,7 +7282,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">COVID-19</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -7810,7 +7810,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">neutrophilic lung inflammation</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Children</td>
     </tr>
 
@@ -8178,7 +8178,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Lewis lung carcinoma</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -8210,7 +8210,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non-small cell lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -8306,7 +8306,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">non-small cell lung cancer</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 
@@ -8770,7 +8770,7 @@ The table below presents the complete collection of currently available sequence
       <td name="td7">Mus musculus</td>
       <td name="td10">Influenza</td>
       <td name="td10">Lung</td>
-      <td name="td11">lung</td>
+      <td name="td11">Lung</td>
       <td name="td11">Adult</td>
     </tr>
 

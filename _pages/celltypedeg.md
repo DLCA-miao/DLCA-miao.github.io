@@ -136,7 +136,7 @@ ORGANOID
   <b style="font-size: 24px; color: #00528e">Expression</b>
   <div id="imageIdContainer"></div>
   <br/>
-  <b style="font-size: 24px; color: #00528e">Celltype</b>
+  <b style="font-size: 24px; color: #00528e">Cell Type</b>
   <br>
   <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedIndex="0"></select>
   <br/>

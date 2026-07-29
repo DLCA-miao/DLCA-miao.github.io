@@ -10,23 +10,23 @@ permalink: /Helps/
 <div class="help-nav">
 <a class="btn btn-default" href="#Data Viewer" >Data Viewer</a>
 <a class="btn btn-default" href="#Portrait">Portrait</a>
-<a class="btn btn-default" href="#Genes">Genes</a>
-<a class="btn btn-default" href="#Exploration">Exploration</a>
+<a class="btn btn-default" href="#Genes">Gene</a>
+<a class="btn btn-default" href="#Exploration">DEG</a>
 <a class="btn btn-default" href="#Dataset">Dataset</a>
 </div>
-<br><br>
 
-**Developmental Lung Cell Atlas is a comprehensive and unified atlas of the lung that was built across studies, regions and sequencing platforms. We integrated the majority of the single-nuclei/single-cell transcriptomic datasets published from 2017 to present from a diverse source of lung samples that provide a unified cell type and manually curated metadata annotated framework for lung cell research in the development.**
 
 <h1 style="background-color: #00528e; color:#ffffff;">Data Viewer</h1>
 <p id="Data Viewer"> </p>
 <p>The Data Viewer page features the UMAP that presents the sample characteristics and gene expressions in the Developmental Lung Cell Atlas.
 From the "Data Viewer" tab, you can choose to view a particular UMAP of lung.</p>
+<p>(1)  <span class="material-icons" style="font-size: 15px; vertical-align: middle;">hub</span> : You can choose different atlas to display the UMAPs.</p>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_data.png" class="help-image">
+<p>(2)  <span class="material-icons" style="font-size: 18px; vertical-align: middle;">settings</span> : You can view coloured cells from a certain attribute for the cells. Several other dimiensions to view the UMAP are described in the first table of the Help Page</p>
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_2.png" class="help-image">
 <!-- <p>The left panel plot is a plotly.js module that displays the integrative UMAPs of the Adult Lung, Fetal Lung, Tumour and Organoids in the Respire Cell Atlas.</p>
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_figure_Dataviewer_left.png" style='height: 800px; width: auto; margin: 0;'> -->
-<p>(1) By clicking  the selection from "Cell Metadata", you can view coloured cells from a certain attribute for the cells. Several other dimiensions to view the UMAP are described as below:
-A list of selectable attributes to display the UMAPs are shown in the left column.</p>
+<p>A list of selectable attributes to display the UMAPs are shown in the left column.</p>
 <div class="help-table-wrap">
 <table class="table table-hover table-bordered">
   <thead>
@@ -37,6 +37,39 @@ A list of selectable attributes to display the UMAPs are shown in the left colum
   </thead>
   <tbody>
     <tr>
+      <td>CellType</td>
+      <td>Cell type annotation.</td>
+    </tr>
+    <tr>
+      <td>CellType Level1</td>
+      <td>Broad cell type class.</td>
+    </tr>    
+    <tr>
+      <td>CellType Level2</td>
+      <td>Fine cell type.</td>
+    </tr>  
+    <tr>
+      <td>CellType Level3</td>
+      <td>Cell subtype.</td>
+    </tr>    
+    <tr>
+      <td>Anatomical Region</td>
+      <td>Anatomical structure(Please find details in the third table of the Help Page).</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>For postnatal individuals, 6 months old is denoted by 6mo; 21 years old is denoted by "21 yr".
+For prenatal individuals, 9 PCW stands for post-conception weeks.</td>
+    </tr>   
+    <tr>
+      <td>Developmental Stage</td>
+      <td>Developmental stage of each individual.</td>
+    </tr>     
+    <tr>
+      <td>Gender</td>
+      <td>F = Female; M = Male; Unclassified = Unknown.</td>
+    </tr>               
+    <tr>
       <td>Sample ID</td>
       <td>Sample ID of the cells or nuclei.</td>
     </tr>
@@ -45,41 +78,96 @@ A list of selectable attributes to display the UMAPs are shown in the left colum
       <td>Author specified donor IDs, which are indicated in the original publications.</td>
     </tr>
     <tr>
-      <td>Gender</td>
-      <td>F = Female; M = Male; Unclassified = Unknown.</td>
-    </tr>
-    <tr>
-      <td>Age</td>
-      <td>For postnatal individuals, 6 months old is denoted by 6mo; 21 years old is denoted by "21 yr".
-For prenatal individuals, 9 w stands for 9 gestational weeks (GW).
-For organoids, use d (days in culture)
-Eg. 10d.</td>
-    </tr>
-    <tr>
-      <td>Development Stage</td>
-      <td>Development stage of each individual.</td>
-    </tr>
-    <tr>
-      <td>Sample Status</td>
-      <td>Each disease status corresponds to common names appearing in MONDO Diseased Ontology.</td>
-    </tr>
-    <tr>
-      <td>Region</td>
-      <td>Anatomical structure level 1 (Please find details in the first table of the Help Page).</td>
-    </tr>
-    <tr>
-      <td>Project Code</td>
-      <td>Project codes are the data accession codes or strings of abbreviation of the study provided by the authors.
-Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
-     <tr>
-      <td>Sequencing methods</td>
-      <td>Sequencing method of the cells or nuclei.</td>
+      <td>Study</td>
+      <td>Publications in the HDLCA reference atlas.</td>
     </tr>
     <tr>
       <td>Sequencing Technology</td>
       <td>Sequencing technology of the cells or nuclei.</td>
+    </tr>  
+     <tr>
+      <td>Sequencing Methods</td>
+      <td>Sequencing method of the cells or nuclei.</td>
     </tr>
+    <tr>
+      <td>Sample Type</td>
+      <td>Categorizes samples according to the developmental stage of the donor, including fetal, infancy, adolescence and adult.</td>
     </tr>
+    <tr>
+      <td>Sample Status</td>
+      <td>Health status of the tissue source.</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+  >
+  <title>Material Icons</title>
+</head>
+<br><br>
+<p>(3)  <span class="material-icons" style="font-size: 18px; vertical-align: middle;">search</span> : You can view coloured cells according to the expression level of the selected gene.</p>
+<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_dataview_gene.png" class="help-image">
+<p>(4) The symbol attributes of the page.</p>
+<div class="help-table-wrap">
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="material-icons" style="font-size: 18px; vertical-align: middle;">hub</span></td>
+      <td>Choose different atlas to display the UMAPs.</td>
+    </tr>  
+    <tr>
+      <td><span class="material-icons" style="font-size: 20px; vertical-align: middle;">settings</span></td>
+      <td>View coloured cells according to the selected attribute in Cell Metadata.</td>
+    </tr>
+    <tr>
+      <td><span class="material-icons" style="font-size: 20px; vertical-align: middle;">search</span></td>
+      <td>View coloured cells according to the expression level of the selected gene.</td>
+    </tr>
+    <tr>
+      <td><span class="material-icons" style="font-size: 20px; vertical-align: middle;">invert_colors</span></td>
+      <td>Indicate the Cell Metadata attribute currently selected to colour cells in the UMAP.</td>
+    </tr>    
+    <tr>
+      <td><span class="material-icons" style="font-size: 20px; vertical-align: middle;">link</span></td>
+      <td>Indicate the number of selected subcategories used to color cells within the selected Cell Metadata attribute.</td>
+    </tr>
+    <tr>
+      <td><span class="material-icons" style="font-size: 18px; vertical-align: middle;">zoom_out_map</span></td>
+      <td>Reset the complete UMAP graph after cropped screenshot.</td>
+    </tr>
+    <tr>
+      <td><span class="mdi mdi-select-arrow-up" style="font-size: 21px; vertical-align: middle;"></span></td>
+      <td>Capture a region of the UMAP for a cropped screenshot.</td>
+    </tr>
+    <tr>
+      <td><span class="mdi mdi-plus-circle-multiple-outline" style="font-size: 20px; vertical-align: middle;"></span></td>
+      <td>Multi-page display of the UMAP.</td>
+    </tr>
+    <tr>
+      <td><span class="material-icons" style="font-size: 20px; vertical-align: middle;">arrow_downward</span></td>
+      <td>Download the UMAP graph.</td>
+    </tr>
+
   </tbody>
 </table>
 </div>
@@ -92,6 +180,7 @@ Eg. GSE/SCP/E-MTAB-/PRJNA/EGAS/phs/PRJEB/SDY/SRP.</td>
 <!-- <p><b>(2)</b> On the right panel you can view the expression of a certain gene on the UMAP from search.</p>
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_figure_Dataviewer_right.png" style='height: 800px; width: auto; margin: 0;'>
 <p><b>(3)</b> You may download the UMAP, using selection tools to crop an area and zoom-in/out by clicking on the tool bars on the top-right of the panel (Some tools may take several seconds to load).</p> -->
+
 
 <br><br>
 <h1 style="background-color: #00528e; color:#ffffff;"> Portrait</h1>
@@ -308,32 +397,20 @@ The interactive viewer shows the human lung and includes all the major regions f
 <br><br>
 <h1 ref="" style="background-color: #00528e; color:#ffffff;">Gene</h1>
 <!-- <p class="header_box" >Gene</p> -->
-<p>Users can obtain a list of differentially expressed genes of the cell types from a selected lung region.<br>
-The cell type name is defined by the most scored prediced cell type computed from the 8 machine-learning-based annotation methods:</p>
-<ul>
-  <li><a href="https://academic.oup.com/bioinformatics/article/36/2/533/5540320?login=false">ACTINN</a></li>
-  <li><a href="https://www.rnacentre.org/RCA_Web/10.1093/nar/gkz543">CHETAH</a></li>
-  <li><a href="https://www.nature.com/articles/s41587-021-01001-7">scArches</a></li>
-  <li><a href="https://doi.org/10.1038/nmeth.4644">ScMap</a></li>
-  <li><a href="https://doi.org/10.1186/s13059-019-1862-5">ScPred</a></li>
-  <li><a href="https://doi.org/10.1016/j.cels.2019.06.004">SingleCellNet</a></li>
-  <li><a href="https://doi.org/10.1038/s41590-018-0276-y">SingleR</a></li>
-  <li>scAnnot - a hierarchical classification model trained based on scANVI.</li>
-</ul>
-<p>To calculate candidate markers within a specific region by selecting tabs <b>By Region</b> or find candidate markers of a cell type by selecting the tab <b>By Cell type</b>. After selection and click on the tab <b>Markers</b>, a volcano plot will be shown</p>
-<p>For example, if you click By Region, the search box will show the region and cell type, you can select a region and a cell type, this function is to show the differential genes of your selected cell type and other cell types under the same region, and clicking the marker button will show the volcano map and the csv table of the differential genes.</p>
+<p>Users can obtain a list of differentially expressed genes of the cell types from a selected lung region，or of different lung regions from a selected cell type.<br>
+<p>To calculate candidate markers within a specific region by selecting tabs <b>By Region</b> or find candidate markers of a cell type by selecting the tab <b>By Cell Type</b>. After selection and click on the tab <b>Markers</b>, a volcano plot will be shown. </p>
+<p>For example, if you click <b>By Region</b>, the search box will show the region and cell type, you can select a region and a cell type, this function is to show the differential genes of your selected cell type and other cell types under the same region, and clicking the <b>Markers</b> button will show the volcano map and the csv table of the differential genes. Clicking the <b>All</b> button</p> means selecting all regions.</p>
 
 <!-- <div style="display: flex; justify-content: center;"> -->
 <div style="display: flex;">
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help_gene1.png" class="help-image">
 </div>
-<div style="display: flex;">
-<img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-gene2.png" class="help-image">
-</div>
 
-<h1 style="background-color: #00528e; color:#ffffff;">Region DEG & Cell type DEG</h1>
-<p>Region DEG (Differential expression Genes) compares different cell types from the same region. A violin plot of the top 3 DEGs for each different cell types of the region will be shown after selection of the input.</p>
-<p>Cell type DEG compares the same cell type from different regions. Likewise, a violin plot of the top 3 DEGs for this cell type across different region will be shown after selection of the input.</p>
+<p id="Exploration"></p>
+<br><br>
+<h1 style="background-color: #00528e; color:#ffffff;">DEG</h1>
+<p>Cell type DEG (Differential expression Genes) compares the same cell type from different regions. Likewise, a violin plot of the top 3 DEGs for this cell type across different region will be shown after selection of the input.</p>
+<p>Region DEG compares different cell types from the same region. A violin plot of the top 3 DEGs for each different cell types of the region will be shown after selection of the input.</p>
 <div style="display: flex">
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-deg.png" class="help-image">
 </div>
@@ -341,7 +418,7 @@ The cell type name is defined by the most scored prediced cell type computed fro
 <p id="Dataset"></p>
 <br><br>
 <h1 style="background-color: #00528e; color:#ffffff;">Dataset</h1>
-<p>The Dataset page includes all the datasets used in the Developmental Lung Cell Atlas, a full list of the studies and authors from this page can be found here. Processed data with re-annotated cell type metadata will be avaiable for download upon publication. All data can be downloaded by four buttons: Copy, CSV, Excel, PDF etc.</p>
+<p>The Dataset page provides access to publicly available datasets from the human and mouse respiratory systems. A complete list of the included studies and contributing authors is available on this page. The data table can be exported using the Copy, CSV, Excel, or PDF buttons.</p>
 <div style="display: flex;">
 <img src = "{{ site.url }}{{ site.baseurl }}/images/helpPage/help-dataset_2.png" class="help-image">
 </div>
