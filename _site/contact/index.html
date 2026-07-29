@@ -20,24 +20,24 @@
 
   <body>
 
-    <div class="navbar-expand-lg navbar-dark" style='background-color: #333333; border-radius: 0; margin-bottom: 0; border: 0; height: 30px;' role="navigation">
-  <div class="container-fluid" style='height: 30px; max-width: 1000px;'>
-	  <ul class="nav navbar-nav navbar-right" style='height: 30px;'>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="http://www.gznl.org/">
-			<img src="http://localhost:4000/images/header/home.svg" style='height: 20px; width: auto; margin: 0;'>
+    <div class="top-nav" role="navigation">
+  <div class="container-fluid top-nav-container">
+	  <ul class="nav navbar-nav navbar-right top-nav-links">
+		<li><a class="nav-link-0 top-nav-link" href="http://www.gznl.org/">
+			<img src="http://localhost:4000/images/header/home.svg" class="top-nav-icon">
 			Home</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/database/">
-			<img src="http://localhost:4000/images/header/database.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/database/">
+			<img src="http://localhost:4000/images/header/database.svg" class="top-nav-icon">
 			Database</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/research/">
-			<img src="http://localhost:4000/images/header/research.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/research/">
+			<img src="http://localhost:4000/images/header/research.svg" class="top-nav-icon">
 			Research</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/aboutus/">
-			<img src="http://localhost:4000/images/header/aboutus.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/aboutus/">
+			<img src="http://localhost:4000/images/header/aboutus.svg" class="top-nav-icon">
 			About us</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://gzlab.ac.cn/">
+		<li><a class="nav-link-0 top-nav-link" href="https://gzlab.ac.cn/">
 			GZNL-RDC
-			<img src="http://localhost:4000/images/header/gznl2.svg" style='height: 20px; width: auto; margin: 0;'>
+			<img src="http://localhost:4000/images/header/gznl2.svg" class="top-nav-icon">
 			</a></li>
 	  </ul>
   </div>
@@ -110,10 +110,44 @@
   
   
   
-  <style>
+<style>
+.top-nav {
+    background-color: #333333;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.top-nav-container {
+    max-width: 1000px;
+}
+
+.top-nav-links {
+    float: none !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.top-nav-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px 8px 6px !important;
+    line-height: 1.4 !important;
+}
+
+.top-nav-icon {
+    height: 20px;
+    width: auto;
+    margin: 0;
+}
+
  .full-width-image {
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     overflow: hidden;
     border-radius: 0;
     margin-top: 0;
@@ -151,11 +185,12 @@
   } */
   
   .search-box {
-	  height: 100%;
-	  width: 1300px;
+	  min-height: 350px;
+	  width: min(100%, 1300px);
 	  margin: 0 auto;
 	  display: flex;
 	  align-items: center;
+    padding: 24px;
   }
   
   .search {
@@ -165,6 +200,7 @@
 	  padding-right: 20px;
 	  background: #fff;
 	  position: absolute;
+    max-width: calc(100% - 48px);
   }
   
   .search h2 {
@@ -178,6 +214,7 @@
   
   .search .i img {
 	  width: 150px;
+	  max-width: 100%;
 	  height: 70px;
 	  margin-bottom: 10px;
 	  object-fit: contain
@@ -256,6 +293,7 @@
 	  display: flex;
 	  align-items: center;
 	  margin: 15px 0 8px 0;
+	  max-width: 100%;
 	  width: 532px;
 	  padding-bottom: 10px;
   }
@@ -303,16 +341,240 @@
 	  width: 18px;
 	  height: 18px;
   }
-  </style>
+
+  .site-navbar {
+    margin-bottom: 0;
+  }
+
+  .site-navbar-container {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .site-navbar-brand {
+    height: 50px;
+  }
+
+  .site-navbar .navbar-brand > img.site-navbar-brand {
+    display: block;
+    width: auto;
+    height: 50px;
+    max-height: 50px;
+    max-width: none;
+    margin-top: -14px;
+    margin-bottom: 0;
+    padding: 2px 2px;
+    border-radius: 0;
+  }
+
+  @media (max-width: 991px) {
+    .site-navbar-container {
+      font-size: 18px !important;
+    }
+
+    .search {
+      position: static;
+      width: 100%;
+    }
+
+    .search-box {
+      min-height: auto;
+      padding: 20px 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .site-navbar-container {
+      font-size: 16px !important;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .site-navbar .navbar-header {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      min-height: 40px;
+    }
+
+    .site-navbar .navbar-brand > img.site-navbar-brand {
+      height: 22px;
+      max-height: 22px;
+      width: auto;
+      max-width: min(140px, calc(100vw - 72px));
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      display: block;
+    }
+
+    .site-navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      float: none;
+      flex: 1;
+      height: 100%;
+      max-width: calc(100vw - 64px);
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .site-navbar .navbar-toggle {
+      float: none;
+      width: 36px;
+      height: 36px;
+      margin: 0;
+      border-color: rgba(255, 255, 255, 0.22);
+      border-radius: 10px;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .site-navbar .navbar-toggle .icon-bar {
+      background-color: #ffffff;
+      height: 2px;
+      width: 16px;
+    }
+
+    .site-navbar .navbar-collapse {
+      border-top: 0;
+      box-shadow: none;
+      margin-top: 12px;
+      padding: 10px 12px 14px;
+      background: rgba(0, 0, 0, 0.12);
+      border-radius: 14px;
+    }
+
+    .site-navbar .navbar-nav {
+      margin: 0;
+    }
+
+    .site-navbar .navbar-nav > li > a {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 14px;
+      padding-right: 14px;
+      border-radius: 10px;
+      margin-bottom: 6px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .site-navbar .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 4px 0 0;
+    }
+
+    .site-navbar .dropdown-menu > li > a {
+      color: #ffffff !important;
+      padding-left: 34px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .site-navbar .navbar-nav > li > a:hover,
+    .site-navbar .navbar-nav > li.open > a,
+    .site-navbar .dropdown-menu > li > a:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .top-nav-links {
+      justify-content: center;
+    }
+
+    .top-nav-link {
+      padding: 8px 8px 6px !important;
+      font-size: 12px;
+    }
+
+    .top-nav-icon {
+      height: 16px;
+    }
+
+    .full-width-image {
+      min-height: auto;
+      background-position: 72% center;
+    }
+
+    .search-box {
+      min-height: auto;
+      padding: 16px 12px;
+    }
+
+    .search {
+      padding: 18px 16px;
+      border-radius: 18px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .search h2 {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .search .i {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .search .i img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .search .i h1 {
+      font-size: 22px;
+      margin-left: 0;
+      margin-top: 0;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .gcse-search {
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .gcse-search input {
+      min-width: 0;
+    }
+
+    .search-btn {
+      width: 52px;
+      margin-left: 8px;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+  }
+</style>
 
 
 
 
 
 
-<div class="navbar navbar-expand-lg navbar-dark bg-primary" style='border-radius: 0; border: 0;' role="navigation">
+<div class="navbar navbar-expand-lg navbar-dark bg-primary site-navbar" style='border-radius: 0; border: 0;' role="navigation">
 
-  <div class="container-fluid" style='width: 1400px; font-size: 20px;'>
+  <div class="container-fluid site-navbar-container" style='font-size: 20px;'>
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
@@ -323,7 +585,7 @@
 	
     <a class="navbar-brand" href="http://localhost:4000/">
 		
-		<img class="navbar-brand" src="http://localhost:4000/images/header/HDLCA-logo-white-large.svg" style='height:50px;margin-top:-14px;margin-bottom:0;padding:2px 2px;border-radius: 0;' alt="logo">
+		<img class="navbar-brand site-navbar-brand" src="http://localhost:4000/images/header/HDLCA-logo-white-large.svg" alt="logo">
 		<!--b style='font-size: 32px; color: #eeeeee;'>RespiratoryCellAtlas</b-->
 	</a>
 	</div>
@@ -375,94 +637,122 @@
 	}
   </script>
 
+
     <div class="container-fluid">
       <div class="row">
         <div id="gridid" class="col-sm-12">
-  <!-- 引用FontAwesome库 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-<!-- <h2>Contacts</h2> -->
-<p><br />
-<!-- <div class="col-lg-10 col-lg-offset-1 text-center"> --></p>
-<div class="col-lg-10 col-lg-offset-1 text-center">
-
-<h3><b>Shuo Feng</b></h3>
-<h4><b>Guangzhou Laboratory</b></h4>
-<p>International Bio-island, <br />
-Guangzhou, 510005, China</p>
-<ul class="list-unstyled">
-<a href="mailto:fengshuo@mail.ustc.edu.cn?subject=[Help]%20RCA">
-<li><i class="fa fa-envelope fa-fw"></i>fengshuo@mail.ustc.edu.cn</li></a>
-<br />
-
-<h3><b>Zhichao (Chichau) Miao</b></h3>
-<h4><b>Guangzhou Laboratory</b></h4>
-<h4><b>Guangzhou Medical University</b></h4>
-<p>International Bio-island, <br />
-Guangzhou, 510005, China</p>
-<ul class="list-unstyled">
-<a href="mailto:miao_zhichao@gzlab.ac.cn?subject=[Help]%20RCA">
-<li><i class="fa fa-envelope fa-fw"></i> miao_zhichao@gzlab.ac.cn</li></a>
-<br />
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3670.9607940189653!2d113.3728525!3d23.0618989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34025549978de655%3A0xbfef76e0d9d7b9!2z5bm_5bee55Sf54mp5bKb5Zu96ZmF5YWs5a-T!5e0!3m2!1sen!2skr!4v1716198561625!5m2!1sen!2skr" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-
-<div>
-<a href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank"><img src="http://localhost:4000/images/helpPage/feedback.svg" alt="drawing" style="width:400px;display:block;margin:0 auto;" /></a>
-</div>
-<footer>
-<p class="meta text-muted">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 <style>
-fa-fw {
-    width: 1.28571429em;
+  .contact-page {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .contact-card {
+    padding: 20px;
+    border: 1px solid #d9e1ea;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    background: #fff;
     text-align: center;
-}
-.fa {
+  }
+
+  .contact-card h3,
+  .contact-card h4 {
+    margin-top: 0;
+  }
+
+  .contact-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-card li {
+    line-height: 1.8;
+    word-break: break-word;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 420px;
+    border: 0;
+    border-radius: 12px;
+  }
+
+  .map-wrap {
+    margin-bottom: 24px;
+  }
+  
+  .feedback-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  }
+  .feedback-link img {
+    width: min(100%, 400px);
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-user agent stylesheet
-i {
-    font-style: italic;
-}
+    margin: 0 auto;
+  }
+
+  @media (max-width: 991px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact-card {
+      padding: 16px;
+    }
+
+    .map-frame {
+      height: 300px;
+    }
+  }
 </style>
-<style>
-    .contact {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin-bottom: 20px;
-    }
-    .contact-item {
-      width: 45%;
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
-    .contact-item h3 {
-      margin-top: 0;
-    }
-    .contact-item ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .contact-item ul li {
-      margin-bottom: 5px;
-    }
-  </style>
-</p></footer></ul></ul></div></ul>
+
+<p><br /></p>
+<div class="contact-page">
+  <div class="contact-grid">
+
+    <section class="contact-card">
+      <h3><b>Shuo Feng</b></h3>
+      <h4><b>Guangzhou National Laboratory</b></h4>
+      <p>International Bio-island,<br />Guangzhou, 510005, China</p>
+      <ul>
+    <li><a href="mailto:fengshuo@mail.ustc.edu.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> fengshuo@mail.ustc.edu.cn</a></li>
+  </ul>
+    </section>
+
+    <section class="contact-card">
+      <h3><b>Zhichao (Chichau) Miao</b></h3>
+      <h4><b>Guangzhou National Laboratory</b></h4>
+      <h4><b>Guangzhou Medical University</b></h4>
+      <p>International Bio-island,<br />Guangzhou, 510005, China</p>
+      <ul>
+    <li><a href="mailto:miao_zhichao@gzlab.ac.cn?subject=[Help]%20RCA"><i class="fa fa-envelope fa-fw"></i> miao_zhichao@gzlab.ac.cn</a></li>
+  </ul>
+    </section>
+  </div>
+
+  <div class="map-wrap">
+    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3670.9607940189653!2d113.3728525!3d23.0618989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34025549978de655%3A0xbfef76e0d9d7b9!2z5bm_5bee55Sf54mp5bKb5Zu96ZmF5YWs5a-T!5e0!3m2!1sen!2skr!4v1716198561625!5m2!1sen!2skr" allowfullscreen=""></iframe>
+  </div>
+
+  <div>
+    <p><a class="feedback-link" href="https://docs.google.com/spreadsheets/d/1MnyUdtO2yXy3WoTDZlKiBMdRUiL7OgH9mc6PiWZsYDA/edit?usp=drive_link" target="_blank">
+  <img src="http://localhost:4000/images/helpPage/feedback.svg" alt="Feedback form" />
+</a></p>
+  </div>
 </div>
 
 </div>
@@ -478,7 +768,7 @@ i {
 		<div class="col-sm-4">
 			
 		  <p>&copy 2024 GZNL-RDC. </p>
-		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#00528e">Guangzhou Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#00528e">RNAcentre</a>.</p>
+		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#00528e">Guangzhou National Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#00528e">RNAcentre</a>.</p>
 		  <p>Site made with <a href="https://jekyllrb.com" style="color:#00528e">Jekyll</a>;  <a href="http://localhost:4000/aboutwebsite.html" style="color:#00528e">copy and  modify it for your own research group.</a></p>
 		  <p>  </p>
 		  <p>  </p>
@@ -486,9 +776,10 @@ i {
 		
 		<div class="col-sm-4">
 		  Funding:<br />
-          - <a href="https://gzlab.ac.cn" style="color:#00528e">R&D Programs of Guangzhou Laboratory</a><br />
-          - <a href="http://www.most.gov.cn/" style="color:#00528e">MOST IT+BT projects</a> <br />
-          - <a href="https://www.nsfc.gov.cn/" style="color:#00528e">NSFC</a> <br />	 
+          - <a style="color:#00528e">Major Project of Guangzhou Laboratory</a><br />
+          - <a style="color:#00528e">National Key R&D Programs of China</a> <br />
+          - <a style="color:#00528e">Natural Science Foundation of China</a> <br />	 
+		  - <a style="color:#00528e">Young Scientists Fund of the National Natural Science Foundation of China</a> <br />	 
 		  <br>
 		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" style="color:#00528e"></script>
 		  <!--<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_uv"><strong>: <a href=""><span id="busuanzi_value_site_uv"></span></strong></a> </span> &nbsp;&nbsp;
@@ -497,7 +788,7 @@ i {
 		
 		<div class="col-sm-4">
 		  Contact:<br />
-		  Yingshida Building F2, Guangzhou National Laboratory<br />
+		  Research Park 2 Building F,Guangzhou National Laboratory<br />
 		  9 Xingdao North Road, Guangzhou International Bio Island, <br />
 		  Haizhu District, Guangzhou, Guangdong, China.<br />
           (<a href="https://goo.gl/maps/hDLr6siEAS2Eaypt8" style="color:#00528e">Maps</a>)
@@ -507,7 +798,7 @@ i {
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/jquery.js"></script>
 <script src="http://localhost:4000/js/bootstrap.min.js"></script>
 
 
