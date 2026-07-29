@@ -19,24 +19,24 @@
 
   <body>
 
-    <div class="navbar-expand-lg navbar-dark" style='background-color: #333333; border-radius: 0; margin-bottom: 0; border: 0; height: 30px;' role="navigation">
-  <div class="container-fluid" style='height: 30px; max-width: 1000px;'>
-	  <ul class="nav navbar-nav navbar-right" style='height: 30px;'>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="http://www.gznl.org/">
-			<img src="http://localhost:4000/images/header/home.svg" style='height: 20px; width: auto; margin: 0;'>
+    <div class="top-nav" role="navigation">
+  <div class="container-fluid top-nav-container">
+	  <ul class="nav navbar-nav navbar-right top-nav-links">
+		<li><a class="nav-link-0 top-nav-link" href="http://www.gznl.org/">
+			<img src="http://localhost:4000/images/header/home.svg" class="top-nav-icon">
 			Home</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/database/">
-			<img src="http://localhost:4000/images/header/database.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/database/">
+			<img src="http://localhost:4000/images/header/database.svg" class="top-nav-icon">
 			Database</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/research/">
-			<img src="http://localhost:4000/images/header/research.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/research/">
+			<img src="http://localhost:4000/images/header/research.svg" class="top-nav-icon">
 			Research</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://www.gznl.org/aboutus/">
-			<img src="http://localhost:4000/images/header/aboutus.svg" style='height: 20px; width: auto; margin: 0;'>
+		<li><a class="nav-link-0 top-nav-link" href="https://www.gznl.org/aboutus/">
+			<img src="http://localhost:4000/images/header/aboutus.svg" class="top-nav-icon">
 			About us</a></li>
-		<li><a style='display: inline; padding: 15px 15px 5px 5px; line-height: 30px;' class="nav-link-0" href="https://gzlab.ac.cn/">
+		<li><a class="nav-link-0 top-nav-link" href="https://gzlab.ac.cn/">
 			GZNL-RDC
-			<img src="http://localhost:4000/images/header/gznl2.svg" style='height: 20px; width: auto; margin: 0;'>
+			<img src="http://localhost:4000/images/header/gznl2.svg" class="top-nav-icon">
 			</a></li>
 	  </ul>
   </div>
@@ -109,10 +109,44 @@
   
   
   
-  <style>
+<style>
+.top-nav {
+    background-color: #333333;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.top-nav-container {
+    max-width: 1000px;
+}
+
+.top-nav-links {
+    float: none !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.top-nav-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px 8px 6px !important;
+    line-height: 1.4 !important;
+}
+
+.top-nav-icon {
+    height: 20px;
+    width: auto;
+    margin: 0;
+}
+
  .full-width-image {
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     overflow: hidden;
     border-radius: 0;
     margin-top: 0;
@@ -150,11 +184,12 @@
   } */
   
   .search-box {
-	  height: 100%;
-	  width: 1300px;
+	  min-height: 350px;
+	  width: min(100%, 1300px);
 	  margin: 0 auto;
 	  display: flex;
 	  align-items: center;
+    padding: 24px;
   }
   
   .search {
@@ -164,6 +199,7 @@
 	  padding-right: 20px;
 	  background: #fff;
 	  position: absolute;
+    max-width: calc(100% - 48px);
   }
   
   .search h2 {
@@ -177,6 +213,7 @@
   
   .search .i img {
 	  width: 150px;
+	  max-width: 100%;
 	  height: 70px;
 	  margin-bottom: 10px;
 	  object-fit: contain
@@ -255,6 +292,7 @@
 	  display: flex;
 	  align-items: center;
 	  margin: 15px 0 8px 0;
+	  max-width: 100%;
 	  width: 532px;
 	  padding-bottom: 10px;
   }
@@ -302,16 +340,240 @@
 	  width: 18px;
 	  height: 18px;
   }
-  </style>
+
+  .site-navbar {
+    margin-bottom: 0;
+  }
+
+  .site-navbar-container {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .site-navbar-brand {
+    height: 50px;
+  }
+
+  .site-navbar .navbar-brand > img.site-navbar-brand {
+    display: block;
+    width: auto;
+    height: 50px;
+    max-height: 50px;
+    max-width: none;
+    margin-top: -14px;
+    margin-bottom: 0;
+    padding: 2px 2px;
+    border-radius: 0;
+  }
+
+  @media (max-width: 991px) {
+    .site-navbar-container {
+      font-size: 18px !important;
+    }
+
+    .search {
+      position: static;
+      width: 100%;
+    }
+
+    .search-box {
+      min-height: auto;
+      padding: 20px 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .site-navbar-container {
+      font-size: 16px !important;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .site-navbar .navbar-header {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      min-height: 40px;
+    }
+
+    .site-navbar .navbar-brand > img.site-navbar-brand {
+      height: 22px;
+      max-height: 22px;
+      width: auto;
+      max-width: min(140px, calc(100vw - 72px));
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      display: block;
+    }
+
+    .site-navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      float: none;
+      flex: 1;
+      height: 100%;
+      max-width: calc(100vw - 64px);
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .site-navbar .navbar-toggle {
+      float: none;
+      width: 36px;
+      height: 36px;
+      margin: 0;
+      border-color: rgba(255, 255, 255, 0.22);
+      border-radius: 10px;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .site-navbar .navbar-toggle .icon-bar {
+      background-color: #ffffff;
+      height: 2px;
+      width: 16px;
+    }
+
+    .site-navbar .navbar-collapse {
+      border-top: 0;
+      box-shadow: none;
+      margin-top: 12px;
+      padding: 10px 12px 14px;
+      background: rgba(0, 0, 0, 0.12);
+      border-radius: 14px;
+    }
+
+    .site-navbar .navbar-nav {
+      margin: 0;
+    }
+
+    .site-navbar .navbar-nav > li > a {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 14px;
+      padding-right: 14px;
+      border-radius: 10px;
+      margin-bottom: 6px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .site-navbar .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 4px 0 0;
+    }
+
+    .site-navbar .dropdown-menu > li > a {
+      color: #ffffff !important;
+      padding-left: 34px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .site-navbar .navbar-nav > li > a:hover,
+    .site-navbar .navbar-nav > li.open > a,
+    .site-navbar .dropdown-menu > li > a:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .top-nav-links {
+      justify-content: center;
+    }
+
+    .top-nav-link {
+      padding: 8px 8px 6px !important;
+      font-size: 12px;
+    }
+
+    .top-nav-icon {
+      height: 16px;
+    }
+
+    .full-width-image {
+      min-height: auto;
+      background-position: 72% center;
+    }
+
+    .search-box {
+      min-height: auto;
+      padding: 16px 12px;
+    }
+
+    .search {
+      padding: 18px 16px;
+      border-radius: 18px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .search h2 {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .search .i {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .search .i img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .search .i h1 {
+      font-size: 22px;
+      margin-left: 0;
+      margin-top: 0;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .gcse-search {
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .gcse-search input {
+      min-width: 0;
+    }
+
+    .search-btn {
+      width: 52px;
+      margin-left: 8px;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+  }
+</style>
 
 
 
 
 
 
-<div class="navbar navbar-expand-lg navbar-dark bg-primary" style='border-radius: 0; border: 0;' role="navigation">
+<div class="navbar navbar-expand-lg navbar-dark bg-primary site-navbar" style='border-radius: 0; border: 0;' role="navigation">
 
-  <div class="container-fluid" style='width: 1400px; font-size: 20px;'>
+  <div class="container-fluid site-navbar-container" style='font-size: 20px;'>
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
@@ -322,7 +584,7 @@
 	
     <a class="navbar-brand" href="http://localhost:4000/">
 		
-		<img class="navbar-brand" src="http://localhost:4000/images/header/HDLCA-logo-white-large.svg" style='height:50px;margin-top:-14px;margin-bottom:0;padding:2px 2px;border-radius: 0;' alt="logo">
+		<img class="navbar-brand site-navbar-brand" src="http://localhost:4000/images/header/HDLCA-logo-white-large.svg" alt="logo">
 		<!--b style='font-size: 32px; color: #eeeeee;'>RespiratoryCellAtlas</b-->
 	</a>
 	</div>
@@ -373,6 +635,7 @@
 	  window.location.href = url;
 	}
   </script>
+
 
     <div class="container-fluid">
       <div class="row">
@@ -501,31 +764,32 @@ ORGANOID
     }
 </style>
 
-<div class="container" style="">
+<div class="container genes-deg-panel">
   <p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of regions in a cell type.</p>
 
   <p><b> Select the target Cell type.</b></p>
-  <p><b style="font-size: 24px; color: #00528e">Celltype</b>
+  <p><b style="font-size: 24px; color: #00528e">Cell Type</b>
   <br />
-  <select id="selectBox1" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedindex="0"></select>
+  <select id="selectBox1" class="genes-deg-select" selectedindex="0"></select>
   <br /></p>
   <div id="imageContainer"></div>
   <p><!-- 新增的div用于展示图片 --></p>
 </div>
 
 <p><br /></p>
-<div class="container">
+<div class="container genes-deg-panel">
   <p class="text-left" style="color:#00528e; font-size:20px; ">The section shows the differentially expressed genes (DEGs) of cell types in a region.</p>
 
   <p><b>Select the target Region.<b></b></b></p>
   <p><b style="font-size: 24px; color: #00528e">Region</b>
   <br />
-  <select id="selectBox2" style="width: 400px;" onchange="handleSelectChange();displaySelectedImage()" selectedindex="0"></select>
+  <select id="selectBox2" class="genes-deg-select" selectedindex="0"></select>
   <br /></p>
   <div id="imageContainer1"></div>
   <p><!-- 新增的div用于展示图片 --></p>
 </div>
 <p><br />
+<!-- lightbox 由 JS 动态创建，避免 Markdown 将 img/button 转义为代码块 -->
 <!-- <div id="imageIdContainer"></div> --></p>
 <style>
   /* 设置固定宽度 */
@@ -550,6 +814,93 @@ ORGANOID
     height: 100%;
     object-fit: contain;
   }
+  #imageContainer,
+  #imageContainer1 {
+    cursor: zoom-in;
+  }
+  #imageContainer img,
+  #imageContainer1 img {
+    cursor: zoom-in;
+    pointer-events: auto;
+  }
+  .deg-image-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  .deg-image-lightbox.active {
+    display: block;
+  }
+  .deg-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+  }
+  .deg-lightbox-viewport {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: grab;
+    z-index: 1;
+  }
+  .deg-lightbox-viewport.is-dragging {
+    cursor: grabbing;
+  }
+  .deg-lightbox-viewport img {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    transform-origin: center center;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+  .deg-lightbox-toolbar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 6px 10px;
+  }
+  .deg-lightbox-toolbar button {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    min-width: 40px;
+    height: 32px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 0;
+  }
+  .deg-lightbox-toolbar button:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .deg-image-lightbox-close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 2;
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+  }
   .container {
   /* background-color: #f0f0f0; */ /* 设置背景颜色为您想要的颜色值 */
   box-shadow: 0 0 2px;
@@ -567,10 +918,240 @@ ORGANOID
     border-radius: 10px; 
     padding: 10px; 
   }
+
+  .genes-deg-panel {
+    width: 100%;
+  }
+
+  .genes-deg-select {
+    width: min(100%, 400px) !important;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .genes-deg-panel {
+      padding: 12px;
+    }
+
+    .genes-deg-select {
+      width: 100% !important;
+    }
+
+    .genes-deg-panel p[style*="font-size:20px"] {
+      font-size: 16px !important;
+      line-height: 1.6;
+    }
+  }
 </style>
 
 <script>
+  var degZoomState = { scale: 1, x: 0, y: 0, minScale: 0.5, maxScale: 6 };
+  var degDragState = { active: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+  var degLightboxInitialized = false;
+
+  function applyDegZoom() {
+    var lightboxImage = document.getElementById('degLightboxImage');
+    if (!lightboxImage) return;
+    lightboxImage.style.transform = 'translate(' + degZoomState.x + 'px, ' + degZoomState.y + 'px) scale(' + degZoomState.scale + ')';
+  }
+
+  function resetDegZoom() {
+    degZoomState.scale = 1;
+    degZoomState.x = 0;
+    degZoomState.y = 0;
+    applyDegZoom();
+  }
+
+  function degZoomAt(clientX, clientY, newScale) {
+    var viewport = document.getElementById('degLightboxViewport');
+    if (!viewport) return;
+    newScale = Math.min(degZoomState.maxScale, Math.max(degZoomState.minScale, newScale));
+    var rect = viewport.getBoundingClientRect();
+    var cx = clientX - rect.left - rect.width / 2;
+    var cy = clientY - rect.top - rect.height / 2;
+    var ratio = newScale / degZoomState.scale;
+    degZoomState.x = cx - (cx - degZoomState.x) * ratio;
+    degZoomState.y = cy - (cy - degZoomState.y) * ratio;
+    degZoomState.scale = newScale;
+    applyDegZoom();
+  }
+
+  function degZoomIn(e) {
+    if (e) e.stopPropagation();
+    var viewport = document.getElementById('degLightboxViewport');
+    if (!viewport) return;
+    var rect = viewport.getBoundingClientRect();
+    degZoomAt(rect.left + rect.width / 2, rect.top + rect.height / 2, degZoomState.scale + 0.25);
+  }
+
+  function degZoomOut(e) {
+    if (e) e.stopPropagation();
+    var viewport = document.getElementById('degLightboxViewport');
+    if (!viewport) return;
+    var rect = viewport.getBoundingClientRect();
+    degZoomAt(rect.left + rect.width / 2, rect.top + rect.height / 2, degZoomState.scale - 0.25);
+  }
+
+  function degZoomReset(e) {
+    if (e) e.stopPropagation();
+    resetDegZoom();
+  }
+
+  function createDegLightbox() {
+    if (document.getElementById('degImageLightbox')) return;
+
+    var lightbox = document.createElement('div');
+    lightbox.id = 'degImageLightbox';
+    lightbox.className = 'deg-image-lightbox';
+
+    var backdrop = document.createElement('div');
+    backdrop.className = 'deg-lightbox-backdrop';
+    backdrop.addEventListener('click', closeDegImageLightbox);
+
+    var closeBtn = document.createElement('span');
+    closeBtn.className = 'deg-image-lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.addEventListener('click', closeDegImageLightbox);
+
+    var toolbar = document.createElement('div');
+    toolbar.className = 'deg-lightbox-toolbar';
+
+    var zoomOutBtn = document.createElement('button');
+    zoomOutBtn.type = 'button';
+    zoomOutBtn.title = '缩小';
+    zoomOutBtn.textContent = '−';
+    zoomOutBtn.addEventListener('click', degZoomOut);
+
+    var zoomResetBtn = document.createElement('button');
+    zoomResetBtn.type = 'button';
+    zoomResetBtn.title = '重置';
+    zoomResetBtn.textContent = '100%';
+    zoomResetBtn.addEventListener('click', degZoomReset);
+
+    var zoomInBtn = document.createElement('button');
+    zoomInBtn.type = 'button';
+    zoomInBtn.title = '放大';
+    zoomInBtn.textContent = '+';
+    zoomInBtn.addEventListener('click', degZoomIn);
+
+    toolbar.appendChild(zoomOutBtn);
+    toolbar.appendChild(zoomResetBtn);
+    toolbar.appendChild(zoomInBtn);
+
+    var viewport = document.createElement('div');
+    viewport.id = 'degLightboxViewport';
+    viewport.className = 'deg-lightbox-viewport';
+
+    var lightboxImage = document.createElement('img');
+    lightboxImage.id = 'degLightboxImage';
+    lightboxImage.alt = '';
+    lightboxImage.draggable = false;
+    viewport.appendChild(lightboxImage);
+
+    lightbox.appendChild(backdrop);
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(toolbar);
+    lightbox.appendChild(viewport);
+    document.body.appendChild(lightbox);
+  }
+
+  function initDegLightboxInteractions() {
+    if (degLightboxInitialized) return;
+    var viewport = document.getElementById('degLightboxViewport');
+    if (!viewport) return;
+    degLightboxInitialized = true;
+
+    viewport.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      var delta = e.deltaY > 0 ? -0.15 : 0.15;
+      degZoomAt(e.clientX, e.clientY, degZoomState.scale + delta);
+    }, { passive: false });
+
+    viewport.addEventListener('mousedown', function(e) {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      degDragState.active = true;
+      degDragState.startX = e.clientX;
+      degDragState.startY = e.clientY;
+      degDragState.originX = degZoomState.x;
+      degDragState.originY = degZoomState.y;
+      viewport.classList.add('is-dragging');
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!degDragState.active) return;
+      degZoomState.x = degDragState.originX + (e.clientX - degDragState.startX);
+      degZoomState.y = degDragState.originY + (e.clientY - degDragState.startY);
+      applyDegZoom();
+    });
+
+    document.addEventListener('mouseup', function() {
+      if (!degDragState.active) return;
+      degDragState.active = false;
+      viewport.classList.remove('is-dragging');
+    });
+
+    viewport.addEventListener('dblclick', function(e) {
+      e.preventDefault();
+      if (degZoomState.scale > 1) {
+        resetDegZoom();
+      } else {
+        degZoomAt(e.clientX, e.clientY, 2);
+      }
+    });
+  }
+
+  function openDegImageLightbox(src) {
+    var lightbox = document.getElementById('degImageLightbox');
+    var lightboxImage = document.getElementById('degLightboxImage');
+    if (!lightbox || !lightboxImage || !src) return;
+    initDegLightboxInteractions();
+    lightboxImage.src = src;
+    resetDegZoom();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDegImageLightbox() {
+    var lightbox = document.getElementById('degImageLightbox');
+    var lightboxImage = document.getElementById('degLightboxImage');
+    if (!lightbox || !lightboxImage) return;
+    lightbox.classList.remove('active');
+    lightboxImage.src = '';
+    resetDegZoom();
+    degDragState.active = false;
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    var lightbox = document.getElementById('degImageLightbox');
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      closeDegImageLightbox();
+    } else if (e.key === '+' || e.key === '=') {
+      degZoomIn();
+    } else if (e.key === '-') {
+      degZoomOut();
+    } else if (e.key === '0') {
+      degZoomReset();
+    }
+  });
+
+  function bindDegImagePreviewClick(imageContainer) {
+    if (!imageContainer || imageContainer.dataset.degClickBound === 'true') return;
+    imageContainer.dataset.degClickBound = 'true';
+    imageContainer.addEventListener('click', function(e) {
+      var img = e.target && e.target.tagName === 'IMG' ? e.target : imageContainer.querySelector('img');
+      if (img && img.src) {
+        openDegImageLightbox(img.src);
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
+    createDegLightbox();
+    initDegLightboxInteractions();
+
     setupImageSelection('selectBox1', 'imageContainer', 'CellTypeDEG.json', 'ByCellType', 'imageIdContainer', '80%', '100%');
     setupImageSelection('selectBox2', 'imageContainer1', 'RegionDEG.json', 'ByRegion', 'imageIdContainer1', '80%', '100%');
 
@@ -579,6 +1160,7 @@ ORGANOID
       var imageContainer = document.getElementById(imageContainerId);
       var imageElement = document.createElement('img');
       imageContainer.appendChild(imageElement);
+      bindDegImagePreviewClick(imageContainer);
 
       selectBox.addEventListener('change', function() {
         handleSelectChange(selectBox, imageElement, imageFolder, width, height);
@@ -625,10 +1207,12 @@ ORGANOID
 
         if (imageElement) {
           imageElement.src = imagePath;
-          imageElement.style.width = width;
+          imageElement.style.width = '100%';
+          imageElement.style.maxWidth = width;
           imageElement.style.height = height;
           imageElement.style.display = 'block';
           imageElement.style.margin = '0 auto';
+          imageElement.title = '点击查看大图，滚轮缩放，拖拽平移';
           console.log('Selected Image:', imagePath);
         }
       } else {
@@ -666,7 +1250,7 @@ ORGANOID
 		<div class="col-sm-4">
 			
 		  <p>&copy 2024 GZNL-RDC. </p>
-		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#00528e">Guangzhou Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#00528e">RNAcentre</a>.</p>
+		  <p>We are part of the <a href="https://gzlab.ac.cn" style="color:#00528e">Guangzhou National Laboratory</a> and <a href="http://www.rnacentre.org/" style="color:#00528e">RNAcentre</a>.</p>
 		  <p>Site made with <a href="https://jekyllrb.com" style="color:#00528e">Jekyll</a>;  <a href="http://localhost:4000/aboutwebsite.html" style="color:#00528e">copy and  modify it for your own research group.</a></p>
 		  <p>  </p>
 		  <p>  </p>
@@ -674,9 +1258,10 @@ ORGANOID
 		
 		<div class="col-sm-4">
 		  Funding:<br />
-          - <a href="https://gzlab.ac.cn" style="color:#00528e">R&D Programs of Guangzhou Laboratory</a><br />
-          - <a href="http://www.most.gov.cn/" style="color:#00528e">MOST IT+BT projects</a> <br />
-          - <a href="https://www.nsfc.gov.cn/" style="color:#00528e">NSFC</a> <br />	 
+          - <a style="color:#00528e">Major Project of Guangzhou Laboratory</a><br />
+          - <a style="color:#00528e">National Key R&D Programs of China</a> <br />
+          - <a style="color:#00528e">Natural Science Foundation of China</a> <br />	 
+		  - <a style="color:#00528e">Young Scientists Fund of the National Natural Science Foundation of China</a> <br />	 
 		  <br>
 		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" style="color:#00528e"></script>
 		  <!--<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span id="busuanzi_container_site_uv"><strong>: <a href=""><span id="busuanzi_value_site_uv"></span></strong></a> </span> &nbsp;&nbsp;
@@ -685,7 +1270,7 @@ ORGANOID
 		
 		<div class="col-sm-4">
 		  Contact:<br />
-		  Yingshida Building F2, Guangzhou National Laboratory<br />
+		  Research Park 2 Building F,Guangzhou National Laboratory<br />
 		  9 Xingdao North Road, Guangzhou International Bio Island, <br />
 		  Haizhu District, Guangzhou, Guangdong, China.<br />
           (<a href="https://goo.gl/maps/hDLr6siEAS2Eaypt8" style="color:#00528e">Maps</a>)
@@ -695,7 +1280,7 @@ ORGANOID
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/jquery.js"></script>
 <script src="http://localhost:4000/js/bootstrap.min.js"></script>
 
 
