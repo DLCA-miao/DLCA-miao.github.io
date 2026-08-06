@@ -272,7 +272,7 @@ border-width: 0;
 
 <h3 style="color:#00528e">Cite us </h3>
 <div class="left-aligned" style="width: 100%;">
-Liangfeng Huang#, Ziliang Huang#, Shuo Feng#, Ke Fang#, Jie Wu#, Ying Ao, Lijing Huang, Linyan Hu, Jin Zhang, Hao Sun, Yuxia Yi, Zhichao Miao*. <strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan.</strong><br>
+Liangfeng Huang#, Ziliang Huang#, Shuo Feng#, Ke Fang#, Jie Wu#, Ying Ao, Lijing Huang, Linyan Hu, Jin Zhang, Hao Sun, Yuxia Yi, Zhichao Miao*. bioRxiv (2026).<strong style="color:#00528e;font-weight: bold">An integrated single-cell atlas of the human lung across the lifespan. https://doi.org/10.64898/2026.07.23.740230.</strong><br>
 <!-- <a> Unpublished</a> -->
 </div>
 
